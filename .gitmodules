@@ -1,0 +1,3 @@
+[submodule "lib/opencv342"]
+	path = lib/opencv342
+	url = https://github.com/thigiacmaytinh/opencv342.git
