@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.28010.2050
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29806.167
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Sample", "SampleCpp\Sample.vcxproj", "{684C1114-D03B-46BF-8AA0-A1A2D5658B09}"
 EndProject
@@ -20,8 +20,6 @@ EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "opencv_videoio", "lib\opencv342\modules\videoio\opencv_videoio.vcxproj", "{7E8DCDC6-DBB6-394E-B1C2-C1CBDC990655}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "opencv_imgcodecs", "lib\opencv342\modules\imgcodecs\opencv_imgcodecs.vcxproj", "{6D369816-6500-3B97-9A71-2F456B881693}"
-EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "IlmImf", "lib\opencv342\3rdparty\openexr\IlmImf.vcxproj", "{A8104AFF-8102-49F8-ACD3-0E4A059E559F}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "libwebp", "lib\opencv342\3rdparty\libwebp\libwebp.vcxproj", "{3C5375B9-04EE-4136-A826-929B32175B32}"
 EndProject
@@ -105,14 +103,6 @@ Global
 		{6D369816-6500-3B97-9A71-2F456B881693}.Release|Win32.Build.0 = Release|Win32
 		{6D369816-6500-3B97-9A71-2F456B881693}.Release|x64.ActiveCfg = Release|x64
 		{6D369816-6500-3B97-9A71-2F456B881693}.Release|x64.Build.0 = Release|x64
-		{A8104AFF-8102-49F8-ACD3-0E4A059E559F}.Debug|Win32.ActiveCfg = Debug|Win32
-		{A8104AFF-8102-49F8-ACD3-0E4A059E559F}.Debug|Win32.Build.0 = Debug|Win32
-		{A8104AFF-8102-49F8-ACD3-0E4A059E559F}.Debug|x64.ActiveCfg = Debug|x64
-		{A8104AFF-8102-49F8-ACD3-0E4A059E559F}.Debug|x64.Build.0 = Debug|x64
-		{A8104AFF-8102-49F8-ACD3-0E4A059E559F}.Release|Win32.ActiveCfg = Release|Win32
-		{A8104AFF-8102-49F8-ACD3-0E4A059E559F}.Release|Win32.Build.0 = Release|Win32
-		{A8104AFF-8102-49F8-ACD3-0E4A059E559F}.Release|x64.ActiveCfg = Release|x64
-		{A8104AFF-8102-49F8-ACD3-0E4A059E559F}.Release|x64.Build.0 = Release|x64
 		{3C5375B9-04EE-4136-A826-929B32175B32}.Debug|Win32.ActiveCfg = Debug|Win32
 		{3C5375B9-04EE-4136-A826-929B32175B32}.Debug|Win32.Build.0 = Debug|Win32
 		{3C5375B9-04EE-4136-A826-929B32175B32}.Debug|x64.ActiveCfg = Debug|x64

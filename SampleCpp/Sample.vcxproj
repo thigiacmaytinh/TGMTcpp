@@ -176,9 +176,6 @@
     <ProjectReference Include="..\lib\opencv342\3rdparty\libpng\libpng.vcxproj">
       <Project>{01bee73e-6f42-4714-9ce6-d968ce1f49d6}</Project>
     </ProjectReference>
-    <ProjectReference Include="..\lib\opencv342\3rdparty\openexr\IlmImf.vcxproj">
-      <Project>{a8104aff-8102-49f8-acd3-0e4a059e559f}</Project>
-    </ProjectReference>
     <ProjectReference Include="..\lib\opencv342\3rdparty\zlib\zlib.vcxproj">
       <Project>{b1c6e4ee-cfaf-452b-a6dc-70cc90415519}</Project>
     </ProjectReference>
