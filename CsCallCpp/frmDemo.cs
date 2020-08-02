@@ -6,8 +6,6 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
-using AForge.Video;
-using AForge.Video.DirectShow;
 using System.Threading;
 using System.IO;
 using System.Drawing.Drawing2D;
@@ -124,6 +122,15 @@ namespace IPSS
         private void trackBar1_Scroll(object sender, EventArgs e)
         {
             PrintMessage("Value: " + trackBar1.Value);
+
+            if (m_bmp == null)
+            {
+                PrintError("No image");
+                return;
+            }
+
+            Bitmap bmp = BridgeCLR.ConvertToBlur(m_bmp, trackBar1.Value);
+            picResult.Image = bmp;
         }
     }
 }
