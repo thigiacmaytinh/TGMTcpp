@@ -1,0 +1,388 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{A64C36C0-8B6A-3E57-B097-4D8992C502C6}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <Platform>x64</Platform>
+    <ProjectName>opencv_datasets</ProjectName>
+    <VCProjectUpgraderObjectName>NoUpgrade</VCProjectUpgraderObjectName>
+    <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v140</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v140</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v140</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v140</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">..\lib\Debug-x64\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(ProjectName).dir\Debug-x64\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">opencv_datasets342d</TargetName>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">opencv_datasets342d</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.dll</TargetExt>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.lib</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</LinkIncremental>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</GenerateManifest>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</GenerateManifest>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">..\lib\Release-x64\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(ProjectName).dir\Release-x64\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">opencv_datasets342</TargetName>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">opencv_datasets342</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.dll</TargetExt>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.lib</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkIncremental>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</GenerateManifest>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</GenerateManifest>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <OutDir>..\lib\Release\</OutDir>
+    <IntDir>$(ProjectName).dir\Release\</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <OutDir>..\lib\Debug\</OutDir>
+    <IntDir>$(ProjectName).dir\Release\</IntDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>$(ProjectDir)..\..\3rdparty\ippicv\ippicv_win\include;$(SolutionDir);src;include;$(SolutionDir)contrib\datasets;$(SolutionDir)modules\core\include;$(SolutionDir)modules\flann\include;$(SolutionDir)modules\imgproc\include;$(SolutionDir)modules\ml\include;$(SolutionDir)modules\dnn\include;$(SolutionDir)modules\videoio\include;$(SolutionDir)modules\highgui\include;$(SolutionDir)modules\features2d\include;$(SolutionDir)contrib\text\include;$(SolutionDir)modules\imgcodecs\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /bigobj</AdditionalOptions>
+      <AssemblerListingLocation>Debug/</AssemblerListingLocation>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <DisableSpecificWarnings>4127;4251;4324;4275;4512;4589;4267</DisableSpecificWarnings>
+      <ExceptionHandling>Async</ExceptionHandling>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <InlineFunctionExpansion>Disabled</InlineFunctionExpansion>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <Optimization>Disabled</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <ProcessorNumber>4</ProcessorNumber>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <WarningLevel>Level4</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;_SCL_SECURE_NO_WARNINGS;_VARIADIC_MAX=10;__OPENCV_BUILD=1;_USE_MATH_DEFINES;__STDC_CONSTANT_MACROS;__STDC_LIMIT_MACROS;__STDC_FORMAT_MACROS;CMAKE_INTDIR="Debug";CVAPI_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <ProgramDataBaseFileName>$(SolutionDir)lib\Debug\opencv_datasets342d.pdb</ProgramDataBaseFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;_SCL_SECURE_NO_WARNINGS;_VARIADIC_MAX=10;__OPENCV_BUILD=1;_USE_MATH_DEFINES;__STDC_CONSTANT_MACROS;__STDC_LIMIT_MACROS;__STDC_FORMAT_MACROS;CMAKE_INTDIR=\"Debug\";CVAPI_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(ProjectDir)..\..\3rdparty\ippicv\ippicv_win\include;$(ProjectDir)..\..\3rdparty\ippicv\ippiw_win\include;$(SolutionDir);src;include;$(SolutionDir)contrib\datasets;$(SolutionDir)modules\core\include;$(SolutionDir)modules\flann\include;$(SolutionDir)modules\imgproc\include;$(SolutionDir)modules\ml\include;$(SolutionDir)modules\dnn\include;$(SolutionDir)modules\flann\include;$(SolutionDir)modules\videoio\include;$(SolutionDir)modules\highgui\include;$(SolutionDir)modules\features2d\include;$(SolutionDir)contrib\text\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>$(ProjectDir)..\..\3rdparty\ippicv\ippicv_win\include;$(ProjectDir)..\..\3rdparty\ippicv\ippiw_win\include;$(SolutionDir);src;include;$(SolutionDir)contrib\datasets;$(SolutionDir)modules\core\include;$(SolutionDir)modules\flann\include;$(SolutionDir)modules\imgproc\include;$(SolutionDir)modules\ml\include;$(SolutionDir)modules\dnn\include;$(SolutionDir)modules\flann\include;$(SolutionDir)modules\videoio\include;$(SolutionDir)modules\highgui\include;$(SolutionDir)modules\features2d\include;$(SolutionDir)contrib\text\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalDependencies>opencv_text342d.lib;..\..\3rdparty\lib\Debug\ippiwd.lib;..\..\3rdparty\ippicv\ippicv_win\lib\intel64\ippicvmt.lib;opencv_ml342d.lib;opencv_dnn342d.lib;opencv_features2d342d.lib;opencv_flann342d.lib;opencv_highgui342d.lib;opencv_videoio342d.lib;opencv_imgcodecs342d.lib;opencv_imgproc342d.lib;opencv_core342d.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(ProjectDir)..\lib\;$(ProjectDir)..\..\modules\lib\;$(SolutionDir)bin\;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+      <GenerateDebugInformation>Debug</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>libc;%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>$(OutDir)opencv_datasets342d.lib</ImportLibrary>
+      <ProgramDataBaseFile>$(OutDir)opencv_datasets342d.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>$(ProjectDir)..\..\3rdparty\ippicv\ippicv_win\include;$(SolutionDir);src;include;$(SolutionDir)contrib\datasets;$(SolutionDir)modules\core\include;$(SolutionDir)modules\flann\include;$(SolutionDir)modules\imgproc\include;$(SolutionDir)modules\ml\include;$(SolutionDir)modules\dnn\include;$(SolutionDir)modules\videoio\include;$(SolutionDir)modules\highgui\include;$(SolutionDir)modules\features2d\include;$(SolutionDir)contrib\text\include;$(SolutionDir)modules\imgcodecs\include;$(ProjectDir)..\..\include\opencv2;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /bigobj</AdditionalOptions>
+      <AssemblerListingLocation>Debug/</AssemblerListingLocation>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <DisableSpecificWarnings>4127;4251;4324;4275;4512;4589;4267</DisableSpecificWarnings>
+      <ExceptionHandling>Async</ExceptionHandling>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <InlineFunctionExpansion>Disabled</InlineFunctionExpansion>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <Optimization>Disabled</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <ProcessorNumber>4</ProcessorNumber>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <WarningLevel>Level4</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;_SCL_SECURE_NO_WARNINGS;_VARIADIC_MAX=10;__OPENCV_BUILD=1;_USE_MATH_DEFINES;__STDC_CONSTANT_MACROS;__STDC_LIMIT_MACROS;__STDC_FORMAT_MACROS;CMAKE_INTDIR="Debug";CVAPI_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <ProgramDataBaseFileName>$(SolutionDir)lib\Debug\opencv_datasets342d.pdb</ProgramDataBaseFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;_SCL_SECURE_NO_WARNINGS;_VARIADIC_MAX=10;__OPENCV_BUILD=1;_USE_MATH_DEFINES;__STDC_CONSTANT_MACROS;__STDC_LIMIT_MACROS;__STDC_FORMAT_MACROS;CMAKE_INTDIR=\"Debug\";CVAPI_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(ProjectDir)..\..\3rdparty\ippicv\ippicv_win\include;$(ProjectDir)..\..\3rdparty\ippicv\ippiw_win\include;$(SolutionDir);src;include;$(SolutionDir)contrib\datasets;$(SolutionDir)modules\core\include;$(SolutionDir)modules\flann\include;$(SolutionDir)modules\imgproc\include;$(SolutionDir)modules\ml\include;$(SolutionDir)modules\dnn\include;$(SolutionDir)modules\flann\include;$(SolutionDir)modules\videoio\include;$(SolutionDir)modules\highgui\include;$(SolutionDir)modules\features2d\include;$(SolutionDir)contrib\text\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>$(ProjectDir)..\..\3rdparty\ippicv\ippicv_win\include;$(ProjectDir)..\..\3rdparty\ippicv\ippiw_win\include;$(SolutionDir);src;include;$(SolutionDir)contrib\datasets;$(SolutionDir)modules\core\include;$(SolutionDir)modules\flann\include;$(SolutionDir)modules\imgproc\include;$(SolutionDir)modules\ml\include;$(SolutionDir)modules\dnn\include;$(SolutionDir)modules\flann\include;$(SolutionDir)modules\videoio\include;$(SolutionDir)modules\highgui\include;$(SolutionDir)modules\features2d\include;$(SolutionDir)contrib\text\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalDependencies>opencv_text342d.lib;..\..\3rdparty\lib\Debug\ippiwd.lib;..\..\3rdparty\ippicv\ippicv_win\lib\intel64\ippicvmt.lib;opencv_ml342d.lib;opencv_dnn342d.lib;opencv_features2d342d.lib;opencv_flann342d.lib;opencv_highgui342d.lib;opencv_videoio342d.lib;opencv_imgcodecs342d.lib;opencv_imgproc342d.lib;opencv_core342d.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(ProjectDir)..\lib\;$(ProjectDir)..\..\modules\lib\;$(SolutionDir)bin\;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+      <GenerateDebugInformation>Debug</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>libc;%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>$(OutDir)opencv_datasets342d.lib</ImportLibrary>
+      <ProgramDataBaseFile>$(OutDir)opencv_datasets342d.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>$(ProjectDir)..\..\3rdparty\ippicv\ippicv_win\include;$(SolutionDir);src;include;$(SolutionDir)contrib\datasets;$(SolutionDir)modules\core\include;$(SolutionDir)modules\flann\include;$(SolutionDir)modules\imgproc\include;$(SolutionDir)modules\ml\include;$(SolutionDir)modules\dnn\include;$(SolutionDir)modules\videoio\include;$(SolutionDir)modules\highgui\include;$(SolutionDir)modules\features2d\include;$(SolutionDir)contrib\text\include;$(SolutionDir)modules\imgcodecs\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /bigobj</AdditionalOptions>
+      <AssemblerListingLocation>Release/</AssemblerListingLocation>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <DisableSpecificWarnings>4127;4251;4324;4275;4512;4589;4267</DisableSpecificWarnings>
+      <ExceptionHandling>Async</ExceptionHandling>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <ProcessorNumber>4</ProcessorNumber>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <WarningLevel>Level4</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;_SCL_SECURE_NO_WARNINGS;NDEBUG;_VARIADIC_MAX=10;__OPENCV_BUILD=1;_USE_MATH_DEFINES;__STDC_CONSTANT_MACROS;__STDC_LIMIT_MACROS;__STDC_FORMAT_MACROS;CMAKE_INTDIR="Release";CVAPI_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
+      <ProgramDataBaseFileName>$(SolutionDir)lib\Release\opencv_datasets342.pdb</ProgramDataBaseFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;_SCL_SECURE_NO_WARNINGS;NDEBUG;_VARIADIC_MAX=10;__OPENCV_BUILD=1;_USE_MATH_DEFINES;__STDC_CONSTANT_MACROS;__STDC_LIMIT_MACROS;__STDC_FORMAT_MACROS;CMAKE_INTDIR=\"Release\";CVAPI_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(ProjectDir)..\..\3rdparty\ippicv\ippicv_win\include;$(ProjectDir)..\..\3rdparty\ippicv\ippiw_win\include;$(SolutionDir);src;include;$(SolutionDir)contrib\datasets;$(SolutionDir)modules\core\include;$(SolutionDir)modules\flann\include;$(SolutionDir)modules\imgproc\include;$(SolutionDir)modules\ml\include;$(SolutionDir)modules\dnn\include;$(SolutionDir)modules\flann\include;$(SolutionDir)modules\videoio\include;$(SolutionDir)modules\highgui\include;$(SolutionDir)modules\features2d\include;$(SolutionDir)contrib\text\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>$(ProjectDir)..\..\3rdparty\ippicv\ippicv_win\include;$(ProjectDir)..\..\3rdparty\ippicv\ippiw_win\include;$(SolutionDir);src;include;$(SolutionDir)contrib\datasets;$(SolutionDir)modules\core\include;$(SolutionDir)modules\flann\include;$(SolutionDir)modules\imgproc\include;$(SolutionDir)modules\ml\include;$(SolutionDir)modules\dnn\include;$(SolutionDir)modules\flann\include;$(SolutionDir)modules\videoio\include;$(SolutionDir)modules\highgui\include;$(SolutionDir)modules\features2d\include;$(SolutionDir)contrib\text\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalDependencies>opencv_text342.lib;..\..\3rdparty\lib\Release\ippiw.lib;..\..\3rdparty\ippicv\ippicv_win\lib\intel64\ippicvmt.lib;opencv_ml342.lib;opencv_dnn342.lib;opencv_features2d342.lib;opencv_flann342.lib;opencv_highgui342.lib;opencv_videoio342.lib;opencv_imgcodecs342.lib;opencv_imgproc342.lib;opencv_core342.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(ProjectDir)..\lib\;$(ProjectDir)..\..\modules\lib\;$(SolutionDir)bin\;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+      <GenerateDebugInformation>Debug</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>libc;%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>$(OutDir)opencv_datasets342.lib</ImportLibrary>
+      <ProgramDataBaseFile>$(OutDir)opencv_datasets342.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>$(ProjectDir)..\..\3rdparty\ippicv\ippicv_win\include;$(SolutionDir);src;include;$(SolutionDir)contrib\datasets;$(SolutionDir)modules\core\include;$(SolutionDir)modules\flann\include;$(SolutionDir)modules\imgproc\include;$(SolutionDir)modules\ml\include;$(SolutionDir)modules\dnn\include;$(SolutionDir)modules\videoio\include;$(SolutionDir)modules\highgui\include;$(SolutionDir)modules\features2d\include;$(SolutionDir)contrib\text\include;$(SolutionDir)modules\imgcodecs\include;$(ProjectDir)..\..\include\opencv2;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /bigobj</AdditionalOptions>
+      <AssemblerListingLocation>Release/</AssemblerListingLocation>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <DisableSpecificWarnings>4127;4251;4324;4275;4512;4589;4267</DisableSpecificWarnings>
+      <ExceptionHandling>Async</ExceptionHandling>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <ProcessorNumber>4</ProcessorNumber>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <WarningLevel>Level4</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;_SCL_SECURE_NO_WARNINGS;NDEBUG;_VARIADIC_MAX=10;__OPENCV_BUILD=1;_USE_MATH_DEFINES;__STDC_CONSTANT_MACROS;__STDC_LIMIT_MACROS;__STDC_FORMAT_MACROS;CMAKE_INTDIR="Release";CVAPI_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
+      <ProgramDataBaseFileName>$(SolutionDir)lib\Release\opencv_datasets342.pdb</ProgramDataBaseFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;_SCL_SECURE_NO_WARNINGS;NDEBUG;_VARIADIC_MAX=10;__OPENCV_BUILD=1;_USE_MATH_DEFINES;__STDC_CONSTANT_MACROS;__STDC_LIMIT_MACROS;__STDC_FORMAT_MACROS;CMAKE_INTDIR=\"Release\";CVAPI_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(ProjectDir)..\..\3rdparty\ippicv\ippicv_win\include;$(ProjectDir)..\..\3rdparty\ippicv\ippiw_win\include;$(SolutionDir);src;include;$(SolutionDir)contrib\datasets;$(SolutionDir)modules\core\include;$(SolutionDir)modules\flann\include;$(SolutionDir)modules\imgproc\include;$(SolutionDir)modules\ml\include;$(SolutionDir)modules\dnn\include;$(SolutionDir)modules\flann\include;$(SolutionDir)modules\videoio\include;$(SolutionDir)modules\highgui\include;$(SolutionDir)modules\features2d\include;$(SolutionDir)contrib\text\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>$(ProjectDir)..\..\3rdparty\ippicv\ippicv_win\include;$(ProjectDir)..\..\3rdparty\ippicv\ippiw_win\include;$(SolutionDir);src;include;$(SolutionDir)contrib\datasets;$(SolutionDir)modules\core\include;$(SolutionDir)modules\flann\include;$(SolutionDir)modules\imgproc\include;$(SolutionDir)modules\ml\include;$(SolutionDir)modules\dnn\include;$(SolutionDir)modules\flann\include;$(SolutionDir)modules\videoio\include;$(SolutionDir)modules\highgui\include;$(SolutionDir)modules\features2d\include;$(SolutionDir)contrib\text\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalDependencies>opencv_text342.lib;..\..\3rdparty\lib\Release\ippiw.lib;..\..\3rdparty\ippicv\ippicv_win\lib\intel64\ippicvmt.lib;opencv_ml342.lib;opencv_dnn342.lib;opencv_features2d342.lib;opencv_flann342.lib;opencv_highgui342.lib;opencv_videoio342.lib;opencv_imgcodecs342.lib;opencv_imgproc342.lib;opencv_core342.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(ProjectDir)..\lib\;$(ProjectDir)..\..\modules\lib\;$(SolutionDir)bin\;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+      <GenerateDebugInformation>Debug</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>libc;%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>$(OutDir)opencv_datasets342.lib</ImportLibrary>
+      <ProgramDataBaseFile>$(OutDir)opencv_datasets342.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="include\opencv2\datasets\ar_hmdb.hpp" />
+    <ClInclude Include="include\opencv2\datasets\ar_sports.hpp" />
+    <ClInclude Include="include\opencv2\datasets\dataset.hpp" />
+    <ClInclude Include="include\opencv2\datasets\fr_adience.hpp" />
+    <ClInclude Include="include\opencv2\datasets\fr_lfw.hpp" />
+    <ClInclude Include="include\opencv2\datasets\gr_chalearn.hpp" />
+    <ClInclude Include="include\opencv2\datasets\gr_skig.hpp" />
+    <ClInclude Include="include\opencv2\datasets\hpe_humaneva.hpp" />
+    <ClInclude Include="include\opencv2\datasets\hpe_parse.hpp" />
+    <ClInclude Include="include\opencv2\datasets\ir_affine.hpp" />
+    <ClInclude Include="include\opencv2\datasets\ir_robot.hpp" />
+    <ClInclude Include="include\opencv2\datasets\is_bsds.hpp" />
+    <ClInclude Include="include\opencv2\datasets\is_weizmann.hpp" />
+    <ClInclude Include="include\opencv2\datasets\msm_epfl.hpp" />
+    <ClInclude Include="include\opencv2\datasets\msm_middlebury.hpp" />
+    <ClInclude Include="include\opencv2\datasets\or_imagenet.hpp" />
+    <ClInclude Include="include\opencv2\datasets\or_mnist.hpp" />
+    <ClInclude Include="include\opencv2\datasets\or_pascal.hpp" />
+    <ClInclude Include="include\opencv2\datasets\or_sun.hpp" />
+    <ClInclude Include="include\opencv2\datasets\pd_caltech.hpp" />
+    <ClInclude Include="include\opencv2\datasets\pd_inria.hpp" />
+    <ClInclude Include="include\opencv2\datasets\slam_kitti.hpp" />
+    <ClInclude Include="include\opencv2\datasets\slam_tumindoor.hpp" />
+    <ClInclude Include="include\opencv2\datasets\tr_chars.hpp" />
+    <ClInclude Include="include\opencv2\datasets\tr_icdar.hpp" />
+    <ClInclude Include="include\opencv2\datasets\tr_svt.hpp" />
+    <ClInclude Include="include\opencv2\datasets\track_alov.hpp" />
+    <ClInclude Include="include\opencv2\datasets\track_vot.hpp" />
+    <ClInclude Include="include\opencv2\datasets\util.hpp" />
+    <ClCompile Include="src\ar_hmdb.cpp" />
+    <ClCompile Include="src\ar_sports.cpp" />
+    <ClCompile Include="src\dataset.cpp" />
+    <ClCompile Include="src\fr_adience.cpp" />
+    <ClCompile Include="src\fr_lfw.cpp" />
+    <ClCompile Include="src\gr_chalearn.cpp" />
+    <ClCompile Include="src\gr_skig.cpp" />
+    <ClCompile Include="src\hpe_humaneva.cpp" />
+    <ClCompile Include="src\hpe_parse.cpp" />
+    <ClCompile Include="src\ir_affine.cpp" />
+    <ClCompile Include="src\ir_robot.cpp" />
+    <ClCompile Include="src\is_bsds.cpp" />
+    <ClCompile Include="src\is_weizmann.cpp" />
+    <ClCompile Include="src\msm_epfl.cpp" />
+    <ClCompile Include="src\msm_middlebury.cpp" />
+    <ClCompile Include="src\or_imagenet.cpp" />
+    <ClCompile Include="src\or_mnist.cpp" />
+    <ClCompile Include="src\or_pascal.cpp" />
+    <ClCompile Include="src\or_sun.cpp" />
+    <ClCompile Include="src\pd_caltech.cpp" />
+    <ClCompile Include="src\pd_inria.cpp" />
+    <ClCompile Include="src\slam_kitti.cpp" />
+    <ClCompile Include="src\slam_tumindoor.cpp" />
+    <ClCompile Include="src\tinyxml2\tinyxml2.cpp" />
+    <ClCompile Include="src\tr_chars.cpp" />
+    <ClCompile Include="src\tr_icdar.cpp" />
+    <ClCompile Include="src\tr_svt.cpp" />
+    <ClCompile Include="src\track_alov.cpp" />
+    <ClCompile Include="src\track_vot.cpp" />
+    <ClCompile Include="src\util.cpp" />
+    <ClInclude Include="src\tinyxml2\tinyxml2.h" />
+    <ClInclude Include="$(SolutionDir)cvconfig.h" />
+    <ClInclude Include="$(SolutionDir)opencv2\opencv_modules.hpp" />
+    <ResourceCompile Include="vs_version.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\modules\core\opencv_core.vcxproj">
+      <Project>{d7300f2b-6873-3e59-8a75-e8352d6fee56}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\modules\dnn\opencv_dnn.vcxproj">
+      <Project>{92fa3061-64d2-3712-b91d-4cc5a0be1e1c}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\modules\features2d\opencv_features2d.vcxproj">
+      <Project>{9f7701d5-01e6-32fa-b99d-e02d150f1866}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\modules\flann\opencv_flann.vcxproj">
+      <Project>{8dd76577-f748-3522-a38c-6505fe6245cc}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\modules\highgui\opencv_highgui.vcxproj">
+      <Project>{cd65d4bc-525b-32f3-94f8-15e3149c92f8}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\modules\imgcodecs\opencv_imgcodecs.vcxproj">
+      <Project>{83fc629c-648d-341e-99f4-4e97e007add7}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\modules\imgproc\opencv_imgproc.vcxproj">
+      <Project>{11c1ce5d-fbba-3746-a9e3-0afb19dfea98}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\modules\ml\opencv_ml.vcxproj">
+      <Project>{9e4bf9ac-4f4a-311a-80f9-e9df55ec82f2}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\modules\videoio\opencv_videoio.vcxproj">
+      <Project>{06a3d594-5e18-3fc3-8ab1-3e7ee6efac15}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\text\opencv_text.vcxproj">
+      <Project>{2fb88f7b-ac5f-3621-8f63-8ceefefc7f5b}</Project>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

@@ -1,0 +1,119 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="src\bif.cpp">
+      <Filter>Src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\eigen_faces.cpp">
+      <Filter>Src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\face_alignment.cpp">
+      <Filter>Src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\face_basic.cpp">
+      <Filter>Src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\facemark.cpp">
+      <Filter>Src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\facemarkAAM.cpp">
+      <Filter>Src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\facemarkLBF.cpp">
+      <Filter>Src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\facerec.cpp">
+      <Filter>Src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\fisher_faces.cpp">
+      <Filter>Src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\getlandmarks.cpp">
+      <Filter>Src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\lbph_faces.cpp">
+      <Filter>Src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\mace.cpp">
+      <Filter>Src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\predict_collector.cpp">
+      <Filter>Src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\regtree.cpp">
+      <Filter>Src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\trainFacemark.cpp">
+      <Filter>Src</Filter>
+    </ClCompile>
+    <ClCompile Include="opencv_face_pch.cpp">
+      <Filter>Src</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="include\opencv2\face.hpp">
+      <Filter>Include\opencv2</Filter>
+    </ClInclude>
+    <ClInclude Include="include\opencv2\face\bif.hpp">
+      <Filter>Include\opencv2\face</Filter>
+    </ClInclude>
+    <ClInclude Include="include\opencv2\face\face_alignment.hpp">
+      <Filter>Include\opencv2\face</Filter>
+    </ClInclude>
+    <ClInclude Include="include\opencv2\face\facemark.hpp">
+      <Filter>Include\opencv2\face</Filter>
+    </ClInclude>
+    <ClInclude Include="include\opencv2\face\facemarkAAM.hpp">
+      <Filter>Include\opencv2\face</Filter>
+    </ClInclude>
+    <ClInclude Include="include\opencv2\face\facemarkLBF.hpp">
+      <Filter>Include\opencv2\face</Filter>
+    </ClInclude>
+    <ClInclude Include="include\opencv2\face\facemark_train.hpp">
+      <Filter>Include\opencv2\face</Filter>
+    </ClInclude>
+    <ClInclude Include="include\opencv2\face\facerec.hpp">
+      <Filter>Include\opencv2\face</Filter>
+    </ClInclude>
+    <ClInclude Include="include\opencv2\face\mace.hpp">
+      <Filter>Include\opencv2\face</Filter>
+    </ClInclude>
+    <ClInclude Include="include\opencv2\face\predict_collector.hpp">
+      <Filter>Include\opencv2\face</Filter>
+    </ClInclude>
+    <ClInclude Include="src\face_alignmentimpl.hpp">
+      <Filter>Src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\face_utils.hpp">
+      <Filter>Src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\precomp.hpp">
+      <Filter>Src</Filter>
+    </ClInclude>
+    <ClInclude Include="$(SolutionDir)cvconfig.h">
+      <Filter>Include</Filter>
+    </ClInclude>
+    <ClInclude Include="$(SolutionDir)opencv2\opencv_modules.hpp">
+      <Filter>Include</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="vs_version.rc">
+      <Filter>Src</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Include">
+      <UniqueIdentifier>{3DE57C33-6277-312B-8C55-AEF411DE727B}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Include\opencv2">
+      <UniqueIdentifier>{A07D22F4-3F50-3BDD-B3DC-53A5EF69F252}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Include\opencv2\face">
+      <UniqueIdentifier>{884E2D26-FECE-31C1-B2E7-00540A4798CF}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Src">
+      <UniqueIdentifier>{DFE1FF5E-3360-3736-BAE5-E3D9B5C50606}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

@@ -1,0 +1,400 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{2FB88F7B-AC5F-3621-8F63-8CEEFEFC7F5B}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <Platform>x64</Platform>
+    <ProjectName>opencv_text</ProjectName>
+    <VCProjectUpgraderObjectName>NoUpgrade</VCProjectUpgraderObjectName>
+    <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v140</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v140</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v140</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v140</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">..\lib\Debug-x64\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(ProjectName).dir\Debug-x64\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">opencv_text342d</TargetName>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">opencv_text342d</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.dll</TargetExt>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.lib</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</LinkIncremental>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</GenerateManifest>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</GenerateManifest>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">..\lib\Release-x64\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(ProjectName).dir\Release-x64\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">opencv_text342</TargetName>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">opencv_text342</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.dll</TargetExt>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.lib</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkIncremental>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</GenerateManifest>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</GenerateManifest>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <OutDir>..\lib\Release\</OutDir>
+    <IntDir>$(ProjectName).dir\Release\</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <OutDir>..\lib\Debug\</OutDir>
+    <IntDir>$(ProjectName).dir\Release\</IntDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>$(SolutionDir)contrib\text;$(ProjectDir)..\..\3rdparty\ippicv\ippicv_win\include;$(ProjectDir)..\..\3rdparty\ippicv\ippiw_win\include;$(SolutionDir);$(SolutionDir)contrib\text\src;$(SolutionDir)contrib\text\include;$(SolutionDir)modules\core\include;$(SolutionDir)modules\flann\include;$(SolutionDir)modules\imgproc\include;$(SolutionDir)modules\ml\include;$(SolutionDir)modules\dnn\include;$(SolutionDir)modules\flann\include;$(SolutionDir)modules\videoio\include;$(SolutionDir)modules\highgui\include;$(SolutionDir)modules\features2d\include;$(ProjectDir)..\..\3rdparty\tesseract\src\api;$(ProjectDir)..\..\3rdparty\tesseract\src\ccutil;$(ProjectDir)..\..\3rdparty\tesseract\src\ccmain;$(ProjectDir)..\..\3rdparty\tesseract\src\ccstruct;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /bigobj</AdditionalOptions>
+      <AssemblerListingLocation>Debug/</AssemblerListingLocation>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <DisableSpecificWarnings>4127;4251;4324;4275;4512;4589</DisableSpecificWarnings>
+      <ExceptionHandling>Async</ExceptionHandling>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <InlineFunctionExpansion>Disabled</InlineFunctionExpansion>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <Optimization>Disabled</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <ProcessorNumber>4</ProcessorNumber>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <WarningLevel>Level4</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;_SCL_SECURE_NO_WARNINGS;_VARIADIC_MAX=10;__OPENCV_BUILD=1;_USE_MATH_DEFINES;__STDC_CONSTANT_MACROS;__STDC_LIMIT_MACROS;__STDC_FORMAT_MACROS;CMAKE_INTDIR="Debug";CVAPI_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <ProgramDataBaseFileName>$(SolutionDir)lib\Debug\opencv_text342d.pdb</ProgramDataBaseFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;_SCL_SECURE_NO_WARNINGS;_VARIADIC_MAX=10;__OPENCV_BUILD=1;_USE_MATH_DEFINES;__STDC_CONSTANT_MACROS;__STDC_LIMIT_MACROS;__STDC_FORMAT_MACROS;CMAKE_INTDIR=\"Debug\";CVAPI_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(SolutionDir)contrib\text;$(ProjectDir)..\..\3rdparty\ippicv\ippicv_win\include;$(ProjectDir)..\..\3rdparty\ippicv\ippiw_win\include;$(SolutionDir);$(SolutionDir)contrib\text\src;$(SolutionDir)contrib\text\include;$(SolutionDir)modules\core\include;$(SolutionDir)modules\flann\include;$(SolutionDir)modules\imgproc\include;$(SolutionDir)modules\ml\include;$(SolutionDir)modules\dnn\include;$(SolutionDir)modules\flann\include;$(SolutionDir)modules\videoio\include;$(SolutionDir)modules\highgui\include;$(SolutionDir)modules\features2d\include;E:\lib\opencv\opencv-3.4.2\tesseract\src\api;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>$(SolutionDir)contrib\text;$(ProjectDir)..\..\3rdparty\ippicv\ippicv_win\include;$(ProjectDir)..\..\3rdparty\ippicv\ippiw_win\include;$(SolutionDir);$(SolutionDir)contrib\text\src;$(SolutionDir)contrib\text\include;$(SolutionDir)modules\core\include;$(SolutionDir)modules\flann\include;$(SolutionDir)modules\imgproc\include;$(SolutionDir)modules\ml\include;$(SolutionDir)modules\dnn\include;$(SolutionDir)modules\flann\include;$(SolutionDir)modules\videoio\include;$(SolutionDir)modules\highgui\include;$(SolutionDir)modules\features2d\include;E:\lib\opencv\opencv-3.4.2\tesseract\src\api;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalDependencies>opencv_ml342d.lib;opencv_dnn342d.lib;opencv_features2d342d.lib;..\..\3rdparty\lib\Debug\ippiwd.lib;..\..\3rdparty\ippicv\ippicv_win\lib\intel64\ippicvmt.lib;F:\COMPUTER_VISION\TextReader\lib\tesseract\lib\Debug\tesseract400-x64d.lib;F:\COMPUTER_VISION\TextReader\lib\tesseract\lib\Debug\leptonica-x64d.lib;opencv_flann342d.lib;opencv_highgui342d.lib;opencv_videoio342d.lib;opencv_imgcodecs342d.lib;opencv_imgproc342d.lib;opencv_core342d.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib;libjpeg-turbod.lib;libpngd.lib;libwebpd.lib;ws2_32.lib;zlibd.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(ProjectDir)..\lib\;$(ProjectDir)..\..\modules\lib\;F:\COMPUTER_VISION\TextReader\lib\tesseract\lib\Debug;$(ProjectDir)..\..\3rdparty\lib\Debug;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+      <GenerateDebugInformation>Debug</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>libc;%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>$(OutDir)opencv_text342d.lib</ImportLibrary>
+      <ProgramDataBaseFile>$(OutDir)opencv_text342d.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>$(SolutionDir)contrib\text;$(ProjectDir)..\..\3rdparty\ippicv\ippicv_win\include;$(ProjectDir)..\..\3rdparty\ippicv\ippiw_win\include;$(SolutionDir);$(SolutionDir)contrib\text\src;$(SolutionDir)contrib\text\include;$(SolutionDir)modules\core\include;$(SolutionDir)modules\flann\include;$(SolutionDir)modules\imgproc\include;$(SolutionDir)modules\ml\include;$(SolutionDir)modules\dnn\include;$(SolutionDir)modules\flann\include;$(SolutionDir)modules\videoio\include;$(SolutionDir)modules\highgui\include;$(SolutionDir)modules\features2d\include;$(ProjectDir)..\..\3rdparty\tesseract\src\api;$(ProjectDir)..\..\3rdparty\tesseract\src\ccutil;$(ProjectDir)..\..\3rdparty\tesseract\src\ccmain;$(ProjectDir)..\..\3rdparty\tesseract\src\ccstruct;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /bigobj</AdditionalOptions>
+      <AssemblerListingLocation>Debug/</AssemblerListingLocation>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <DisableSpecificWarnings>4127;4251;4324;4275;4512;4589</DisableSpecificWarnings>
+      <ExceptionHandling>Async</ExceptionHandling>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <InlineFunctionExpansion>Disabled</InlineFunctionExpansion>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <Optimization>Disabled</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <ProcessorNumber>4</ProcessorNumber>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <WarningLevel>Level4</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;_SCL_SECURE_NO_WARNINGS;_VARIADIC_MAX=10;__OPENCV_BUILD=1;_USE_MATH_DEFINES;__STDC_CONSTANT_MACROS;__STDC_LIMIT_MACROS;__STDC_FORMAT_MACROS;CMAKE_INTDIR="Debug";CVAPI_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <ProgramDataBaseFileName>$(SolutionDir)lib\Debug\opencv_text342d.pdb</ProgramDataBaseFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;_SCL_SECURE_NO_WARNINGS;_VARIADIC_MAX=10;__OPENCV_BUILD=1;_USE_MATH_DEFINES;__STDC_CONSTANT_MACROS;__STDC_LIMIT_MACROS;__STDC_FORMAT_MACROS;CMAKE_INTDIR=\"Debug\";CVAPI_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(SolutionDir)contrib\text;$(ProjectDir)..\..\3rdparty\ippicv\ippicv_win\include;$(ProjectDir)..\..\3rdparty\ippicv\ippiw_win\include;$(SolutionDir);$(SolutionDir)contrib\text\src;$(SolutionDir)contrib\text\include;$(SolutionDir)modules\core\include;$(SolutionDir)modules\flann\include;$(SolutionDir)modules\imgproc\include;$(SolutionDir)modules\ml\include;$(SolutionDir)modules\dnn\include;$(SolutionDir)modules\flann\include;$(SolutionDir)modules\videoio\include;$(SolutionDir)modules\highgui\include;$(SolutionDir)modules\features2d\include;E:\lib\opencv\opencv-3.4.2\tesseract\src\api;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>$(SolutionDir)contrib\text;$(ProjectDir)..\..\3rdparty\ippicv\ippicv_win\include;$(ProjectDir)..\..\3rdparty\ippicv\ippiw_win\include;$(SolutionDir);$(SolutionDir)contrib\text\src;$(SolutionDir)contrib\text\include;$(SolutionDir)modules\core\include;$(SolutionDir)modules\flann\include;$(SolutionDir)modules\imgproc\include;$(SolutionDir)modules\ml\include;$(SolutionDir)modules\dnn\include;$(SolutionDir)modules\flann\include;$(SolutionDir)modules\videoio\include;$(SolutionDir)modules\highgui\include;$(SolutionDir)modules\features2d\include;E:\lib\opencv\opencv-3.4.2\tesseract\src\api;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalDependencies>opencv_ml342d.lib;opencv_dnn342d.lib;opencv_features2d342d.lib;..\..\3rdparty\lib\Debug\ippiwd.lib;..\..\3rdparty\ippicv\ippicv_win\lib\intel64\ippicvmt.lib;F:\COMPUTER_VISION\TextReader\lib\tesseract\lib\Debug\tesseract400-x64d.lib;F:\COMPUTER_VISION\TextReader\lib\tesseract\lib\Debug\leptonica-x64d.lib;opencv_flann342d.lib;opencv_highgui342d.lib;opencv_videoio342d.lib;opencv_imgcodecs342d.lib;opencv_imgproc342d.lib;opencv_core342d.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib;libjpeg-turbod.lib;libpngd.lib;libwebpd.lib;ws2_32.lib;zlibd.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(ProjectDir)..\lib\;$(ProjectDir)..\..\modules\lib\;F:\COMPUTER_VISION\TextReader\lib\tesseract\lib\Debug;$(ProjectDir)..\..\3rdparty\lib\Debug;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+      <GenerateDebugInformation>Debug</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>libc;%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>$(OutDir)opencv_text342d.lib</ImportLibrary>
+      <ProgramDataBaseFile>$(OutDir)opencv_text342d.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>$(SolutionDir)contrib\text;$(ProjectDir)..\..\3rdparty\ippicv\ippicv_win\include;$(ProjectDir)..\..\3rdparty\ippicv\ippiw_win\include;$(SolutionDir);$(SolutionDir)contrib\text\src;$(SolutionDir)contrib\text\include;$(SolutionDir)modules\core\include;$(SolutionDir)modules\flann\include;$(SolutionDir)modules\imgproc\include;$(SolutionDir)modules\ml\include;$(SolutionDir)modules\dnn\include;$(SolutionDir)modules\flann\include;$(SolutionDir)modules\videoio\include;$(SolutionDir)modules\highgui\include;$(SolutionDir)modules\features2d\include;$(ProjectDir)..\..\3rdparty\tesseract\src\api;$(ProjectDir)..\..\3rdparty\tesseract\src\ccutil;$(ProjectDir)..\..\3rdparty\tesseract\src\ccmain;$(ProjectDir)..\..\3rdparty\tesseract\src\ccstruct;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /bigobj</AdditionalOptions>
+      <AssemblerListingLocation>Release/</AssemblerListingLocation>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <DisableSpecificWarnings>4127;4251;4324;4275;4512;4589</DisableSpecificWarnings>
+      <ExceptionHandling>Async</ExceptionHandling>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <ProcessorNumber>4</ProcessorNumber>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <WarningLevel>Level4</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;_SCL_SECURE_NO_WARNINGS;NDEBUG;_VARIADIC_MAX=10;__OPENCV_BUILD=1;_USE_MATH_DEFINES;__STDC_CONSTANT_MACROS;__STDC_LIMIT_MACROS;__STDC_FORMAT_MACROS;CMAKE_INTDIR="Release";CVAPI_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
+      <ProgramDataBaseFileName>$(SolutionDir)lib\Release\opencv_text342.pdb</ProgramDataBaseFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;_SCL_SECURE_NO_WARNINGS;NDEBUG;_VARIADIC_MAX=10;__OPENCV_BUILD=1;_USE_MATH_DEFINES;__STDC_CONSTANT_MACROS;__STDC_LIMIT_MACROS;__STDC_FORMAT_MACROS;CMAKE_INTDIR=\"Release\";CVAPI_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(SolutionDir)contrib\text;$(ProjectDir)..\..\3rdparty\ippicv\ippicv_win\include;$(ProjectDir)..\..\3rdparty\ippicv\ippiw_win\include;$(SolutionDir);$(SolutionDir)contrib\text\src;$(SolutionDir)contrib\text\include;$(SolutionDir)modules\core\include;$(SolutionDir)modules\flann\include;$(SolutionDir)modules\imgproc\include;$(SolutionDir)modules\ml\include;$(SolutionDir)modules\dnn\include;$(SolutionDir)modules\flann\include;$(SolutionDir)modules\videoio\include;$(SolutionDir)modules\highgui\include;$(SolutionDir)modules\features2d\include;E:\lib\opencv\opencv-3.4.2\tesseract\src\api;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>$(SolutionDir)contrib\text;$(ProjectDir)..\..\3rdparty\ippicv\ippicv_win\include;$(ProjectDir)..\..\3rdparty\ippicv\ippiw_win\include;$(SolutionDir);$(SolutionDir)contrib\text\src;$(SolutionDir)contrib\text\include;$(SolutionDir)modules\core\include;$(SolutionDir)modules\flann\include;$(SolutionDir)modules\imgproc\include;$(SolutionDir)modules\ml\include;$(SolutionDir)modules\dnn\include;$(SolutionDir)modules\flann\include;$(SolutionDir)modules\videoio\include;$(SolutionDir)modules\highgui\include;$(SolutionDir)modules\features2d\include;E:\lib\opencv\opencv-3.4.2\tesseract\src\api;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalDependencies>opencv_ml342.lib;opencv_dnn342.lib;opencv_features2d342.lib;..\..\3rdparty\lib\Release\ippiw.lib;..\..\3rdparty\ippicv\ippicv_win\lib\intel64\ippicvmt.lib;F:\COMPUTER_VISION\TextReader\lib\tesseract\lib\Release\tesseract400-x64.lib;F:\COMPUTER_VISION\TextReader\lib\tesseract\lib\Release\leptonica-x64.lib;opencv_flann342.lib;opencv_highgui342.lib;opencv_videoio342.lib;opencv_imgcodecs342.lib;opencv_imgproc342.lib;opencv_core342.lib;libjpeg-turbo.lib;libpng.lib;libwebp.lib;ws2_32.lib;zlib.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(ProjectDir)..\lib\;$(ProjectDir)..\..\modules\lib\;F:\COMPUTER_VISION\TextReader\lib\tesseract\lib\Release;$(ProjectDir)..\..\3rdparty\lib\Release;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+      <GenerateDebugInformation>Debug</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>libc;%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>$(OutDir)opencv_text342.lib</ImportLibrary>
+      <ProgramDataBaseFile>$(OutDir)opencv_text342.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>$(SolutionDir)contrib\text;$(ProjectDir)..\..\3rdparty\ippicv\ippicv_win\include;$(ProjectDir)..\..\3rdparty\ippicv\ippiw_win\include;$(SolutionDir);$(SolutionDir)contrib\text\src;$(SolutionDir)contrib\text\include;$(SolutionDir)modules\core\include;$(SolutionDir)modules\flann\include;$(SolutionDir)modules\imgproc\include;$(SolutionDir)modules\ml\include;$(SolutionDir)modules\dnn\include;$(SolutionDir)modules\flann\include;$(SolutionDir)modules\videoio\include;$(SolutionDir)modules\highgui\include;$(SolutionDir)modules\features2d\include;$(ProjectDir)..\..\3rdparty\tesseract\src\api;$(ProjectDir)..\..\3rdparty\tesseract\src\ccutil;$(ProjectDir)..\..\3rdparty\tesseract\src\ccmain;$(ProjectDir)..\..\3rdparty\tesseract\src\ccstruct;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /bigobj</AdditionalOptions>
+      <AssemblerListingLocation>Release/</AssemblerListingLocation>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <DisableSpecificWarnings>4127;4251;4324;4275;4512;4589</DisableSpecificWarnings>
+      <ExceptionHandling>Async</ExceptionHandling>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <ProcessorNumber>4</ProcessorNumber>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <WarningLevel>Level4</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;_SCL_SECURE_NO_WARNINGS;NDEBUG;_VARIADIC_MAX=10;__OPENCV_BUILD=1;_USE_MATH_DEFINES;__STDC_CONSTANT_MACROS;__STDC_LIMIT_MACROS;__STDC_FORMAT_MACROS;CMAKE_INTDIR="Release";CVAPI_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
+      <ProgramDataBaseFileName>$(SolutionDir)lib\Release\opencv_text342.pdb</ProgramDataBaseFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;_SCL_SECURE_NO_WARNINGS;NDEBUG;_VARIADIC_MAX=10;__OPENCV_BUILD=1;_USE_MATH_DEFINES;__STDC_CONSTANT_MACROS;__STDC_LIMIT_MACROS;__STDC_FORMAT_MACROS;CMAKE_INTDIR=\"Release\";CVAPI_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(SolutionDir)contrib\text;$(ProjectDir)..\..\3rdparty\ippicv\ippicv_win\include;$(ProjectDir)..\..\3rdparty\ippicv\ippiw_win\include;$(SolutionDir);$(SolutionDir)contrib\text\src;$(SolutionDir)contrib\text\include;$(SolutionDir)modules\core\include;$(SolutionDir)modules\flann\include;$(SolutionDir)modules\imgproc\include;$(SolutionDir)modules\ml\include;$(SolutionDir)modules\dnn\include;$(SolutionDir)modules\flann\include;$(SolutionDir)modules\videoio\include;$(SolutionDir)modules\highgui\include;$(SolutionDir)modules\features2d\include;E:\lib\opencv\opencv-3.4.2\tesseract\src\api;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>$(SolutionDir)contrib\text;$(ProjectDir)..\..\3rdparty\ippicv\ippicv_win\include;$(ProjectDir)..\..\3rdparty\ippicv\ippiw_win\include;$(SolutionDir);$(SolutionDir)contrib\text\src;$(SolutionDir)contrib\text\include;$(SolutionDir)modules\core\include;$(SolutionDir)modules\flann\include;$(SolutionDir)modules\imgproc\include;$(SolutionDir)modules\ml\include;$(SolutionDir)modules\dnn\include;$(SolutionDir)modules\flann\include;$(SolutionDir)modules\videoio\include;$(SolutionDir)modules\highgui\include;$(SolutionDir)modules\features2d\include;E:\lib\opencv\opencv-3.4.2\tesseract\src\api;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalDependencies>opencv_ml342.lib;opencv_dnn342.lib;opencv_features2d342.lib;..\..\3rdparty\lib\Release\ippiw.lib;..\..\3rdparty\ippicv\ippicv_win\lib\intel64\ippicvmt.lib;F:\COMPUTER_VISION\TextReader\lib\tesseract\lib\Release\tesseract400-x64.lib;F:\COMPUTER_VISION\TextReader\lib\tesseract\lib\Release\leptonica-x64.lib;opencv_flann342.lib;opencv_highgui342.lib;opencv_videoio342.lib;opencv_imgcodecs342.lib;opencv_imgproc342.lib;opencv_core342.lib;libjpeg-turbo.lib;libpng.lib;libwebp.lib;ws2_32.lib;zlib.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(ProjectDir)..\lib\;$(ProjectDir)..\..\modules\lib\;F:\COMPUTER_VISION\TextReader\lib\tesseract\lib\Release;$(ProjectDir)..\..\3rdparty\lib\Release;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+      <GenerateDebugInformation>Debug</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>libc;%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>$(OutDir)opencv_text342.lib</ImportLibrary>
+      <ProgramDataBaseFile>$(OutDir)opencv_text342.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="$(SolutionDir)contrib\text\include\opencv2\text.hpp" />
+    <ClInclude Include="$(SolutionDir)contrib\text\include\opencv2\text\erfilter.hpp" />
+    <ClInclude Include="$(SolutionDir)contrib\text\include\opencv2\text\ocr.hpp" />
+    <ClInclude Include="$(SolutionDir)contrib\text\include\opencv2\text\textDetector.hpp" />
+    <ClCompile Include="$(SolutionDir)contrib\text\src\erfilter.cpp">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">src/precomp.hpp</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">src/precomp.hpp</ForcedIncludeFiles>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">src/precomp.hpp</PrecompiledHeaderFile>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">src/precomp.hpp</PrecompiledHeaderFile>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">src/precomp.hpp</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">src/precomp.hpp</ForcedIncludeFiles>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Release|x64'">src/precomp.hpp</PrecompiledHeaderFile>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">src/precomp.hpp</PrecompiledHeaderFile>
+    </ClCompile>
+    <ClCompile Include="$(SolutionDir)contrib\text\src\ocr_beamsearch_decoder.cpp">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">src/precomp.hpp</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">src/precomp.hpp</ForcedIncludeFiles>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">src/precomp.hpp</PrecompiledHeaderFile>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">src/precomp.hpp</PrecompiledHeaderFile>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">src/precomp.hpp</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">src/precomp.hpp</ForcedIncludeFiles>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Release|x64'">src/precomp.hpp</PrecompiledHeaderFile>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">src/precomp.hpp</PrecompiledHeaderFile>
+    </ClCompile>
+    <ClCompile Include="$(SolutionDir)contrib\text\src\ocr_hmm_decoder.cpp">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">src/precomp.hpp</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">src/precomp.hpp</ForcedIncludeFiles>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">src/precomp.hpp</PrecompiledHeaderFile>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">src/precomp.hpp</PrecompiledHeaderFile>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">src/precomp.hpp</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">src/precomp.hpp</ForcedIncludeFiles>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Release|x64'">src/precomp.hpp</PrecompiledHeaderFile>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">src/precomp.hpp</PrecompiledHeaderFile>
+    </ClCompile>
+    <ClCompile Include="$(SolutionDir)contrib\text\src\ocr_holistic.cpp">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">src/precomp.hpp</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">src/precomp.hpp</ForcedIncludeFiles>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">src/precomp.hpp</PrecompiledHeaderFile>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">src/precomp.hpp</PrecompiledHeaderFile>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">src/precomp.hpp</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">src/precomp.hpp</ForcedIncludeFiles>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Release|x64'">src/precomp.hpp</PrecompiledHeaderFile>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">src/precomp.hpp</PrecompiledHeaderFile>
+    </ClCompile>
+    <ClCompile Include="$(SolutionDir)contrib\text\src\ocr_tesseract.cpp">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">src/precomp.hpp</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">src/precomp.hpp</ForcedIncludeFiles>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">src/precomp.hpp</PrecompiledHeaderFile>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">src/precomp.hpp</PrecompiledHeaderFile>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">src/precomp.hpp</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">src/precomp.hpp</ForcedIncludeFiles>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Release|x64'">src/precomp.hpp</PrecompiledHeaderFile>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">src/precomp.hpp</PrecompiledHeaderFile>
+    </ClCompile>
+    <ClCompile Include="$(SolutionDir)contrib\text\src\text_detectorCNN.cpp">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">src/precomp.hpp</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">src/precomp.hpp</ForcedIncludeFiles>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">src/precomp.hpp</PrecompiledHeaderFile>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">src/precomp.hpp</PrecompiledHeaderFile>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">src/precomp.hpp</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">src/precomp.hpp</ForcedIncludeFiles>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Release|x64'">src/precomp.hpp</PrecompiledHeaderFile>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">src/precomp.hpp</PrecompiledHeaderFile>
+    </ClCompile>
+    <ClInclude Include="$(SolutionDir)contrib\text\src\precomp.hpp" />
+    <ClInclude Include="$(SolutionDir)cvconfig.h" />
+    <ClInclude Include="$(SolutionDir)opencv2\opencv_modules.hpp" />
+    <ClCompile Include="opencv_text_pch.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">src/precomp.hpp</PrecompiledHeaderFile>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">src/precomp.hpp</PrecompiledHeaderFile>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Release|x64'">src/precomp.hpp</PrecompiledHeaderFile>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">src/precomp.hpp</PrecompiledHeaderFile>
+    </ClCompile>
+    <ResourceCompile Include="vs_version.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\modules\core\opencv_core.vcxproj">
+      <Project>{d7300f2b-6873-3e59-8a75-e8352d6fee56}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\modules\dnn\opencv_dnn.vcxproj">
+      <Project>{92fa3061-64d2-3712-b91d-4cc5a0be1e1c}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\modules\features2d\opencv_features2d.vcxproj">
+      <Project>{9f7701d5-01e6-32fa-b99d-e02d150f1866}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\modules\flann\opencv_flann.vcxproj">
+      <Project>{8dd76577-f748-3522-a38c-6505fe6245cc}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\modules\highgui\opencv_highgui.vcxproj">
+      <Project>{cd65d4bc-525b-32f3-94f8-15e3149c92f8}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\modules\imgcodecs\opencv_imgcodecs.vcxproj">
+      <Project>{83fc629c-648d-341e-99f4-4e97e007add7}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\modules\imgproc\opencv_imgproc.vcxproj">
+      <Project>{11c1ce5d-fbba-3746-a9e3-0afb19dfea98}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\modules\ml\opencv_ml.vcxproj">
+      <Project>{9e4bf9ac-4f4a-311a-80f9-e9df55ec82f2}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\modules\videoio\opencv_videoio.vcxproj">
+      <Project>{06a3d594-5e18-3fc3-8ab1-3e7ee6efac15}</Project>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

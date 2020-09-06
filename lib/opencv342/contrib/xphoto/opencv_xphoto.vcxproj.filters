@@ -1,0 +1,116 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="src\bm3d_image_denoising.cpp">
+      <Filter>Src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\dct_image_denoising.cpp">
+      <Filter>Src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\grayworld_white_balance.cpp">
+      <Filter>Src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\inpainting.cpp">
+      <Filter>Src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\learning_based_color_balance.cpp">
+      <Filter>Src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\simple_color_balance.cpp">
+      <Filter>Src</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="include\opencv2\xphoto.hpp">
+      <Filter>Include\opencv2</Filter>
+    </ClInclude>
+    <ClInclude Include="include\opencv2\xphoto\bm3d_image_denoising.hpp">
+      <Filter>Include\opencv2\xphoto</Filter>
+    </ClInclude>
+    <ClInclude Include="include\opencv2\xphoto\dct_image_denoising.hpp">
+      <Filter>Include\opencv2\xphoto</Filter>
+    </ClInclude>
+    <ClInclude Include="include\opencv2\xphoto\inpainting.hpp">
+      <Filter>Include\opencv2\xphoto</Filter>
+    </ClInclude>
+    <ClInclude Include="include\opencv2\xphoto\white_balance.hpp">
+      <Filter>Include\opencv2\xphoto</Filter>
+    </ClInclude>
+    <ClInclude Include="src\advanced_types.hpp">
+      <Filter>Src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\annf.hpp">
+      <Filter>Src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\blending.hpp">
+      <Filter>Src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\bm3d_denoising_invoker_commons.hpp">
+      <Filter>Src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\bm3d_denoising_invoker_step1.hpp">
+      <Filter>Src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\bm3d_denoising_invoker_step2.hpp">
+      <Filter>Src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\bm3d_denoising_invoker_structs.hpp">
+      <Filter>Src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\bm3d_denoising_transforms.hpp">
+      <Filter>Src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\bm3d_denoising_transforms_1D.hpp">
+      <Filter>Src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\bm3d_denoising_transforms_2D.hpp">
+      <Filter>Src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\bm3d_denoising_transforms_haar.hpp">
+      <Filter>Src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\gcgraph.hpp">
+      <Filter>Src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\kaiser_window.hpp">
+      <Filter>Src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\learning_based_color_balance_model.hpp">
+      <Filter>Src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\norm2.hpp">
+      <Filter>Src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\photomontage.hpp">
+      <Filter>Src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\whs.hpp">
+      <Filter>Src</Filter>
+    </ClInclude>
+    <ClInclude Include="$(SolutionDir)cvconfig.h">
+      <Filter>Include</Filter>
+    </ClInclude>
+    <ClInclude Include="$(SolutionDir)opencv2\opencv_modules.hpp">
+      <Filter>Include</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="vs_version.rc">
+      <Filter>Src</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Include">
+      <UniqueIdentifier>{3DE57C33-6277-312B-8C55-AEF411DE727B}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Include\opencv2">
+      <UniqueIdentifier>{A07D22F4-3F50-3BDD-B3DC-53A5EF69F252}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Include\opencv2\xphoto">
+      <UniqueIdentifier>{E291DBD1-60E0-3BFA-896F-716EDD1C3FC8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Src">
+      <UniqueIdentifier>{DFE1FF5E-3360-3736-BAE5-E3D9B5C50606}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

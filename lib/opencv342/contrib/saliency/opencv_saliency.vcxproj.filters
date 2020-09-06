@@ -1,0 +1,98 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="$(SolutionDir)contrib\saliency\src\BING\CmFile.cpp">
+      <Filter>Src\BING</Filter>
+    </ClCompile>
+    <ClCompile Include="$(SolutionDir)contrib\saliency\src\BING\CmShow.cpp">
+      <Filter>Src\BING</Filter>
+    </ClCompile>
+    <ClCompile Include="$(SolutionDir)contrib\saliency\src\BING\FilterTIG.cpp">
+      <Filter>Src\BING</Filter>
+    </ClCompile>
+    <ClCompile Include="$(SolutionDir)contrib\saliency\src\BING\ValStructVec.cpp">
+      <Filter>Src\BING</Filter>
+    </ClCompile>
+    <ClCompile Include="$(SolutionDir)contrib\saliency\src\BING\objectnessBING.cpp">
+      <Filter>Src\BING</Filter>
+    </ClCompile>
+    <ClCompile Include="$(SolutionDir)contrib\saliency\src\motionSaliency.cpp">
+      <Filter>Src</Filter>
+    </ClCompile>
+    <ClCompile Include="$(SolutionDir)contrib\saliency\src\motionSaliencyBinWangApr2014.cpp">
+      <Filter>Src</Filter>
+    </ClCompile>
+    <ClCompile Include="$(SolutionDir)contrib\saliency\src\objectness.cpp">
+      <Filter>Src</Filter>
+    </ClCompile>
+    <ClCompile Include="$(SolutionDir)contrib\saliency\src\saliency.cpp">
+      <Filter>Src</Filter>
+    </ClCompile>
+    <ClCompile Include="$(SolutionDir)contrib\saliency\src\staticSaliency.cpp">
+      <Filter>Src</Filter>
+    </ClCompile>
+    <ClCompile Include="$(SolutionDir)contrib\saliency\src\staticSaliencyFineGrained.cpp">
+      <Filter>Src</Filter>
+    </ClCompile>
+    <ClCompile Include="$(SolutionDir)contrib\saliency\src\staticSaliencySpectralResidual.cpp">
+      <Filter>Src</Filter>
+    </ClCompile>
+    <ClCompile Include="opencv_saliency_pch.cpp">
+      <Filter>Src</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="$(SolutionDir)contrib\saliency\include\opencv2\saliency.hpp">
+      <Filter>Include\opencv2</Filter>
+    </ClInclude>
+    <ClInclude Include="$(SolutionDir)contrib\saliency\include\opencv2\saliency\saliencyBaseClasses.hpp">
+      <Filter>Include\opencv2\saliency</Filter>
+    </ClInclude>
+    <ClInclude Include="$(SolutionDir)contrib\saliency\include\opencv2\saliency\saliencySpecializedClasses.hpp">
+      <Filter>Include\opencv2\saliency</Filter>
+    </ClInclude>
+    <ClInclude Include="$(SolutionDir)contrib\saliency\src\BING\CmFile.hpp">
+      <Filter>Src\BING</Filter>
+    </ClInclude>
+    <ClInclude Include="$(SolutionDir)contrib\saliency\src\BING\CmShow.hpp">
+      <Filter>Src\BING</Filter>
+    </ClInclude>
+    <ClInclude Include="$(SolutionDir)contrib\saliency\src\BING\CmTimer.hpp">
+      <Filter>Src\BING</Filter>
+    </ClInclude>
+    <ClInclude Include="$(SolutionDir)contrib\saliency\src\BING\kyheader.hpp">
+      <Filter>Src\BING</Filter>
+    </ClInclude>
+    <ClInclude Include="$(SolutionDir)contrib\saliency\src\precomp.hpp">
+      <Filter>Src</Filter>
+    </ClInclude>
+    <ClInclude Include="$(SolutionDir)cvconfig.h">
+      <Filter>Include</Filter>
+    </ClInclude>
+    <ClInclude Include="$(SolutionDir)opencv2\opencv_modules.hpp">
+      <Filter>Include</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="vs_version.rc">
+      <Filter>Src</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Include">
+      <UniqueIdentifier>{3DE57C33-6277-312B-8C55-AEF411DE727B}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Include\opencv2">
+      <UniqueIdentifier>{A07D22F4-3F50-3BDD-B3DC-53A5EF69F252}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Include\opencv2\saliency">
+      <UniqueIdentifier>{7656EEA8-3C65-31A0-8549-867EE9FFACBD}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Src">
+      <UniqueIdentifier>{DFE1FF5E-3360-3736-BAE5-E3D9B5C50606}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Src\BING">
+      <UniqueIdentifier>{8CD938FC-D865-3131-9943-D3FCB50EC420}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

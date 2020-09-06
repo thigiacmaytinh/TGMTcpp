@@ -1,0 +1,92 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="src\hfs.cpp">
+      <Filter>Src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\hfs_core.cpp">
+      <Filter>Src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\magnitude\magnitude.cpp">
+      <Filter>Src\magnitude</Filter>
+    </ClCompile>
+    <ClCompile Include="src\merge\merge.cpp">
+      <Filter>Src\merge</Filter>
+    </ClCompile>
+    <ClCompile Include="src\slic\gslic_engine.cpp">
+      <Filter>Src\slic</Filter>
+    </ClCompile>
+    <ClCompile Include="src\slic\slic.cpp">
+      <Filter>Src\slic</Filter>
+    </ClCompile>
+    <ClCompile Include="opencv_hfs_pch.cpp">
+      <Filter>Src</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="include\opencv2\hfs.hpp">
+      <Filter>Include\opencv2</Filter>
+    </ClInclude>
+    <ClInclude Include="src\hfs_core.hpp">
+      <Filter>Src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\magnitude\magnitude.hpp">
+      <Filter>Src\magnitude</Filter>
+    </ClInclude>
+    <ClInclude Include="src\merge\merge.hpp">
+      <Filter>Src\merge</Filter>
+    </ClInclude>
+    <ClInclude Include="src\or_utils\or_image.hpp">
+      <Filter>Src\or_utils</Filter>
+    </ClInclude>
+    <ClInclude Include="src\or_utils\or_memory_block.hpp">
+      <Filter>Src\or_utils</Filter>
+    </ClInclude>
+    <ClInclude Include="src\or_utils\or_types.hpp">
+      <Filter>Src\or_utils</Filter>
+    </ClInclude>
+    <ClInclude Include="src\or_utils\or_vector.hpp">
+      <Filter>Src\or_utils</Filter>
+    </ClInclude>
+    <ClInclude Include="src\precomp.hpp">
+      <Filter>Src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\slic\slic.hpp">
+      <Filter>Src\slic</Filter>
+    </ClInclude>
+    <ClInclude Include="$(SolutionDir)cvconfig.h">
+      <Filter>Include</Filter>
+    </ClInclude>
+    <ClInclude Include="$(SolutionDir)opencv2\opencv_modules.hpp">
+      <Filter>Include</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="vs_version.rc">
+      <Filter>Src</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Include">
+      <UniqueIdentifier>{3DE57C33-6277-312B-8C55-AEF411DE727B}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Include\opencv2">
+      <UniqueIdentifier>{A07D22F4-3F50-3BDD-B3DC-53A5EF69F252}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Src">
+      <UniqueIdentifier>{DFE1FF5E-3360-3736-BAE5-E3D9B5C50606}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Src\magnitude">
+      <UniqueIdentifier>{F011E6E5-3E6C-3099-A8AF-C175C0D82F0F}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Src\merge">
+      <UniqueIdentifier>{B680503C-52EF-35F9-8C2B-88F8772C218C}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Src\or_utils">
+      <UniqueIdentifier>{B167985A-9275-3E12-8869-6475FC445A6B}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Src\slic">
+      <UniqueIdentifier>{05C914B6-CDDC-3147-8FE5-28794502EB45}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

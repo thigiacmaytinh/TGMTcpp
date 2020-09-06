@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="$(SolutionDir)contrib\stereo\src\descriptor.cpp">
+      <Filter>Src</Filter>
+    </ClCompile>
+    <ClCompile Include="$(SolutionDir)contrib\stereo\src\stereo_binary_bm.cpp">
+      <Filter>Src</Filter>
+    </ClCompile>
+    <ClCompile Include="$(SolutionDir)contrib\stereo\src\stereo_binary_sgbm.cpp">
+      <Filter>Src</Filter>
+    </ClCompile>
+    <ClCompile Include="opencv_stereo_pch.cpp">
+      <Filter>Src</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="$(SolutionDir)contrib\stereo\include\opencv2\stereo.hpp">
+      <Filter>Include\opencv2</Filter>
+    </ClInclude>
+    <ClInclude Include="$(SolutionDir)contrib\stereo\include\opencv2\stereo\descriptor.hpp">
+      <Filter>Include\opencv2\stereo</Filter>
+    </ClInclude>
+    <ClInclude Include="$(SolutionDir)contrib\stereo\include\opencv2\stereo\matching.hpp">
+      <Filter>Include\opencv2\stereo</Filter>
+    </ClInclude>
+    <ClInclude Include="$(SolutionDir)contrib\stereo\include\opencv2\stereo\stereo.hpp">
+      <Filter>Include\opencv2\stereo</Filter>
+    </ClInclude>
+    <ClInclude Include="$(SolutionDir)contrib\stereo\src\precomp.hpp">
+      <Filter>Src</Filter>
+    </ClInclude>
+    <ClInclude Include="$(SolutionDir)cvconfig.h">
+      <Filter>Include</Filter>
+    </ClInclude>
+    <ClInclude Include="$(SolutionDir)opencv2\opencv_modules.hpp">
+      <Filter>Include</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="vs_version.rc">
+      <Filter>Src</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Include">
+      <UniqueIdentifier>{3DE57C33-6277-312B-8C55-AEF411DE727B}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Include\opencv2">
+      <UniqueIdentifier>{A07D22F4-3F50-3BDD-B3DC-53A5EF69F252}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Include\opencv2\stereo">
+      <UniqueIdentifier>{E03B3F7D-B81D-3342-9396-9D9616A83008}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Src">
+      <UniqueIdentifier>{DFE1FF5E-3360-3736-BAE5-E3D9B5C50606}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>
