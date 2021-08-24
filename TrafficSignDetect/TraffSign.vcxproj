@@ -1,0 +1,141 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{4B803BD0-2F72-4418-8971-F85F9565A2FE}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>TGMTtemplate</RootNamespace>
+    <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
+    <ProjectName>TrafficSignDetect</ProjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="..\lib\opencv342\OpenCV342_Debug.props" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="..\lib\opencv342\OpenCV342_Release.props" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+    <OutDir>$(SolutionDir)bin\$(ProjectName)</OutDir>
+    <TargetName>$(ProjectName)d</TargetName>
+    <IntDir>obj\$(Configuration)\</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+    <OutDir>$(SolutionDir)bin\$(ProjectName)</OutDir>
+    <IntDir>obj\$(Configuration)\</IntDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <SDLCheck>true</SDLCheck>
+      <AdditionalIncludeDirectories>$(SolutionDir)lib\jsoncpp\include;$(SolutionDir)lib\opencv342\contrib\xfeatures2d\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>$(SolutionDir)lib\jsoncpp\project\vs2015\compiled_lib\Debug;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>opencv_videoio342d.lib;opencv_xfeatures2d342d.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <SDLCheck>true</SDLCheck>
+      <AdditionalIncludeDirectories>$(SolutionDir)lib\jsoncpp\include;$(SolutionDir)lib\opencv342\contrib\xfeatures2d\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalLibraryDirectories>$(SolutionDir)lib\jsoncpp\project\vs2015\compiled_lib\Release;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>opencv_videoio342.lib;opencv_xfeatures2d342.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="..\lib\TGMTcpp\src\stdafx.cpp" />
+    <ClCompile Include="..\lib\TGMTcpp\src\TGMTcolor.cpp" />
+    <ClCompile Include="..\lib\TGMTcpp\src\TGMTConfig.cpp" />
+    <ClCompile Include="..\lib\TGMTcpp\src\TGMTdebugger.cpp" />
+    <ClCompile Include="..\lib\TGMTcpp\src\TGMTdraw.cpp" />
+    <ClCompile Include="..\lib\TGMTcpp\src\TGMTfile.cpp" />
+    <ClCompile Include="..\lib\TGMTcpp\src\TGMTimage.cpp" />
+    <ClCompile Include="..\lib\TGMTcpp\src\TGMTshape.cpp" />
+    <ClCompile Include="..\lib\TGMTcpp\src\TGMTutil.cpp" />
+    <ClCompile Include="..\lib\TGMTcpp\src\TGMTvideo.cpp" />
+    <ClCompile Include="TraffSign.cpp" />
+    <ClCompile Include="WinMain.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\lib\TGMTcpp\src\stdafx.h" />
+    <ClInclude Include="..\lib\TGMTcpp\src\TGMTcolor.h" />
+    <ClInclude Include="..\lib\TGMTcpp\src\TGMTConfig.h" />
+    <ClInclude Include="..\lib\TGMTcpp\src\TGMTdebugger.h" />
+    <ClInclude Include="..\lib\TGMTcpp\src\TGMTdraw.h" />
+    <ClInclude Include="..\lib\TGMTcpp\src\TGMTfile.h" />
+    <ClInclude Include="..\lib\TGMTcpp\src\TGMTimage.h" />
+    <ClInclude Include="..\lib\TGMTcpp\src\TGMTshape.h" />
+    <ClInclude Include="..\lib\TGMTcpp\src\TGMTutil.h" />
+    <ClInclude Include="..\lib\TGMTcpp\src\TGMTvideo.h" />
+    <ClInclude Include="resource.h" />
+    <ClInclude Include="TraffSign.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\lib\opencv342\modules\core\opencv_core.vcxproj">
+      <Project>{10b8265c-d814-3269-9aef-6c50f1815909}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\lib\opencv342\modules\highgui\opencv_highgui.vcxproj">
+      <Project>{8e809e09-d93a-34a4-89dd-2a962dd66f4b}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\lib\opencv342\modules\imgcodecs\opencv_imgcodecs.vcxproj">
+      <Project>{6d369816-6500-3b97-9a71-2f456b881693}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\lib\opencv342\modules\imgproc\opencv_imgproc.vcxproj">
+      <Project>{b326aaa3-5b95-3ddc-9303-94fdad8439a6}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\lib\opencv342\modules\videoio\opencv_videoio.vcxproj">
+      <Project>{7e8dcdc6-dbb6-394e-b1c2-c1cbdc990655}</Project>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
