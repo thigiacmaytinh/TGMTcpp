@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="src\videoio_registry.cpp" />
+    <ClCompile Include="src\videoio_c.cpp" />
+    <ClCompile Include="src\cap.cpp" />
+    <ClCompile Include="src\cap_images.cpp" />
+    <ClCompile Include="src\cap_mjpeg_encoder.cpp" />
+    <ClCompile Include="src\cap_mjpeg_decoder.cpp" />
+    <ClCompile Include="src\backend_plugin.cpp" />
+    <ClCompile Include="src\backend_static.cpp" />
+    <ClCompile Include="src\container_avi.cpp" />
+    <ClCompile Include="src\cap_dshow.cpp" />
+    <ClCompile Include="src\cap_msmf.cpp" />
+    <ClCompile Include="opencv_videoio_pch.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="include\opencv2\videoio.hpp" />
+    <ClInclude Include="include\opencv2\videoio\cap_ios.h" />
+    <ClInclude Include="include\opencv2\videoio\container_avi.private.hpp" />
+    <ClInclude Include="include\opencv2\videoio\legacy\constants_c.h" />
+    <ClInclude Include="include\opencv2\videoio\registry.hpp" />
+    <ClInclude Include="include\opencv2\videoio\videoio.hpp" />
+    <ClInclude Include="include\opencv2\videoio\videoio_c.h" />
+    <ClInclude Include="src\precomp.hpp" />
+    <ClInclude Include="src\cap_dshow.hpp" />
+    <ClInclude Include="src\cap_msmf.hpp" />
+    <ClInclude Include="cvconfig.h" />
+    <ClInclude Include="opencv_modules.hpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="vs_version.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{4FFFFA6D-9010-393B-BA81-0B8D5A0B2548}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Include">
+      <UniqueIdentifier>{0F4E727C-A542-39DA-A5B7-B658528F0B6C}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{CE12B7EF-4DE0-3097-AE17-93B2DA197F27}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Src">
+      <UniqueIdentifier>{CD70F01E-A37A-31F4-9B99-9B18D6482D8A}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

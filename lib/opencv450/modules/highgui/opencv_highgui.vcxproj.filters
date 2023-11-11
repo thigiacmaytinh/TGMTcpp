@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="src\window.cpp" />
+    <ClCompile Include="src\roiSelector.cpp" />
+    <ClCompile Include="src\window_w32.cpp" />
+    <ClCompile Include="opencv_highgui_pch.cpp" />
+    <ClCompile Include="opencv_highgui_main.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="include\opencv2\highgui.hpp" />
+    <ClInclude Include="include\opencv2\highgui\highgui.hpp" />
+    <ClInclude Include="include\opencv2\highgui\highgui_c.h" />
+    <ClInclude Include="src\precomp.hpp" />
+    <ClInclude Include="cvconfig.h" />
+    <ClInclude Include="opencv_modules.hpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="vs_version.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Include">
+      <UniqueIdentifier>{0F4E727C-A542-39DA-A5B7-B658528F0B6C}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{CE12B7EF-4DE0-3097-AE17-93B2DA197F27}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Src">
+      <UniqueIdentifier>{CD70F01E-A37A-31F4-9B99-9B18D6482D8A}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

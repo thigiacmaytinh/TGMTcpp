@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="src\cuda_perf.cpp" />
+    <ClCompile Include="src\cuda_test.cpp" />
+    <ClCompile Include="src\ocl_perf.cpp" />
+    <ClCompile Include="src\ocl_test.cpp" />
+    <ClCompile Include="src\ts.cpp" />
+    <ClCompile Include="src\ts_arrtest.cpp" />
+    <ClCompile Include="src\ts_func.cpp" />
+    <ClCompile Include="src\ts_gtest.cpp" />
+    <ClCompile Include="src\ts_perf.cpp" />
+    <ClCompile Include="src\ts_tags.cpp" />
+    <ClCompile Include="opencv_ts_pch.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="include\opencv2\ts.hpp" />
+    <ClInclude Include="include\opencv2\ts\cuda_perf.hpp" />
+    <ClInclude Include="include\opencv2\ts\cuda_test.hpp" />
+    <ClInclude Include="include\opencv2\ts\ocl_perf.hpp" />
+    <ClInclude Include="include\opencv2\ts\ocl_test.hpp" />
+    <ClInclude Include="include\opencv2\ts\ts_ext.hpp" />
+    <ClInclude Include="include\opencv2\ts\ts_gtest.h" />
+    <ClInclude Include="include\opencv2\ts\ts_perf.hpp" />
+    <ClInclude Include="src\precomp.hpp" />
+    <ClInclude Include="src\ts_tags.hpp" />
+    <ClInclude Include="cvconfig.h" />
+    <ClInclude Include="opencv_modules.hpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Include">
+      <UniqueIdentifier>{0F4E727C-A542-39DA-A5B7-B658528F0B6C}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Include\opencv2">
+      <UniqueIdentifier>{8E98FA75-E5B5-3AD2-AC34-8A455A40CD7D}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Include\opencv2\ts">
+      <UniqueIdentifier>{6DDC3479-16C5-3E5E-B278-43A7D8B5E2D0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Src">
+      <UniqueIdentifier>{CD70F01E-A37A-31F4-9B99-9B18D6482D8A}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

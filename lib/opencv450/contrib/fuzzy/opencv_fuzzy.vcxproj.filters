@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="src\fuzzy_F0_math.cpp" />
+    <ClCompile Include="src\fuzzy_F1_math.cpp" />
+    <ClCompile Include="src\fuzzy_image.cpp" />
+    <ClCompile Include="opencv_fuzzy_pch.cpp" />
+    <ClCompile Include="opencv_fuzzy_main.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="include\opencv2\fuzzy.hpp" />
+    <ClInclude Include="include\opencv2\fuzzy\fuzzy_F0_math.hpp" />
+    <ClInclude Include="include\opencv2\fuzzy\fuzzy_F1_math.hpp" />
+    <ClInclude Include="include\opencv2\fuzzy\fuzzy_image.hpp" />
+    <ClInclude Include="include\opencv2\fuzzy\types.hpp" />
+    <ClInclude Include="src\precomp.hpp" />
+    <ClInclude Include="cvconfig.h" />
+    <ClInclude Include="opencv_modules.hpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="vs_version.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Include">
+      <UniqueIdentifier>{0F4E727C-A542-39DA-A5B7-B658528F0B6C}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Include\opencv2">
+      <UniqueIdentifier>{8E98FA75-E5B5-3AD2-AC34-8A455A40CD7D}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Include\opencv2\fuzzy">
+      <UniqueIdentifier>{E3860E90-5210-398C-A522-7D385C98D927}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{CE12B7EF-4DE0-3097-AE17-93B2DA197F27}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Src">
+      <UniqueIdentifier>{CD70F01E-A37A-31F4-9B99-9B18D6482D8A}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

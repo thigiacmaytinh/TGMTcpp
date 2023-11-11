@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="src\hfs.cpp" />
+    <ClCompile Include="src\hfs_core.cpp" />
+    <ClCompile Include="src\magnitude\magnitude.cpp" />
+    <ClCompile Include="src\merge\merge.cpp" />
+    <ClCompile Include="src\slic\gslic_engine.cpp" />
+    <ClCompile Include="src\slic\slic.cpp" />
+    <ClCompile Include="opencv_hfs_pch.cpp" />
+    <ClCompile Include="opencv_hfs_main.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="include\opencv2\hfs.hpp" />
+    <ClInclude Include="src\hfs_core.hpp" />
+    <ClInclude Include="src\magnitude\magnitude.hpp" />
+    <ClInclude Include="src\merge\merge.hpp" />
+    <ClInclude Include="src\or_utils\or_image.hpp" />
+    <ClInclude Include="src\or_utils\or_memory_block.hpp" />
+    <ClInclude Include="src\or_utils\or_types.hpp" />
+    <ClInclude Include="src\or_utils\or_vector.hpp" />
+    <ClInclude Include="src\precomp.hpp" />
+    <ClInclude Include="src\slic\slic.hpp" />
+    <ClInclude Include="cvconfig.h" />
+    <ClInclude Include="opencv_modules.hpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="vs_version.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Include">
+      <UniqueIdentifier>{0F4E727C-A542-39DA-A5B7-B658528F0B6C}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Include\opencv2">
+      <UniqueIdentifier>{8E98FA75-E5B5-3AD2-AC34-8A455A40CD7D}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{CE12B7EF-4DE0-3097-AE17-93B2DA197F27}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Src">
+      <UniqueIdentifier>{CD70F01E-A37A-31F4-9B99-9B18D6482D8A}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Src\magnitude">
+      <UniqueIdentifier>{F0E689D6-BF1D-3B23-BAEE-D4924A7B8D42}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Src\merge">
+      <UniqueIdentifier>{75626AD6-0E23-39F2-9EAF-43614DE52A70}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Src\or_utils">
+      <UniqueIdentifier>{668AC45E-7512-329D-BD9C-EFA3E487421E}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Src\slic">
+      <UniqueIdentifier>{444E9978-A010-3291-B878-4014B21B25F8}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

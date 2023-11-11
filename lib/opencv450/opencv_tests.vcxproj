@@ -1,0 +1,362 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <PreferredToolArchitecture>x64</PreferredToolArchitecture>
+  </PropertyGroup>
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{501FFD02-BB23-363D-9041-E3CFA74BA81E}</ProjectGuid>
+    <WindowsTargetPlatformVersion>10.0.18362.0</WindowsTargetPlatformVersion>
+    <Keyword>Win32Proj</Keyword>
+    <Platform>x64</Platform>
+    <ProjectName>opencv_tests</ProjectName>
+    <VCProjectUpgraderObjectName>NoUpgrade</VCProjectUpgraderObjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Midl>
+      <AdditionalIncludeDirectories>D:\LIB\opencv\opencv450\build\3rdparty\ippicv\ippicv_win\icv\include;D:\LIB\opencv\opencv450\build;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Midl>
+      <AdditionalIncludeDirectories>D:\LIB\opencv\opencv450\build\3rdparty\ippicv\ippicv_win\icv\include;D:\LIB\opencv\opencv450\build;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <CustomBuild Include="D:\LIB\opencv\opencv450\sources\CMakeLists.txt">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Building Custom Rule D:/LIB/opencv/opencv450/sources/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SD:/LIB/opencv/opencv450/sources -BD:/LIB/opencv/opencv450/build --check-stamp-file D:/LIB/opencv/opencv450/build/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:/LIB/opencv/opencv450/sources/CMakeLists.txt;C:\Program Files\CMake\share\cmake-3.14\Modules\CMakeCInformation.cmake;C:\Program Files\CMake\share\cmake-3.14\Modules\CMakeCXXInformation.cmake;C:\Program Files\CMake\share\cmake-3.14\Modules\CMakeCommonLanguageInclude.cmake;C:\Program Files\CMake\share\cmake-3.14\Modules\CMakeGenericSystem.cmake;C:\Program Files\CMake\share\cmake-3.14\Modules\CMakeInitializeConfigs.cmake;C:\Program Files\CMake\share\cmake-3.14\Modules\CMakeLanguageInformation.cmake;C:\Program Files\CMake\share\cmake-3.14\Modules\CMakeParseArguments.cmake;C:\Program Files\CMake\share\cmake-3.14\Modules\CMakePushCheckState.cmake;C:\Program Files\CMake\share\cmake-3.14\Modules\CMakeRCInformation.cmake;C:\Program Files\CMake\share\cmake-3.14\Modules\CMakeSystemSpecificInformation.cmake;C:\Program Files\CMake\share\cmake-3.14\Modules\CMakeSystemSpecificInitialize.cmake;C:\Program Files\CMake\share\cmake-3.14\Modules\CPack.cmake;C:\Program Files\CMake\share\cmake-3.14\Modules\CPackComponent.cmake;C:\Program Files\CMake\share\cmake-3.14\Modules\CheckFortranFunctionExists.cmake;C:\Program Files\CMake\share\cmake-3.14\Modules\CheckFunctionExists.cmake;C:\Program Files\CMake\share\cmake-3.14\Modules\CheckIncludeFile.cmake;C:\Program Files\CMake\share\cmake-3.14\Modules\CheckIncludeFileCXX.cmake;C:\Program Files\CMake\share\cmake-3.14\Modules\CheckLibraryExists.cmake;C:\Program Files\CMake\share\cmake-3.14\Modules\CheckSymbolExists.cmake;C:\Program Files\CMake\share\cmake-3.14\Modules\CheckTypeSize.cmake;C:\Program Files\CMake\share\cmake-3.14\Modules\Compiler\CMakeCommonCompilerMacros.cmake;C:\Program Files\CMake\share\cmake-3.14\Modules\Compiler\MSVC-C.cmake;C:\Program Files\CMake\share\cmake-3.14\Modules\Compiler\MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-3.14\Modules\FindBLAS.cmake;C:\Program Files\CMake\share\cmake-3.14\Modules\FindGit.cmake;C:\Program Files\CMake\share\cmake-3.14\Modules\FindLAPACK.cmake;C:\Program Files\CMake\share\cmake-3.14\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-3.14\Modules\FindPackageMessage.cmake;C:\Program Files\CMake\share\cmake-3.14\Modules\FindPythonInterp.cmake;C:\Program Files\CMake\share\cmake-3.14\Modules\FindThreads.cmake;C:\Program Files\CMake\share\cmake-3.14\Modules\Platform\Windows-MSVC-C.cmake;C:\Program Files\CMake\share\cmake-3.14\Modules\Platform\Windows-MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-3.14\Modules\Platform\Windows-MSVC.cmake;C:\Program Files\CMake\share\cmake-3.14\Modules\Platform\Windows.cmake;C:\Program Files\CMake\share\cmake-3.14\Modules\Platform\WindowsPaths.cmake;C:\Program Files\CMake\share\cmake-3.14\Modules\TestBigEndian.cmake;C:\Program Files\CMake\share\cmake-3.14\Templates\CPackConfig.cmake.in;D:\LIB\opencv\opencv450\build\CMakeFiles\3.14.2\CMakeCCompiler.cmake;D:\LIB\opencv\opencv450\build\CMakeFiles\3.14.2\CMakeCXXCompiler.cmake;D:\LIB\opencv\opencv450\build\CMakeFiles\3.14.2\CMakeRCCompiler.cmake;D:\LIB\opencv\opencv450\build\CMakeFiles\3.14.2\CMakeSystem.cmake;D:\LIB\opencv\opencv450\sources\3rdparty\ippicv\ippicv.cmake;D:\LIB\opencv\opencv450\sources\CMakeLists.txt;D:\LIB\opencv\opencv450\sources\cmake\OpenCVCRTLinkage.cmake;D:\LIB\opencv\opencv450\sources\cmake\OpenCVCompilerOptimizations.cmake;D:\LIB\opencv\opencv450\sources\cmake\OpenCVCompilerOptions.cmake;D:\LIB\opencv\opencv450\sources\cmake\OpenCVDetectCXXCompiler.cmake;D:\LIB\opencv\opencv450\sources\cmake\OpenCVDetectDirectX.cmake;D:\LIB\opencv\opencv450\sources\cmake\OpenCVDetectOpenCL.cmake;D:\LIB\opencv\opencv450\sources\cmake\OpenCVDetectPython.cmake;D:\LIB\opencv\opencv450\sources\cmake\OpenCVDetectTrace.cmake;D:\LIB\opencv\opencv450\sources\cmake\OpenCVDetectVTK.cmake;D:\LIB\opencv\opencv450\sources\cmake\OpenCVDownload.cmake;D:\LIB\opencv\opencv450\sources\cmake\OpenCVExtraTargets.cmake;D:\LIB\opencv\opencv450\sources\cmake\OpenCVFindFrameworks.cmake;D:\LIB\opencv\opencv450\sources\cmake\OpenCVFindIPP.cmake;D:\LIB\opencv\opencv450\sources\cmake\OpenCVFindIPPIW.cmake;D:\LIB\opencv\opencv450\sources\cmake\OpenCVFindLAPACK.cmake;D:\LIB\opencv\opencv450\sources\cmake\OpenCVFindLibsGUI.cmake;D:\LIB\opencv\opencv450\sources\cmake\OpenCVFindLibsGrfmt.cmake;D:\LIB\opencv\opencv450\sources\cmake\OpenCVFindLibsPerf.cmake;D:\LIB\opencv\opencv450\sources\cmake\OpenCVFindLibsVideo.cmake;D:\LIB\opencv\opencv450\sources\cmake\OpenCVFindMKL.cmake;D:\LIB\opencv\opencv450\sources\cmake\OpenCVFindOpenBLAS.cmake;D:\LIB\opencv\opencv450\sources\cmake\OpenCVFindOpenEXR.cmake;D:\LIB\opencv\opencv450\sources\cmake\OpenCVFindProtobuf.cmake;D:\LIB\opencv\opencv450\sources\cmake\OpenCVGenABI.cmake;D:\LIB\opencv\opencv450\sources\cmake\OpenCVGenAndroidMK.cmake;D:\LIB\opencv\opencv450\sources\cmake\OpenCVGenConfig.cmake;D:\LIB\opencv\opencv450\sources\cmake\OpenCVGenHeaders.cmake;D:\LIB\opencv\opencv450\sources\cmake\OpenCVGenSetupVars.cmake;D:\LIB\opencv\opencv450\sources\cmake\OpenCVInstallLayout.cmake;D:\LIB\opencv\opencv450\sources\cmake\OpenCVMinDepVersions.cmake;D:\LIB\opencv\opencv450\sources\cmake\OpenCVModule.cmake;D:\LIB\opencv\opencv450\sources\cmake\OpenCVPCHSupport.cmake;D:\LIB\opencv\opencv450\sources\cmake\OpenCVPackaging.cmake;D:\LIB\opencv\opencv450\sources\cmake\OpenCVUtils.cmake;D:\LIB\opencv\opencv450\sources\cmake\OpenCVVersion.cmake;D:\LIB\opencv\opencv450\sources\cmake\checks\directx.cpp;D:\LIB\opencv\opencv450\sources\cmake\checks\opencl.cpp;D:\LIB\opencv\opencv450\sources\cmake\checks\win32uitest.cpp;D:\LIB\opencv\opencv450\sources\cmake\platforms\OpenCV-Windows.cmake;D:\LIB\opencv\opencv450\sources\cmake\templates\OpenCVConfig-version.cmake.in;D:\LIB\opencv\opencv450\sources\cmake\templates\OpenCVConfig.cmake.in;D:\LIB\opencv\opencv450\sources\cmake\templates\OpenCVConfig.root-WIN32.cmake.in;D:\LIB\opencv\opencv450\sources\cmake\templates\cmake_uninstall.cmake.in;D:\LIB\opencv\opencv450\sources\cmake\templates\custom_hal.hpp.in;D:\LIB\opencv\opencv450\sources\cmake\templates\cv_cpu_config.h.in;D:\LIB\opencv\opencv450\sources\cmake\templates\cvconfig.h.in;D:\LIB\opencv\opencv450\sources\cmake\templates\opencv_modules.hpp.in;D:\LIB\opencv\opencv450\sources\cmake\templates\setup_vars_win32.cmd.in;D:\LIB\opencv\opencv450\sources\modules\core\include\opencv2\core\version.hpp;D:\LIB\opencv\opencv450\sources\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:\LIB\opencv\opencv450\build\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Building Custom Rule D:/LIB/opencv/opencv450/sources/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SD:/LIB/opencv/opencv450/sources -BD:/LIB/opencv/opencv450/build --check-stamp-file D:/LIB/opencv/opencv450/build/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">D:/LIB/opencv/opencv450/sources/CMakeLists.txt;C:\Program Files\CMake\share\cmake-3.14\Modules\CMakeCInformation.cmake;C:\Program Files\CMake\share\cmake-3.14\Modules\CMakeCXXInformation.cmake;C:\Program Files\CMake\share\cmake-3.14\Modules\CMakeCommonLanguageInclude.cmake;C:\Program Files\CMake\share\cmake-3.14\Modules\CMakeGenericSystem.cmake;C:\Program Files\CMake\share\cmake-3.14\Modules\CMakeInitializeConfigs.cmake;C:\Program Files\CMake\share\cmake-3.14\Modules\CMakeLanguageInformation.cmake;C:\Program Files\CMake\share\cmake-3.14\Modules\CMakeParseArguments.cmake;C:\Program Files\CMake\share\cmake-3.14\Modules\CMakePushCheckState.cmake;C:\Program Files\CMake\share\cmake-3.14\Modules\CMakeRCInformation.cmake;C:\Program Files\CMake\share\cmake-3.14\Modules\CMakeSystemSpecificInformation.cmake;C:\Program Files\CMake\share\cmake-3.14\Modules\CMakeSystemSpecificInitialize.cmake;C:\Program Files\CMake\share\cmake-3.14\Modules\CPack.cmake;C:\Program Files\CMake\share\cmake-3.14\Modules\CPackComponent.cmake;C:\Program Files\CMake\share\cmake-3.14\Modules\CheckFortranFunctionExists.cmake;C:\Program Files\CMake\share\cmake-3.14\Modules\CheckFunctionExists.cmake;C:\Program Files\CMake\share\cmake-3.14\Modules\CheckIncludeFile.cmake;C:\Program Files\CMake\share\cmake-3.14\Modules\CheckIncludeFileCXX.cmake;C:\Program Files\CMake\share\cmake-3.14\Modules\CheckLibraryExists.cmake;C:\Program Files\CMake\share\cmake-3.14\Modules\CheckSymbolExists.cmake;C:\Program Files\CMake\share\cmake-3.14\Modules\CheckTypeSize.cmake;C:\Program Files\CMake\share\cmake-3.14\Modules\Compiler\CMakeCommonCompilerMacros.cmake;C:\Program Files\CMake\share\cmake-3.14\Modules\Compiler\MSVC-C.cmake;C:\Program Files\CMake\share\cmake-3.14\Modules\Compiler\MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-3.14\Modules\FindBLAS.cmake;C:\Program Files\CMake\share\cmake-3.14\Modules\FindGit.cmake;C:\Program Files\CMake\share\cmake-3.14\Modules\FindLAPACK.cmake;C:\Program Files\CMake\share\cmake-3.14\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-3.14\Modules\FindPackageMessage.cmake;C:\Program Files\CMake\share\cmake-3.14\Modules\FindPythonInterp.cmake;C:\Program Files\CMake\share\cmake-3.14\Modules\FindThreads.cmake;C:\Program Files\CMake\share\cmake-3.14\Modules\Platform\Windows-MSVC-C.cmake;C:\Program Files\CMake\share\cmake-3.14\Modules\Platform\Windows-MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-3.14\Modules\Platform\Windows-MSVC.cmake;C:\Program Files\CMake\share\cmake-3.14\Modules\Platform\Windows.cmake;C:\Program Files\CMake\share\cmake-3.14\Modules\Platform\WindowsPaths.cmake;C:\Program Files\CMake\share\cmake-3.14\Modules\TestBigEndian.cmake;C:\Program Files\CMake\share\cmake-3.14\Templates\CPackConfig.cmake.in;D:\LIB\opencv\opencv450\build\CMakeFiles\3.14.2\CMakeCCompiler.cmake;D:\LIB\opencv\opencv450\build\CMakeFiles\3.14.2\CMakeCXXCompiler.cmake;D:\LIB\opencv\opencv450\build\CMakeFiles\3.14.2\CMakeRCCompiler.cmake;D:\LIB\opencv\opencv450\build\CMakeFiles\3.14.2\CMakeSystem.cmake;D:\LIB\opencv\opencv450\sources\3rdparty\ippicv\ippicv.cmake;D:\LIB\opencv\opencv450\sources\CMakeLists.txt;D:\LIB\opencv\opencv450\sources\cmake\OpenCVCRTLinkage.cmake;D:\LIB\opencv\opencv450\sources\cmake\OpenCVCompilerOptimizations.cmake;D:\LIB\opencv\opencv450\sources\cmake\OpenCVCompilerOptions.cmake;D:\LIB\opencv\opencv450\sources\cmake\OpenCVDetectCXXCompiler.cmake;D:\LIB\opencv\opencv450\sources\cmake\OpenCVDetectDirectX.cmake;D:\LIB\opencv\opencv450\sources\cmake\OpenCVDetectOpenCL.cmake;D:\LIB\opencv\opencv450\sources\cmake\OpenCVDetectPython.cmake;D:\LIB\opencv\opencv450\sources\cmake\OpenCVDetectTrace.cmake;D:\LIB\opencv\opencv450\sources\cmake\OpenCVDetectVTK.cmake;D:\LIB\opencv\opencv450\sources\cmake\OpenCVDownload.cmake;D:\LIB\opencv\opencv450\sources\cmake\OpenCVExtraTargets.cmake;D:\LIB\opencv\opencv450\sources\cmake\OpenCVFindFrameworks.cmake;D:\LIB\opencv\opencv450\sources\cmake\OpenCVFindIPP.cmake;D:\LIB\opencv\opencv450\sources\cmake\OpenCVFindIPPIW.cmake;D:\LIB\opencv\opencv450\sources\cmake\OpenCVFindLAPACK.cmake;D:\LIB\opencv\opencv450\sources\cmake\OpenCVFindLibsGUI.cmake;D:\LIB\opencv\opencv450\sources\cmake\OpenCVFindLibsGrfmt.cmake;D:\LIB\opencv\opencv450\sources\cmake\OpenCVFindLibsPerf.cmake;D:\LIB\opencv\opencv450\sources\cmake\OpenCVFindLibsVideo.cmake;D:\LIB\opencv\opencv450\sources\cmake\OpenCVFindMKL.cmake;D:\LIB\opencv\opencv450\sources\cmake\OpenCVFindOpenBLAS.cmake;D:\LIB\opencv\opencv450\sources\cmake\OpenCVFindOpenEXR.cmake;D:\LIB\opencv\opencv450\sources\cmake\OpenCVFindProtobuf.cmake;D:\LIB\opencv\opencv450\sources\cmake\OpenCVGenABI.cmake;D:\LIB\opencv\opencv450\sources\cmake\OpenCVGenAndroidMK.cmake;D:\LIB\opencv\opencv450\sources\cmake\OpenCVGenConfig.cmake;D:\LIB\opencv\opencv450\sources\cmake\OpenCVGenHeaders.cmake;D:\LIB\opencv\opencv450\sources\cmake\OpenCVGenSetupVars.cmake;D:\LIB\opencv\opencv450\sources\cmake\OpenCVInstallLayout.cmake;D:\LIB\opencv\opencv450\sources\cmake\OpenCVMinDepVersions.cmake;D:\LIB\opencv\opencv450\sources\cmake\OpenCVModule.cmake;D:\LIB\opencv\opencv450\sources\cmake\OpenCVPCHSupport.cmake;D:\LIB\opencv\opencv450\sources\cmake\OpenCVPackaging.cmake;D:\LIB\opencv\opencv450\sources\cmake\OpenCVUtils.cmake;D:\LIB\opencv\opencv450\sources\cmake\OpenCVVersion.cmake;D:\LIB\opencv\opencv450\sources\cmake\checks\directx.cpp;D:\LIB\opencv\opencv450\sources\cmake\checks\opencl.cpp;D:\LIB\opencv\opencv450\sources\cmake\checks\win32uitest.cpp;D:\LIB\opencv\opencv450\sources\cmake\platforms\OpenCV-Windows.cmake;D:\LIB\opencv\opencv450\sources\cmake\templates\OpenCVConfig-version.cmake.in;D:\LIB\opencv\opencv450\sources\cmake\templates\OpenCVConfig.cmake.in;D:\LIB\opencv\opencv450\sources\cmake\templates\OpenCVConfig.root-WIN32.cmake.in;D:\LIB\opencv\opencv450\sources\cmake\templates\cmake_uninstall.cmake.in;D:\LIB\opencv\opencv450\sources\cmake\templates\custom_hal.hpp.in;D:\LIB\opencv\opencv450\sources\cmake\templates\cv_cpu_config.h.in;D:\LIB\opencv\opencv450\sources\cmake\templates\cvconfig.h.in;D:\LIB\opencv\opencv450\sources\cmake\templates\opencv_modules.hpp.in;D:\LIB\opencv\opencv450\sources\cmake\templates\setup_vars_win32.cmd.in;D:\LIB\opencv\opencv450\sources\modules\core\include\opencv2\core\version.hpp;D:\LIB\opencv\opencv450\sources\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">D:\LIB\opencv\opencv450\build\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="D:\LIB\opencv\opencv450\build\ZERO_CHECK.vcxproj">
+      <Project>{19254E1A-0B62-37BB-9EDC-AAF2CE8801AD}</Project>
+      <Name>ZERO_CHECK</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="D:\LIB\opencv\opencv450\build\modules\aruco\opencv_test_aruco.vcxproj">
+      <Project>{F4EC33A6-6186-3845-A337-3749D54C2D3C}</Project>
+      <Name>opencv_test_aruco</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="D:\LIB\opencv\opencv450\build\modules\bgsegm\opencv_test_bgsegm.vcxproj">
+      <Project>{EC7C5ED7-23A3-3861-9A88-65F6090465C3}</Project>
+      <Name>opencv_test_bgsegm</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="D:\LIB\opencv\opencv450\build\modules\bioinspired\opencv_test_bioinspired.vcxproj">
+      <Project>{2C3CE744-6650-36C2-A23D-7178EB956AE0}</Project>
+      <Name>opencv_test_bioinspired</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="D:\LIB\opencv\opencv450\build\modules\calib3d\opencv_test_calib3d.vcxproj">
+      <Project>{381DE5E7-3DFE-3F05-8480-9777D8796409}</Project>
+      <Name>opencv_test_calib3d</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="D:\LIB\opencv\opencv450\build\modules\core\opencv_test_core.vcxproj">
+      <Project>{7C94F81E-DBED-38F4-910B-52858B8226DC}</Project>
+      <Name>opencv_test_core</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="D:\LIB\opencv\opencv450\build\modules\dnn\opencv_test_dnn.vcxproj">
+      <Project>{B6B0D30C-B685-3F76-925D-E2F7F3486B79}</Project>
+      <Name>opencv_test_dnn</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="D:\LIB\opencv\opencv450\build\modules\dnn_superres\opencv_test_dnn_superres.vcxproj">
+      <Project>{BF4AF808-B514-3DE2-8923-CAD838310C47}</Project>
+      <Name>opencv_test_dnn_superres</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="D:\LIB\opencv\opencv450\build\modules\face\opencv_test_face.vcxproj">
+      <Project>{478EE498-62E0-3173-863C-C41F31F86031}</Project>
+      <Name>opencv_test_face</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="D:\LIB\opencv\opencv450\build\modules\features2d\opencv_test_features2d.vcxproj">
+      <Project>{5A028CB0-7A78-3159-8F99-D4E6F049D150}</Project>
+      <Name>opencv_test_features2d</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="D:\LIB\opencv\opencv450\build\modules\flann\opencv_test_flann.vcxproj">
+      <Project>{9AA8C231-2ED4-3EB7-8ACA-DE7B35426D8B}</Project>
+      <Name>opencv_test_flann</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="D:\LIB\opencv\opencv450\build\modules\fuzzy\opencv_test_fuzzy.vcxproj">
+      <Project>{B73C3CA5-D6CF-31B9-9979-C3B1B0810DDD}</Project>
+      <Name>opencv_test_fuzzy</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="D:\LIB\opencv\opencv450\build\modules\gapi\opencv_test_gapi.vcxproj">
+      <Project>{A8AC2295-7DC4-3D19-826B-BC1BAE313D53}</Project>
+      <Name>opencv_test_gapi</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="D:\LIB\opencv\opencv450\build\modules\highgui\opencv_test_highgui.vcxproj">
+      <Project>{068E76FB-AB8C-3F94-870C-CA82DDD1AA2C}</Project>
+      <Name>opencv_test_highgui</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="D:\LIB\opencv\opencv450\build\modules\img_hash\opencv_test_img_hash.vcxproj">
+      <Project>{1E7938D2-BC11-38B4-9535-104E2F8A1E95}</Project>
+      <Name>opencv_test_img_hash</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="D:\LIB\opencv\opencv450\build\modules\imgcodecs\opencv_test_imgcodecs.vcxproj">
+      <Project>{1EF1F86A-D221-3D0F-B62E-0AD3C475A245}</Project>
+      <Name>opencv_test_imgcodecs</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="D:\LIB\opencv\opencv450\build\modules\imgproc\opencv_test_imgproc.vcxproj">
+      <Project>{AE5AEA3C-2018-3979-A3EE-AD6292259F43}</Project>
+      <Name>opencv_test_imgproc</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="D:\LIB\opencv\opencv450\build\modules\intensity_transform\opencv_test_intensity_transform.vcxproj">
+      <Project>{F46204D7-F0C4-3EE8-BA89-AD43BAA25F71}</Project>
+      <Name>opencv_test_intensity_transform</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="D:\LIB\opencv\opencv450\build\modules\line_descriptor\opencv_test_line_descriptor.vcxproj">
+      <Project>{6AEFEDB3-30A2-358E-A070-AC4F59BF5B2D}</Project>
+      <Name>opencv_test_line_descriptor</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="D:\LIB\opencv\opencv450\build\modules\mcc\opencv_test_mcc.vcxproj">
+      <Project>{D7BEB956-6688-3E35-BABB-7B478C90EFC4}</Project>
+      <Name>opencv_test_mcc</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="D:\LIB\opencv\opencv450\build\modules\ml\opencv_test_ml.vcxproj">
+      <Project>{71E72D34-9433-3408-B362-AF70A51FB36F}</Project>
+      <Name>opencv_test_ml</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="D:\LIB\opencv\opencv450\build\modules\objdetect\opencv_test_objdetect.vcxproj">
+      <Project>{739548A5-E105-3D76-AA59-1D003752BCAD}</Project>
+      <Name>opencv_test_objdetect</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="D:\LIB\opencv\opencv450\build\modules\optflow\opencv_test_optflow.vcxproj">
+      <Project>{DC6BFBC5-FF4B-3EAE-9909-402D02C2B79E}</Project>
+      <Name>opencv_test_optflow</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="D:\LIB\opencv\opencv450\build\modules\phase_unwrapping\opencv_test_phase_unwrapping.vcxproj">
+      <Project>{0B97F041-7490-3C60-BAA0-CCB4E98D0B66}</Project>
+      <Name>opencv_test_phase_unwrapping</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="D:\LIB\opencv\opencv450\build\modules\photo\opencv_test_photo.vcxproj">
+      <Project>{AD1D65AF-ABCC-3BBC-B0AA-4248D4519D2A}</Project>
+      <Name>opencv_test_photo</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="D:\LIB\opencv\opencv450\build\modules\quality\opencv_test_quality.vcxproj">
+      <Project>{4D49673B-9E5D-34CE-9574-2BCA724F6E03}</Project>
+      <Name>opencv_test_quality</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="D:\LIB\opencv\opencv450\build\modules\rapid\opencv_test_rapid.vcxproj">
+      <Project>{D4F2E121-6EEE-31D8-9AFF-1EC0C73345F0}</Project>
+      <Name>opencv_test_rapid</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="D:\LIB\opencv\opencv450\build\modules\reg\opencv_test_reg.vcxproj">
+      <Project>{B344D54E-4B57-3CF4-BEB4-F78913D4CDDA}</Project>
+      <Name>opencv_test_reg</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="D:\LIB\opencv\opencv450\build\modules\rgbd\opencv_test_rgbd.vcxproj">
+      <Project>{136744FE-2768-3F05-AA89-320E8EE619E2}</Project>
+      <Name>opencv_test_rgbd</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="D:\LIB\opencv\opencv450\build\modules\saliency\opencv_test_saliency.vcxproj">
+      <Project>{EA07D715-D10C-37DB-94F6-8B10A349B2B6}</Project>
+      <Name>opencv_test_saliency</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="D:\LIB\opencv\opencv450\build\modules\shape\opencv_test_shape.vcxproj">
+      <Project>{844C736F-BE9F-36EF-A5A4-D7B77DD0D157}</Project>
+      <Name>opencv_test_shape</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="D:\LIB\opencv\opencv450\build\modules\stereo\opencv_test_stereo.vcxproj">
+      <Project>{E9343B97-E89B-3DF4-AD3A-B883ADA9D219}</Project>
+      <Name>opencv_test_stereo</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="D:\LIB\opencv\opencv450\build\modules\stitching\opencv_test_stitching.vcxproj">
+      <Project>{D0DB26A0-9D35-34B5-93EC-36A562A52F60}</Project>
+      <Name>opencv_test_stitching</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="D:\LIB\opencv\opencv450\build\modules\structured_light\opencv_test_structured_light.vcxproj">
+      <Project>{719FE949-953C-36EC-922A-2E969078233D}</Project>
+      <Name>opencv_test_structured_light</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="D:\LIB\opencv\opencv450\build\modules\superres\opencv_test_superres.vcxproj">
+      <Project>{6A1C9F07-CC91-3E3B-8CFB-C9A956FB0C9F}</Project>
+      <Name>opencv_test_superres</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="D:\LIB\opencv\opencv450\build\modules\text\opencv_test_text.vcxproj">
+      <Project>{6B6BF89D-A4D1-3626-B6E3-0C968FFC6E42}</Project>
+      <Name>opencv_test_text</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="D:\LIB\opencv\opencv450\build\modules\tracking\opencv_test_tracking.vcxproj">
+      <Project>{95684E4E-820C-3068-96E9-8F32AE985F12}</Project>
+      <Name>opencv_test_tracking</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="D:\LIB\opencv\opencv450\build\modules\video\opencv_test_video.vcxproj">
+      <Project>{8B9C372E-7708-3345-97A6-B206CAD1FAC8}</Project>
+      <Name>opencv_test_video</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="D:\LIB\opencv\opencv450\build\modules\videoio\opencv_test_videoio.vcxproj">
+      <Project>{2CE396B5-98B3-3EF4-92F9-6670C13B7A00}</Project>
+      <Name>opencv_test_videoio</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="D:\LIB\opencv\opencv450\build\modules\videostab\opencv_test_videostab.vcxproj">
+      <Project>{AAD9F426-43F7-3042-9973-4ED4A3F519DA}</Project>
+      <Name>opencv_test_videostab</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="D:\LIB\opencv\opencv450\build\modules\xfeatures2d\opencv_test_xfeatures2d.vcxproj">
+      <Project>{A20C9088-ACCB-349A-B1AE-21E72BA218A0}</Project>
+      <Name>opencv_test_xfeatures2d</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="D:\LIB\opencv\opencv450\build\modules\ximgproc\opencv_test_ximgproc.vcxproj">
+      <Project>{92F6DE1E-6628-3630-8E50-293A1B2DAE72}</Project>
+      <Name>opencv_test_ximgproc</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="D:\LIB\opencv\opencv450\build\modules\xphoto\opencv_test_xphoto.vcxproj">
+      <Project>{A9E510DB-FDB6-313E-A4BA-1DF70CA086BC}</Project>
+      <Name>opencv_test_xphoto</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

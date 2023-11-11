@@ -1,0 +1,29 @@
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.6.33815.320
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3rdparty", "3rdparty", "{F73AC2E0-3B59-3B7D-8E91-5FF876EAD60C}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "libprotobuf", "libprotobuf.vcxproj", "{799B87EB-36B1-323F-A7C7-0397F9511D43}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x64 = Debug|x64
+		Release|x64 = Release|x64
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{799B87EB-36B1-323F-A7C7-0397F9511D43}.Debug|x64.ActiveCfg = Debug|x64
+		{799B87EB-36B1-323F-A7C7-0397F9511D43}.Debug|x64.Build.0 = Debug|x64
+		{799B87EB-36B1-323F-A7C7-0397F9511D43}.Release|x64.ActiveCfg = Release|x64
+		{799B87EB-36B1-323F-A7C7-0397F9511D43}.Release|x64.Build.0 = Release|x64
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{799B87EB-36B1-323F-A7C7-0397F9511D43} = {F73AC2E0-3B59-3B7D-8E91-5FF876EAD60C}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {C5B4B549-5BF6-38C1-898B-BD092AF12F35}
+	EndGlobalSection
+EndGlobal

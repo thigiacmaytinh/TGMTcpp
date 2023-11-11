@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="src\BING\CmFile.cpp" />
+    <ClCompile Include="src\BING\CmShow.cpp" />
+    <ClCompile Include="src\BING\FilterTIG.cpp" />
+    <ClCompile Include="src\BING\ValStructVec.cpp" />
+    <ClCompile Include="src\BING\objectnessBING.cpp" />
+    <ClCompile Include="src\motionSaliency.cpp" />
+    <ClCompile Include="src\motionSaliencyBinWangApr2014.cpp" />
+    <ClCompile Include="src\objectness.cpp" />
+    <ClCompile Include="src\saliency.cpp" />
+    <ClCompile Include="src\staticSaliency.cpp" />
+    <ClCompile Include="src\staticSaliencyFineGrained.cpp" />
+    <ClCompile Include="src\staticSaliencySpectralResidual.cpp" />
+    <ClCompile Include="opencv_saliency_pch.cpp" />
+    <ClCompile Include="opencv_saliency_main.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="include\opencv2\saliency.hpp" />
+    <ClInclude Include="include\opencv2\saliency\saliencyBaseClasses.hpp" />
+    <ClInclude Include="include\opencv2\saliency\saliencySpecializedClasses.hpp" />
+    <ClInclude Include="src\BING\CmFile.hpp" />
+    <ClInclude Include="src\BING\CmShow.hpp" />
+    <ClInclude Include="src\BING\CmTimer.hpp" />
+    <ClInclude Include="src\BING\kyheader.hpp" />
+    <ClInclude Include="src\precomp.hpp" />
+    <ClInclude Include="cvconfig.h" />
+    <ClInclude Include="opencv_modules.hpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="vs_version.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Include">
+      <UniqueIdentifier>{0F4E727C-A542-39DA-A5B7-B658528F0B6C}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Include\opencv2">
+      <UniqueIdentifier>{8E98FA75-E5B5-3AD2-AC34-8A455A40CD7D}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Include\opencv2\saliency">
+      <UniqueIdentifier>{CA72CC04-B9A0-3B1D-A0BE-1FB1BAC5E6EC}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{CE12B7EF-4DE0-3097-AE17-93B2DA197F27}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Src">
+      <UniqueIdentifier>{CD70F01E-A37A-31F4-9B99-9B18D6482D8A}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Src\BING">
+      <UniqueIdentifier>{368B3945-E486-3504-B71B-91605EF08EE0}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

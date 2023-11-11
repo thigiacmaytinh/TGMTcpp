@@ -1,0 +1,511 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{DA189172-5FE9-3F2F-BA0D-C85F6B05940E}</ProjectGuid>
+    <WindowsTargetPlatformVersion>10.0.17763.0</WindowsTargetPlatformVersion>
+    <Keyword>Win32Proj</Keyword>
+    <Platform>x64</Platform>
+    <ProjectName>ALL_BUILD</ProjectName>
+    <VCProjectUpgraderObjectName>NoUpgrade</VCProjectUpgraderObjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Midl>
+      <AdditionalIncludeDirectories>D:\LIB\opencv\opencv450\build\3rdparty\ippicv\ippicv_win\icv\include;D:\LIB\opencv\opencv450\build\3rdparty\ippicv\ippicv_win\iw\include;D:\LIB\opencv\opencv450\build;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Midl>
+      <AdditionalIncludeDirectories>D:\LIB\opencv\opencv450\build\3rdparty\ippicv\ippicv_win\icv\include;D:\LIB\opencv\opencv450\build\3rdparty\ippicv\ippicv_win\iw\include;D:\LIB\opencv\opencv450\build;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="D:\LIB\opencv\opencv450\build\modules\ade.vcxproj">
+      <Project>{49260A06-1464-35A3-88AD-880C44C0F36A}</Project>
+      <Name>ade</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\LIB\opencv\opencv450\build\3rdparty\ippiw\ippiw.vcxproj">
+      <Project>{ECEA50E7-4EFC-346A-9D42-4ED01CA96DA0}</Project>
+      <Name>ippiw</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\LIB\opencv\opencv450\build\3rdparty\ittnotify\ittnotify.vcxproj">
+      <Project>{49744A82-746F-32AF-89B4-0F1928B6DD43}</Project>
+      <Name>ittnotify</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\LIB\opencv\opencv450\build\3rdparty\libjpeg-turbo\libjpeg-turbo.vcxproj">
+      <Project>{47342378-2353-3676-B3C4-08FAA8A166AD}</Project>
+      <Name>libjpeg-turbo</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\LIB\opencv\opencv450\build\3rdparty\openjpeg\openjp2\libopenjp2.vcxproj">
+      <Project>{2DDB8E6F-D6EE-3C12-A7E0-DBF3AB4F7CBA}</Project>
+      <Name>libopenjp2</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\LIB\opencv\opencv450\build\3rdparty\libpng\libpng.vcxproj">
+      <Project>{D8B0CAC0-8501-39BD-8731-3DE10779E5B9}</Project>
+      <Name>libpng</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\LIB\opencv\opencv450\build\3rdparty\protobuf\libprotobuf.vcxproj">
+      <Project>{799B87EB-36B1-323F-A7C7-0397F9511D43}</Project>
+      <Name>libprotobuf</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\LIB\opencv\opencv450\build\3rdparty\libtiff\libtiff.vcxproj">
+      <Project>{7D1DBA4B-2AB5-3B2B-956D-BF17D4DFB1BE}</Project>
+      <Name>libtiff</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\LIB\opencv\opencv450\build\3rdparty\libwebp\libwebp.vcxproj">
+      <Project>{90082C75-5419-314D-B8C4-D9090F9293FA}</Project>
+      <Name>libwebp</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\LIB\opencv\opencv450\build\apps\annotation\opencv_annotation.vcxproj">
+      <Project>{8F45A9B7-D8DE-369A-943F-69A3415768F7}</Project>
+      <Name>opencv_annotation</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\LIB\opencv\opencv450\build\modules\aruco\opencv_aruco.vcxproj">
+      <Project>{BE012749-951B-37E7-BDD0-CD599D5F93C5}</Project>
+      <Name>opencv_aruco</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\LIB\opencv\opencv450\build\modules\bgsegm\opencv_bgsegm.vcxproj">
+      <Project>{D4947004-156E-3817-9062-B53D4CD172E3}</Project>
+      <Name>opencv_bgsegm</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\LIB\opencv\opencv450\build\modules\bioinspired\opencv_bioinspired.vcxproj">
+      <Project>{DE6CB7B2-66D8-33AC-888C-F217058E1BA8}</Project>
+      <Name>opencv_bioinspired</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\LIB\opencv\opencv450\build\modules\calib3d\opencv_calib3d.vcxproj">
+      <Project>{5C9ECDC3-1FD9-39D9-846B-C8FEE3DDB7CD}</Project>
+      <Name>opencv_calib3d</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\LIB\opencv\opencv450\build\modules\calib3d\opencv_calib3d_AVX2.vcxproj">
+      <Project>{CF033D5C-786C-35CB-8E6A-3C9778A37B96}</Project>
+      <Name>opencv_calib3d_AVX2</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="D:\LIB\opencv\opencv450\build\modules\ccalib\opencv_ccalib.vcxproj">
+      <Project>{1BA49390-E53F-3A1C-9D3B-A36C6E41C629}</Project>
+      <Name>opencv_ccalib</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\LIB\opencv\opencv450\build\modules\core\opencv_core.vcxproj">
+      <Project>{26820A44-4B84-3AD3-A82C-3BB5CC597915}</Project>
+      <Name>opencv_core</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\LIB\opencv\opencv450\build\modules\core\opencv_core_AVX.vcxproj">
+      <Project>{F45BD04F-9ACB-3C3B-9A94-72E72D1B6A0F}</Project>
+      <Name>opencv_core_AVX</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="D:\LIB\opencv\opencv450\build\modules\core\opencv_core_AVX2.vcxproj">
+      <Project>{042B7623-3FA4-35BC-BEF1-786CD13E3549}</Project>
+      <Name>opencv_core_AVX2</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="D:\LIB\opencv\opencv450\build\modules\core\opencv_core_AVX512_SKX.vcxproj">
+      <Project>{3F031C98-536B-34B3-ACE1-BB45E07C5DDD}</Project>
+      <Name>opencv_core_AVX512_SKX</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="D:\LIB\opencv\opencv450\build\modules\core\opencv_core_SSE4_1.vcxproj">
+      <Project>{3C72CEBA-1193-3392-9CD9-6CBF82B258FA}</Project>
+      <Name>opencv_core_SSE4_1</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="D:\LIB\opencv\opencv450\build\modules\core\opencv_core_SSE4_2.vcxproj">
+      <Project>{FF9CB596-7AEA-34EC-918A-DA42BDD7E8B6}</Project>
+      <Name>opencv_core_SSE4_2</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="D:\LIB\opencv\opencv450\build\modules\cudaarithm\opencv_cudaarithm.vcxproj">
+      <Project>{F3A13A99-A132-3750-9B4D-394C608EE5C3}</Project>
+      <Name>opencv_cudaarithm</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\LIB\opencv\opencv450\build\modules\cudabgsegm\opencv_cudabgsegm.vcxproj">
+      <Project>{2287396A-A7F9-3438-8076-56324B58F75B}</Project>
+      <Name>opencv_cudabgsegm</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\LIB\opencv\opencv450\build\modules\cudacodec\opencv_cudacodec.vcxproj">
+      <Project>{9D610F16-271B-3B8A-AE83-1083CEEB2E2E}</Project>
+      <Name>opencv_cudacodec</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\LIB\opencv\opencv450\build\modules\cudafeatures2d\opencv_cudafeatures2d.vcxproj">
+      <Project>{8AD37C25-3127-300C-AF20-ACC5DA1B5101}</Project>
+      <Name>opencv_cudafeatures2d</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\LIB\opencv\opencv450\build\modules\cudafilters\opencv_cudafilters.vcxproj">
+      <Project>{DA01F59E-9825-3B65-9DCE-7C7650F600F8}</Project>
+      <Name>opencv_cudafilters</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\LIB\opencv\opencv450\build\modules\cudaimgproc\opencv_cudaimgproc.vcxproj">
+      <Project>{A68943B5-7701-3D98-B492-7EB463BE22D9}</Project>
+      <Name>opencv_cudaimgproc</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\LIB\opencv\opencv450\build\modules\cudalegacy\opencv_cudalegacy.vcxproj">
+      <Project>{C9DDF39A-3610-348A-AE15-EAEAE6CEC418}</Project>
+      <Name>opencv_cudalegacy</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\LIB\opencv\opencv450\build\modules\cudaobjdetect\opencv_cudaobjdetect.vcxproj">
+      <Project>{77C4EBC3-8839-3769-8D3D-3D992582E223}</Project>
+      <Name>opencv_cudaobjdetect</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\LIB\opencv\opencv450\build\modules\cudaoptflow\opencv_cudaoptflow.vcxproj">
+      <Project>{0DDB8D85-BF1D-34B1-9D9C-C6BE1015627C}</Project>
+      <Name>opencv_cudaoptflow</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\LIB\opencv\opencv450\build\modules\cudastereo\opencv_cudastereo.vcxproj">
+      <Project>{58AEDA16-1D0C-3919-80B9-1CC10D82CAC5}</Project>
+      <Name>opencv_cudastereo</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\LIB\opencv\opencv450\build\modules\cudawarping\opencv_cudawarping.vcxproj">
+      <Project>{33DEA5B3-D5F0-3120-932E-D43A05E37D02}</Project>
+      <Name>opencv_cudawarping</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\LIB\opencv\opencv450\build\modules\cudev\opencv_cudev.vcxproj">
+      <Project>{C8BD5CF9-F46D-3593-8000-AF87086BDCED}</Project>
+      <Name>opencv_cudev</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\LIB\opencv\opencv450\build\modules\datasets\opencv_datasets.vcxproj">
+      <Project>{09FEF1CD-E6DE-347F-B5CB-0475A3D441A8}</Project>
+      <Name>opencv_datasets</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\LIB\opencv\opencv450\build\modules\dnn\opencv_dnn.vcxproj">
+      <Project>{12AC3E54-987B-3E7C-9827-F96466F6173C}</Project>
+      <Name>opencv_dnn</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\LIB\opencv\opencv450\build\modules\dnn\opencv_dnn_AVX.vcxproj">
+      <Project>{4E23DAB0-9D62-35F3-A14C-A851531DE162}</Project>
+      <Name>opencv_dnn_AVX</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="D:\LIB\opencv\opencv450\build\modules\dnn\opencv_dnn_AVX2.vcxproj">
+      <Project>{11A6B41A-89BE-3811-9066-42FC1AC2E1B5}</Project>
+      <Name>opencv_dnn_AVX2</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="D:\LIB\opencv\opencv450\build\modules\dnn\opencv_dnn_AVX512_SKX.vcxproj">
+      <Project>{A2375833-9C3B-3107-868B-E55FEBA4151B}</Project>
+      <Name>opencv_dnn_AVX512_SKX</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="D:\LIB\opencv\opencv450\build\modules\dnn_objdetect\opencv_dnn_objdetect.vcxproj">
+      <Project>{8D40420A-CA0B-3FB1-8EA3-D60791A9256D}</Project>
+      <Name>opencv_dnn_objdetect</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\LIB\opencv\opencv450\build\modules\dnn_superres\opencv_dnn_superres.vcxproj">
+      <Project>{F57D212D-099B-32DC-8407-5A725F3E1429}</Project>
+      <Name>opencv_dnn_superres</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\LIB\opencv\opencv450\build\modules\dpm\opencv_dpm.vcxproj">
+      <Project>{DF5164BE-DD2F-3397-80B7-4393533D4AAA}</Project>
+      <Name>opencv_dpm</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\LIB\opencv\opencv450\build\modules\face\opencv_face.vcxproj">
+      <Project>{0FF960EF-16E1-3DF1-B2EC-59642C7C911F}</Project>
+      <Name>opencv_face</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\LIB\opencv\opencv450\build\modules\features2d\opencv_features2d.vcxproj">
+      <Project>{F14C2E5E-E346-3B79-98B4-F42959690F06}</Project>
+      <Name>opencv_features2d</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\LIB\opencv\opencv450\build\modules\features2d\opencv_features2d_AVX2.vcxproj">
+      <Project>{8CD41595-24F4-3FD0-B3CE-99C64C1B619A}</Project>
+      <Name>opencv_features2d_AVX2</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="D:\LIB\opencv\opencv450\build\modules\features2d\opencv_features2d_AVX512_SKX.vcxproj">
+      <Project>{6EB0CBAF-2C51-389E-BBCB-6296C8F8C2B4}</Project>
+      <Name>opencv_features2d_AVX512_SKX</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="D:\LIB\opencv\opencv450\build\modules\features2d\opencv_features2d_SSE4_1.vcxproj">
+      <Project>{E64D6BB5-0C19-3351-8BA2-F01B83792574}</Project>
+      <Name>opencv_features2d_SSE4_1</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="D:\LIB\opencv\opencv450\build\modules\flann\opencv_flann.vcxproj">
+      <Project>{A78F35E9-AA3E-3148-ACC4-8DFAA61AB0B0}</Project>
+      <Name>opencv_flann</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\LIB\opencv\opencv450\build\modules\fuzzy\opencv_fuzzy.vcxproj">
+      <Project>{492C840E-6DCA-39AA-A904-F363A3D9635E}</Project>
+      <Name>opencv_fuzzy</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\LIB\opencv\opencv450\build\modules\gapi\opencv_gapi.vcxproj">
+      <Project>{1DC6DA9C-714A-39AC-9F0D-E434F88F91CC}</Project>
+      <Name>opencv_gapi</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\LIB\opencv\opencv450\build\modules\gapi\opencv_gapi_AVX2.vcxproj">
+      <Project>{60CE53F1-0B33-33D5-9B95-C790731BB60C}</Project>
+      <Name>opencv_gapi_AVX2</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="D:\LIB\opencv\opencv450\build\modules\gapi\opencv_gapi_SSE4_1.vcxproj">
+      <Project>{065A100C-6C79-3E4A-8C34-B5CF6E43B2C6}</Project>
+      <Name>opencv_gapi_SSE4_1</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="D:\LIB\opencv\opencv450\build\modules\hfs\opencv_hfs.vcxproj">
+      <Project>{FD095C9E-D34F-39FF-B496-A4CC5055BE6A}</Project>
+      <Name>opencv_hfs</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\LIB\opencv\opencv450\build\modules\highgui\opencv_highgui.vcxproj">
+      <Project>{2ED7E492-2FB6-388C-9D1E-130B1217C6D2}</Project>
+      <Name>opencv_highgui</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\LIB\opencv\opencv450\build\modules\img_hash\opencv_img_hash.vcxproj">
+      <Project>{3081F05A-E05A-3819-B1A5-456BCF43F35F}</Project>
+      <Name>opencv_img_hash</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\LIB\opencv\opencv450\build\modules\imgcodecs\opencv_imgcodecs.vcxproj">
+      <Project>{B7EA3436-145A-37A3-AA8D-BC694C9B1F69}</Project>
+      <Name>opencv_imgcodecs</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\LIB\opencv\opencv450\build\modules\imgproc\opencv_imgproc.vcxproj">
+      <Project>{2989009F-683B-3056-8726-9FD2005880A4}</Project>
+      <Name>opencv_imgproc</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\LIB\opencv\opencv450\build\modules\imgproc\opencv_imgproc_AVX.vcxproj">
+      <Project>{03581DB9-E306-3EC0-930A-6A5FF5D9E4C2}</Project>
+      <Name>opencv_imgproc_AVX</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="D:\LIB\opencv\opencv450\build\modules\imgproc\opencv_imgproc_AVX2.vcxproj">
+      <Project>{DA1B94D2-1BAC-38C5-BF14-1029D150E135}</Project>
+      <Name>opencv_imgproc_AVX2</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="D:\LIB\opencv\opencv450\build\modules\imgproc\opencv_imgproc_AVX512_SKX.vcxproj">
+      <Project>{ADC6A9D6-B0AE-377D-B710-B30AF21DC10B}</Project>
+      <Name>opencv_imgproc_AVX512_SKX</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="D:\LIB\opencv\opencv450\build\modules\imgproc\opencv_imgproc_SSE4_1.vcxproj">
+      <Project>{8C02DD34-E1DF-3DC2-AE34-22456451883C}</Project>
+      <Name>opencv_imgproc_SSE4_1</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="D:\LIB\opencv\opencv450\build\modules\intensity_transform\opencv_intensity_transform.vcxproj">
+      <Project>{4FE3D54B-B7FA-394C-9A39-D7F8DEDCD509}</Project>
+      <Name>opencv_intensity_transform</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\LIB\opencv\opencv450\build\apps\interactive-calibration\opencv_interactive-calibration.vcxproj">
+      <Project>{AAEE366D-D491-3E57-9D6F-91C01EF919FF}</Project>
+      <Name>opencv_interactive-calibration</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\LIB\opencv\opencv450\build\modules\line_descriptor\opencv_line_descriptor.vcxproj">
+      <Project>{F82D28A3-C1E1-354C-973E-00D6D193A8B3}</Project>
+      <Name>opencv_line_descriptor</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\LIB\opencv\opencv450\build\modules\mcc\opencv_mcc.vcxproj">
+      <Project>{347B0AA6-831F-3851-9DE6-D4C4A5437D10}</Project>
+      <Name>opencv_mcc</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\LIB\opencv\opencv450\build\modules\ml\opencv_ml.vcxproj">
+      <Project>{3AF7BB57-9948-3095-AE53-06710B900D40}</Project>
+      <Name>opencv_ml</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\LIB\opencv\opencv450\build\modules\objdetect\opencv_objdetect.vcxproj">
+      <Project>{3A6D7D6B-49DD-3272-BFC0-C2C7CE79700E}</Project>
+      <Name>opencv_objdetect</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\LIB\opencv\opencv450\build\modules\optflow\opencv_optflow.vcxproj">
+      <Project>{6B6EE1C3-CFBA-3783-A93B-4FB59E8FD103}</Project>
+      <Name>opencv_optflow</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\LIB\opencv\opencv450\build\modules\phase_unwrapping\opencv_phase_unwrapping.vcxproj">
+      <Project>{474831F6-E716-3A91-8967-D3558199F70F}</Project>
+      <Name>opencv_phase_unwrapping</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\LIB\opencv\opencv450\build\modules\photo\opencv_photo.vcxproj">
+      <Project>{00A0B2A6-6CA2-3361-B74D-F978A64848AC}</Project>
+      <Name>opencv_photo</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\LIB\opencv\opencv450\build\modules\plot\opencv_plot.vcxproj">
+      <Project>{B735B667-A814-393C-A5B8-8A854022798A}</Project>
+      <Name>opencv_plot</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\LIB\opencv\opencv450\build\modules\python3\opencv_python3.vcxproj">
+      <Project>{A0BA2F98-A9ED-37E7-A9C0-4F3EC2734266}</Project>
+      <Name>opencv_python3</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="D:\LIB\opencv\opencv450\build\modules\quality\opencv_quality.vcxproj">
+      <Project>{4F6B75A1-8CE8-31D4-88DA-1C4E39FF1D61}</Project>
+      <Name>opencv_quality</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\LIB\opencv\opencv450\build\modules\rapid\opencv_rapid.vcxproj">
+      <Project>{264053B9-835D-31D5-8805-54D9F01632E5}</Project>
+      <Name>opencv_rapid</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\LIB\opencv\opencv450\build\modules\reg\opencv_reg.vcxproj">
+      <Project>{69744111-C0E0-3780-A09F-5064A2FACD85}</Project>
+      <Name>opencv_reg</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\LIB\opencv\opencv450\build\modules\rgbd\opencv_rgbd.vcxproj">
+      <Project>{7F6644B1-6B0C-31BA-8FD3-C3145E2D9473}</Project>
+      <Name>opencv_rgbd</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\LIB\opencv\opencv450\build\modules\saliency\opencv_saliency.vcxproj">
+      <Project>{5D531023-AB5A-35A3-AB75-98DBC0218BB4}</Project>
+      <Name>opencv_saliency</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\LIB\opencv\opencv450\build\modules\shape\opencv_shape.vcxproj">
+      <Project>{D81074F2-99DD-331D-944B-2761CF8FB16F}</Project>
+      <Name>opencv_shape</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\LIB\opencv\opencv450\build\modules\stereo\opencv_stereo.vcxproj">
+      <Project>{AC09FAEB-99E4-3756-9FE1-4571BC144E2F}</Project>
+      <Name>opencv_stereo</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\LIB\opencv\opencv450\build\modules\stitching\opencv_stitching.vcxproj">
+      <Project>{68559562-02B3-3A75-81E2-87A21AC27875}</Project>
+      <Name>opencv_stitching</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\LIB\opencv\opencv450\build\modules\structured_light\opencv_structured_light.vcxproj">
+      <Project>{505B1764-3AE2-3C9F-BDF1-5B65242E3F98}</Project>
+      <Name>opencv_structured_light</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\LIB\opencv\opencv450\build\modules\superres\opencv_superres.vcxproj">
+      <Project>{503C26DA-D50C-33F3-B49B-D978EB7C330C}</Project>
+      <Name>opencv_superres</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\LIB\opencv\opencv450\build\modules\surface_matching\opencv_surface_matching.vcxproj">
+      <Project>{6AD12E8E-016A-39FC-9CD3-98D88B14B6DF}</Project>
+      <Name>opencv_surface_matching</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\LIB\opencv\opencv450\build\modules\text\opencv_text.vcxproj">
+      <Project>{082C0E89-FF1B-3ACF-B33E-2C6C17B98D82}</Project>
+      <Name>opencv_text</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\LIB\opencv\opencv450\build\modules\tracking\opencv_tracking.vcxproj">
+      <Project>{367FB96A-84C2-34A9-A86D-5A4B1112490B}</Project>
+      <Name>opencv_tracking</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\LIB\opencv\opencv450\build\modules\ts\opencv_ts.vcxproj">
+      <Project>{E102F3C3-F3B2-3A5E-9FD3-6ABD49CDD348}</Project>
+      <Name>opencv_ts</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\LIB\opencv\opencv450\build\apps\version\opencv_version.vcxproj">
+      <Project>{5EC36122-12E1-3B07-A22F-1DE0E454DEF9}</Project>
+      <Name>opencv_version</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\LIB\opencv\opencv450\build\apps\version\opencv_version_win32.vcxproj">
+      <Project>{C7F5BBC1-6848-36F6-8E38-96976BD3A5CF}</Project>
+      <Name>opencv_version_win32</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\LIB\opencv\opencv450\build\modules\video\opencv_video.vcxproj">
+      <Project>{9166A05A-43E2-3C3F-BA39-68771B02C655}</Project>
+      <Name>opencv_video</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\LIB\opencv\opencv450\build\modules\videoio\opencv_videoio.vcxproj">
+      <Project>{578E90C5-8F5A-30F3-941F-F2E2338D1012}</Project>
+      <Name>opencv_videoio</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\LIB\opencv\opencv450\build\modules\.firstpass\videoio\opencv_videoio_plugins.vcxproj">
+      <Project>{3584098D-E33F-3A76-AE4D-16FAD77442C9}</Project>
+      <Name>opencv_videoio_plugins</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="D:\LIB\opencv\opencv450\build\modules\videostab\opencv_videostab.vcxproj">
+      <Project>{D779D3D3-0C68-384F-AC2E-DBDCD4154A0D}</Project>
+      <Name>opencv_videostab</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\LIB\opencv\opencv450\build\apps\visualisation\opencv_visualisation.vcxproj">
+      <Project>{9081DA70-FCBB-3D31-A9E9-C4629C90BDE9}</Project>
+      <Name>opencv_visualisation</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\LIB\opencv\opencv450\build\modules\xobjdetect\tools\waldboost_detector\opencv_waldboost_detector.vcxproj">
+      <Project>{EAD5EB7E-1D89-3125-B384-9BD5E0608627}</Project>
+      <Name>opencv_waldboost_detector</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\LIB\opencv\opencv450\build\modules\xfeatures2d\opencv_xfeatures2d.vcxproj">
+      <Project>{C4DAA04F-676A-3290-A597-059189FF356E}</Project>
+      <Name>opencv_xfeatures2d</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\LIB\opencv\opencv450\build\modules\ximgproc\opencv_ximgproc.vcxproj">
+      <Project>{C78DEF6E-D1B2-3DBA-B679-B31856053798}</Project>
+      <Name>opencv_ximgproc</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\LIB\opencv\opencv450\build\modules\xobjdetect\opencv_xobjdetect.vcxproj">
+      <Project>{B2EEE319-574D-30EF-9944-96D7BA222EE0}</Project>
+      <Name>opencv_xobjdetect</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\LIB\opencv\opencv450\build\modules\xphoto\opencv_xphoto.vcxproj">
+      <Project>{589DB57E-C74E-3EB1-8FFA-D4DC1DEA9686}</Project>
+      <Name>opencv_xphoto</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\LIB\opencv\opencv450\build\3rdparty\quirc\quirc.vcxproj">
+      <Project>{DA58280A-03AA-348F-86EB-134754EEE00C}</Project>
+      <Name>quirc</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\LIB\opencv\opencv450\build\3rdparty\zlib\zlib.vcxproj">
+      <Project>{62693FEB-1C7A-3AB0-9E05-73E003866D2C}</Project>
+      <Name>zlib</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

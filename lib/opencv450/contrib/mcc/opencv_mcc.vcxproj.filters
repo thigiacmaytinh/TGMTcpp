@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="src\bound_min.cpp" />
+    <ClCompile Include="src\charts.cpp" />
+    <ClCompile Include="src\checker_detector.cpp" />
+    <ClCompile Include="src\checker_model.cpp" />
+    <ClCompile Include="src\common.cpp" />
+    <ClCompile Include="src\debug.cpp" />
+    <ClCompile Include="src\graph_cluster.cpp" />
+    <ClCompile Include="src\mcc.cpp" />
+    <ClCompile Include="src\wiener_filter.cpp" />
+    <ClCompile Include="opencv_mcc_pch.cpp" />
+    <ClCompile Include="opencv_mcc_main.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="include\opencv2\mcc.hpp" />
+    <ClInclude Include="include\opencv2\mcc\checker_detector.hpp" />
+    <ClInclude Include="include\opencv2\mcc\checker_model.hpp" />
+    <ClInclude Include="src\bound_min.hpp" />
+    <ClInclude Include="src\charts.hpp" />
+    <ClInclude Include="src\checker_detector.hpp" />
+    <ClInclude Include="src\checker_model.hpp" />
+    <ClInclude Include="src\common.hpp" />
+    <ClInclude Include="src\debug.hpp" />
+    <ClInclude Include="src\dictionary.hpp" />
+    <ClInclude Include="src\graph_cluster.hpp" />
+    <ClInclude Include="src\precomp.hpp" />
+    <ClInclude Include="src\wiener_filter.hpp" />
+    <ClInclude Include="cvconfig.h" />
+    <ClInclude Include="opencv_modules.hpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="vs_version.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Include">
+      <UniqueIdentifier>{0F4E727C-A542-39DA-A5B7-B658528F0B6C}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Include\opencv2">
+      <UniqueIdentifier>{8E98FA75-E5B5-3AD2-AC34-8A455A40CD7D}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Include\opencv2\mcc">
+      <UniqueIdentifier>{2D07DC89-C7C8-3662-A8A8-8D862EC1AA7B}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{CE12B7EF-4DE0-3097-AE17-93B2DA197F27}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Src">
+      <UniqueIdentifier>{CD70F01E-A37A-31F4-9B99-9B18D6482D8A}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

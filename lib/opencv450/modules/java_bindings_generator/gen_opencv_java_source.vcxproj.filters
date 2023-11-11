@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <None Include="D:\LIB\opencv\opencv450\build\modules\java_bindings_generator\CMakeFiles\gen_opencv_java_source" />
+    <None Include="D:\LIB\opencv\opencv450\sources\modules\java\generator\gen_java.py" />
+    <None Include="D:\LIB\opencv\opencv450\build\modules\java_bindings_generator\gen_java.json" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="CMake Rules">
+      <UniqueIdentifier>{613DCB51-195E-330E-A772-6D5B40BA759D}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

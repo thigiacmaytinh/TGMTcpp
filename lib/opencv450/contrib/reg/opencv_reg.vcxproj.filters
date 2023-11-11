@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="src\map.cpp" />
+    <ClCompile Include="src\mapaffine.cpp" />
+    <ClCompile Include="src\mapper.cpp" />
+    <ClCompile Include="src\mappergradaffine.cpp" />
+    <ClCompile Include="src\mappergradeuclid.cpp" />
+    <ClCompile Include="src\mappergradproj.cpp" />
+    <ClCompile Include="src\mappergradshift.cpp" />
+    <ClCompile Include="src\mappergradsimilar.cpp" />
+    <ClCompile Include="src\mapperpyramid.cpp" />
+    <ClCompile Include="src\mapprojec.cpp" />
+    <ClCompile Include="src\mapshift.cpp" />
+    <ClCompile Include="opencv_reg_pch.cpp" />
+    <ClCompile Include="opencv_reg_main.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="include\opencv2\reg\map.hpp" />
+    <ClInclude Include="include\opencv2\reg\mapaffine.hpp" />
+    <ClInclude Include="include\opencv2\reg\mapper.hpp" />
+    <ClInclude Include="include\opencv2\reg\mappergradaffine.hpp" />
+    <ClInclude Include="include\opencv2\reg\mappergradeuclid.hpp" />
+    <ClInclude Include="include\opencv2\reg\mappergradproj.hpp" />
+    <ClInclude Include="include\opencv2\reg\mappergradshift.hpp" />
+    <ClInclude Include="include\opencv2\reg\mappergradsimilar.hpp" />
+    <ClInclude Include="include\opencv2\reg\mapperpyramid.hpp" />
+    <ClInclude Include="include\opencv2\reg\mapprojec.hpp" />
+    <ClInclude Include="include\opencv2\reg\mapshift.hpp" />
+    <ClInclude Include="src\precomp.hpp" />
+    <ClInclude Include="cvconfig.h" />
+    <ClInclude Include="opencv_modules.hpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="vs_version.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Include">
+      <UniqueIdentifier>{0F4E727C-A542-39DA-A5B7-B658528F0B6C}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Include\opencv2">
+      <UniqueIdentifier>{8E98FA75-E5B5-3AD2-AC34-8A455A40CD7D}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Include\opencv2\reg">
+      <UniqueIdentifier>{B948B0ED-19F8-30BD-8AC0-3C6F00325C47}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{CE12B7EF-4DE0-3097-AE17-93B2DA197F27}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Src">
+      <UniqueIdentifier>{CD70F01E-A37A-31F4-9B99-9B18D6482D8A}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

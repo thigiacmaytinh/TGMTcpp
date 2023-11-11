@@ -1,0 +1,461 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <PreferredToolArchitecture>x64</PreferredToolArchitecture>
+  </PropertyGroup>
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{A0BA2F98-A9ED-37E7-A9C0-4F3EC2734266}</ProjectGuid>
+    <WindowsTargetPlatformVersion>10.0.18362.0</WindowsTargetPlatformVersion>
+    <Keyword>Win32Proj</Keyword>
+    <Platform>x64</Platform>
+    <ProjectName>opencv_python3</ProjectName>
+    <VCProjectUpgraderObjectName>NoUpgrade</VCProjectUpgraderObjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:\LIB\opencv\opencv450\build\lib\python3\Debug\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">opencv_python3.dir\Debug\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">cv2.cp36-win_amd64</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.pyd</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</GenerateManifest>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">D:\LIB\opencv\opencv450\build\lib\python3\Release\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">opencv_python3.dir\Release\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">cv2.cp36-win_amd64</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.pyd</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</GenerateManifest>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>..\python\python3\src;..\python\python3\include;..\python3;..\core\include;..\flann\include;..\imgproc\include;..\intensity_transform\include;..\ml\include;..\phase_unwrapping\include;..\photo\include;..\plot\include;..\quality\include;..\reg\include;D:\LIB\opencv\opencv_contrib-4.5.0\modules\surface_matching\include;D:\LIB\opencv\opencv_contrib-4.5.0\modules\xphoto\include;..\dnn\include;D:\LIB\opencv\opencv_contrib-4.5.0\modules\dnn_superres\include;..\features2d\include;D:\LIB\opencv\opencv_contrib-4.5.0\modules\fuzzy\include;D:\LIB\opencv\opencv_contrib-4.5.0\modules\hfs\include;D:\LIB\opencv\opencv_contrib-4.5.0\modules\img_hash\include;..\imgcodecs\include;D:\LIB\opencv\opencv_contrib-4.5.0\modules\line_descriptor\include;D:\LIB\opencv\opencv_contrib-4.5.0\modules\saliency\include;D:\LIB\opencv\opencv_contrib-4.5.0\modules\text\include;..\videoio\include;..\calib3d\include;D:\LIB\opencv\opencv_contrib-4.5.0\modules\datasets\include;..\highgui\include;D:\LIB\opencv\opencv_contrib-4.5.0\modules\mcc\include;..\objdetect\include;D:\LIB\opencv\opencv_contrib-4.5.0\modules\rapid\include;D:\LIB\opencv\opencv_contrib-4.5.0\modules\rgbd\include;D:\LIB\opencv\opencv_contrib-4.5.0\modules\shape\include;D:\LIB\opencv\opencv_contrib-4.5.0\modules\structured_light\include;..\video\include;D:\LIB\opencv\opencv_contrib-4.5.0\modules\videostab\include;D:\LIB\opencv\opencv_contrib-4.5.0\modules\xfeatures2d\include;D:\LIB\opencv\opencv_contrib-4.5.0\modules\ximgproc\include;D:\LIB\opencv\opencv_contrib-4.5.0\modules\xobjdetect\include;D:\LIB\opencv\opencv_contrib-4.5.0\modules\aruco\include;D:\LIB\opencv\opencv_contrib-4.5.0\modules\bgsegm\include;D:\LIB\opencv\opencv_contrib-4.5.0\modules\bioinspired\include;D:\LIB\opencv\opencv_contrib-4.5.0\modules\ccalib\include;D:\LIB\opencv\opencv_contrib-4.5.0\modules\dpm\include;D:\LIB\opencv\opencv_contrib-4.5.0\modules\face\include;D:\LIB\opencv\opencv_contrib-4.5.0\modules\optflow\include;..\stitching\include;D:\LIB\opencv\opencv_contrib-4.5.0\modules\superres\include;D:\LIB\opencv\opencv_contrib-4.5.0\modules\tracking\include;..\python\src2;..\python_bindings_generator;$(SolutionDir)C:\Users\vohungvi\AppData\Local\Programs\Python\Python36\include;C:\Users\vohungvi\AppData\Local\Programs\Python\Python36\lib\site-packages\numpy\core\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /bigobj</AdditionalOptions>
+      <AssemblerListingLocation>Debug/</AssemblerListingLocation>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <DisableSpecificWarnings>4127;4251;4324;4275;4512;4589;4100;4127;4505;4996</DisableSpecificWarnings>
+      <ExceptionHandling>Async</ExceptionHandling>
+      <FloatingPointModel>Precise</FloatingPointModel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <InlineFunctionExpansion>Disabled</InlineFunctionExpansion>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <Optimization>Disabled</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;_SCL_SECURE_NO_WARNINGS;_VARIADIC_MAX=10;_WIN32_WINNT=0x0601;__OPENCV_BUILD=1;_USE_MATH_DEFINES;__STDC_CONSTANT_MACROS;__STDC_LIMIT_MACROS;__STDC_FORMAT_MACROS;CVAPI_EXPORTS;CMAKE_INTDIR="Debug";opencv_python3_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;_SCL_SECURE_NO_WARNINGS;_VARIADIC_MAX=10;_WIN32_WINNT=0x0601;__OPENCV_BUILD=1;_USE_MATH_DEFINES;__STDC_CONSTANT_MACROS;__STDC_LIMIT_MACROS;__STDC_FORMAT_MACROS;CVAPI_EXPORTS;CMAKE_INTDIR=\"Debug\";opencv_python3_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>..\python\python3\src;..\python\python3\include;..\python3;..\core\include;..\flann\include;..\imgproc\include;D:\LIB\opencv\opencv_contrib-4.5.0\modules\intensity_transform\include;..\ml\include;D:\LIB\opencv\opencv_contrib-4.5.0\modules\phase_unwrapping\include;..\photo\include;D:\LIB\opencv\opencv_contrib-4.5.0\modules\plot\include;D:\LIB\opencv\opencv_contrib-4.5.0\modules\quality\include;D:\LIB\opencv\opencv_contrib-4.5.0\modules\reg\include;D:\LIB\opencv\opencv_contrib-4.5.0\modules\surface_matching\include;D:\LIB\opencv\opencv_contrib-4.5.0\modules\xphoto\include;..\dnn\include;D:\LIB\opencv\opencv_contrib-4.5.0\modules\dnn_superres\include;..\features2d\include;D:\LIB\opencv\opencv_contrib-4.5.0\modules\fuzzy\include;D:\LIB\opencv\opencv_contrib-4.5.0\modules\hfs\include;D:\LIB\opencv\opencv_contrib-4.5.0\modules\img_hash\include;..\imgcodecs\include;D:\LIB\opencv\opencv_contrib-4.5.0\modules\line_descriptor\include;D:\LIB\opencv\opencv_contrib-4.5.0\modules\saliency\include;D:\LIB\opencv\opencv_contrib-4.5.0\modules\text\include;..\videoio\include;..\calib3d\include;D:\LIB\opencv\opencv_contrib-4.5.0\modules\datasets\include;..\highgui\include;D:\LIB\opencv\opencv_contrib-4.5.0\modules\mcc\include;..\objdetect\include;D:\LIB\opencv\opencv_contrib-4.5.0\modules\rapid\include;D:\LIB\opencv\opencv_contrib-4.5.0\modules\rgbd\include;D:\LIB\opencv\opencv_contrib-4.5.0\modules\shape\include;D:\LIB\opencv\opencv_contrib-4.5.0\modules\structured_light\include;..\video\include;D:\LIB\opencv\opencv_contrib-4.5.0\modules\videostab\include;D:\LIB\opencv\opencv_contrib-4.5.0\modules\xfeatures2d\include;D:\LIB\opencv\opencv_contrib-4.5.0\modules\ximgproc\include;D:\LIB\opencv\opencv_contrib-4.5.0\modules\xobjdetect\include;D:\LIB\opencv\opencv_contrib-4.5.0\modules\aruco\include;D:\LIB\opencv\opencv_contrib-4.5.0\modules\bgsegm\include;D:\LIB\opencv\opencv_contrib-4.5.0\modules\bioinspired\include;D:\LIB\opencv\opencv_contrib-4.5.0\modules\ccalib\include;D:\LIB\opencv\opencv_contrib-4.5.0\modules\dpm\include;D:\LIB\opencv\opencv_contrib-4.5.0\modules\face\include;D:\LIB\opencv\opencv_contrib-4.5.0\modules\optflow\include;..\stitching\include;D:\LIB\opencv\opencv_contrib-4.5.0\modules\superres\include;D:\LIB\opencv\opencv_contrib-4.5.0\modules\tracking\include;..\python\src2;..\python_bindings_generator;$(SolutionDir)C:\Users\vohungvi\AppData\Local\Programs\Python\Python36\include;C:\Users\vohungvi\AppData\Local\Programs\Python\Python36\lib\site-packages\numpy\core\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>..\python\python3\src;..\python\python3\include;..\python3;..\core\include;..\flann\include;..\imgproc\include;D:\LIB\opencv\opencv_contrib-4.5.0\modules\intensity_transform\include;..\ml\include;D:\LIB\opencv\opencv_contrib-4.5.0\modules\phase_unwrapping\include;..\photo\include;D:\LIB\opencv\opencv_contrib-4.5.0\modules\plot\include;D:\LIB\opencv\opencv_contrib-4.5.0\modules\quality\include;D:\LIB\opencv\opencv_contrib-4.5.0\modules\reg\include;D:\LIB\opencv\opencv_contrib-4.5.0\modules\surface_matching\include;D:\LIB\opencv\opencv_contrib-4.5.0\modules\xphoto\include;..\dnn\include;D:\LIB\opencv\opencv_contrib-4.5.0\modules\dnn_superres\include;..\features2d\include;D:\LIB\opencv\opencv_contrib-4.5.0\modules\fuzzy\include;D:\LIB\opencv\opencv_contrib-4.5.0\modules\hfs\include;D:\LIB\opencv\opencv_contrib-4.5.0\modules\img_hash\include;..\imgcodecs\include;D:\LIB\opencv\opencv_contrib-4.5.0\modules\line_descriptor\include;D:\LIB\opencv\opencv_contrib-4.5.0\modules\saliency\include;D:\LIB\opencv\opencv_contrib-4.5.0\modules\text\include;..\videoio\include;..\calib3d\include;D:\LIB\opencv\opencv_contrib-4.5.0\modules\datasets\include;..\highgui\include;D:\LIB\opencv\opencv_contrib-4.5.0\modules\mcc\include;..\objdetect\include;D:\LIB\opencv\opencv_contrib-4.5.0\modules\rapid\include;D:\LIB\opencv\opencv_contrib-4.5.0\modules\rgbd\include;D:\LIB\opencv\opencv_contrib-4.5.0\modules\shape\include;D:\LIB\opencv\opencv_contrib-4.5.0\modules\structured_light\include;..\video\include;D:\LIB\opencv\opencv_contrib-4.5.0\modules\videostab\include;D:\LIB\opencv\opencv_contrib-4.5.0\modules\xfeatures2d\include;D:\LIB\opencv\opencv_contrib-4.5.0\modules\ximgproc\include;D:\LIB\opencv\opencv_contrib-4.5.0\modules\xobjdetect\include;D:\LIB\opencv\opencv_contrib-4.5.0\modules\aruco\include;D:\LIB\opencv\opencv_contrib-4.5.0\modules\bgsegm\include;D:\LIB\opencv\opencv_contrib-4.5.0\modules\bioinspired\include;D:\LIB\opencv\opencv_contrib-4.5.0\modules\ccalib\include;D:\LIB\opencv\opencv_contrib-4.5.0\modules\dpm\include;D:\LIB\opencv\opencv_contrib-4.5.0\modules\face\include;D:\LIB\opencv\opencv_contrib-4.5.0\modules\optflow\include;..\stitching\include;D:\LIB\opencv\opencv_contrib-4.5.0\modules\superres\include;D:\LIB\opencv\opencv_contrib-4.5.0\modules\tracking\include;..\python\src2;..\python_bindings_generator;$(SolutionDir)C:\Users\vohungvi\AppData\Local\Programs\Python\Python36\include;C:\Users\vohungvi\AppData\Local\Programs\Python\Python36\lib\site-packages\numpy\core\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalDependencies>C:\Users\vohungvi\AppData\Local\Programs\Python\Python36\libs\python36.lib;..\..\lib\Debug\opencv_intensity_transform450d.lib;..\..\lib\Debug\opencv_reg450d.lib;..\..\lib\Debug\opencv_surface_matching450d.lib;..\..\lib\Debug\opencv_xphoto450d.lib;..\..\lib\Debug\opencv_dnn_superres450d.lib;..\..\lib\Debug\opencv_fuzzy450d.lib;..\..\lib\Debug\opencv_hfs450d.lib;..\..\lib\Debug\opencv_img_hash450d.lib;..\..\lib\Debug\opencv_line_descriptor450d.lib;..\..\lib\Debug\opencv_saliency450d.lib;..\..\lib\Debug\opencv_mcc450d.lib;..\..\lib\Debug\opencv_rapid450d.lib;..\..\lib\Debug\opencv_rgbd450d.lib;..\..\lib\Debug\opencv_structured_light450d.lib;..\..\lib\Debug\opencv_videostab450d.lib;..\..\lib\Debug\opencv_xobjdetect450d.lib;..\..\lib\Debug\opencv_aruco450d.lib;..\..\lib\Debug\opencv_bgsegm450d.lib;..\..\lib\Debug\opencv_bioinspired450d.lib;..\..\lib\Debug\opencv_ccalib450d.lib;..\..\lib\Debug\opencv_dpm450d.lib;..\..\lib\Debug\opencv_face450d.lib;..\..\lib\Debug\opencv_stitching450d.lib;..\..\lib\Debug\opencv_superres450d.lib;..\..\lib\Debug\opencv_tracking450d.lib;..\..\lib\Debug\opencv_quality450d.lib;..\..\lib\Debug\opencv_phase_unwrapping450d.lib;..\..\lib\Debug\opencv_highgui450d.lib;..\..\lib\Debug\opencv_photo450d.lib;..\..\lib\Debug\opencv_objdetect450d.lib;..\..\lib\Debug\opencv_xfeatures2d450d.lib;..\..\lib\Debug\opencv_shape450d.lib;..\..\lib\Debug\opencv_videoio450d.lib;..\..\lib\Debug\opencv_optflow450d.lib;..\..\lib\Debug\opencv_ximgproc450d.lib;..\..\lib\Debug\opencv_plot450d.lib;..\..\lib\Debug\opencv_datasets450d.lib;..\..\lib\Debug\opencv_imgcodecs450d.lib;..\..\lib\Debug\opencv_text450d.lib;..\..\lib\Debug\opencv_ml450d.lib;..\..\lib\Debug\opencv_dnn450d.lib;..\..\lib\Debug\opencv_video450d.lib;..\..\lib\Debug\opencv_calib3d450d.lib;..\..\lib\Debug\opencv_features2d450d.lib;..\..\lib\Debug\opencv_flann450d.lib;..\..\lib\Debug\opencv_imgproc450d.lib;..\lib\Debug-x64\opencv_core450d.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>D:/LIB/opencv/opencv450/build/lib/Debug/opencv_python3.lib</ImportLibrary>
+      <ProgramDataBaseFile>D:/LIB/opencv/opencv450/build/lib/python3/Debug/cv2.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>..\python\python3\src;..\python\python3\include;..\python3;..\core\include;..\flann\include;..\imgproc\include;..\intensity_transform\include;..\ml\include;..\phase_unwrapping\include;..\photo\include;..\plot\include;..\quality\include;..\reg\include;D:\LIB\opencv\opencv_contrib-4.5.0\modules\surface_matching\include;D:\LIB\opencv\opencv_contrib-4.5.0\modules\xphoto\include;..\dnn\include;D:\LIB\opencv\opencv_contrib-4.5.0\modules\dnn_superres\include;..\features2d\include;D:\LIB\opencv\opencv_contrib-4.5.0\modules\fuzzy\include;D:\LIB\opencv\opencv_contrib-4.5.0\modules\hfs\include;D:\LIB\opencv\opencv_contrib-4.5.0\modules\img_hash\include;..\imgcodecs\include;D:\LIB\opencv\opencv_contrib-4.5.0\modules\line_descriptor\include;D:\LIB\opencv\opencv_contrib-4.5.0\modules\saliency\include;D:\LIB\opencv\opencv_contrib-4.5.0\modules\text\include;..\videoio\include;..\calib3d\include;D:\LIB\opencv\opencv_contrib-4.5.0\modules\datasets\include;..\highgui\include;D:\LIB\opencv\opencv_contrib-4.5.0\modules\mcc\include;..\objdetect\include;D:\LIB\opencv\opencv_contrib-4.5.0\modules\rapid\include;D:\LIB\opencv\opencv_contrib-4.5.0\modules\rgbd\include;D:\LIB\opencv\opencv_contrib-4.5.0\modules\shape\include;D:\LIB\opencv\opencv_contrib-4.5.0\modules\structured_light\include;..\video\include;D:\LIB\opencv\opencv_contrib-4.5.0\modules\videostab\include;D:\LIB\opencv\opencv_contrib-4.5.0\modules\xfeatures2d\include;D:\LIB\opencv\opencv_contrib-4.5.0\modules\ximgproc\include;D:\LIB\opencv\opencv_contrib-4.5.0\modules\xobjdetect\include;D:\LIB\opencv\opencv_contrib-4.5.0\modules\aruco\include;D:\LIB\opencv\opencv_contrib-4.5.0\modules\bgsegm\include;D:\LIB\opencv\opencv_contrib-4.5.0\modules\bioinspired\include;D:\LIB\opencv\opencv_contrib-4.5.0\modules\ccalib\include;D:\LIB\opencv\opencv_contrib-4.5.0\modules\dpm\include;D:\LIB\opencv\opencv_contrib-4.5.0\modules\face\include;D:\LIB\opencv\opencv_contrib-4.5.0\modules\optflow\include;..\stitching\include;D:\LIB\opencv\opencv_contrib-4.5.0\modules\superres\include;D:\LIB\opencv\opencv_contrib-4.5.0\modules\tracking\include;..\python\src2;..\python_bindings_generator;$(SolutionDir)C:\Users\vohungvi\AppData\Local\Programs\Python\Python36\include;C:\Users\vohungvi\AppData\Local\Programs\Python\Python36\lib\site-packages\numpy\core\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /bigobj</AdditionalOptions>
+      <AssemblerListingLocation>Release/</AssemblerListingLocation>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <DisableSpecificWarnings>4127;4251;4324;4275;4512;4589;4100;4127;4505;4996</DisableSpecificWarnings>
+      <ExceptionHandling>Async</ExceptionHandling>
+      <FloatingPointModel>Precise</FloatingPointModel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;_SCL_SECURE_NO_WARNINGS;NDEBUG;_VARIADIC_MAX=10;_WIN32_WINNT=0x0601;__OPENCV_BUILD=1;_USE_MATH_DEFINES;__STDC_CONSTANT_MACROS;__STDC_LIMIT_MACROS;__STDC_FORMAT_MACROS;CVAPI_EXPORTS;CMAKE_INTDIR="Release";opencv_python3_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;_SCL_SECURE_NO_WARNINGS;NDEBUG;_VARIADIC_MAX=10;_WIN32_WINNT=0x0601;__OPENCV_BUILD=1;_USE_MATH_DEFINES;__STDC_CONSTANT_MACROS;__STDC_LIMIT_MACROS;__STDC_FORMAT_MACROS;CVAPI_EXPORTS;CMAKE_INTDIR=\"Release\";opencv_python3_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>..\python\python3\src;..\python\python3\include;..\python3;..\core\include;..\flann\include;..\imgproc\include;D:\LIB\opencv\opencv_contrib-4.5.0\modules\intensity_transform\include;..\ml\include;D:\LIB\opencv\opencv_contrib-4.5.0\modules\phase_unwrapping\include;..\photo\include;D:\LIB\opencv\opencv_contrib-4.5.0\modules\plot\include;D:\LIB\opencv\opencv_contrib-4.5.0\modules\quality\include;D:\LIB\opencv\opencv_contrib-4.5.0\modules\reg\include;D:\LIB\opencv\opencv_contrib-4.5.0\modules\surface_matching\include;D:\LIB\opencv\opencv_contrib-4.5.0\modules\xphoto\include;..\dnn\include;D:\LIB\opencv\opencv_contrib-4.5.0\modules\dnn_superres\include;..\features2d\include;D:\LIB\opencv\opencv_contrib-4.5.0\modules\fuzzy\include;D:\LIB\opencv\opencv_contrib-4.5.0\modules\hfs\include;D:\LIB\opencv\opencv_contrib-4.5.0\modules\img_hash\include;..\imgcodecs\include;D:\LIB\opencv\opencv_contrib-4.5.0\modules\line_descriptor\include;D:\LIB\opencv\opencv_contrib-4.5.0\modules\saliency\include;D:\LIB\opencv\opencv_contrib-4.5.0\modules\text\include;..\videoio\include;..\calib3d\include;D:\LIB\opencv\opencv_contrib-4.5.0\modules\datasets\include;..\highgui\include;D:\LIB\opencv\opencv_contrib-4.5.0\modules\mcc\include;..\objdetect\include;D:\LIB\opencv\opencv_contrib-4.5.0\modules\rapid\include;D:\LIB\opencv\opencv_contrib-4.5.0\modules\rgbd\include;D:\LIB\opencv\opencv_contrib-4.5.0\modules\shape\include;D:\LIB\opencv\opencv_contrib-4.5.0\modules\structured_light\include;..\video\include;D:\LIB\opencv\opencv_contrib-4.5.0\modules\videostab\include;D:\LIB\opencv\opencv_contrib-4.5.0\modules\xfeatures2d\include;D:\LIB\opencv\opencv_contrib-4.5.0\modules\ximgproc\include;D:\LIB\opencv\opencv_contrib-4.5.0\modules\xobjdetect\include;D:\LIB\opencv\opencv_contrib-4.5.0\modules\aruco\include;D:\LIB\opencv\opencv_contrib-4.5.0\modules\bgsegm\include;D:\LIB\opencv\opencv_contrib-4.5.0\modules\bioinspired\include;D:\LIB\opencv\opencv_contrib-4.5.0\modules\ccalib\include;D:\LIB\opencv\opencv_contrib-4.5.0\modules\dpm\include;D:\LIB\opencv\opencv_contrib-4.5.0\modules\face\include;D:\LIB\opencv\opencv_contrib-4.5.0\modules\optflow\include;..\stitching\include;D:\LIB\opencv\opencv_contrib-4.5.0\modules\superres\include;D:\LIB\opencv\opencv_contrib-4.5.0\modules\tracking\include;..\python\src2;..\python_bindings_generator;$(SolutionDir)C:\Users\vohungvi\AppData\Local\Programs\Python\Python36\include;C:\Users\vohungvi\AppData\Local\Programs\Python\Python36\lib\site-packages\numpy\core\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>..\python\python3\src;..\python\python3\include;..\python3;..\core\include;..\flann\include;..\imgproc\include;D:\LIB\opencv\opencv_contrib-4.5.0\modules\intensity_transform\include;..\ml\include;D:\LIB\opencv\opencv_contrib-4.5.0\modules\phase_unwrapping\include;..\photo\include;D:\LIB\opencv\opencv_contrib-4.5.0\modules\plot\include;D:\LIB\opencv\opencv_contrib-4.5.0\modules\quality\include;D:\LIB\opencv\opencv_contrib-4.5.0\modules\reg\include;D:\LIB\opencv\opencv_contrib-4.5.0\modules\surface_matching\include;D:\LIB\opencv\opencv_contrib-4.5.0\modules\xphoto\include;..\dnn\include;D:\LIB\opencv\opencv_contrib-4.5.0\modules\dnn_superres\include;..\features2d\include;D:\LIB\opencv\opencv_contrib-4.5.0\modules\fuzzy\include;D:\LIB\opencv\opencv_contrib-4.5.0\modules\hfs\include;D:\LIB\opencv\opencv_contrib-4.5.0\modules\img_hash\include;..\imgcodecs\include;D:\LIB\opencv\opencv_contrib-4.5.0\modules\line_descriptor\include;D:\LIB\opencv\opencv_contrib-4.5.0\modules\saliency\include;D:\LIB\opencv\opencv_contrib-4.5.0\modules\text\include;..\videoio\include;..\calib3d\include;D:\LIB\opencv\opencv_contrib-4.5.0\modules\datasets\include;..\highgui\include;D:\LIB\opencv\opencv_contrib-4.5.0\modules\mcc\include;..\objdetect\include;D:\LIB\opencv\opencv_contrib-4.5.0\modules\rapid\include;D:\LIB\opencv\opencv_contrib-4.5.0\modules\rgbd\include;D:\LIB\opencv\opencv_contrib-4.5.0\modules\shape\include;D:\LIB\opencv\opencv_contrib-4.5.0\modules\structured_light\include;..\video\include;D:\LIB\opencv\opencv_contrib-4.5.0\modules\videostab\include;D:\LIB\opencv\opencv_contrib-4.5.0\modules\xfeatures2d\include;D:\LIB\opencv\opencv_contrib-4.5.0\modules\ximgproc\include;D:\LIB\opencv\opencv_contrib-4.5.0\modules\xobjdetect\include;D:\LIB\opencv\opencv_contrib-4.5.0\modules\aruco\include;D:\LIB\opencv\opencv_contrib-4.5.0\modules\bgsegm\include;D:\LIB\opencv\opencv_contrib-4.5.0\modules\bioinspired\include;D:\LIB\opencv\opencv_contrib-4.5.0\modules\ccalib\include;D:\LIB\opencv\opencv_contrib-4.5.0\modules\dpm\include;D:\LIB\opencv\opencv_contrib-4.5.0\modules\face\include;D:\LIB\opencv\opencv_contrib-4.5.0\modules\optflow\include;..\stitching\include;D:\LIB\opencv\opencv_contrib-4.5.0\modules\superres\include;D:\LIB\opencv\opencv_contrib-4.5.0\modules\tracking\include;..\python\src2;..\python_bindings_generator;$(SolutionDir)C:\Users\vohungvi\AppData\Local\Programs\Python\Python36\include;C:\Users\vohungvi\AppData\Local\Programs\Python\Python36\lib\site-packages\numpy\core\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalDependencies>C:\Users\vohungvi\AppData\Local\Programs\Python\Python36\libs\python36.lib;..\..\lib\Release\opencv_intensity_transform450.lib;..\..\lib\Release\opencv_reg450.lib;..\..\lib\Release\opencv_surface_matching450.lib;..\..\lib\Release\opencv_xphoto450.lib;..\..\lib\Release\opencv_dnn_superres450.lib;..\..\lib\Release\opencv_fuzzy450.lib;..\..\lib\Release\opencv_hfs450.lib;..\..\lib\Release\opencv_img_hash450.lib;..\..\lib\Release\opencv_line_descriptor450.lib;..\..\lib\Release\opencv_saliency450.lib;..\..\lib\Release\opencv_mcc450.lib;..\..\lib\Release\opencv_rapid450.lib;..\..\lib\Release\opencv_rgbd450.lib;..\..\lib\Release\opencv_structured_light450.lib;..\..\lib\Release\opencv_videostab450.lib;..\..\lib\Release\opencv_xobjdetect450.lib;..\..\lib\Release\opencv_aruco450.lib;..\..\lib\Release\opencv_bgsegm450.lib;..\..\lib\Release\opencv_bioinspired450.lib;..\..\lib\Release\opencv_ccalib450.lib;..\..\lib\Release\opencv_dpm450.lib;..\..\lib\Release\opencv_face450.lib;..\..\lib\Release\opencv_stitching450.lib;..\..\lib\Release\opencv_superres450.lib;..\..\lib\Release\opencv_tracking450.lib;..\..\lib\Release\opencv_quality450.lib;..\..\lib\Release\opencv_phase_unwrapping450.lib;..\..\lib\Release\opencv_highgui450.lib;..\..\lib\Release\opencv_photo450.lib;..\..\lib\Release\opencv_objdetect450.lib;..\..\lib\Release\opencv_xfeatures2d450.lib;..\..\lib\Release\opencv_shape450.lib;..\..\lib\Release\opencv_videoio450.lib;..\..\lib\Release\opencv_optflow450.lib;..\..\lib\Release\opencv_ximgproc450.lib;..\..\lib\Release\opencv_plot450.lib;..\..\lib\Release\opencv_datasets450.lib;..\..\lib\Release\opencv_imgcodecs450.lib;..\..\lib\Release\opencv_text450.lib;..\..\lib\Release\opencv_ml450.lib;..\..\lib\Release\opencv_dnn450.lib;..\..\lib\Release\opencv_video450.lib;..\..\lib\Release\opencv_calib3d450.lib;..\..\lib\Release\opencv_features2d450.lib;..\..\lib\Release\opencv_flann450.lib;..\..\lib\Release\opencv_imgproc450.lib;..\..\lib\Release\opencv_core450.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>D:/LIB/opencv/opencv450/build/lib/Release/opencv_python3.lib</ImportLibrary>
+      <ProgramDataBaseFile>D:/LIB/opencv/opencv450/build/lib/python3/Release/cv2.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="src2\cv2.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="D:\LIB\opencv\opencv450\build\ZERO_CHECK.vcxproj">
+      <Project>{19254E1A-0B62-37BB-9EDC-AAF2CE8801AD}</Project>
+      <Name>ZERO_CHECK</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="..\python_bindings_generator\gen_opencv_python_source.vcxproj">
+      <Project>{F6B12F78-BA5C-3C61-AFFC-1D79CA6ACCBD}</Project>
+      <Name>gen_opencv_python_source</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="..\aruco\opencv_aruco.vcxproj">
+      <Project>{BE012749-951B-37E7-BDD0-CD599D5F93C5}</Project>
+      <Name>opencv_aruco</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="..\bgsegm\opencv_bgsegm.vcxproj">
+      <Project>{D4947004-156E-3817-9062-B53D4CD172E3}</Project>
+      <Name>opencv_bgsegm</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="..\bioinspired\opencv_bioinspired.vcxproj">
+      <Project>{DE6CB7B2-66D8-33AC-888C-F217058E1BA8}</Project>
+      <Name>opencv_bioinspired</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="..\calib3d\opencv_calib3d.vcxproj">
+      <Project>{5C9ECDC3-1FD9-39D9-846B-C8FEE3DDB7CD}</Project>
+      <Name>opencv_calib3d</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="..\ccalib\opencv_ccalib.vcxproj">
+      <Project>{1BA49390-E53F-3A1C-9D3B-A36C6E41C629}</Project>
+      <Name>opencv_ccalib</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="..\core\opencv_core.vcxproj">
+      <Project>{26820A44-4B84-3AD3-A82C-3BB5CC597915}</Project>
+      <Name>opencv_core</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="..\datasets\opencv_datasets.vcxproj">
+      <Project>{09FEF1CD-E6DE-347F-B5CB-0475A3D441A8}</Project>
+      <Name>opencv_datasets</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="..\dnn\opencv_dnn.vcxproj">
+      <Project>{12AC3E54-987B-3E7C-9827-F96466F6173C}</Project>
+      <Name>opencv_dnn</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="..\dnn_superres\opencv_dnn_superres.vcxproj">
+      <Project>{F57D212D-099B-32DC-8407-5A725F3E1429}</Project>
+      <Name>opencv_dnn_superres</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="..\dpm\opencv_dpm.vcxproj">
+      <Project>{DF5164BE-DD2F-3397-80B7-4393533D4AAA}</Project>
+      <Name>opencv_dpm</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="..\face\opencv_face.vcxproj">
+      <Project>{0FF960EF-16E1-3DF1-B2EC-59642C7C911F}</Project>
+      <Name>opencv_face</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="..\features2d\opencv_features2d.vcxproj">
+      <Project>{F14C2E5E-E346-3B79-98B4-F42959690F06}</Project>
+      <Name>opencv_features2d</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="..\flann\opencv_flann.vcxproj">
+      <Project>{A78F35E9-AA3E-3148-ACC4-8DFAA61AB0B0}</Project>
+      <Name>opencv_flann</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="..\fuzzy\opencv_fuzzy.vcxproj">
+      <Project>{492C840E-6DCA-39AA-A904-F363A3D9635E}</Project>
+      <Name>opencv_fuzzy</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="..\hfs\opencv_hfs.vcxproj">
+      <Project>{FD095C9E-D34F-39FF-B496-A4CC5055BE6A}</Project>
+      <Name>opencv_hfs</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="..\highgui\opencv_highgui.vcxproj">
+      <Project>{2ED7E492-2FB6-388C-9D1E-130B1217C6D2}</Project>
+      <Name>opencv_highgui</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="..\img_hash\opencv_img_hash.vcxproj">
+      <Project>{3081F05A-E05A-3819-B1A5-456BCF43F35F}</Project>
+      <Name>opencv_img_hash</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="..\imgcodecs\opencv_imgcodecs.vcxproj">
+      <Project>{B7EA3436-145A-37A3-AA8D-BC694C9B1F69}</Project>
+      <Name>opencv_imgcodecs</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="..\imgproc\opencv_imgproc.vcxproj">
+      <Project>{2989009F-683B-3056-8726-9FD2005880A4}</Project>
+      <Name>opencv_imgproc</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="..\intensity_transform\opencv_intensity_transform.vcxproj">
+      <Project>{4FE3D54B-B7FA-394C-9A39-D7F8DEDCD509}</Project>
+      <Name>opencv_intensity_transform</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="..\line_descriptor\opencv_line_descriptor.vcxproj">
+      <Project>{F82D28A3-C1E1-354C-973E-00D6D193A8B3}</Project>
+      <Name>opencv_line_descriptor</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="..\mcc\opencv_mcc.vcxproj">
+      <Project>{347B0AA6-831F-3851-9DE6-D4C4A5437D10}</Project>
+      <Name>opencv_mcc</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="..\ml\opencv_ml.vcxproj">
+      <Project>{3AF7BB57-9948-3095-AE53-06710B900D40}</Project>
+      <Name>opencv_ml</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="..\objdetect\opencv_objdetect.vcxproj">
+      <Project>{3A6D7D6B-49DD-3272-BFC0-C2C7CE79700E}</Project>
+      <Name>opencv_objdetect</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="..\optflow\opencv_optflow.vcxproj">
+      <Project>{6B6EE1C3-CFBA-3783-A93B-4FB59E8FD103}</Project>
+      <Name>opencv_optflow</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="..\phase_unwrapping\opencv_phase_unwrapping.vcxproj">
+      <Project>{474831F6-E716-3A91-8967-D3558199F70F}</Project>
+      <Name>opencv_phase_unwrapping</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="..\photo\opencv_photo.vcxproj">
+      <Project>{00A0B2A6-6CA2-3361-B74D-F978A64848AC}</Project>
+      <Name>opencv_photo</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="..\plot\opencv_plot.vcxproj">
+      <Project>{B735B667-A814-393C-A5B8-8A854022798A}</Project>
+      <Name>opencv_plot</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="..\quality\opencv_quality.vcxproj">
+      <Project>{4F6B75A1-8CE8-31D4-88DA-1C4E39FF1D61}</Project>
+      <Name>opencv_quality</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="..\rapid\opencv_rapid.vcxproj">
+      <Project>{264053B9-835D-31D5-8805-54D9F01632E5}</Project>
+      <Name>opencv_rapid</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="..\reg\opencv_reg.vcxproj">
+      <Project>{69744111-C0E0-3780-A09F-5064A2FACD85}</Project>
+      <Name>opencv_reg</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="..\rgbd\opencv_rgbd.vcxproj">
+      <Project>{7F6644B1-6B0C-31BA-8FD3-C3145E2D9473}</Project>
+      <Name>opencv_rgbd</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="..\saliency\opencv_saliency.vcxproj">
+      <Project>{5D531023-AB5A-35A3-AB75-98DBC0218BB4}</Project>
+      <Name>opencv_saliency</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="..\shape\opencv_shape.vcxproj">
+      <Project>{D81074F2-99DD-331D-944B-2761CF8FB16F}</Project>
+      <Name>opencv_shape</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="..\stitching\opencv_stitching.vcxproj">
+      <Project>{68559562-02B3-3A75-81E2-87A21AC27875}</Project>
+      <Name>opencv_stitching</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="..\structured_light\opencv_structured_light.vcxproj">
+      <Project>{505B1764-3AE2-3C9F-BDF1-5B65242E3F98}</Project>
+      <Name>opencv_structured_light</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="..\superres\opencv_superres.vcxproj">
+      <Project>{503C26DA-D50C-33F3-B49B-D978EB7C330C}</Project>
+      <Name>opencv_superres</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="..\surface_matching\opencv_surface_matching.vcxproj">
+      <Project>{6AD12E8E-016A-39FC-9CD3-98D88B14B6DF}</Project>
+      <Name>opencv_surface_matching</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="..\text\opencv_text.vcxproj">
+      <Project>{082C0E89-FF1B-3ACF-B33E-2C6C17B98D82}</Project>
+      <Name>opencv_text</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="..\tracking\opencv_tracking.vcxproj">
+      <Project>{367FB96A-84C2-34A9-A86D-5A4B1112490B}</Project>
+      <Name>opencv_tracking</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="..\video\opencv_video.vcxproj">
+      <Project>{9166A05A-43E2-3C3F-BA39-68771B02C655}</Project>
+      <Name>opencv_video</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="..\videoio\opencv_videoio.vcxproj">
+      <Project>{578E90C5-8F5A-30F3-941F-F2E2338D1012}</Project>
+      <Name>opencv_videoio</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="..\videostab\opencv_videostab.vcxproj">
+      <Project>{D779D3D3-0C68-384F-AC2E-DBDCD4154A0D}</Project>
+      <Name>opencv_videostab</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="..\xfeatures2d\opencv_xfeatures2d.vcxproj">
+      <Project>{C4DAA04F-676A-3290-A597-059189FF356E}</Project>
+      <Name>opencv_xfeatures2d</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="..\ximgproc\opencv_ximgproc.vcxproj">
+      <Project>{C78DEF6E-D1B2-3DBA-B679-B31856053798}</Project>
+      <Name>opencv_ximgproc</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="..\xobjdetect\opencv_xobjdetect.vcxproj">
+      <Project>{B2EEE319-574D-30EF-9944-96D7BA222EE0}</Project>
+      <Name>opencv_xobjdetect</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="..\xphoto\opencv_xphoto.vcxproj">
+      <Project>{589DB57E-C74E-3EB1-8FFA-D4DC1DEA9686}</Project>
+      <Name>opencv_xphoto</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

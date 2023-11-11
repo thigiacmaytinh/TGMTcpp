@@ -1,0 +1,63 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="src\bm3d_image_denoising.cpp" />
+    <ClCompile Include="src\dct_image_denoising.cpp" />
+    <ClCompile Include="src\grayworld_white_balance.cpp" />
+    <ClCompile Include="src\inpainting.cpp" />
+    <ClCompile Include="src\learning_based_color_balance.cpp" />
+    <ClCompile Include="src\oilpainting.cpp" />
+    <ClCompile Include="src\simple_color_balance.cpp" />
+    <ClCompile Include="src\tonemap.cpp" />
+    <ClCompile Include="opencv_xphoto_main.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="include\opencv2\xphoto.hpp" />
+    <ClInclude Include="include\opencv2\xphoto\bm3d_image_denoising.hpp" />
+    <ClInclude Include="include\opencv2\xphoto\dct_image_denoising.hpp" />
+    <ClInclude Include="include\opencv2\xphoto\inpainting.hpp" />
+    <ClInclude Include="include\opencv2\xphoto\oilpainting.hpp" />
+    <ClInclude Include="include\opencv2\xphoto\tonemap.hpp" />
+    <ClInclude Include="include\opencv2\xphoto\white_balance.hpp" />
+    <ClInclude Include="src\advanced_types.hpp" />
+    <ClInclude Include="src\annf.hpp" />
+    <ClInclude Include="src\blending.hpp" />
+    <ClInclude Include="src\bm3d_denoising_invoker_commons.hpp" />
+    <ClInclude Include="src\bm3d_denoising_invoker_step1.hpp" />
+    <ClInclude Include="src\bm3d_denoising_invoker_step2.hpp" />
+    <ClInclude Include="src\bm3d_denoising_invoker_structs.hpp" />
+    <ClInclude Include="src\bm3d_denoising_transforms.hpp" />
+    <ClInclude Include="src\bm3d_denoising_transforms_1D.hpp" />
+    <ClInclude Include="src\bm3d_denoising_transforms_2D.hpp" />
+    <ClInclude Include="src\bm3d_denoising_transforms_haar.hpp" />
+    <ClInclude Include="src\gcgraph.hpp" />
+    <ClInclude Include="src\inpainting_fsr.impl.hpp" />
+    <ClInclude Include="src\kaiser_window.hpp" />
+    <ClInclude Include="src\learning_based_color_balance_model.hpp" />
+    <ClInclude Include="src\norm2.hpp" />
+    <ClInclude Include="src\photomontage.hpp" />
+    <ClInclude Include="src\whs.hpp" />
+    <ClInclude Include="cvconfig.h" />
+    <ClInclude Include="opencv_modules.hpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="vs_version.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Include">
+      <UniqueIdentifier>{0F4E727C-A542-39DA-A5B7-B658528F0B6C}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Include\opencv2">
+      <UniqueIdentifier>{8E98FA75-E5B5-3AD2-AC34-8A455A40CD7D}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Include\opencv2\xphoto">
+      <UniqueIdentifier>{1474209E-19AB-3699-B20A-3589FFC18153}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{CE12B7EF-4DE0-3097-AE17-93B2DA197F27}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Src">
+      <UniqueIdentifier>{CD70F01E-A37A-31F4-9B99-9B18D6482D8A}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

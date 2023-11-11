@@ -1,0 +1,10 @@
+# CMake generation dependency list for this directory.
+C:/Program Files/CMake/share/cmake-3.14/Modules/CheckIncludeFile.cmake
+C:/Program Files/CMake/share/cmake-3.14/Modules/CheckIncludeFileCXX.cmake
+C:/Program Files/CMake/share/cmake-3.14/Modules/CheckIncludeFiles.cmake
+C:/Program Files/CMake/share/cmake-3.14/Modules/CheckSymbolExists.cmake
+C:/Program Files/CMake/share/cmake-3.14/Modules/CheckTypeSize.cmake
+C:/Program Files/CMake/share/cmake-3.14/Modules/TestBigEndian.cmake
+D:/LIB/opencv/opencv450/sources/3rdparty/openjpeg/CMakeLists.txt
+D:/LIB/opencv/opencv450/sources/3rdparty/openjpeg/openjp2/opj_config.h.cmake.in
+D:/LIB/opencv/opencv450/sources/3rdparty/openjpeg/openjp2/opj_config_private.h.cmake.in
