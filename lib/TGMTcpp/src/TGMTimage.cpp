@@ -49,11 +49,11 @@ cv::Mat TGMTimage::ConvertToGray(const cv::Mat matInput)
 	cv::Mat matGray;
 	if (matInput.channels() == 3) 
 	{
-		cv::cvtColor(matInput, matGray, CV_BGR2GRAY);
+		cv::cvtColor(matInput, matGray, cv::COLOR_BGR2GRAY);
 	}
 	else if (matInput.channels() == 4) 
 	{
-		cv::cvtColor(matInput, matGray, CV_BGRA2GRAY);
+		cv::cvtColor(matInput, matGray, cv::COLOR_BGRA2GRAY);
 	}
 	else
 	{

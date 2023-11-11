@@ -54,7 +54,7 @@ public:
 	TGMTConfig();
 	~TGMTConfig();
 
-	bool LoadSettingFromFile(std::string settingFile = "config.ini");
+	bool LoadConfig(std::string settingFile = "config.ini");
 
 #if (defined(WIN32) || defined(WIN64)) && defined( UNICODE)
 	std::wstring ReadValueWString(std::string section, std::string key, std::wstring defaultValue = L"");

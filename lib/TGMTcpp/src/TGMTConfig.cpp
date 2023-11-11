@@ -23,7 +23,7 @@ TGMTConfig::~TGMTConfig()
 
 //////////////////////////////////////////////////////////////////////////////////////////////////
 
-bool TGMTConfig::LoadSettingFromFile(std::string settingFile)
+bool TGMTConfig::LoadConfig(std::string settingFile)
 {
 	if (settingFile.substr(1, 1) != ":")
 	{
