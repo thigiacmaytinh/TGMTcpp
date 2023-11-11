@@ -1,5 +1,9 @@
-Lưu ý:
-- File opencv_modules.hpp chứa config để enable các project, nếu project nào không sử dụng thì remove
+# TGMTcpp: các ví dụ về OpenCV viết bằng C++
 
-https://thigiacmaytinh.com
-https://www.facebook.com/groups/thigiacmaytinh
+Website hướng dẫn: https://thigiacmaytinh.com
+
+## Hướng dẫn sử dụng
+- Sử dụng Visual Studio 2017 trở lên để build
+- File **opencv_modules.hpp** chứa config để enable các project, nếu project nào không sử dụng thì rem (comment)
+
+

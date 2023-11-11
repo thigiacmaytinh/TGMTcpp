@@ -1,5 +1,7 @@
-// DetectShirtColor.cpp : Defines the entry point for the console application.
-//
+﻿/*
+Bật cờ #define HAVE_OPENCV_VIDEOIO ở file opencv_modules.hpp nếu không build được
+*/
+
 
 #include "stdafx.h"
 #include "tchar.h"
