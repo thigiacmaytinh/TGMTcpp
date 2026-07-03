@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="opencv_saliency_main.cpp" />
+    <ClCompile Include="src\BING\CmFile.cpp" />
+    <ClCompile Include="src\BING\CmShow.cpp" />
+    <ClCompile Include="src\BING\FilterTIG.cpp" />
+    <ClCompile Include="src\BING\ValStructVec.cpp" />
+    <ClCompile Include="src\BING\objectnessBING.cpp" />
+    <ClCompile Include="src\motionSaliency.cpp" />
+    <ClCompile Include="src\motionSaliencyBinWangApr2014.cpp" />
+    <ClCompile Include="src\objectness.cpp" />
+    <ClCompile Include="src\saliency.cpp" />
+    <ClCompile Include="src\staticSaliency.cpp" />
+    <ClCompile Include="src\staticSaliencyFineGrained.cpp" />
+    <ClCompile Include="src\staticSaliencySpectralResidual.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="D:\LIB\opencv\opencv480\build\cvconfig.h">
+      <Filter>Include</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\LIB\opencv\opencv480\build\opencv2\opencv_modules.hpp">
+      <Filter>Include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\opencv2\saliency.hpp" />
+    <ClInclude Include="include\opencv2\saliency\saliencyBaseClasses.hpp" />
+    <ClInclude Include="include\opencv2\saliency\saliencySpecializedClasses.hpp" />
+    <ClInclude Include="src\BING\CmFile.hpp" />
+    <ClInclude Include="src\BING\CmShow.hpp" />
+    <ClInclude Include="src\BING\CmTimer.hpp" />
+    <ClInclude Include="src\BING\kyheader.hpp" />
+    <ClInclude Include="src\precomp.hpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="vs_version.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Include">
+      <UniqueIdentifier>{F73E1321-2CC0-3C82-B659-D2B5CEC43562}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Include\opencv2">
+      <UniqueIdentifier>{7B157B1B-D693-3CAB-B777-2F3947536837}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Include\opencv2\saliency">
+      <UniqueIdentifier>{A26E6D80-F852-395A-8A1E-CCB12648F2FE}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Precompile Header File">
+      <UniqueIdentifier>{5D557921-288E-3543-B0CB-0F405FBA551C}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{B424FE76-8A02-34EF-85BB-75F86BE76CE0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Src">
+      <UniqueIdentifier>{BA1B5659-E9EF-3DC1-8E8D-15B598609623}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Src\BING">
+      <UniqueIdentifier>{87899C22-9D8D-33B0-AD95-CAC81D356855}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

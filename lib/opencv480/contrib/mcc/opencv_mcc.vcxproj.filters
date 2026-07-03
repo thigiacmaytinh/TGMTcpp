@@ -1,0 +1,75 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="opencv_mcc_main.cpp" />
+    <ClCompile Include="src\bound_min.cpp" />
+    <ClCompile Include="src\ccm.cpp" />
+    <ClCompile Include="src\charts.cpp" />
+    <ClCompile Include="src\checker_detector.cpp" />
+    <ClCompile Include="src\checker_model.cpp" />
+    <ClCompile Include="src\color.cpp" />
+    <ClCompile Include="src\colorspace.cpp" />
+    <ClCompile Include="src\common.cpp" />
+    <ClCompile Include="src\debug.cpp" />
+    <ClCompile Include="src\distance.cpp" />
+    <ClCompile Include="src\graph_cluster.cpp" />
+    <ClCompile Include="src\io.cpp" />
+    <ClCompile Include="src\linearize.cpp" />
+    <ClCompile Include="src\mcc.cpp" />
+    <ClCompile Include="src\operations.cpp" />
+    <ClCompile Include="src\utils.cpp" />
+    <ClCompile Include="src\wiener_filter.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="D:\LIB\opencv\opencv480\build\cvconfig.h">
+      <Filter>Include</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\LIB\opencv\opencv480\build\opencv2\opencv_modules.hpp">
+      <Filter>Include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\opencv2\mcc.hpp" />
+    <ClInclude Include="include\opencv2\mcc\ccm.hpp" />
+    <ClInclude Include="include\opencv2\mcc\checker_detector.hpp" />
+    <ClInclude Include="include\opencv2\mcc\checker_model.hpp" />
+    <ClInclude Include="src\bound_min.hpp" />
+    <ClInclude Include="src\charts.hpp" />
+    <ClInclude Include="src\checker_detector.hpp" />
+    <ClInclude Include="src\checker_model.hpp" />
+    <ClInclude Include="src\color.hpp" />
+    <ClInclude Include="src\colorspace.hpp" />
+    <ClInclude Include="src\common.hpp" />
+    <ClInclude Include="src\debug.hpp" />
+    <ClInclude Include="src\dictionary.hpp" />
+    <ClInclude Include="src\distance.hpp" />
+    <ClInclude Include="src\graph_cluster.hpp" />
+    <ClInclude Include="src\io.hpp" />
+    <ClInclude Include="src\linearize.hpp" />
+    <ClInclude Include="src\operations.hpp" />
+    <ClInclude Include="src\precomp.hpp" />
+    <ClInclude Include="src\utils.hpp" />
+    <ClInclude Include="src\wiener_filter.hpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="vs_version.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Include">
+      <UniqueIdentifier>{F73E1321-2CC0-3C82-B659-D2B5CEC43562}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Include\opencv2">
+      <UniqueIdentifier>{7B157B1B-D693-3CAB-B777-2F3947536837}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Include\opencv2\mcc">
+      <UniqueIdentifier>{1BCFEF84-6320-3F9A-9279-C347DABB07C4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Precompile Header File">
+      <UniqueIdentifier>{5D557921-288E-3543-B0CB-0F405FBA551C}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{B424FE76-8A02-34EF-85BB-75F86BE76CE0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Src">
+      <UniqueIdentifier>{BA1B5659-E9EF-3DC1-8E8D-15B598609623}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

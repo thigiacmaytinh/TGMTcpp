@@ -1,0 +1,119 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="opencl_kernels_tracking.cpp" />
+    <ClCompile Include="opencv_tracking_main.cpp" />
+    <ClCompile Include="src\augmented_unscented_kalman.cpp" />
+    <ClCompile Include="src\feature.cpp" />
+    <ClCompile Include="src\featureColorName.cpp" />
+    <ClCompile Include="src\gtrUtils.cpp" />
+    <ClCompile Include="src\kuhn_munkres.cpp" />
+    <ClCompile Include="src\mosseTracker.cpp" />
+    <ClCompile Include="src\multiTracker.cpp" />
+    <ClCompile Include="src\multiTracker_alt.cpp" />
+    <ClCompile Include="src\onlineBoosting.cpp" />
+    <ClCompile Include="src\tldDataset.cpp" />
+    <ClCompile Include="src\tldDetector.cpp" />
+    <ClCompile Include="src\tldEnsembleClassifier.cpp" />
+    <ClCompile Include="src\tldModel.cpp" />
+    <ClCompile Include="src\tldTracker.cpp" />
+    <ClCompile Include="src\tldUtils.cpp" />
+    <ClCompile Include="src\tracker.cpp" />
+    <ClCompile Include="src\trackerBoosting.cpp" />
+    <ClCompile Include="src\trackerBoostingModel.cpp" />
+    <ClCompile Include="src\trackerCSRT.cpp" />
+    <ClCompile Include="src\trackerCSRTScaleEstimation.cpp" />
+    <ClCompile Include="src\trackerCSRTSegmentation.cpp" />
+    <ClCompile Include="src\trackerCSRTUtils.cpp" />
+    <ClCompile Include="src\trackerFeature.cpp" />
+    <ClCompile Include="src\trackerFeatureSet.cpp" />
+    <ClCompile Include="src\trackerKCF.cpp" />
+    <ClCompile Include="src\trackerMIL_legacy.cpp" />
+    <ClCompile Include="src\trackerMedianFlow.cpp" />
+    <ClCompile Include="src\trackerSampler.cpp" />
+    <ClCompile Include="src\trackerSamplerAlgorithm.cpp" />
+    <ClCompile Include="src\trackerStateEstimator.cpp" />
+    <ClCompile Include="src\tracking_by_matching.cpp" />
+    <ClCompile Include="src\tracking_utils.cpp" />
+    <ClCompile Include="src\unscented_kalman.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="D:\LIB\opencv\opencv480\build\cvconfig.h">
+      <Filter>Include</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\LIB\opencv\opencv480\build\opencv2\opencv_modules.hpp">
+      <Filter>Include</Filter>
+    </ClInclude>
+    <ClInclude Include="opencl_kernels_tracking.hpp" />
+    <ClInclude Include="include\opencv2\tracking.hpp" />
+    <ClInclude Include="include\opencv2\tracking\feature.hpp" />
+    <ClInclude Include="include\opencv2\tracking\kalman_filters.hpp" />
+    <ClInclude Include="include\opencv2\tracking\onlineBoosting.hpp" />
+    <ClInclude Include="include\opencv2\tracking\tldDataset.hpp" />
+    <ClInclude Include="include\opencv2\tracking\tracking.hpp" />
+    <ClInclude Include="include\opencv2\tracking\tracking_by_matching.hpp" />
+    <ClInclude Include="include\opencv2\tracking\tracking_internals.hpp" />
+    <ClInclude Include="include\opencv2\tracking\tracking_legacy.hpp" />
+    <ClInclude Include="src\PFSolver.hpp" />
+    <ClInclude Include="src\TrackingFunctionPF.hpp" />
+    <ClInclude Include="src\gtrUtils.hpp" />
+    <ClInclude Include="src\kuhn_munkres.hpp" />
+    <ClInclude Include="src\legacy\tracker.legacy.hpp" />
+    <ClInclude Include="src\legacy\trackerCSRT.legacy.hpp" />
+    <ClInclude Include="src\legacy\trackerKCF.legacy.hpp" />
+    <ClInclude Include="src\multiTracker.hpp" />
+    <ClInclude Include="src\precomp.hpp" />
+    <ClInclude Include="src\tldDetector.hpp" />
+    <ClInclude Include="src\tldEnsembleClassifier.hpp" />
+    <ClInclude Include="src\tldModel.hpp" />
+    <ClInclude Include="src\tldTracker.hpp" />
+    <ClInclude Include="src\tldUtils.hpp" />
+    <ClInclude Include="src\trackerBoostingModel.hpp" />
+    <ClInclude Include="src\trackerCSRTScaleEstimation.hpp" />
+    <ClInclude Include="src\trackerCSRTSegmentation.hpp" />
+    <ClInclude Include="src\trackerCSRTUtils.hpp" />
+    <ClInclude Include="src\tracking_utils.hpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="src\opencl\tldDetector.cl" />
+    <None Include="src\opencl\tmm.cl" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="vs_version.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="CMake Rules">
+      <UniqueIdentifier>{BC6BC956-0833-3F3E-B3C8-CF14B630DA9D}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Include">
+      <UniqueIdentifier>{F73E1321-2CC0-3C82-B659-D2B5CEC43562}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Include\opencv2">
+      <UniqueIdentifier>{7B157B1B-D693-3CAB-B777-2F3947536837}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Include\opencv2\tracking">
+      <UniqueIdentifier>{46D58ED1-A582-36FE-A104-70091FCC2D4A}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Precompile Header File">
+      <UniqueIdentifier>{5D557921-288E-3543-B0CB-0F405FBA551C}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{B424FE76-8A02-34EF-85BB-75F86BE76CE0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Src">
+      <UniqueIdentifier>{BA1B5659-E9EF-3DC1-8E8D-15B598609623}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Src\legacy">
+      <UniqueIdentifier>{6D36C0FC-B9C9-371F-9700-1413C9478CFD}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Src\opencl">
+      <UniqueIdentifier>{B0F36292-7761-3055-A6B6-041B8E30B9A5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Src\opencl\kernels">
+      <UniqueIdentifier>{A508DA8B-FF29-300B-8DAE-83129DCCA3EC}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Src\opencl\kernels\autogenerated">
+      <UniqueIdentifier>{ABADE330-7AC5-39DC-8486-109D51C8EF9B}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

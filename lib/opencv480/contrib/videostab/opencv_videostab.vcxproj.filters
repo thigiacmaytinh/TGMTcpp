@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="opencv_videostab_main.cpp" />
+    <ClCompile Include="src\deblurring.cpp" />
+    <ClCompile Include="src\fast_marching.cpp" />
+    <ClCompile Include="src\frame_source.cpp" />
+    <ClCompile Include="src\global_motion.cpp" />
+    <ClCompile Include="src\inpainting.cpp" />
+    <ClCompile Include="src\log.cpp" />
+    <ClCompile Include="src\motion_stabilizing.cpp" />
+    <ClCompile Include="src\optical_flow.cpp" />
+    <ClCompile Include="src\outlier_rejection.cpp" />
+    <ClCompile Include="src\stabilizer.cpp" />
+    <ClCompile Include="src\wobble_suppression.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="D:\LIB\opencv\opencv480\build\cvconfig.h">
+      <Filter>Include</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\LIB\opencv\opencv480\build\opencv2\opencv_modules.hpp">
+      <Filter>Include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\opencv2\videostab.hpp" />
+    <ClInclude Include="include\opencv2\videostab\deblurring.hpp" />
+    <ClInclude Include="include\opencv2\videostab\fast_marching.hpp" />
+    <ClInclude Include="include\opencv2\videostab\fast_marching_inl.hpp" />
+    <ClInclude Include="include\opencv2\videostab\frame_source.hpp" />
+    <ClInclude Include="include\opencv2\videostab\global_motion.hpp" />
+    <ClInclude Include="include\opencv2\videostab\inpainting.hpp" />
+    <ClInclude Include="include\opencv2\videostab\log.hpp" />
+    <ClInclude Include="include\opencv2\videostab\motion_core.hpp" />
+    <ClInclude Include="include\opencv2\videostab\motion_stabilizing.hpp" />
+    <ClInclude Include="include\opencv2\videostab\optical_flow.hpp" />
+    <ClInclude Include="include\opencv2\videostab\outlier_rejection.hpp" />
+    <ClInclude Include="include\opencv2\videostab\ring_buffer.hpp" />
+    <ClInclude Include="include\opencv2\videostab\stabilizer.hpp" />
+    <ClInclude Include="include\opencv2\videostab\wobble_suppression.hpp" />
+    <ClInclude Include="src\clp.hpp" />
+    <ClInclude Include="src\precomp.hpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="vs_version.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Include">
+      <UniqueIdentifier>{F73E1321-2CC0-3C82-B659-D2B5CEC43562}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Include\opencv2">
+      <UniqueIdentifier>{7B157B1B-D693-3CAB-B777-2F3947536837}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Include\opencv2\videostab">
+      <UniqueIdentifier>{E28CB709-327B-303A-9C3C-35C861A74B92}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Precompile Header File">
+      <UniqueIdentifier>{5D557921-288E-3543-B0CB-0F405FBA551C}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{B424FE76-8A02-34EF-85BB-75F86BE76CE0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Src">
+      <UniqueIdentifier>{BA1B5659-E9EF-3DC1-8E8D-15B598609623}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

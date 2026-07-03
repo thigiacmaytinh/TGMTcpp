@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{C52E6A76-8178-3B1F-930D-5CBBC4C48842}</ProjectGuid>
+    <WindowsTargetPlatformVersion>10.0.17763.0</WindowsTargetPlatformVersion>
+    <Keyword>Win32Proj</Keyword>
+    <Platform>x64</Platform>
+    <ProjectName>ALL_BUILD</ProjectName>
+    <VCProjectUpgraderObjectName>NoUpgrade</VCProjectUpgraderObjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Midl>
+      <AdditionalIncludeDirectories>$(SolutionDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Midl>
+      <AdditionalIncludeDirectories>$(SolutionDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+  </ItemGroup>
+  <ItemGroup>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="D:\LIB\opencv\opencv480\build\ZERO_CHECK.vcxproj">
+      <Project>{A2B6B0A1-0116-3B54-BA2A-2EB40583D0C0}</Project>
+      <Name>ZERO_CHECK</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="example_ximgproc_brightedgesexample.vcxproj">
+      <Project>{F2A0C1AE-632A-34B6-B801-D1594F34AFDE}</Project>
+      <Name>example_ximgproc_brightedgesexample</Name>
+    </ProjectReference>
+    <ProjectReference Include="example_ximgproc_color_match_template.vcxproj">
+      <Project>{9022C59C-0640-338D-8788-88201E51E570}</Project>
+      <Name>example_ximgproc_color_match_template</Name>
+    </ProjectReference>
+    <ProjectReference Include="example_ximgproc_colorize.vcxproj">
+      <Project>{097CB4BE-9AE0-3DEE-8E6B-88A787784F60}</Project>
+      <Name>example_ximgproc_colorize</Name>
+    </ProjectReference>
+    <ProjectReference Include="example_ximgproc_deriche_demo.vcxproj">
+      <Project>{12E6D508-C6F0-328B-B519-FB4BBDC3235B}</Project>
+      <Name>example_ximgproc_deriche_demo</Name>
+    </ProjectReference>
+    <ProjectReference Include="example_ximgproc_disparity_filtering.vcxproj">
+      <Project>{10C4DFA4-3D08-353A-AAB1-3C290773DD8B}</Project>
+      <Name>example_ximgproc_disparity_filtering</Name>
+    </ProjectReference>
+    <ProjectReference Include="example_ximgproc_edgeboxes_demo.vcxproj">
+      <Project>{F37A54C9-22B0-3AD6-8DDB-2CDF4CF595AF}</Project>
+      <Name>example_ximgproc_edgeboxes_demo</Name>
+    </ProjectReference>
+    <ProjectReference Include="example_ximgproc_edgepreserving_filter_demo.vcxproj">
+      <Project>{D36F6021-D764-3E1C-BDC6-3EA0CA7F833B}</Project>
+      <Name>example_ximgproc_edgepreserving_filter_demo</Name>
+    </ProjectReference>
+    <ProjectReference Include="example_ximgproc_fast_hough_transform.vcxproj">
+      <Project>{6D468902-B75F-3575-A63F-CEFE84BECAE9}</Project>
+      <Name>example_ximgproc_fast_hough_transform</Name>
+    </ProjectReference>
+    <ProjectReference Include="example_ximgproc_filterdemo.vcxproj">
+      <Project>{430936C4-BD66-3E1E-8071-AAAE5B0017AD}</Project>
+      <Name>example_ximgproc_filterdemo</Name>
+    </ProjectReference>
+    <ProjectReference Include="example_ximgproc_find_ellipses.vcxproj">
+      <Project>{2FBB3640-C0CB-3458-ACDD-B62EE243AB53}</Project>
+      <Name>example_ximgproc_find_ellipses</Name>
+    </ProjectReference>
+    <ProjectReference Include="example_ximgproc_fld_lines.vcxproj">
+      <Project>{1F77E725-18CF-32DF-B7BB-71ED954047ED}</Project>
+      <Name>example_ximgproc_fld_lines</Name>
+    </ProjectReference>
+    <ProjectReference Include="example_ximgproc_fourier_descriptors_demo.vcxproj">
+      <Project>{C9C26337-BE5D-37B1-B04E-DAEA8B35D818}</Project>
+      <Name>example_ximgproc_fourier_descriptors_demo</Name>
+    </ProjectReference>
+    <ProjectReference Include="example_ximgproc_graphsegmentation_demo.vcxproj">
+      <Project>{A59D93C9-FB5A-3FBA-859A-92E2DE1D70CA}</Project>
+      <Name>example_ximgproc_graphsegmentation_demo</Name>
+    </ProjectReference>
+    <ProjectReference Include="example_ximgproc_live_demo.vcxproj">
+      <Project>{D2E924BE-762D-3C80-A777-FC70E34F4781}</Project>
+      <Name>example_ximgproc_live_demo</Name>
+    </ProjectReference>
+    <ProjectReference Include="example_ximgproc_niblack_thresholding.vcxproj">
+      <Project>{76830582-E9E6-3D2B-AAF4-6573D17534AE}</Project>
+      <Name>example_ximgproc_niblack_thresholding</Name>
+    </ProjectReference>
+    <ProjectReference Include="example_ximgproc_paillou_demo.vcxproj">
+      <Project>{EC4B33DC-CAE1-3A15-86E6-797BA7043146}</Project>
+      <Name>example_ximgproc_paillou_demo</Name>
+    </ProjectReference>
+    <ProjectReference Include="example_ximgproc_peilin.vcxproj">
+      <Project>{0350FD04-BECA-3AB3-A12C-216E0EB84240}</Project>
+      <Name>example_ximgproc_peilin</Name>
+    </ProjectReference>
+    <ProjectReference Include="example_ximgproc_radon_transform_demo.vcxproj">
+      <Project>{044A7599-D0F6-3C0E-9CD6-0CBCA1AB38C9}</Project>
+      <Name>example_ximgproc_radon_transform_demo</Name>
+    </ProjectReference>
+    <ProjectReference Include="example_ximgproc_run_length_morphology_demo.vcxproj">
+      <Project>{92C37F49-A896-314C-A863-B635293CA00D}</Project>
+      <Name>example_ximgproc_run_length_morphology_demo</Name>
+    </ProjectReference>
+    <ProjectReference Include="example_ximgproc_seeds.vcxproj">
+      <Project>{DA72C39F-1F05-332F-A080-D92DDE886369}</Project>
+      <Name>example_ximgproc_seeds</Name>
+    </ProjectReference>
+    <ProjectReference Include="example_ximgproc_selectivesearchsegmentation_demo.vcxproj">
+      <Project>{36C6B7F9-B86D-3D5C-AA20-9FD8B211D481}</Project>
+      <Name>example_ximgproc_selectivesearchsegmentation_demo</Name>
+    </ProjectReference>
+    <ProjectReference Include="example_ximgproc_slic.vcxproj">
+      <Project>{96305FE0-0ED2-337B-A598-617458739E69}</Project>
+      <Name>example_ximgproc_slic</Name>
+    </ProjectReference>
+    <ProjectReference Include="example_ximgproc_structured_edge_detection.vcxproj">
+      <Project>{62287EAE-C21E-3083-910F-B626F4B2CDBA}</Project>
+      <Name>example_ximgproc_structured_edge_detection</Name>
+    </ProjectReference>
+    <ProjectReference Include="example_ximgproc_thinning.vcxproj">
+      <Project>{F5E1DE4E-D891-3939-B892-A027D8A6628E}</Project>
+      <Name>example_ximgproc_thinning</Name>
+    </ProjectReference>
+    <ProjectReference Include="opencv_ximgproc.vcxproj">
+      <Project>{A497379D-DF46-3CBF-996E-BDBA6D69D052}</Project>
+      <Name>opencv_ximgproc</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

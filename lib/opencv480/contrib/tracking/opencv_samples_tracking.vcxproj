@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{7AA41875-18AF-3E80-94C0-A423E7299327}</ProjectGuid>
+    <WindowsTargetPlatformVersion>10.0.17763.0</WindowsTargetPlatformVersion>
+    <Keyword>Win32Proj</Keyword>
+    <Platform>x64</Platform>
+    <ProjectName>opencv_samples_tracking</ProjectName>
+    <VCProjectUpgraderObjectName>NoUpgrade</VCProjectUpgraderObjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Midl>
+      <AdditionalIncludeDirectories>$(SolutionDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Midl>
+      <AdditionalIncludeDirectories>$(SolutionDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+  </ItemGroup>
+  <ItemGroup>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="D:\LIB\opencv\opencv480\build\ZERO_CHECK.vcxproj">
+      <Project>{A2B6B0A1-0116-3B54-BA2A-2EB40583D0C0}</Project>
+      <Name>ZERO_CHECK</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="example_tracking_benchmark.vcxproj">
+      <Project>{81C5E7E7-E600-3BF6-B993-877C44B7A7A1}</Project>
+      <Name>example_tracking_benchmark</Name>
+    </ProjectReference>
+    <ProjectReference Include="example_tracking_csrt.vcxproj">
+      <Project>{76A45FE0-6E2D-3768-A086-F26E2A97746D}</Project>
+      <Name>example_tracking_csrt</Name>
+    </ProjectReference>
+    <ProjectReference Include="example_tracking_goturnTracker.vcxproj">
+      <Project>{7FD1F4EB-DDCC-3302-9D1D-0978C602A408}</Project>
+      <Name>example_tracking_goturnTracker</Name>
+    </ProjectReference>
+    <ProjectReference Include="example_tracking_kcf.vcxproj">
+      <Project>{29E3F33F-717E-343E-899F-02A001361DA8}</Project>
+      <Name>example_tracking_kcf</Name>
+    </ProjectReference>
+    <ProjectReference Include="example_tracking_multiTracker_dataset.vcxproj">
+      <Project>{16683566-85D8-32EA-86BC-9FFF9DDE0CB5}</Project>
+      <Name>example_tracking_multiTracker_dataset</Name>
+    </ProjectReference>
+    <ProjectReference Include="example_tracking_multitracker.vcxproj">
+      <Project>{5C70EDC3-487E-3266-BA9D-00857AFEF877}</Project>
+      <Name>example_tracking_multitracker</Name>
+    </ProjectReference>
+    <ProjectReference Include="example_tracking_tracker.vcxproj">
+      <Project>{7399F295-3EBB-3807-AD6C-34FDA1432F8E}</Project>
+      <Name>example_tracking_tracker</Name>
+    </ProjectReference>
+    <ProjectReference Include="example_tracking_tracker_dataset.vcxproj">
+      <Project>{B92036F0-F117-313E-85DF-D2140D77981D}</Project>
+      <Name>example_tracking_tracker_dataset</Name>
+    </ProjectReference>
+    <ProjectReference Include="example_tracking_tracking_by_matching.vcxproj">
+      <Project>{A6B9CA9A-7B12-3713-BE4E-070D63C16AF1}</Project>
+      <Name>example_tracking_tracking_by_matching</Name>
+    </ProjectReference>
+    <ProjectReference Include="example_tracking_tutorial_customizing_cn_tracker.vcxproj">
+      <Project>{FFE45271-3EE8-3872-A1C4-C8591A67C8AC}</Project>
+      <Name>example_tracking_tutorial_customizing_cn_tracker</Name>
+    </ProjectReference>
+    <ProjectReference Include="example_tracking_tutorial_introduction_to_tracker.vcxproj">
+      <Project>{3CA81B85-3C18-3C8C-B0B6-27C328268717}</Project>
+      <Name>example_tracking_tutorial_introduction_to_tracker</Name>
+    </ProjectReference>
+    <ProjectReference Include="example_tracking_tutorial_multitracker.vcxproj">
+      <Project>{27F5D518-68E6-3860-8F83-B667920488BD}</Project>
+      <Name>example_tracking_tutorial_multitracker</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

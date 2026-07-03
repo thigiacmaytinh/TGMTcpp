@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{0BB894E2-DE81-3D52-86F6-C0FC27C94BE1}</ProjectGuid>
+    <WindowsTargetPlatformVersion>10.0.17763.0</WindowsTargetPlatformVersion>
+    <Keyword>Win32Proj</Keyword>
+    <Platform>x64</Platform>
+    <ProjectName>opencv_samples_text</ProjectName>
+    <VCProjectUpgraderObjectName>NoUpgrade</VCProjectUpgraderObjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Midl>
+      <AdditionalIncludeDirectories>D:\LIB\opencv\opencv480\build\modules\text;$(SolutionDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Midl>
+      <AdditionalIncludeDirectories>D:\LIB\opencv\opencv480\build\modules\text;$(SolutionDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+  </ItemGroup>
+  <ItemGroup>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="D:\LIB\opencv\opencv480\build\ZERO_CHECK.vcxproj">
+      <Project>{A2B6B0A1-0116-3B54-BA2A-2EB40583D0C0}</Project>
+      <Name>ZERO_CHECK</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="example_text_character_recognition.vcxproj">
+      <Project>{41064AB7-9BFC-373F-ABBB-26627E1198D4}</Project>
+      <Name>example_text_character_recognition</Name>
+    </ProjectReference>
+    <ProjectReference Include="example_text_cropped_word_recognition.vcxproj">
+      <Project>{3E46B087-B772-3B09-B393-F282D2499C64}</Project>
+      <Name>example_text_cropped_word_recognition</Name>
+    </ProjectReference>
+    <ProjectReference Include="example_text_dictnet_demo.vcxproj">
+      <Project>{0E80BAEF-DE77-38FB-AB3E-919BC55240FE}</Project>
+      <Name>example_text_dictnet_demo</Name>
+    </ProjectReference>
+    <ProjectReference Include="example_text_end_to_end_recognition.vcxproj">
+      <Project>{B1F71B0F-3D74-39BE-899E-8C70D88D28B7}</Project>
+      <Name>example_text_end_to_end_recognition</Name>
+    </ProjectReference>
+    <ProjectReference Include="example_text_segmented_word_recognition.vcxproj">
+      <Project>{F8FBBC13-B9D3-35BC-A059-A65DCCB06E45}</Project>
+      <Name>example_text_segmented_word_recognition</Name>
+    </ProjectReference>
+    <ProjectReference Include="example_text_text_recognition_cnn.vcxproj">
+      <Project>{6B8F0C87-00FE-3D1C-B0B8-036E5FFE5B35}</Project>
+      <Name>example_text_text_recognition_cnn</Name>
+    </ProjectReference>
+    <ProjectReference Include="example_text_textbox_demo.vcxproj">
+      <Project>{CFF8FA53-3040-316A-989B-B043D3878BFE}</Project>
+      <Name>example_text_textbox_demo</Name>
+    </ProjectReference>
+    <ProjectReference Include="example_text_textdetection.vcxproj">
+      <Project>{5B8836B2-2CC3-3B7D-8379-FA73FCEF333E}</Project>
+      <Name>example_text_textdetection</Name>
+    </ProjectReference>
+    <ProjectReference Include="example_text_textdetection_swt.vcxproj">
+      <Project>{7BCA3C69-1BB7-3D33-88BA-CCFC97A92D8E}</Project>
+      <Name>example_text_textdetection_swt</Name>
+    </ProjectReference>
+    <ProjectReference Include="example_text_webcam_demo.vcxproj">
+      <Project>{A730BED6-CC65-31BD-AA61-0512AE7169AA}</Project>
+      <Name>example_text_webcam_demo</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{C52E6A76-8178-3B1F-930D-5CBBC4C48842}</ProjectGuid>
+    <WindowsTargetPlatformVersion>10.0.17763.0</WindowsTargetPlatformVersion>
+    <Keyword>Win32Proj</Keyword>
+    <Platform>x64</Platform>
+    <ProjectName>ALL_BUILD</ProjectName>
+    <VCProjectUpgraderObjectName>NoUpgrade</VCProjectUpgraderObjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Midl>
+      <AdditionalIncludeDirectories>D:\LIB\opencv\opencv480\build\modules\aruco;$(SolutionDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Midl>
+      <AdditionalIncludeDirectories>D:\LIB\opencv\opencv480\build\modules\aruco;$(SolutionDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+  </ItemGroup>
+  <ItemGroup>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="D:\LIB\opencv\opencv480\build\ZERO_CHECK.vcxproj">
+      <Project>{A2B6B0A1-0116-3B54-BA2A-2EB40583D0C0}</Project>
+      <Name>ZERO_CHECK</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="example_aruco_calibrate_camera.vcxproj">
+      <Project>{A9BC9EE5-6CFF-385A-B6D2-FEB86255F5F0}</Project>
+      <Name>example_aruco_calibrate_camera</Name>
+    </ProjectReference>
+    <ProjectReference Include="example_aruco_calibrate_camera_charuco.vcxproj">
+      <Project>{A43A4534-1C20-328B-AE42-15D31F842F0D}</Project>
+      <Name>example_aruco_calibrate_camera_charuco</Name>
+    </ProjectReference>
+    <ProjectReference Include="example_aruco_create_board.vcxproj">
+      <Project>{F066F803-0B5A-36B1-A160-B7CC87A3B2AF}</Project>
+      <Name>example_aruco_create_board</Name>
+    </ProjectReference>
+    <ProjectReference Include="example_aruco_create_board_charuco.vcxproj">
+      <Project>{3C81E1D3-7E34-3D14-A79B-53F08FC2AD3A}</Project>
+      <Name>example_aruco_create_board_charuco</Name>
+    </ProjectReference>
+    <ProjectReference Include="example_aruco_create_diamond.vcxproj">
+      <Project>{DD2CA7A4-F316-362E-A7D9-7664FD30EA46}</Project>
+      <Name>example_aruco_create_diamond</Name>
+    </ProjectReference>
+    <ProjectReference Include="example_aruco_create_marker.vcxproj">
+      <Project>{EB0D47B9-9155-3A99-A476-E0AA6E8B363B}</Project>
+      <Name>example_aruco_create_marker</Name>
+    </ProjectReference>
+    <ProjectReference Include="example_aruco_detect_board.vcxproj">
+      <Project>{C8D31131-98F7-3D78-8E1C-E5250BE89FDE}</Project>
+      <Name>example_aruco_detect_board</Name>
+    </ProjectReference>
+    <ProjectReference Include="example_aruco_detect_board_charuco.vcxproj">
+      <Project>{2442E5C6-3F42-3D8D-8A29-F9283B3ACCE4}</Project>
+      <Name>example_aruco_detect_board_charuco</Name>
+    </ProjectReference>
+    <ProjectReference Include="example_aruco_detect_diamonds.vcxproj">
+      <Project>{320E43F6-C48B-3475-BF7D-53277E8E2986}</Project>
+      <Name>example_aruco_detect_diamonds</Name>
+    </ProjectReference>
+    <ProjectReference Include="example_aruco_detect_markers.vcxproj">
+      <Project>{883E4491-427A-358A-8FEA-CBEA2E16E8E2}</Project>
+      <Name>example_aruco_detect_markers</Name>
+    </ProjectReference>
+    <ProjectReference Include="example_aruco_tutorial_charuco_create_detect.vcxproj">
+      <Project>{BAA127C0-49E4-330C-AD23-EB1D9AAAC85D}</Project>
+      <Name>example_aruco_tutorial_charuco_create_detect</Name>
+    </ProjectReference>
+    <ProjectReference Include="opencv_aruco.vcxproj">
+      <Project>{EEFE6921-9F76-3EDC-BE4D-64B9FC7B7474}</Project>
+      <Name>opencv_aruco</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

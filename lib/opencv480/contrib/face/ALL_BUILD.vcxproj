@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{C52E6A76-8178-3B1F-930D-5CBBC4C48842}</ProjectGuid>
+    <WindowsTargetPlatformVersion>10.0.17763.0</WindowsTargetPlatformVersion>
+    <Keyword>Win32Proj</Keyword>
+    <Platform>x64</Platform>
+    <ProjectName>ALL_BUILD</ProjectName>
+    <VCProjectUpgraderObjectName>NoUpgrade</VCProjectUpgraderObjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Midl>
+      <AdditionalIncludeDirectories>$(SolutionDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Midl>
+      <AdditionalIncludeDirectories>$(SolutionDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+  </ItemGroup>
+  <ItemGroup>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="D:\LIB\opencv\opencv480\build\ZERO_CHECK.vcxproj">
+      <Project>{A2B6B0A1-0116-3B54-BA2A-2EB40583D0C0}</Project>
+      <Name>ZERO_CHECK</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="example_face_facemark_demo_aam.vcxproj">
+      <Project>{B2424F92-0267-3999-8113-D612A5A87E5C}</Project>
+      <Name>example_face_facemark_demo_aam</Name>
+    </ProjectReference>
+    <ProjectReference Include="example_face_facemark_demo_lbf.vcxproj">
+      <Project>{152F0A89-8851-38A1-960F-81503A308FC4}</Project>
+      <Name>example_face_facemark_demo_lbf</Name>
+    </ProjectReference>
+    <ProjectReference Include="example_face_facemark_lbf_fitting.vcxproj">
+      <Project>{BB1DEC4D-02E9-369F-8E1D-FE08335A8476}</Project>
+      <Name>example_face_facemark_lbf_fitting</Name>
+    </ProjectReference>
+    <ProjectReference Include="example_face_facerec_demo.vcxproj">
+      <Project>{3B3C1DB1-A736-3DC0-A46B-9DBC82638169}</Project>
+      <Name>example_face_facerec_demo</Name>
+    </ProjectReference>
+    <ProjectReference Include="example_face_facerec_eigenfaces.vcxproj">
+      <Project>{8C3659DC-CE2C-373A-99E4-F22B9A827C45}</Project>
+      <Name>example_face_facerec_eigenfaces</Name>
+    </ProjectReference>
+    <ProjectReference Include="example_face_facerec_fisherfaces.vcxproj">
+      <Project>{7E5F7A4D-229D-37C2-81FA-8AEF482BA1D3}</Project>
+      <Name>example_face_facerec_fisherfaces</Name>
+    </ProjectReference>
+    <ProjectReference Include="example_face_facerec_lbph.vcxproj">
+      <Project>{E6BCEAF8-7B0B-3B77-9D77-2DEF234D558F}</Project>
+      <Name>example_face_facerec_lbph</Name>
+    </ProjectReference>
+    <ProjectReference Include="example_face_facerec_save_load.vcxproj">
+      <Project>{A3068060-7094-308A-9254-45BC3C99F890}</Project>
+      <Name>example_face_facerec_save_load</Name>
+    </ProjectReference>
+    <ProjectReference Include="example_face_facerec_video.vcxproj">
+      <Project>{4A0D7AA7-0A59-39B9-8D96-181A6D71D7B2}</Project>
+      <Name>example_face_facerec_video</Name>
+    </ProjectReference>
+    <ProjectReference Include="example_face_mace_webcam.vcxproj">
+      <Project>{6EF6D245-BB72-385A-8F0F-36AAED55F2C7}</Project>
+      <Name>example_face_mace_webcam</Name>
+    </ProjectReference>
+    <ProjectReference Include="example_face_sampleDetectLandmarks.vcxproj">
+      <Project>{15325AD0-3A10-32C0-B460-E5BE9576DB34}</Project>
+      <Name>example_face_sampleDetectLandmarks</Name>
+    </ProjectReference>
+    <ProjectReference Include="example_face_sampleDetectLandmarksvideo.vcxproj">
+      <Project>{C19BDA1C-E043-3334-B91C-CFEB5CA5146F}</Project>
+      <Name>example_face_sampleDetectLandmarksvideo</Name>
+    </ProjectReference>
+    <ProjectReference Include="example_face_sample_face_swapping.vcxproj">
+      <Project>{BE26149F-B0E7-3D58-B186-23E30AB96C83}</Project>
+      <Name>example_face_sample_face_swapping</Name>
+    </ProjectReference>
+    <ProjectReference Include="example_face_sample_train_landmark_detector.vcxproj">
+      <Project>{97DD5CDD-F9A8-3DF0-BE5C-0AAF7FFF14DE}</Project>
+      <Name>example_face_sample_train_landmark_detector</Name>
+    </ProjectReference>
+    <ProjectReference Include="example_face_sample_train_landmark_detector2.vcxproj">
+      <Project>{5B644A05-C0A3-3FB0-9772-EEC907691ADE}</Project>
+      <Name>example_face_sample_train_landmark_detector2</Name>
+    </ProjectReference>
+    <ProjectReference Include="example_face_samplewriteconfigfile.vcxproj">
+      <Project>{E012F4D9-3706-371B-BB72-D46496414F1D}</Project>
+      <Name>example_face_samplewriteconfigfile</Name>
+    </ProjectReference>
+    <ProjectReference Include="opencv_face.vcxproj">
+      <Project>{763BECA9-0785-31A2-851F-F6F1465D4C56}</Project>
+      <Name>opencv_face</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

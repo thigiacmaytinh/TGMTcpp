@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="opencv_xphoto_main.cpp" />
+    <ClCompile Include="src\bm3d_image_denoising.cpp" />
+    <ClCompile Include="src\dct_image_denoising.cpp" />
+    <ClCompile Include="src\grayworld_white_balance.cpp" />
+    <ClCompile Include="src\inpainting.cpp" />
+    <ClCompile Include="src\learning_based_color_balance.cpp" />
+    <ClCompile Include="src\oilpainting.cpp" />
+    <ClCompile Include="src\simple_color_balance.cpp" />
+    <ClCompile Include="src\tonemap.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="D:\LIB\opencv\opencv480\build\cvconfig.h">
+      <Filter>Include</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\LIB\opencv\opencv480\build\opencv2\opencv_modules.hpp">
+      <Filter>Include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\opencv2\xphoto.hpp" />
+    <ClInclude Include="include\opencv2\xphoto\bm3d_image_denoising.hpp" />
+    <ClInclude Include="include\opencv2\xphoto\dct_image_denoising.hpp" />
+    <ClInclude Include="include\opencv2\xphoto\inpainting.hpp" />
+    <ClInclude Include="include\opencv2\xphoto\oilpainting.hpp" />
+    <ClInclude Include="include\opencv2\xphoto\tonemap.hpp" />
+    <ClInclude Include="include\opencv2\xphoto\white_balance.hpp" />
+    <ClInclude Include="src\advanced_types.hpp" />
+    <ClInclude Include="src\annf.hpp" />
+    <ClInclude Include="src\blending.hpp" />
+    <ClInclude Include="src\bm3d_denoising_invoker_commons.hpp" />
+    <ClInclude Include="src\bm3d_denoising_invoker_step1.hpp" />
+    <ClInclude Include="src\bm3d_denoising_invoker_step2.hpp" />
+    <ClInclude Include="src\bm3d_denoising_invoker_structs.hpp" />
+    <ClInclude Include="src\bm3d_denoising_transforms.hpp" />
+    <ClInclude Include="src\bm3d_denoising_transforms_1D.hpp" />
+    <ClInclude Include="src\bm3d_denoising_transforms_2D.hpp" />
+    <ClInclude Include="src\bm3d_denoising_transforms_haar.hpp" />
+    <ClInclude Include="src\gcgraph.hpp" />
+    <ClInclude Include="src\inpainting_fsr.impl.hpp" />
+    <ClInclude Include="src\kaiser_window.hpp" />
+    <ClInclude Include="src\learning_based_color_balance_model.hpp" />
+    <ClInclude Include="src\norm2.hpp" />
+    <ClInclude Include="src\photomontage.hpp" />
+    <ClInclude Include="src\whs.hpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="vs_version.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Include">
+      <UniqueIdentifier>{F73E1321-2CC0-3C82-B659-D2B5CEC43562}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Include\opencv2">
+      <UniqueIdentifier>{7B157B1B-D693-3CAB-B777-2F3947536837}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Include\opencv2\xphoto">
+      <UniqueIdentifier>{C5A0DC35-ED2E-3DBA-A592-12A6905B958B}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{B424FE76-8A02-34EF-85BB-75F86BE76CE0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Src">
+      <UniqueIdentifier>{BA1B5659-E9EF-3DC1-8E8D-15B598609623}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

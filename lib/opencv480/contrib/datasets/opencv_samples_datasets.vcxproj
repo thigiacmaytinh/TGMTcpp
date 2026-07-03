@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{BAF758EA-3F83-3F96-8AE5-88F183C5516A}</ProjectGuid>
+    <WindowsTargetPlatformVersion>10.0.17763.0</WindowsTargetPlatformVersion>
+    <Keyword>Win32Proj</Keyword>
+    <Platform>x64</Platform>
+    <ProjectName>opencv_samples_datasets</ProjectName>
+    <VCProjectUpgraderObjectName>NoUpgrade</VCProjectUpgraderObjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Midl>
+      <AdditionalIncludeDirectories>$(SolutionDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Midl>
+      <AdditionalIncludeDirectories>$(SolutionDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+  </ItemGroup>
+  <ItemGroup>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="D:\LIB\opencv\opencv480\build\ZERO_CHECK.vcxproj">
+      <Project>{A2B6B0A1-0116-3B54-BA2A-2EB40583D0C0}</Project>
+      <Name>ZERO_CHECK</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="example_datasets_ar_hmdb.vcxproj">
+      <Project>{DAC05020-1914-3DD3-9FA6-1C0B1818AC3D}</Project>
+      <Name>example_datasets_ar_hmdb</Name>
+    </ProjectReference>
+    <ProjectReference Include="example_datasets_ar_hmdb_benchmark.vcxproj">
+      <Project>{42B189B0-B227-32C4-A3EF-7D1CC3F1CA89}</Project>
+      <Name>example_datasets_ar_hmdb_benchmark</Name>
+    </ProjectReference>
+    <ProjectReference Include="example_datasets_ar_sports.vcxproj">
+      <Project>{F68D1032-2876-3618-B769-C409E8EA7FA0}</Project>
+      <Name>example_datasets_ar_sports</Name>
+    </ProjectReference>
+    <ProjectReference Include="example_datasets_fr_adience.vcxproj">
+      <Project>{7931035C-68D1-3ED0-AC71-0F653A9DAF12}</Project>
+      <Name>example_datasets_fr_adience</Name>
+    </ProjectReference>
+    <ProjectReference Include="example_datasets_fr_lfw.vcxproj">
+      <Project>{9B1AEDD9-BA37-3E75-A4A2-2738F563180A}</Project>
+      <Name>example_datasets_fr_lfw</Name>
+    </ProjectReference>
+    <ProjectReference Include="example_datasets_fr_lfw_benchmark.vcxproj">
+      <Project>{5128EAFA-337B-3FEF-82BD-A1635C471F73}</Project>
+      <Name>example_datasets_fr_lfw_benchmark</Name>
+    </ProjectReference>
+    <ProjectReference Include="example_datasets_gr_chalearn.vcxproj">
+      <Project>{A411D4FE-C9A9-3634-8BCC-DA60282039C3}</Project>
+      <Name>example_datasets_gr_chalearn</Name>
+    </ProjectReference>
+    <ProjectReference Include="example_datasets_gr_skig.vcxproj">
+      <Project>{D223E45F-7FCC-3DAA-B174-C82D9DCD7C34}</Project>
+      <Name>example_datasets_gr_skig</Name>
+    </ProjectReference>
+    <ProjectReference Include="example_datasets_hpe_humaneva.vcxproj">
+      <Project>{5F61A586-1A10-3C6C-97E4-72E383545862}</Project>
+      <Name>example_datasets_hpe_humaneva</Name>
+    </ProjectReference>
+    <ProjectReference Include="example_datasets_hpe_parse.vcxproj">
+      <Project>{07E4E46E-5686-3733-9D92-B3D7B949FBD8}</Project>
+      <Name>example_datasets_hpe_parse</Name>
+    </ProjectReference>
+    <ProjectReference Include="example_datasets_ir_affine.vcxproj">
+      <Project>{F32F7658-AE3B-3662-A22C-19388B398EDD}</Project>
+      <Name>example_datasets_ir_affine</Name>
+    </ProjectReference>
+    <ProjectReference Include="example_datasets_ir_robot.vcxproj">
+      <Project>{A9AE6088-BCA9-3E00-84A7-F7FD347B71C1}</Project>
+      <Name>example_datasets_ir_robot</Name>
+    </ProjectReference>
+    <ProjectReference Include="example_datasets_is_bsds.vcxproj">
+      <Project>{52ABB4B8-BEFE-3963-B4D0-C6B6E8ECA3E1}</Project>
+      <Name>example_datasets_is_bsds</Name>
+    </ProjectReference>
+    <ProjectReference Include="example_datasets_is_weizmann.vcxproj">
+      <Project>{B6CB0BB5-800C-3D18-A283-5E120F993B69}</Project>
+      <Name>example_datasets_is_weizmann</Name>
+    </ProjectReference>
+    <ProjectReference Include="example_datasets_msm_epfl.vcxproj">
+      <Project>{C8066720-4904-3C19-8FCE-6CB2484FAD73}</Project>
+      <Name>example_datasets_msm_epfl</Name>
+    </ProjectReference>
+    <ProjectReference Include="example_datasets_msm_middlebury.vcxproj">
+      <Project>{86D9B775-E02B-3943-91B2-4A683E581FB2}</Project>
+      <Name>example_datasets_msm_middlebury</Name>
+    </ProjectReference>
+    <ProjectReference Include="example_datasets_or_imagenet.vcxproj">
+      <Project>{B96CFB17-0909-3D15-88AC-ACB440C80385}</Project>
+      <Name>example_datasets_or_imagenet</Name>
+    </ProjectReference>
+    <ProjectReference Include="example_datasets_or_mnist.vcxproj">
+      <Project>{8D2D47D5-4716-3FA0-8493-FBA42E750556}</Project>
+      <Name>example_datasets_or_mnist</Name>
+    </ProjectReference>
+    <ProjectReference Include="example_datasets_or_pascal.vcxproj">
+      <Project>{2C619964-C648-34CF-A5E5-6A8D9437FB51}</Project>
+      <Name>example_datasets_or_pascal</Name>
+    </ProjectReference>
+    <ProjectReference Include="example_datasets_or_sun.vcxproj">
+      <Project>{521C1022-2698-3854-A6A9-7C2681D1372F}</Project>
+      <Name>example_datasets_or_sun</Name>
+    </ProjectReference>
+    <ProjectReference Include="example_datasets_pd_caltech.vcxproj">
+      <Project>{2ACCC56F-DE9E-3EB1-A907-D082BE18BC01}</Project>
+      <Name>example_datasets_pd_caltech</Name>
+    </ProjectReference>
+    <ProjectReference Include="example_datasets_pd_inria.vcxproj">
+      <Project>{F9AFEDD6-C179-3DD3-91A7-0C85ACFA5BBF}</Project>
+      <Name>example_datasets_pd_inria</Name>
+    </ProjectReference>
+    <ProjectReference Include="example_datasets_slam_kitti.vcxproj">
+      <Project>{D092855E-02B8-37E7-B159-083E0C9BF3EA}</Project>
+      <Name>example_datasets_slam_kitti</Name>
+    </ProjectReference>
+    <ProjectReference Include="example_datasets_slam_tumindoor.vcxproj">
+      <Project>{75C736CD-3BD4-3A17-8027-2F4FB3258052}</Project>
+      <Name>example_datasets_slam_tumindoor</Name>
+    </ProjectReference>
+    <ProjectReference Include="example_datasets_sr_bsds.vcxproj">
+      <Project>{3E03D01F-7B39-3AC5-9704-C945B575C9B0}</Project>
+      <Name>example_datasets_sr_bsds</Name>
+    </ProjectReference>
+    <ProjectReference Include="example_datasets_sr_div2k.vcxproj">
+      <Project>{DD3561EF-5D1E-359D-A220-BE04F816B547}</Project>
+      <Name>example_datasets_sr_div2k</Name>
+    </ProjectReference>
+    <ProjectReference Include="example_datasets_sr_general100.vcxproj">
+      <Project>{3762F55A-5403-3FB7-A805-E0B203877421}</Project>
+      <Name>example_datasets_sr_general100</Name>
+    </ProjectReference>
+    <ProjectReference Include="example_datasets_tr_chars.vcxproj">
+      <Project>{3806DD5D-A11B-363C-AB86-FDD1BBDC4E9B}</Project>
+      <Name>example_datasets_tr_chars</Name>
+    </ProjectReference>
+    <ProjectReference Include="example_datasets_tr_chars_benchmark.vcxproj">
+      <Project>{C915EC93-6733-35B2-AF98-6CB6F78619DA}</Project>
+      <Name>example_datasets_tr_chars_benchmark</Name>
+    </ProjectReference>
+    <ProjectReference Include="example_datasets_tr_icdar.vcxproj">
+      <Project>{DD4B21F8-BD18-323B-9EC1-876506ADDCE0}</Project>
+      <Name>example_datasets_tr_icdar</Name>
+    </ProjectReference>
+    <ProjectReference Include="example_datasets_tr_icdar_benchmark.vcxproj">
+      <Project>{F632B638-F63B-3703-96EC-E1F2EACA8E19}</Project>
+      <Name>example_datasets_tr_icdar_benchmark</Name>
+    </ProjectReference>
+    <ProjectReference Include="example_datasets_tr_svt.vcxproj">
+      <Project>{2D151915-3A3B-3DFC-A79C-02509D4B269C}</Project>
+      <Name>example_datasets_tr_svt</Name>
+    </ProjectReference>
+    <ProjectReference Include="example_datasets_tr_svt_benchmark.vcxproj">
+      <Project>{E862900C-5CE6-300C-9D93-A50C6028C7FF}</Project>
+      <Name>example_datasets_tr_svt_benchmark</Name>
+    </ProjectReference>
+    <ProjectReference Include="example_datasets_track_vot.vcxproj">
+      <Project>{22E6A4EA-F9E8-3C69-A3AA-ADEE50246A26}</Project>
+      <Name>example_datasets_track_vot</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

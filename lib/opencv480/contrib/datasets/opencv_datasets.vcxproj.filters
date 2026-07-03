@@ -1,0 +1,103 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="opencv_datasets_main.cpp" />
+    <ClCompile Include="src\ar_hmdb.cpp" />
+    <ClCompile Include="src\ar_sports.cpp" />
+    <ClCompile Include="src\dataset.cpp" />
+    <ClCompile Include="src\fr_adience.cpp" />
+    <ClCompile Include="src\fr_lfw.cpp" />
+    <ClCompile Include="src\gr_chalearn.cpp" />
+    <ClCompile Include="src\gr_skig.cpp" />
+    <ClCompile Include="src\hpe_humaneva.cpp" />
+    <ClCompile Include="src\hpe_parse.cpp" />
+    <ClCompile Include="src\ir_affine.cpp" />
+    <ClCompile Include="src\ir_robot.cpp" />
+    <ClCompile Include="src\is_bsds.cpp" />
+    <ClCompile Include="src\is_weizmann.cpp" />
+    <ClCompile Include="src\msm_epfl.cpp" />
+    <ClCompile Include="src\msm_middlebury.cpp" />
+    <ClCompile Include="src\or_imagenet.cpp" />
+    <ClCompile Include="src\or_mnist.cpp" />
+    <ClCompile Include="src\or_pascal.cpp" />
+    <ClCompile Include="src\or_sun.cpp" />
+    <ClCompile Include="src\pd_caltech.cpp" />
+    <ClCompile Include="src\pd_inria.cpp" />
+    <ClCompile Include="src\slam_kitti.cpp" />
+    <ClCompile Include="src\slam_tumindoor.cpp" />
+    <ClCompile Include="src\sr_bsds.cpp" />
+    <ClCompile Include="src\sr_div2k.cpp" />
+    <ClCompile Include="src\sr_general100.cpp" />
+    <ClCompile Include="src\tinyxml2\tinyxml2.cpp" />
+    <ClCompile Include="src\tr_chars.cpp" />
+    <ClCompile Include="src\tr_icdar.cpp" />
+    <ClCompile Include="src\tr_svt.cpp" />
+    <ClCompile Include="src\track_alov.cpp" />
+    <ClCompile Include="src\track_vot.cpp" />
+    <ClCompile Include="src\util.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="D:\LIB\opencv\opencv480\build\cvconfig.h">
+      <Filter>Include</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\LIB\opencv\opencv480\build\opencv2\opencv_modules.hpp">
+      <Filter>Include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\opencv2\datasets\ar_hmdb.hpp" />
+    <ClInclude Include="include\opencv2\datasets\ar_sports.hpp" />
+    <ClInclude Include="include\opencv2\datasets\dataset.hpp" />
+    <ClInclude Include="include\opencv2\datasets\fr_adience.hpp" />
+    <ClInclude Include="include\opencv2\datasets\fr_lfw.hpp" />
+    <ClInclude Include="include\opencv2\datasets\gr_chalearn.hpp" />
+    <ClInclude Include="include\opencv2\datasets\gr_skig.hpp" />
+    <ClInclude Include="include\opencv2\datasets\hpe_humaneva.hpp" />
+    <ClInclude Include="include\opencv2\datasets\hpe_parse.hpp" />
+    <ClInclude Include="include\opencv2\datasets\ir_affine.hpp" />
+    <ClInclude Include="include\opencv2\datasets\ir_robot.hpp" />
+    <ClInclude Include="include\opencv2\datasets\is_bsds.hpp" />
+    <ClInclude Include="include\opencv2\datasets\is_weizmann.hpp" />
+    <ClInclude Include="include\opencv2\datasets\msm_epfl.hpp" />
+    <ClInclude Include="include\opencv2\datasets\msm_middlebury.hpp" />
+    <ClInclude Include="include\opencv2\datasets\or_imagenet.hpp" />
+    <ClInclude Include="include\opencv2\datasets\or_mnist.hpp" />
+    <ClInclude Include="include\opencv2\datasets\or_pascal.hpp" />
+    <ClInclude Include="include\opencv2\datasets\or_sun.hpp" />
+    <ClInclude Include="include\opencv2\datasets\pd_caltech.hpp" />
+    <ClInclude Include="include\opencv2\datasets\pd_inria.hpp" />
+    <ClInclude Include="include\opencv2\datasets\slam_kitti.hpp" />
+    <ClInclude Include="include\opencv2\datasets\slam_tumindoor.hpp" />
+    <ClInclude Include="include\opencv2\datasets\sr_bsds.hpp" />
+    <ClInclude Include="include\opencv2\datasets\sr_div2k.hpp" />
+    <ClInclude Include="include\opencv2\datasets\sr_general100.hpp" />
+    <ClInclude Include="include\opencv2\datasets\tr_chars.hpp" />
+    <ClInclude Include="include\opencv2\datasets\tr_icdar.hpp" />
+    <ClInclude Include="include\opencv2\datasets\tr_svt.hpp" />
+    <ClInclude Include="include\opencv2\datasets\track_alov.hpp" />
+    <ClInclude Include="include\opencv2\datasets\track_vot.hpp" />
+    <ClInclude Include="include\opencv2\datasets\util.hpp" />
+    <ClInclude Include="src\tinyxml2\tinyxml2.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="vs_version.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Include">
+      <UniqueIdentifier>{F73E1321-2CC0-3C82-B659-D2B5CEC43562}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Include\opencv2">
+      <UniqueIdentifier>{7B157B1B-D693-3CAB-B777-2F3947536837}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Include\opencv2\datasets">
+      <UniqueIdentifier>{3AF42D10-09D1-385D-926D-060DA05D2CD9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{B424FE76-8A02-34EF-85BB-75F86BE76CE0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Src">
+      <UniqueIdentifier>{BA1B5659-E9EF-3DC1-8E8D-15B598609623}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Src\tinyxml2">
+      <UniqueIdentifier>{B967FA04-0597-39CE-98D1-1B9ECFD67A17}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

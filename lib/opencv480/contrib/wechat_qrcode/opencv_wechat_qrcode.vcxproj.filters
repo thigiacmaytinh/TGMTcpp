@@ -1,0 +1,406 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="src\zxing\common\binarizer\adaptive_threshold_mean_binarizer.cpp">
+      <Filter>Src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\detector\align.cpp">
+      <Filter>Src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\zxing\qrcode\detector\alignment_pattern.cpp">
+      <Filter>Src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\zxing\qrcode\detector\alignment_pattern_finder.cpp">
+      <Filter>Src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\zxing\binarizer.cpp">
+      <Filter>Src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\binarizermgr.cpp">
+      <Filter>Src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\zxing\binarybitmap.cpp">
+      <Filter>Src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\zxing\common\bitarray.cpp">
+      <Filter>Src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\zxing\common\bitmatrix.cpp">
+      <Filter>Src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\zxing\qrcode\decoder\bitmatrixparser.cpp">
+      <Filter>Src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\zxing\common\bitsource.cpp">
+      <Filter>Src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\zxing\common\bytematrix.cpp">
+      <Filter>Src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\zxing\common\characterseteci.cpp">
+      <Filter>Src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\zxing\qrcode\decoder\datablock.cpp">
+      <Filter>Src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\zxing\qrcode\decoder\datamask.cpp">
+      <Filter>Src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\zxing\qrcode\decoder\decoded_bit_stream_parser.cpp">
+      <Filter>Src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\zxing\qrcode\decoder\decoder.cpp">
+      <Filter>Src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\zxing\common\decoder_result.cpp">
+      <Filter>Src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\decodermgr.cpp">
+      <Filter>Src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\zxing\qrcode\detector\detector.cpp">
+      <Filter>Src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\zxing\common\detector_result.cpp">
+      <Filter>Src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\zxing\qrcode\error_correction_level.cpp">
+      <Filter>Src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\zxing\errorhandler.cpp">
+      <Filter>Src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\zxing\common\binarizer\fast_window_binarizer.cpp">
+      <Filter>Src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\zxing\qrcode\detector\finder_pattern.cpp">
+      <Filter>Src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\zxing\qrcode\detector\finder_pattern_finder.cpp">
+      <Filter>Src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\zxing\qrcode\detector\finder_pattern_info.cpp">
+      <Filter>Src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\zxing\qrcode\format_information.cpp">
+      <Filter>Src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\zxing\common\reedsolomon\genericgf.cpp">
+      <Filter>Src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\zxing\common\reedsolomon\genericgfpoly.cpp">
+      <Filter>Src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\zxing\common\binarizer\global_histogram_binarizer.cpp">
+      <Filter>Src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\zxing\common\greyscale_luminance_source.cpp">
+      <Filter>Src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\zxing\common\greyscale_rotated_luminance_source.cpp">
+      <Filter>Src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\zxing\common\grid_sampler.cpp">
+      <Filter>Src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\zxing\common\binarizer\hybrid_binarizer.cpp">
+      <Filter>Src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\zxing\common\imagecut.cpp">
+      <Filter>Src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\imgsource.cpp">
+      <Filter>Src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\zxing\common\kmeans.cpp">
+      <Filter>Src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\zxing\luminance_source.cpp">
+      <Filter>Src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\zxing\qrcode\decoder\mode.cpp">
+      <Filter>Src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\zxing\qrcode\detector\pattern_result.cpp">
+      <Filter>Src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\zxing\common\perspective_transform.cpp">
+      <Filter>Src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\zxing\qrcode\qrcode_reader.cpp">
+      <Filter>Src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\zxing\reader.cpp">
+      <Filter>Src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\zxing\common\reedsolomon\reed_solomon_decoder.cpp">
+      <Filter>Src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\zxing\result.cpp">
+      <Filter>Src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\zxing\resultpoint.cpp">
+      <Filter>Src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\zxing\common\binarizer\simple_adaptive_binarizer.cpp">
+      <Filter>Src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\detector\ssd_detector.cpp">
+      <Filter>Src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\zxing\common\str.cpp">
+      <Filter>Src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\zxing\common\stringutils.cpp">
+      <Filter>Src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\scale\super_scale.cpp">
+      <Filter>Src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\zxing\common\unicomblock.cpp">
+      <Filter>Src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\zxing\qrcode\version.cpp">
+      <Filter>Src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\wechat_qrcode.cpp">
+      <Filter>Src</Filter>
+    </ClCompile>
+    <ClCompile Include="opencv_wechat_qrcode_main.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="src\zxing\common\binarizer\adaptive_threshold_mean_binarizer.hpp">
+      <Filter>Src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\detector\align.hpp">
+      <Filter>Src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\zxing\qrcode\detector\alignment_pattern.hpp">
+      <Filter>Src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\zxing\qrcode\detector\alignment_pattern_finder.hpp">
+      <Filter>Src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\zxing\common\array.hpp">
+      <Filter>Src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\zxing\binarizer.hpp">
+      <Filter>Src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\binarizermgr.hpp">
+      <Filter>Src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\zxing\binarybitmap.hpp">
+      <Filter>Src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\zxing\common\bitarray.hpp">
+      <Filter>Src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\zxing\common\bitmatrix.hpp">
+      <Filter>Src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\zxing\qrcode\decoder\bitmatrixparser.hpp">
+      <Filter>Src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\zxing\common\bitsource.hpp">
+      <Filter>Src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\zxing\common\bytematrix.hpp">
+      <Filter>Src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\zxing\common\characterseteci.hpp">
+      <Filter>Src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\zxing\common\counted.hpp">
+      <Filter>Src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\zxing\qrcode\decoder\datablock.hpp">
+      <Filter>Src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\zxing\qrcode\decoder\datamask.hpp">
+      <Filter>Src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\zxing\qrcode\decoder\decoded_bit_stream_parser.hpp">
+      <Filter>Src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\zxing\decodehints.hpp">
+      <Filter>Src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\zxing\qrcode\decoder\decoder.hpp">
+      <Filter>Src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\zxing\common\decoder_result.hpp">
+      <Filter>Src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\decodermgr.hpp">
+      <Filter>Src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\zxing\qrcode\detector\detector.hpp">
+      <Filter>Src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\zxing\common\detector_result.hpp">
+      <Filter>Src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\zxing\qrcode\error_correction_level.hpp">
+      <Filter>Src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\zxing\errorhandler.hpp">
+      <Filter>Src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\zxing\common\binarizer\fast_window_binarizer.hpp">
+      <Filter>Src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\zxing\qrcode\detector\finder_pattern.hpp">
+      <Filter>Src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\zxing\qrcode\detector\finder_pattern_finder.hpp">
+      <Filter>Src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\zxing\qrcode\detector\finder_pattern_info.hpp">
+      <Filter>Src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\zxing\qrcode\format_information.hpp">
+      <Filter>Src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\zxing\common\reedsolomon\genericgf.hpp">
+      <Filter>Src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\zxing\common\reedsolomon\genericgfpoly.hpp">
+      <Filter>Src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\zxing\common\binarizer\global_histogram_binarizer.hpp">
+      <Filter>Src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\zxing\common\greyscale_luminance_source.hpp">
+      <Filter>Src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\zxing\common\greyscale_rotated_luminance_source.hpp">
+      <Filter>Src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\zxing\common\grid_sampler.hpp">
+      <Filter>Src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\zxing\common\binarizer\hybrid_binarizer.hpp">
+      <Filter>Src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\zxing\common\imagecut.hpp">
+      <Filter>Src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\imgsource.hpp">
+      <Filter>Src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\zxing\common\kmeans.hpp">
+      <Filter>Src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\zxing\luminance_source.hpp">
+      <Filter>Src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\zxing\common\mathutils.hpp">
+      <Filter>Src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\zxing\qrcode\decoder\mode.hpp">
+      <Filter>Src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\zxing\qrcode\detector\pattern_result.hpp">
+      <Filter>Src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\zxing\common\perspective_transform.hpp">
+      <Filter>Src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\precomp.hpp">
+      <Filter>Src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\zxing\qrcode\decoder\qrcode_decoder_metadata.hpp">
+      <Filter>Src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\zxing\qrcode\qrcode_reader.hpp">
+      <Filter>Src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\zxing\reader.hpp">
+      <Filter>Src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\zxing\common\reedsolomon\reed_solomon_decoder.hpp">
+      <Filter>Src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\zxing\result.hpp">
+      <Filter>Src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\zxing\resultpoint.hpp">
+      <Filter>Src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\zxing\common\binarizer\simple_adaptive_binarizer.hpp">
+      <Filter>Src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\detector\ssd_detector.hpp">
+      <Filter>Src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\zxing\common\str.hpp">
+      <Filter>Src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\zxing\common\stringutils.hpp">
+      <Filter>Src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\scale\super_scale.hpp">
+      <Filter>Src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\zxing\common\unicomblock.hpp">
+      <Filter>Src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\zxing\qrcode\version.hpp">
+      <Filter>Src</Filter>
+    </ClInclude>
+    <ClInclude Include="include\opencv2\wechat_qrcode.hpp">
+      <Filter>Src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\zxing\zxing.hpp">
+      <Filter>Src</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="vs_version.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Include">
+      <UniqueIdentifier>{F73E1321-2CC0-3C82-B659-D2B5CEC43562}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Include\opencv2">
+      <UniqueIdentifier>{7B157B1B-D693-3CAB-B777-2F3947536837}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Precompile Header File">
+      <UniqueIdentifier>{5D557921-288E-3543-B0CB-0F405FBA551C}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{B424FE76-8A02-34EF-85BB-75F86BE76CE0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Src">
+      <UniqueIdentifier>{BA1B5659-E9EF-3DC1-8E8D-15B598609623}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Src\detector">
+      <UniqueIdentifier>{2DEABD08-6159-3F87-8B8D-52921A51F75D}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Src\scale">
+      <UniqueIdentifier>{4A5694C1-CC95-358A-B021-473CE982E6B3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Src\zxing">
+      <UniqueIdentifier>{FE646A94-4405-3164-B79F-BA01655E00BD}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Src\zxing\common">
+      <UniqueIdentifier>{0C46038D-035B-363B-974A-7144A52E955A}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Src\zxing\common\binarizer">
+      <UniqueIdentifier>{58C95E4E-08C0-321E-B1FE-B54F671B169C}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Src\zxing\common\reedsolomon">
+      <UniqueIdentifier>{D8A4AE63-B8DB-3EB0-BC9D-625AC62AAEB4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Src\zxing\qrcode">
+      <UniqueIdentifier>{F8A02881-99EE-32CF-BC82-31BBECD5B536}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Src\zxing\qrcode\decoder">
+      <UniqueIdentifier>{F07D894A-3BC2-3396-AEBC-81339478F6CC}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Src\zxing\qrcode\detector">
+      <UniqueIdentifier>{1DE10498-AEDC-30DB-A524-306A2642C0A6}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

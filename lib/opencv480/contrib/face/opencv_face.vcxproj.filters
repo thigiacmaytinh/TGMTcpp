@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="opencv_face_main.cpp" />
+    <ClCompile Include="src\bif.cpp" />
+    <ClCompile Include="src\eigen_faces.cpp" />
+    <ClCompile Include="src\face_alignment.cpp" />
+    <ClCompile Include="src\face_basic.cpp" />
+    <ClCompile Include="src\facemark.cpp" />
+    <ClCompile Include="src\facemarkAAM.cpp" />
+    <ClCompile Include="src\facemarkLBF.cpp" />
+    <ClCompile Include="src\facerec.cpp" />
+    <ClCompile Include="src\fisher_faces.cpp" />
+    <ClCompile Include="src\getlandmarks.cpp" />
+    <ClCompile Include="src\lbph_faces.cpp" />
+    <ClCompile Include="src\mace.cpp" />
+    <ClCompile Include="src\predict_collector.cpp" />
+    <ClCompile Include="src\regtree.cpp" />
+    <ClCompile Include="src\trainFacemark.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="D:\LIB\opencv\opencv480\build\cvconfig.h">
+      <Filter>Include</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\LIB\opencv\opencv480\build\opencv2\opencv_modules.hpp">
+      <Filter>Include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\opencv2\face.hpp" />
+    <ClInclude Include="include\opencv2\face\bif.hpp" />
+    <ClInclude Include="include\opencv2\face\face_alignment.hpp" />
+    <ClInclude Include="include\opencv2\face\facemark.hpp" />
+    <ClInclude Include="include\opencv2\face\facemarkAAM.hpp" />
+    <ClInclude Include="include\opencv2\face\facemarkLBF.hpp" />
+    <ClInclude Include="include\opencv2\face\facemark_train.hpp" />
+    <ClInclude Include="include\opencv2\face\facerec.hpp" />
+    <ClInclude Include="include\opencv2\face\mace.hpp" />
+    <ClInclude Include="include\opencv2\face\predict_collector.hpp" />
+    <ClInclude Include="src\face_alignmentimpl.hpp" />
+    <ClInclude Include="src\face_utils.hpp" />
+    <ClInclude Include="src\precomp.hpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="vs_version.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Include">
+      <UniqueIdentifier>{F73E1321-2CC0-3C82-B659-D2B5CEC43562}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Include\opencv2">
+      <UniqueIdentifier>{7B157B1B-D693-3CAB-B777-2F3947536837}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Include\opencv2\face">
+      <UniqueIdentifier>{6810263B-B7CE-322B-90CB-B8ED2A7F38DE}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Precompile Header File">
+      <UniqueIdentifier>{5D557921-288E-3543-B0CB-0F405FBA551C}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{B424FE76-8A02-34EF-85BB-75F86BE76CE0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Src">
+      <UniqueIdentifier>{BA1B5659-E9EF-3DC1-8E8D-15B598609623}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>
