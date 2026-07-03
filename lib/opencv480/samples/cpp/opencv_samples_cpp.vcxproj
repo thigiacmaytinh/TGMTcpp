@@ -1,0 +1,471 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{B7B470D7-8E17-3881-BD2F-A1F522C101B2}</ProjectGuid>
+    <WindowsTargetPlatformVersion>10.0.17763.0</WindowsTargetPlatformVersion>
+    <Keyword>Win32Proj</Keyword>
+    <Platform>x64</Platform>
+    <ProjectName>opencv_samples_cpp</ProjectName>
+    <VCProjectUpgraderObjectName>NoUpgrade</VCProjectUpgraderObjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Midl>
+      <AdditionalIncludeDirectories>..\..\modules\photo\include;..\..\modules\imgproc\include;..\..\modules\core\include;..\..\modules\objdetect\include;..\..\modules\calib3d\include;..\..\modules\imgcodecs\include;..\..\modules\features2d\include;..\..\modules\dnn\include;..\..\modules\flann\include;..\..\modules\video\include;D:\LIB\opencv\opencv_contrib-4.8.0\modules\shape\include;..\..\modules\ml\include;..\..\modules\videoio\include;..\..\modules\highgui\include;D:\LIB\opencv\opencv_contrib-4.8.0\modules\datasets\include;D:\LIB\opencv\opencv_contrib-4.8.0\modules\text\include;D:\LIB\opencv\opencv_contrib-4.8.0\modules\plot\include;D:\LIB\opencv\opencv_contrib-4.8.0\modules\optflow\include;D:\LIB\opencv\opencv_contrib-4.8.0\modules\ximgproc\include;D:\LIB\opencv\opencv_contrib-4.8.0\modules\phase_unwrapping\include;D:\LIB\opencv\opencv_contrib-4.8.0\modules\tracking\include;D:\LIB\opencv\opencv_contrib-4.8.0\modules\quality\include;D:\LIB\opencv\opencv_contrib-4.8.0\modules\xfeatures2d\include;D:\LIB\opencv\opencv_contrib-4.8.0\modules\xphoto\include;D:\LIB\opencv\opencv_contrib-4.8.0\modules\xobjdetect\include;D:\LIB\opencv\opencv_contrib-4.8.0\modules\videostab\include;D:\LIB\opencv\opencv_contrib-4.8.0\modules\surface_matching\include;D:\LIB\opencv\opencv_contrib-4.8.0\modules\superres\include;D:\LIB\opencv\opencv_contrib-4.8.0\modules\structured_light\include;D:\LIB\opencv\opencv_contrib-4.8.0\modules\stereo\include;D:\LIB\opencv\opencv_contrib-4.8.0\modules\saliency\include;D:\LIB\opencv\opencv_contrib-4.8.0\modules\rgbd\include;D:\LIB\opencv\opencv_contrib-4.8.0\modules\reg\include;D:\LIB\opencv\opencv_contrib-4.8.0\modules\rapid\include;D:\LIB\opencv\opencv_contrib-4.8.0\modules\mcc\include;D:\LIB\opencv\opencv_contrib-4.8.0\modules\line_descriptor\include;D:\LIB\opencv\opencv_contrib-4.8.0\modules\intensity_transform\include;D:\LIB\opencv\opencv_contrib-4.8.0\modules\img_hash\include;D:\LIB\opencv\opencv_contrib-4.8.0\modules\hfs\include;D:\LIB\opencv\opencv_contrib-4.8.0\modules\fuzzy\include;D:\LIB\opencv\opencv_contrib-4.8.0\modules\face\include;D:\LIB\opencv\opencv_contrib-4.8.0\modules\dpm\include;D:\LIB\opencv\opencv_contrib-4.8.0\modules\dnn_superres\include;D:\LIB\opencv\opencv_contrib-4.8.0\modules\dnn_objdetect\include;D:\LIB\opencv\opencv_contrib-4.8.0\modules\ccalib\include;D:\LIB\opencv\opencv_contrib-4.8.0\modules\bioinspired\include;D:\LIB\opencv\opencv_contrib-4.8.0\modules\bgsegm\include;D:\LIB\opencv\opencv_contrib-4.8.0\modules\aruco\include;..\..\modules\stitching\include;..\..\modules\gapi\include;D:\LIB\opencv\opencv480\build;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Midl>
+      <AdditionalIncludeDirectories>..\..\modules\photo\include;..\..\modules\imgproc\include;..\..\modules\core\include;..\..\modules\objdetect\include;..\..\modules\calib3d\include;..\..\modules\imgcodecs\include;..\..\modules\features2d\include;..\..\modules\dnn\include;..\..\modules\flann\include;..\..\modules\video\include;D:\LIB\opencv\opencv_contrib-4.8.0\modules\shape\include;..\..\modules\ml\include;..\..\modules\videoio\include;..\..\modules\highgui\include;D:\LIB\opencv\opencv_contrib-4.8.0\modules\datasets\include;D:\LIB\opencv\opencv_contrib-4.8.0\modules\text\include;D:\LIB\opencv\opencv_contrib-4.8.0\modules\plot\include;D:\LIB\opencv\opencv_contrib-4.8.0\modules\optflow\include;D:\LIB\opencv\opencv_contrib-4.8.0\modules\ximgproc\include;D:\LIB\opencv\opencv_contrib-4.8.0\modules\phase_unwrapping\include;D:\LIB\opencv\opencv_contrib-4.8.0\modules\tracking\include;D:\LIB\opencv\opencv_contrib-4.8.0\modules\quality\include;D:\LIB\opencv\opencv_contrib-4.8.0\modules\xfeatures2d\include;D:\LIB\opencv\opencv_contrib-4.8.0\modules\xphoto\include;D:\LIB\opencv\opencv_contrib-4.8.0\modules\xobjdetect\include;D:\LIB\opencv\opencv_contrib-4.8.0\modules\videostab\include;D:\LIB\opencv\opencv_contrib-4.8.0\modules\surface_matching\include;D:\LIB\opencv\opencv_contrib-4.8.0\modules\superres\include;D:\LIB\opencv\opencv_contrib-4.8.0\modules\structured_light\include;D:\LIB\opencv\opencv_contrib-4.8.0\modules\stereo\include;D:\LIB\opencv\opencv_contrib-4.8.0\modules\saliency\include;D:\LIB\opencv\opencv_contrib-4.8.0\modules\rgbd\include;D:\LIB\opencv\opencv_contrib-4.8.0\modules\reg\include;D:\LIB\opencv\opencv_contrib-4.8.0\modules\rapid\include;D:\LIB\opencv\opencv_contrib-4.8.0\modules\mcc\include;D:\LIB\opencv\opencv_contrib-4.8.0\modules\line_descriptor\include;D:\LIB\opencv\opencv_contrib-4.8.0\modules\intensity_transform\include;D:\LIB\opencv\opencv_contrib-4.8.0\modules\img_hash\include;D:\LIB\opencv\opencv_contrib-4.8.0\modules\hfs\include;D:\LIB\opencv\opencv_contrib-4.8.0\modules\fuzzy\include;D:\LIB\opencv\opencv_contrib-4.8.0\modules\face\include;D:\LIB\opencv\opencv_contrib-4.8.0\modules\dpm\include;D:\LIB\opencv\opencv_contrib-4.8.0\modules\dnn_superres\include;D:\LIB\opencv\opencv_contrib-4.8.0\modules\dnn_objdetect\include;D:\LIB\opencv\opencv_contrib-4.8.0\modules\ccalib\include;D:\LIB\opencv\opencv_contrib-4.8.0\modules\bioinspired\include;D:\LIB\opencv\opencv_contrib-4.8.0\modules\bgsegm\include;D:\LIB\opencv\opencv_contrib-4.8.0\modules\aruco\include;..\..\modules\stitching\include;..\..\modules\gapi\include;D:\LIB\opencv\opencv480\build;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+  </ItemGroup>
+  <ItemGroup>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="D:\LIB\opencv\opencv480\build\ZERO_CHECK.vcxproj">
+      <Project>{A2B6B0A1-0116-3B54-BA2A-2EB40583D0C0}</Project>
+      <Name>ZERO_CHECK</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="example_cpp_3calibration.vcxproj">
+      <Project>{70C0F896-0B82-3BC2-8ABC-31B41B80B0A9}</Project>
+      <Name>example_cpp_3calibration</Name>
+    </ProjectReference>
+    <ProjectReference Include="example_cpp_application_trace.vcxproj">
+      <Project>{F427192A-FBCD-3EB0-BE91-609819062775}</Project>
+      <Name>example_cpp_application_trace</Name>
+    </ProjectReference>
+    <ProjectReference Include="example_cpp_aruco_dict_utils.vcxproj">
+      <Project>{A3A6DC23-C86B-3F48-9412-7220862084DB}</Project>
+      <Name>example_cpp_aruco_dict_utils</Name>
+    </ProjectReference>
+    <ProjectReference Include="example_cpp_asift.vcxproj">
+      <Project>{50388A1A-DB99-3ADC-BF24-212266AF8362}</Project>
+      <Name>example_cpp_asift</Name>
+    </ProjectReference>
+    <ProjectReference Include="example_cpp_audio_spectrogram.vcxproj">
+      <Project>{BA3D6AAC-F26D-31B6-BFD1-B1BE60CFF6FE}</Project>
+      <Name>example_cpp_audio_spectrogram</Name>
+    </ProjectReference>
+    <ProjectReference Include="example_cpp_barcode.vcxproj">
+      <Project>{DEB1C52E-B327-35DB-83AE-5D23F0093C8A}</Project>
+      <Name>example_cpp_barcode</Name>
+    </ProjectReference>
+    <ProjectReference Include="example_cpp_bgfg_segm.vcxproj">
+      <Project>{E098B028-7E9C-3F1A-8219-55C43E911564}</Project>
+      <Name>example_cpp_bgfg_segm</Name>
+    </ProjectReference>
+    <ProjectReference Include="example_cpp_calibration.vcxproj">
+      <Project>{A14321AB-49C6-36F3-A517-728B5EFCD56C}</Project>
+      <Name>example_cpp_calibration</Name>
+    </ProjectReference>
+    <ProjectReference Include="example_cpp_camshiftdemo.vcxproj">
+      <Project>{813B610A-696F-3962-B706-D065E421A174}</Project>
+      <Name>example_cpp_camshiftdemo</Name>
+    </ProjectReference>
+    <ProjectReference Include="example_cpp_cloning_demo.vcxproj">
+      <Project>{09CA3C83-B25D-31A9-ABD4-F0C194DC8E3B}</Project>
+      <Name>example_cpp_cloning_demo</Name>
+    </ProjectReference>
+    <ProjectReference Include="example_cpp_cloning_gui.vcxproj">
+      <Project>{71E97CF2-11BE-30C0-B396-E1B88522D6B8}</Project>
+      <Name>example_cpp_cloning_gui</Name>
+    </ProjectReference>
+    <ProjectReference Include="example_cpp_connected_components.vcxproj">
+      <Project>{ABB685ED-499B-3263-8AA1-24999E086547}</Project>
+      <Name>example_cpp_connected_components</Name>
+    </ProjectReference>
+    <ProjectReference Include="example_cpp_contours2.vcxproj">
+      <Project>{0B1D6F41-D12E-393C-914D-A786F88AC8AE}</Project>
+      <Name>example_cpp_contours2</Name>
+    </ProjectReference>
+    <ProjectReference Include="example_cpp_convexhull.vcxproj">
+      <Project>{41470EF2-230F-3158-94FD-1A0E7417E627}</Project>
+      <Name>example_cpp_convexhull</Name>
+    </ProjectReference>
+    <ProjectReference Include="example_cpp_cout_mat.vcxproj">
+      <Project>{091434BB-518B-3EB9-9E02-10E328464AE1}</Project>
+      <Name>example_cpp_cout_mat</Name>
+    </ProjectReference>
+    <ProjectReference Include="example_cpp_create_mask.vcxproj">
+      <Project>{FACB919C-5764-372A-9AFD-4E11B32E83CE}</Project>
+      <Name>example_cpp_create_mask</Name>
+    </ProjectReference>
+    <ProjectReference Include="example_cpp_dbt_face_detection.vcxproj">
+      <Project>{5A8FE45C-7C22-321A-9419-6B06E2222216}</Project>
+      <Name>example_cpp_dbt_face_detection</Name>
+    </ProjectReference>
+    <ProjectReference Include="example_cpp_delaunay2.vcxproj">
+      <Project>{608F4E52-D45A-3383-B5B4-779DFDFA3B8F}</Project>
+      <Name>example_cpp_delaunay2</Name>
+    </ProjectReference>
+    <ProjectReference Include="example_cpp_demhist.vcxproj">
+      <Project>{7FD4C747-E359-3AC4-9EC6-9D4479065821}</Project>
+      <Name>example_cpp_demhist</Name>
+    </ProjectReference>
+    <ProjectReference Include="example_cpp_detect_blob.vcxproj">
+      <Project>{2F3A427C-67C1-339F-8172-87EDAC55400C}</Project>
+      <Name>example_cpp_detect_blob</Name>
+    </ProjectReference>
+    <ProjectReference Include="example_cpp_detect_mser.vcxproj">
+      <Project>{385F3F96-E96D-3A80-9F92-0F91490EB0C4}</Project>
+      <Name>example_cpp_detect_mser</Name>
+    </ProjectReference>
+    <ProjectReference Include="example_cpp_dft.vcxproj">
+      <Project>{8901DAE7-A1DF-37D4-B225-FBD1A5F05BB3}</Project>
+      <Name>example_cpp_dft</Name>
+    </ProjectReference>
+    <ProjectReference Include="example_cpp_digits_lenet.vcxproj">
+      <Project>{99957A12-7864-348C-B624-D694C3570273}</Project>
+      <Name>example_cpp_digits_lenet</Name>
+    </ProjectReference>
+    <ProjectReference Include="example_cpp_digits_svm.vcxproj">
+      <Project>{60E6919C-3425-37E2-865E-17040609452E}</Project>
+      <Name>example_cpp_digits_svm</Name>
+    </ProjectReference>
+    <ProjectReference Include="example_cpp_dis_opticalflow.vcxproj">
+      <Project>{99457F66-EB59-36DE-A398-12E697AAFCDE}</Project>
+      <Name>example_cpp_dis_opticalflow</Name>
+    </ProjectReference>
+    <ProjectReference Include="example_cpp_distrans.vcxproj">
+      <Project>{7B4D5DEE-68B7-3CD4-A510-412927904064}</Project>
+      <Name>example_cpp_distrans</Name>
+    </ProjectReference>
+    <ProjectReference Include="example_cpp_drawing.vcxproj">
+      <Project>{C42BC15A-E411-32D6-A0C5-DAE0930D661B}</Project>
+      <Name>example_cpp_drawing</Name>
+    </ProjectReference>
+    <ProjectReference Include="example_cpp_edge.vcxproj">
+      <Project>{4F0C2694-B5DD-37FF-89A7-8DC9F1C8B3BA}</Project>
+      <Name>example_cpp_edge</Name>
+    </ProjectReference>
+    <ProjectReference Include="example_cpp_ela.vcxproj">
+      <Project>{1073C0B7-EA27-3128-888C-1189D5577160}</Project>
+      <Name>example_cpp_ela</Name>
+    </ProjectReference>
+    <ProjectReference Include="example_cpp_em.vcxproj">
+      <Project>{59EC2DBD-2CE3-3AE1-95AA-2E7FDA2634F4}</Project>
+      <Name>example_cpp_em</Name>
+    </ProjectReference>
+    <ProjectReference Include="example_cpp_epipolar_lines.vcxproj">
+      <Project>{A6305EF3-1F87-3E75-9CD2-9299F45AEE93}</Project>
+      <Name>example_cpp_epipolar_lines</Name>
+    </ProjectReference>
+    <ProjectReference Include="example_cpp_essential_mat_reconstr.vcxproj">
+      <Project>{6F4676C3-A712-33D7-B054-28BFBA444224}</Project>
+      <Name>example_cpp_essential_mat_reconstr</Name>
+    </ProjectReference>
+    <ProjectReference Include="example_cpp_example.vcxproj">
+      <Project>{F7E881A5-C641-3750-A3C7-635AD681C05D}</Project>
+      <Name>example_cpp_example</Name>
+    </ProjectReference>
+    <ProjectReference Include="example_cpp_facedetect.vcxproj">
+      <Project>{7E0DC526-47C1-3E8C-BA78-2077554E39F2}</Project>
+      <Name>example_cpp_facedetect</Name>
+    </ProjectReference>
+    <ProjectReference Include="example_cpp_facial_features.vcxproj">
+      <Project>{E47CFFFD-0CA9-306C-949C-56862F0D8C6E}</Project>
+      <Name>example_cpp_facial_features</Name>
+    </ProjectReference>
+    <ProjectReference Include="example_cpp_falsecolor.vcxproj">
+      <Project>{83C3848D-4E6C-3E1E-AC6A-9FC70E300074}</Project>
+      <Name>example_cpp_falsecolor</Name>
+    </ProjectReference>
+    <ProjectReference Include="example_cpp_fback.vcxproj">
+      <Project>{8189A23F-4A36-3F8C-99A8-C6296AC99972}</Project>
+      <Name>example_cpp_fback</Name>
+    </ProjectReference>
+    <ProjectReference Include="example_cpp_ffilldemo.vcxproj">
+      <Project>{B0BB5FA8-039A-32E8-84E7-C5EDD25051A7}</Project>
+      <Name>example_cpp_ffilldemo</Name>
+    </ProjectReference>
+    <ProjectReference Include="example_cpp_filestorage.vcxproj">
+      <Project>{AAEDBBA2-04CA-3E4D-9369-E4169C98AE02}</Project>
+      <Name>example_cpp_filestorage</Name>
+    </ProjectReference>
+    <ProjectReference Include="example_cpp_fitellipse.vcxproj">
+      <Project>{69901484-9A20-3079-8571-43F872E25F37}</Project>
+      <Name>example_cpp_fitellipse</Name>
+    </ProjectReference>
+    <ProjectReference Include="example_cpp_flann_search_dataset.vcxproj">
+      <Project>{C5D31965-0796-374E-8BDE-1A7C4EFED91E}</Project>
+      <Name>example_cpp_flann_search_dataset</Name>
+    </ProjectReference>
+    <ProjectReference Include="example_cpp_grabcut.vcxproj">
+      <Project>{DCD08085-2FC1-357E-A4FE-E3EC077ADEE7}</Project>
+      <Name>example_cpp_grabcut</Name>
+    </ProjectReference>
+    <ProjectReference Include="example_cpp_image_alignment.vcxproj">
+      <Project>{DCAE4040-AAAD-3CFF-90FA-B38013D240AC}</Project>
+      <Name>example_cpp_image_alignment</Name>
+    </ProjectReference>
+    <ProjectReference Include="example_cpp_imagelist_creator.vcxproj">
+      <Project>{ACCE0D23-91C4-3943-ACFE-1E95D447340C}</Project>
+      <Name>example_cpp_imagelist_creator</Name>
+    </ProjectReference>
+    <ProjectReference Include="example_cpp_imagelist_reader.vcxproj">
+      <Project>{E5468665-64A0-3FD7-9DE9-A8C381A6FADB}</Project>
+      <Name>example_cpp_imagelist_reader</Name>
+    </ProjectReference>
+    <ProjectReference Include="example_cpp_imgcodecs_jpeg.vcxproj">
+      <Project>{516B5F0D-DF9D-3F78-A56C-4FC45DBF0BBF}</Project>
+      <Name>example_cpp_imgcodecs_jpeg</Name>
+    </ProjectReference>
+    <ProjectReference Include="example_cpp_inpaint.vcxproj">
+      <Project>{1EF14607-F685-3C72-8B2B-ABE1AED5AA01}</Project>
+      <Name>example_cpp_inpaint</Name>
+    </ProjectReference>
+    <ProjectReference Include="example_cpp_intelligent_scissors.vcxproj">
+      <Project>{9B4AC880-6064-3982-A45E-91620B47B07B}</Project>
+      <Name>example_cpp_intelligent_scissors</Name>
+    </ProjectReference>
+    <ProjectReference Include="example_cpp_intersectExample.vcxproj">
+      <Project>{9B5328A6-C555-331D-8A24-B2EDD8FC4D4A}</Project>
+      <Name>example_cpp_intersectExample</Name>
+    </ProjectReference>
+    <ProjectReference Include="example_cpp_kalman.vcxproj">
+      <Project>{D515268F-565E-35BB-A5FD-57DD1C34469D}</Project>
+      <Name>example_cpp_kalman</Name>
+    </ProjectReference>
+    <ProjectReference Include="example_cpp_kmeans.vcxproj">
+      <Project>{184E96D2-3085-3811-BA30-439378DB1249}</Project>
+      <Name>example_cpp_kmeans</Name>
+    </ProjectReference>
+    <ProjectReference Include="example_cpp_laplace.vcxproj">
+      <Project>{DB391F57-C374-3285-8B36-54A72DA512FD}</Project>
+      <Name>example_cpp_laplace</Name>
+    </ProjectReference>
+    <ProjectReference Include="example_cpp_letter_recog.vcxproj">
+      <Project>{20E60F42-DA42-3EF0-9415-27EE8308584B}</Project>
+      <Name>example_cpp_letter_recog</Name>
+    </ProjectReference>
+    <ProjectReference Include="example_cpp_lkdemo.vcxproj">
+      <Project>{21B268F9-69D4-32E4-81B9-79CB89D3B4C5}</Project>
+      <Name>example_cpp_lkdemo</Name>
+    </ProjectReference>
+    <ProjectReference Include="example_cpp_logistic_regression.vcxproj">
+      <Project>{C2D7A8D7-DA8F-3EB7-87CE-E5CC39B21ADA}</Project>
+      <Name>example_cpp_logistic_regression</Name>
+    </ProjectReference>
+    <ProjectReference Include="example_cpp_lsd_lines.vcxproj">
+      <Project>{47F40AD1-A1E1-3CBB-9080-922A2BA0813B}</Project>
+      <Name>example_cpp_lsd_lines</Name>
+    </ProjectReference>
+    <ProjectReference Include="example_cpp_mask_tmpl.vcxproj">
+      <Project>{9A7F4BC8-7A0D-3CE0-A14E-108DE62E33BD}</Project>
+      <Name>example_cpp_mask_tmpl</Name>
+    </ProjectReference>
+    <ProjectReference Include="example_cpp_matchmethod_orb_akaze_brisk.vcxproj">
+      <Project>{661E5A68-9F40-3CAE-808B-BA5106A9F3A8}</Project>
+      <Name>example_cpp_matchmethod_orb_akaze_brisk</Name>
+    </ProjectReference>
+    <ProjectReference Include="example_cpp_minarea.vcxproj">
+      <Project>{522B9EF6-D872-340B-96BD-9B0D35555C44}</Project>
+      <Name>example_cpp_minarea</Name>
+    </ProjectReference>
+    <ProjectReference Include="example_cpp_morphology2.vcxproj">
+      <Project>{B13CF7F6-B83E-3F71-B52D-BC847BC5B007}</Project>
+      <Name>example_cpp_morphology2</Name>
+    </ProjectReference>
+    <ProjectReference Include="example_cpp_neural_network.vcxproj">
+      <Project>{D8AC4C22-17FD-304B-8A58-4E72C0C211A0}</Project>
+      <Name>example_cpp_neural_network</Name>
+    </ProjectReference>
+    <ProjectReference Include="example_cpp_npr_demo.vcxproj">
+      <Project>{FC32F3F9-BBAF-3CCE-931F-043BA2CD161F}</Project>
+      <Name>example_cpp_npr_demo</Name>
+    </ProjectReference>
+    <ProjectReference Include="example_cpp_opencv_version.vcxproj">
+      <Project>{EF9AA29B-AB06-3145-A597-7DA62F69D4E1}</Project>
+      <Name>example_cpp_opencv_version</Name>
+    </ProjectReference>
+    <ProjectReference Include="example_cpp_pca.vcxproj">
+      <Project>{B9A8F1EE-7273-3A5A-8662-248DF7B03337}</Project>
+      <Name>example_cpp_pca</Name>
+    </ProjectReference>
+    <ProjectReference Include="example_cpp_peopledetect.vcxproj">
+      <Project>{93F36356-152B-37BC-9651-76AB1D66E25D}</Project>
+      <Name>example_cpp_peopledetect</Name>
+    </ProjectReference>
+    <ProjectReference Include="example_cpp_phase_corr.vcxproj">
+      <Project>{9301201D-2AC2-3578-AC42-C4D01EB6B8F8}</Project>
+      <Name>example_cpp_phase_corr</Name>
+    </ProjectReference>
+    <ProjectReference Include="example_cpp_points_classifier.vcxproj">
+      <Project>{2E2D196F-7D59-365D-A715-B016C8DD7344}</Project>
+      <Name>example_cpp_points_classifier</Name>
+    </ProjectReference>
+    <ProjectReference Include="example_cpp_polar_transforms.vcxproj">
+      <Project>{476FBD6B-C0F5-3E16-8CE5-3B933EFCFE42}</Project>
+      <Name>example_cpp_polar_transforms</Name>
+    </ProjectReference>
+    <ProjectReference Include="example_cpp_qrcode.vcxproj">
+      <Project>{6843E5E6-7994-315B-AA24-5C687FE4AE45}</Project>
+      <Name>example_cpp_qrcode</Name>
+    </ProjectReference>
+    <ProjectReference Include="example_cpp_segment_objects.vcxproj">
+      <Project>{705B1492-C3C0-3681-85A6-3797C1DFAA8C}</Project>
+      <Name>example_cpp_segment_objects</Name>
+    </ProjectReference>
+    <ProjectReference Include="example_cpp_select3dobj.vcxproj">
+      <Project>{CA7169E4-C1DF-38C8-B116-C488C2234F54}</Project>
+      <Name>example_cpp_select3dobj</Name>
+    </ProjectReference>
+    <ProjectReference Include="example_cpp_simd_basic.vcxproj">
+      <Project>{D63D5AD1-1CB2-31C6-B956-B83CD1218A48}</Project>
+      <Name>example_cpp_simd_basic</Name>
+    </ProjectReference>
+    <ProjectReference Include="example_cpp_smiledetect.vcxproj">
+      <Project>{4A12FEB1-44D5-3B4C-9ADE-D47EA5BAD77B}</Project>
+      <Name>example_cpp_smiledetect</Name>
+    </ProjectReference>
+    <ProjectReference Include="example_cpp_squares.vcxproj">
+      <Project>{AD1E0095-14BB-3E33-B0B7-7337788D89A1}</Project>
+      <Name>example_cpp_squares</Name>
+    </ProjectReference>
+    <ProjectReference Include="example_cpp_stereo_calib.vcxproj">
+      <Project>{132A08DE-C813-30D6-9FD5-EDE2EAB91586}</Project>
+      <Name>example_cpp_stereo_calib</Name>
+    </ProjectReference>
+    <ProjectReference Include="example_cpp_stereo_match.vcxproj">
+      <Project>{59831336-39D6-3F78-A1D4-4873A2FB0753}</Project>
+      <Name>example_cpp_stereo_match</Name>
+    </ProjectReference>
+    <ProjectReference Include="example_cpp_stitching.vcxproj">
+      <Project>{3207B1B2-DC79-3C47-BB23-99804A5231B7}</Project>
+      <Name>example_cpp_stitching</Name>
+    </ProjectReference>
+    <ProjectReference Include="example_cpp_stitching_detailed.vcxproj">
+      <Project>{A8993FD2-E457-388B-A1C5-31AD73A8D0C7}</Project>
+      <Name>example_cpp_stitching_detailed</Name>
+    </ProjectReference>
+    <ProjectReference Include="example_cpp_text_skewness_correction.vcxproj">
+      <Project>{134039A1-4C81-3887-BF38-CAB9E221153D}</Project>
+      <Name>example_cpp_text_skewness_correction</Name>
+    </ProjectReference>
+    <ProjectReference Include="example_cpp_train_HOG.vcxproj">
+      <Project>{1F82D417-7FF0-32B9-8744-65AAB11C033C}</Project>
+      <Name>example_cpp_train_HOG</Name>
+    </ProjectReference>
+    <ProjectReference Include="example_cpp_train_svmsgd.vcxproj">
+      <Project>{058ADE85-F4E7-3528-B436-3611669EB7A4}</Project>
+      <Name>example_cpp_train_svmsgd</Name>
+    </ProjectReference>
+    <ProjectReference Include="example_cpp_travelsalesman.vcxproj">
+      <Project>{B7A2C66E-38FE-3401-A79D-7CA31BFDD0AE}</Project>
+      <Name>example_cpp_travelsalesman</Name>
+    </ProjectReference>
+    <ProjectReference Include="example_cpp_tree_engine.vcxproj">
+      <Project>{C4E6F8BF-FDE1-3814-95F0-A46BDADA15D9}</Project>
+      <Name>example_cpp_tree_engine</Name>
+    </ProjectReference>
+    <ProjectReference Include="example_cpp_videocapture_audio.vcxproj">
+      <Project>{D14E9E8E-B977-3840-9468-E03BC8D6498B}</Project>
+      <Name>example_cpp_videocapture_audio</Name>
+    </ProjectReference>
+    <ProjectReference Include="example_cpp_videocapture_audio_combination.vcxproj">
+      <Project>{537C41D8-F0A3-31B0-98C4-A21E61851CA0}</Project>
+      <Name>example_cpp_videocapture_audio_combination</Name>
+    </ProjectReference>
+    <ProjectReference Include="example_cpp_videocapture_basic.vcxproj">
+      <Project>{0F25143D-0B5C-311F-9EF6-05262C1664CE}</Project>
+      <Name>example_cpp_videocapture_basic</Name>
+    </ProjectReference>
+    <ProjectReference Include="example_cpp_videocapture_camera.vcxproj">
+      <Project>{BD097B0B-E0E7-31A3-8899-73BCAA24C9E7}</Project>
+      <Name>example_cpp_videocapture_camera</Name>
+    </ProjectReference>
+    <ProjectReference Include="example_cpp_videocapture_gphoto2_autofocus.vcxproj">
+      <Project>{9E0E2E58-BD05-34D4-9C7C-258B769076F2}</Project>
+      <Name>example_cpp_videocapture_gphoto2_autofocus</Name>
+    </ProjectReference>
+    <ProjectReference Include="example_cpp_videocapture_gstreamer_pipeline.vcxproj">
+      <Project>{40C8C498-F668-35DF-BEBB-7A9ED5DA8FF9}</Project>
+      <Name>example_cpp_videocapture_gstreamer_pipeline</Name>
+    </ProjectReference>
+    <ProjectReference Include="example_cpp_videocapture_image_sequence.vcxproj">
+      <Project>{0DEADFAC-06A3-375E-92B7-11805414A19C}</Project>
+      <Name>example_cpp_videocapture_image_sequence</Name>
+    </ProjectReference>
+    <ProjectReference Include="example_cpp_videocapture_microphone.vcxproj">
+      <Project>{714EBB18-70DC-3160-B48F-8EDD1AA712DF}</Project>
+      <Name>example_cpp_videocapture_microphone</Name>
+    </ProjectReference>
+    <ProjectReference Include="example_cpp_videocapture_obsensor.vcxproj">
+      <Project>{3FE659A8-3EB6-3E4A-A0F7-4513EA2EECBF}</Project>
+      <Name>example_cpp_videocapture_obsensor</Name>
+    </ProjectReference>
+    <ProjectReference Include="example_cpp_videocapture_openni.vcxproj">
+      <Project>{0FE0D589-612F-3328-918C-038A3E722DC6}</Project>
+      <Name>example_cpp_videocapture_openni</Name>
+    </ProjectReference>
+    <ProjectReference Include="example_cpp_videocapture_realsense.vcxproj">
+      <Project>{7C6E5DE9-15C8-3BB1-BA0C-183852A3AE67}</Project>
+      <Name>example_cpp_videocapture_realsense</Name>
+    </ProjectReference>
+    <ProjectReference Include="example_cpp_videocapture_starter.vcxproj">
+      <Project>{549D1FB8-6E85-33B8-922F-AAB946CF27E8}</Project>
+      <Name>example_cpp_videocapture_starter</Name>
+    </ProjectReference>
+    <ProjectReference Include="example_cpp_videowriter_basic.vcxproj">
+      <Project>{1D359AF3-8D1E-38C0-86CB-2137FFBFBE28}</Project>
+      <Name>example_cpp_videowriter_basic</Name>
+    </ProjectReference>
+    <ProjectReference Include="example_cpp_warpPerspective_demo.vcxproj">
+      <Project>{F9B29D4B-938C-3B11-BE9A-75D2ADD0F7CA}</Project>
+      <Name>example_cpp_warpPerspective_demo</Name>
+    </ProjectReference>
+    <ProjectReference Include="example_cpp_watershed.vcxproj">
+      <Project>{FCA89BAE-A23A-3673-8AD5-EDA8E05D84C4}</Project>
+      <Name>example_cpp_watershed</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

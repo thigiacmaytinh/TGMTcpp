@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{041E769C-244D-3E40-B1ED-92AE58B19CA5}</ProjectGuid>
+    <WindowsTargetPlatformVersion>10.0.17763.0</WindowsTargetPlatformVersion>
+    <Keyword>Win32Proj</Keyword>
+    <Platform>x64</Platform>
+    <ProjectName>opencv_samples_tapi</ProjectName>
+    <VCProjectUpgraderObjectName>NoUpgrade</VCProjectUpgraderObjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Midl>
+      <AdditionalIncludeDirectories>D:\LIB\opencv\opencv480\sources\modules\core\include;D:\LIB\opencv\opencv480\sources\modules\features2d\include;D:\LIB\opencv\opencv480\sources\modules\imgproc\include;D:\LIB\opencv\opencv480\sources\modules\flann\include;D:\LIB\opencv\opencv480\sources\modules\calib3d\include;D:\LIB\opencv\opencv480\sources\modules\dnn\include;D:\LIB\opencv\opencv480\sources\modules\videoio\include;D:\LIB\opencv\opencv480\sources\modules\imgcodecs\include;D:\LIB\opencv\opencv480\sources\modules\objdetect\include;D:\LIB\opencv\opencv480\sources\modules\highgui\include;D:\LIB\opencv\opencv480\sources\modules\video\include;D:\LIB\opencv\opencv480\build;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Midl>
+      <AdditionalIncludeDirectories>D:\LIB\opencv\opencv480\sources\modules\core\include;D:\LIB\opencv\opencv480\sources\modules\features2d\include;D:\LIB\opencv\opencv480\sources\modules\imgproc\include;D:\LIB\opencv\opencv480\sources\modules\flann\include;D:\LIB\opencv\opencv480\sources\modules\calib3d\include;D:\LIB\opencv\opencv480\sources\modules\dnn\include;D:\LIB\opencv\opencv480\sources\modules\videoio\include;D:\LIB\opencv\opencv480\sources\modules\imgcodecs\include;D:\LIB\opencv\opencv480\sources\modules\objdetect\include;D:\LIB\opencv\opencv480\sources\modules\highgui\include;D:\LIB\opencv\opencv480\sources\modules\video\include;D:\LIB\opencv\opencv480\build;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+  </ItemGroup>
+  <ItemGroup>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="D:\LIB\opencv\opencv480\build\ZERO_CHECK.vcxproj">
+      <Project>{A2B6B0A1-0116-3B54-BA2A-2EB40583D0C0}</Project>
+      <Name>ZERO_CHECK</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="example_tapi_bgfg_segm.vcxproj">
+      <Project>{DD919372-8334-336E-9CC4-E4D6B58E7F97}</Project>
+      <Name>example_tapi_bgfg_segm</Name>
+    </ProjectReference>
+    <ProjectReference Include="example_tapi_camshift.vcxproj">
+      <Project>{847ABEBB-DCB9-3655-9C11-5E439DE40881}</Project>
+      <Name>example_tapi_camshift</Name>
+    </ProjectReference>
+    <ProjectReference Include="example_tapi_clahe.vcxproj">
+      <Project>{D08DAD23-E11E-3FD9-B4A0-319E452ECBF4}</Project>
+      <Name>example_tapi_clahe</Name>
+    </ProjectReference>
+    <ProjectReference Include="example_tapi_dense_optical_flow.vcxproj">
+      <Project>{2B7FDE57-498C-39F4-8EA1-EA58EE2AAC10}</Project>
+      <Name>example_tapi_dense_optical_flow</Name>
+    </ProjectReference>
+    <ProjectReference Include="example_tapi_hog.vcxproj">
+      <Project>{E5828177-F2AE-3F2D-9E8B-A9E87AF524D8}</Project>
+      <Name>example_tapi_hog</Name>
+    </ProjectReference>
+    <ProjectReference Include="example_tapi_opencl_custom_kernel.vcxproj">
+      <Project>{D69E5BF6-D52E-32C4-ACF2-7BCC4261BD91}</Project>
+      <Name>example_tapi_opencl_custom_kernel</Name>
+    </ProjectReference>
+    <ProjectReference Include="example_tapi_pyrlk_optical_flow.vcxproj">
+      <Project>{D7D64CE2-0CC0-3FE5-834B-C327AAA7C8EC}</Project>
+      <Name>example_tapi_pyrlk_optical_flow</Name>
+    </ProjectReference>
+    <ProjectReference Include="example_tapi_squares.vcxproj">
+      <Project>{B515C719-DD52-33E1-A715-608B2B5E766B}</Project>
+      <Name>example_tapi_squares</Name>
+    </ProjectReference>
+    <ProjectReference Include="example_tapi_ufacedetect.vcxproj">
+      <Project>{94FE68B5-D388-3684-BEEA-D1635FEACAE3}</Project>
+      <Name>example_tapi_ufacedetect</Name>
+    </ProjectReference>
+    <ProjectReference Include="example_tapi_video_acceleration.vcxproj">
+      <Project>{526A49FF-CBFA-34F6-8602-C525F28114F5}</Project>
+      <Name>example_tapi_video_acceleration</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

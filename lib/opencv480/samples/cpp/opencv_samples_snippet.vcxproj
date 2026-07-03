@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{42090068-7631-3B3F-9A5D-C4DFFC1F6355}</ProjectGuid>
+    <WindowsTargetPlatformVersion>10.0.17763.0</WindowsTargetPlatformVersion>
+    <Keyword>Win32Proj</Keyword>
+    <Platform>x64</Platform>
+    <ProjectName>opencv_samples_snippet</ProjectName>
+    <VCProjectUpgraderObjectName>NoUpgrade</VCProjectUpgraderObjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Midl>
+      <AdditionalIncludeDirectories>..\..\modules\photo\include;..\..\modules\imgproc\include;..\..\modules\core\include;..\..\modules\objdetect\include;..\..\modules\calib3d\include;..\..\modules\imgcodecs\include;..\..\modules\features2d\include;..\..\modules\dnn\include;..\..\modules\flann\include;..\..\modules\video\include;D:\LIB\opencv\opencv_contrib-4.8.0\modules\shape\include;..\..\modules\ml\include;..\..\modules\videoio\include;..\..\modules\highgui\include;D:\LIB\opencv\opencv_contrib-4.8.0\modules\datasets\include;D:\LIB\opencv\opencv_contrib-4.8.0\modules\text\include;D:\LIB\opencv\opencv_contrib-4.8.0\modules\plot\include;D:\LIB\opencv\opencv_contrib-4.8.0\modules\optflow\include;D:\LIB\opencv\opencv_contrib-4.8.0\modules\ximgproc\include;D:\LIB\opencv\opencv_contrib-4.8.0\modules\phase_unwrapping\include;D:\LIB\opencv\opencv_contrib-4.8.0\modules\tracking\include;D:\LIB\opencv\opencv_contrib-4.8.0\modules\quality\include;D:\LIB\opencv\opencv_contrib-4.8.0\modules\xfeatures2d\include;D:\LIB\opencv\opencv_contrib-4.8.0\modules\xphoto\include;D:\LIB\opencv\opencv_contrib-4.8.0\modules\xobjdetect\include;D:\LIB\opencv\opencv_contrib-4.8.0\modules\videostab\include;D:\LIB\opencv\opencv_contrib-4.8.0\modules\surface_matching\include;D:\LIB\opencv\opencv_contrib-4.8.0\modules\superres\include;D:\LIB\opencv\opencv_contrib-4.8.0\modules\structured_light\include;D:\LIB\opencv\opencv_contrib-4.8.0\modules\stereo\include;D:\LIB\opencv\opencv_contrib-4.8.0\modules\saliency\include;D:\LIB\opencv\opencv_contrib-4.8.0\modules\rgbd\include;D:\LIB\opencv\opencv_contrib-4.8.0\modules\reg\include;D:\LIB\opencv\opencv_contrib-4.8.0\modules\rapid\include;D:\LIB\opencv\opencv_contrib-4.8.0\modules\mcc\include;D:\LIB\opencv\opencv_contrib-4.8.0\modules\line_descriptor\include;D:\LIB\opencv\opencv_contrib-4.8.0\modules\intensity_transform\include;D:\LIB\opencv\opencv_contrib-4.8.0\modules\img_hash\include;D:\LIB\opencv\opencv_contrib-4.8.0\modules\hfs\include;D:\LIB\opencv\opencv_contrib-4.8.0\modules\fuzzy\include;D:\LIB\opencv\opencv_contrib-4.8.0\modules\face\include;D:\LIB\opencv\opencv_contrib-4.8.0\modules\dpm\include;D:\LIB\opencv\opencv_contrib-4.8.0\modules\dnn_superres\include;D:\LIB\opencv\opencv_contrib-4.8.0\modules\dnn_objdetect\include;D:\LIB\opencv\opencv_contrib-4.8.0\modules\ccalib\include;D:\LIB\opencv\opencv_contrib-4.8.0\modules\bioinspired\include;D:\LIB\opencv\opencv_contrib-4.8.0\modules\bgsegm\include;D:\LIB\opencv\opencv_contrib-4.8.0\modules\aruco\include;..\..\modules\stitching\include;..\..\modules\gapi\include;D:\LIB\opencv\opencv480\build;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Midl>
+      <AdditionalIncludeDirectories>..\..\modules\photo\include;..\..\modules\imgproc\include;..\..\modules\core\include;..\..\modules\objdetect\include;..\..\modules\calib3d\include;..\..\modules\imgcodecs\include;..\..\modules\features2d\include;..\..\modules\dnn\include;..\..\modules\flann\include;..\..\modules\video\include;D:\LIB\opencv\opencv_contrib-4.8.0\modules\shape\include;..\..\modules\ml\include;..\..\modules\videoio\include;..\..\modules\highgui\include;D:\LIB\opencv\opencv_contrib-4.8.0\modules\datasets\include;D:\LIB\opencv\opencv_contrib-4.8.0\modules\text\include;D:\LIB\opencv\opencv_contrib-4.8.0\modules\plot\include;D:\LIB\opencv\opencv_contrib-4.8.0\modules\optflow\include;D:\LIB\opencv\opencv_contrib-4.8.0\modules\ximgproc\include;D:\LIB\opencv\opencv_contrib-4.8.0\modules\phase_unwrapping\include;D:\LIB\opencv\opencv_contrib-4.8.0\modules\tracking\include;D:\LIB\opencv\opencv_contrib-4.8.0\modules\quality\include;D:\LIB\opencv\opencv_contrib-4.8.0\modules\xfeatures2d\include;D:\LIB\opencv\opencv_contrib-4.8.0\modules\xphoto\include;D:\LIB\opencv\opencv_contrib-4.8.0\modules\xobjdetect\include;D:\LIB\opencv\opencv_contrib-4.8.0\modules\videostab\include;D:\LIB\opencv\opencv_contrib-4.8.0\modules\surface_matching\include;D:\LIB\opencv\opencv_contrib-4.8.0\modules\superres\include;D:\LIB\opencv\opencv_contrib-4.8.0\modules\structured_light\include;D:\LIB\opencv\opencv_contrib-4.8.0\modules\stereo\include;D:\LIB\opencv\opencv_contrib-4.8.0\modules\saliency\include;D:\LIB\opencv\opencv_contrib-4.8.0\modules\rgbd\include;D:\LIB\opencv\opencv_contrib-4.8.0\modules\reg\include;D:\LIB\opencv\opencv_contrib-4.8.0\modules\rapid\include;D:\LIB\opencv\opencv_contrib-4.8.0\modules\mcc\include;D:\LIB\opencv\opencv_contrib-4.8.0\modules\line_descriptor\include;D:\LIB\opencv\opencv_contrib-4.8.0\modules\intensity_transform\include;D:\LIB\opencv\opencv_contrib-4.8.0\modules\img_hash\include;D:\LIB\opencv\opencv_contrib-4.8.0\modules\hfs\include;D:\LIB\opencv\opencv_contrib-4.8.0\modules\fuzzy\include;D:\LIB\opencv\opencv_contrib-4.8.0\modules\face\include;D:\LIB\opencv\opencv_contrib-4.8.0\modules\dpm\include;D:\LIB\opencv\opencv_contrib-4.8.0\modules\dnn_superres\include;D:\LIB\opencv\opencv_contrib-4.8.0\modules\dnn_objdetect\include;D:\LIB\opencv\opencv_contrib-4.8.0\modules\ccalib\include;D:\LIB\opencv\opencv_contrib-4.8.0\modules\bioinspired\include;D:\LIB\opencv\opencv_contrib-4.8.0\modules\bgsegm\include;D:\LIB\opencv\opencv_contrib-4.8.0\modules\aruco\include;..\..\modules\stitching\include;..\..\modules\gapi\include;D:\LIB\opencv\opencv480\build;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+  </ItemGroup>
+  <ItemGroup>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="D:\LIB\opencv\opencv480\build\ZERO_CHECK.vcxproj">
+      <Project>{A2B6B0A1-0116-3B54-BA2A-2EB40583D0C0}</Project>
+      <Name>ZERO_CHECK</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="example_snippet_core_mat_checkVector.vcxproj">
+      <Project>{7CA8A635-6197-3704-BF11-AFD346806747}</Project>
+      <Name>example_snippet_core_mat_checkVector</Name>
+    </ProjectReference>
+    <ProjectReference Include="example_snippet_core_merge.vcxproj">
+      <Project>{5B1AA8CB-47D9-38E8-8F84-EF7B92E2A006}</Project>
+      <Name>example_snippet_core_merge</Name>
+    </ProjectReference>
+    <ProjectReference Include="example_snippet_core_reduce.vcxproj">
+      <Project>{828F81AD-3C1B-3716-B2C7-7C6DAAA473CC}</Project>
+      <Name>example_snippet_core_reduce</Name>
+    </ProjectReference>
+    <ProjectReference Include="example_snippet_core_split.vcxproj">
+      <Project>{92D36DDB-4228-3515-AF88-4385CFFB248F}</Project>
+      <Name>example_snippet_core_split</Name>
+    </ProjectReference>
+    <ProjectReference Include="example_snippet_core_various.vcxproj">
+      <Project>{304C09AC-8AA7-3EB8-933E-F44DD828B904}</Project>
+      <Name>example_snippet_core_various</Name>
+    </ProjectReference>
+    <ProjectReference Include="example_snippet_imgcodecs_imwrite.vcxproj">
+      <Project>{6B302234-33E5-3FD8-8FD5-C2FE755A6E9C}</Project>
+      <Name>example_snippet_imgcodecs_imwrite</Name>
+    </ProjectReference>
+    <ProjectReference Include="example_snippet_imgproc_HoughLinesCircles.vcxproj">
+      <Project>{BCB71837-1B35-3E00-B75C-66BAC435F365}</Project>
+      <Name>example_snippet_imgproc_HoughLinesCircles</Name>
+    </ProjectReference>
+    <ProjectReference Include="example_snippet_imgproc_HoughLinesP.vcxproj">
+      <Project>{53F4B052-C4D4-366C-A5E9-188CCDD083C7}</Project>
+      <Name>example_snippet_imgproc_HoughLinesP</Name>
+    </ProjectReference>
+    <ProjectReference Include="example_snippet_imgproc_HoughLinesPointSet.vcxproj">
+      <Project>{2CAD4207-9F94-307D-AB4E-7DD659B9467D}</Project>
+      <Name>example_snippet_imgproc_HoughLinesPointSet</Name>
+    </ProjectReference>
+    <ProjectReference Include="example_snippet_imgproc_applyColorMap.vcxproj">
+      <Project>{991FC671-36EC-3B04-9E39-F21472E06425}</Project>
+      <Name>example_snippet_imgproc_applyColorMap</Name>
+    </ProjectReference>
+    <ProjectReference Include="example_snippet_imgproc_calcHist.vcxproj">
+      <Project>{C1A5E4F1-85A1-3865-9BCB-BD570B78D3D8}</Project>
+      <Name>example_snippet_imgproc_calcHist</Name>
+    </ProjectReference>
+    <ProjectReference Include="example_snippet_imgproc_drawContours.vcxproj">
+      <Project>{ADD21446-BA9F-35C3-B29C-60B41D049518}</Project>
+      <Name>example_snippet_imgproc_drawContours</Name>
+    </ProjectReference>
+    <ProjectReference Include="example_snippet_imgproc_segmentation.vcxproj">
+      <Project>{E7B98715-9402-3E34-A55C-07E99BA522CD}</Project>
+      <Name>example_snippet_imgproc_segmentation</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

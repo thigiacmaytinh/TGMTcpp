@@ -1,0 +1,479 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{D91FBA03-6A0C-3ADA-B142-3D3170CF01E5}</ProjectGuid>
+    <WindowsTargetPlatformVersion>10.0.17763.0</WindowsTargetPlatformVersion>
+    <Keyword>Win32Proj</Keyword>
+    <Platform>x64</Platform>
+    <ProjectName>opencv_samples_tutorial</ProjectName>
+    <VCProjectUpgraderObjectName>NoUpgrade</VCProjectUpgraderObjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Midl>
+      <AdditionalIncludeDirectories>..\..\modules\photo\include;..\..\modules\imgproc\include;..\..\modules\core\include;..\..\modules\objdetect\include;..\..\modules\calib3d\include;..\..\modules\imgcodecs\include;..\..\modules\features2d\include;..\..\modules\dnn\include;..\..\modules\flann\include;..\..\modules\video\include;D:\LIB\opencv\opencv_contrib-4.8.0\modules\shape\include;..\..\modules\ml\include;..\..\modules\videoio\include;..\..\modules\highgui\include;D:\LIB\opencv\opencv_contrib-4.8.0\modules\datasets\include;D:\LIB\opencv\opencv_contrib-4.8.0\modules\text\include;D:\LIB\opencv\opencv_contrib-4.8.0\modules\plot\include;D:\LIB\opencv\opencv_contrib-4.8.0\modules\optflow\include;D:\LIB\opencv\opencv_contrib-4.8.0\modules\ximgproc\include;D:\LIB\opencv\opencv_contrib-4.8.0\modules\phase_unwrapping\include;D:\LIB\opencv\opencv_contrib-4.8.0\modules\tracking\include;D:\LIB\opencv\opencv_contrib-4.8.0\modules\quality\include;D:\LIB\opencv\opencv_contrib-4.8.0\modules\xfeatures2d\include;D:\LIB\opencv\opencv_contrib-4.8.0\modules\xphoto\include;D:\LIB\opencv\opencv_contrib-4.8.0\modules\xobjdetect\include;D:\LIB\opencv\opencv_contrib-4.8.0\modules\videostab\include;D:\LIB\opencv\opencv_contrib-4.8.0\modules\surface_matching\include;D:\LIB\opencv\opencv_contrib-4.8.0\modules\superres\include;D:\LIB\opencv\opencv_contrib-4.8.0\modules\structured_light\include;D:\LIB\opencv\opencv_contrib-4.8.0\modules\stereo\include;D:\LIB\opencv\opencv_contrib-4.8.0\modules\saliency\include;D:\LIB\opencv\opencv_contrib-4.8.0\modules\rgbd\include;D:\LIB\opencv\opencv_contrib-4.8.0\modules\reg\include;D:\LIB\opencv\opencv_contrib-4.8.0\modules\rapid\include;D:\LIB\opencv\opencv_contrib-4.8.0\modules\mcc\include;D:\LIB\opencv\opencv_contrib-4.8.0\modules\line_descriptor\include;D:\LIB\opencv\opencv_contrib-4.8.0\modules\intensity_transform\include;D:\LIB\opencv\opencv_contrib-4.8.0\modules\img_hash\include;D:\LIB\opencv\opencv_contrib-4.8.0\modules\hfs\include;D:\LIB\opencv\opencv_contrib-4.8.0\modules\fuzzy\include;D:\LIB\opencv\opencv_contrib-4.8.0\modules\face\include;D:\LIB\opencv\opencv_contrib-4.8.0\modules\dpm\include;D:\LIB\opencv\opencv_contrib-4.8.0\modules\dnn_superres\include;D:\LIB\opencv\opencv_contrib-4.8.0\modules\dnn_objdetect\include;D:\LIB\opencv\opencv_contrib-4.8.0\modules\ccalib\include;D:\LIB\opencv\opencv_contrib-4.8.0\modules\bioinspired\include;D:\LIB\opencv\opencv_contrib-4.8.0\modules\bgsegm\include;D:\LIB\opencv\opencv_contrib-4.8.0\modules\aruco\include;..\..\modules\stitching\include;..\..\modules\gapi\include;D:\LIB\opencv\opencv480\build;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Midl>
+      <AdditionalIncludeDirectories>..\..\modules\photo\include;..\..\modules\imgproc\include;..\..\modules\core\include;..\..\modules\objdetect\include;..\..\modules\calib3d\include;..\..\modules\imgcodecs\include;..\..\modules\features2d\include;..\..\modules\dnn\include;..\..\modules\flann\include;..\..\modules\video\include;D:\LIB\opencv\opencv_contrib-4.8.0\modules\shape\include;..\..\modules\ml\include;..\..\modules\videoio\include;..\..\modules\highgui\include;D:\LIB\opencv\opencv_contrib-4.8.0\modules\datasets\include;D:\LIB\opencv\opencv_contrib-4.8.0\modules\text\include;D:\LIB\opencv\opencv_contrib-4.8.0\modules\plot\include;D:\LIB\opencv\opencv_contrib-4.8.0\modules\optflow\include;D:\LIB\opencv\opencv_contrib-4.8.0\modules\ximgproc\include;D:\LIB\opencv\opencv_contrib-4.8.0\modules\phase_unwrapping\include;D:\LIB\opencv\opencv_contrib-4.8.0\modules\tracking\include;D:\LIB\opencv\opencv_contrib-4.8.0\modules\quality\include;D:\LIB\opencv\opencv_contrib-4.8.0\modules\xfeatures2d\include;D:\LIB\opencv\opencv_contrib-4.8.0\modules\xphoto\include;D:\LIB\opencv\opencv_contrib-4.8.0\modules\xobjdetect\include;D:\LIB\opencv\opencv_contrib-4.8.0\modules\videostab\include;D:\LIB\opencv\opencv_contrib-4.8.0\modules\surface_matching\include;D:\LIB\opencv\opencv_contrib-4.8.0\modules\superres\include;D:\LIB\opencv\opencv_contrib-4.8.0\modules\structured_light\include;D:\LIB\opencv\opencv_contrib-4.8.0\modules\stereo\include;D:\LIB\opencv\opencv_contrib-4.8.0\modules\saliency\include;D:\LIB\opencv\opencv_contrib-4.8.0\modules\rgbd\include;D:\LIB\opencv\opencv_contrib-4.8.0\modules\reg\include;D:\LIB\opencv\opencv_contrib-4.8.0\modules\rapid\include;D:\LIB\opencv\opencv_contrib-4.8.0\modules\mcc\include;D:\LIB\opencv\opencv_contrib-4.8.0\modules\line_descriptor\include;D:\LIB\opencv\opencv_contrib-4.8.0\modules\intensity_transform\include;D:\LIB\opencv\opencv_contrib-4.8.0\modules\img_hash\include;D:\LIB\opencv\opencv_contrib-4.8.0\modules\hfs\include;D:\LIB\opencv\opencv_contrib-4.8.0\modules\fuzzy\include;D:\LIB\opencv\opencv_contrib-4.8.0\modules\face\include;D:\LIB\opencv\opencv_contrib-4.8.0\modules\dpm\include;D:\LIB\opencv\opencv_contrib-4.8.0\modules\dnn_superres\include;D:\LIB\opencv\opencv_contrib-4.8.0\modules\dnn_objdetect\include;D:\LIB\opencv\opencv_contrib-4.8.0\modules\ccalib\include;D:\LIB\opencv\opencv_contrib-4.8.0\modules\bioinspired\include;D:\LIB\opencv\opencv_contrib-4.8.0\modules\bgsegm\include;D:\LIB\opencv\opencv_contrib-4.8.0\modules\aruco\include;..\..\modules\stitching\include;..\..\modules\gapi\include;D:\LIB\opencv\opencv480\build;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+  </ItemGroup>
+  <ItemGroup>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="D:\LIB\opencv\opencv480\build\ZERO_CHECK.vcxproj">
+      <Project>{A2B6B0A1-0116-3B54-BA2A-2EB40583D0C0}</Project>
+      <Name>ZERO_CHECK</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="example_tutorial_AKAZE_match.vcxproj">
+      <Project>{F40C6945-E672-3928-B963-85D496244871}</Project>
+      <Name>example_tutorial_AKAZE_match</Name>
+    </ProjectReference>
+    <ProjectReference Include="example_tutorial_AddingImages.vcxproj">
+      <Project>{9C8EF670-64BA-3A29-95C1-79AE98505503}</Project>
+      <Name>example_tutorial_AddingImages</Name>
+    </ProjectReference>
+    <ProjectReference Include="example_tutorial_AddingImagesTrackbar.vcxproj">
+      <Project>{8A608973-9200-3BE3-8803-6B11897C4744}</Project>
+      <Name>example_tutorial_AddingImagesTrackbar</Name>
+    </ProjectReference>
+    <ProjectReference Include="example_tutorial_BasicLinearTransforms.vcxproj">
+      <Project>{45371DC3-F8F6-335F-90F6-B068301623ED}</Project>
+      <Name>example_tutorial_BasicLinearTransforms</Name>
+    </ProjectReference>
+    <ProjectReference Include="example_tutorial_BasicLinearTransformsTrackbar.vcxproj">
+      <Project>{5279DD87-DE45-3C7E-8498-F551141F4D56}</Project>
+      <Name>example_tutorial_BasicLinearTransformsTrackbar</Name>
+    </ProjectReference>
+    <ProjectReference Include="example_tutorial_CannyDetector_Demo.vcxproj">
+      <Project>{43E98B9A-F117-37B7-85E5-0C832F44D69A}</Project>
+      <Name>example_tutorial_CannyDetector_Demo</Name>
+    </ProjectReference>
+    <ProjectReference Include="example_tutorial_Drawing_1.vcxproj">
+      <Project>{DF2A2457-5E60-37E2-9DCE-D826A062BF41}</Project>
+      <Name>example_tutorial_Drawing_1</Name>
+    </ProjectReference>
+    <ProjectReference Include="example_tutorial_Drawing_2.vcxproj">
+      <Project>{DCB7916C-3569-329E-AF73-7F9AF533B0B8}</Project>
+      <Name>example_tutorial_Drawing_2</Name>
+    </ProjectReference>
+    <ProjectReference Include="example_tutorial_EqualizeHist_Demo.vcxproj">
+      <Project>{E95EF23B-2B94-3C72-A99F-0AF846AC0E30}</Project>
+      <Name>example_tutorial_EqualizeHist_Demo</Name>
+    </ProjectReference>
+    <ProjectReference Include="example_tutorial_Geometric_Transforms_Demo.vcxproj">
+      <Project>{AAF22DCD-DD0A-31B7-8CE1-91104D1A896E}</Project>
+      <Name>example_tutorial_Geometric_Transforms_Demo</Name>
+    </ProjectReference>
+    <ProjectReference Include="example_tutorial_HitMiss.vcxproj">
+      <Project>{F6AE1A2C-0FBD-3F74-8DB0-84728B826F5B}</Project>
+      <Name>example_tutorial_HitMiss</Name>
+    </ProjectReference>
+    <ProjectReference Include="example_tutorial_HoughCircle_Demo.vcxproj">
+      <Project>{19574B25-DB25-3C1B-9FB8-7022ABEB0F16}</Project>
+      <Name>example_tutorial_HoughCircle_Demo</Name>
+    </ProjectReference>
+    <ProjectReference Include="example_tutorial_HoughLines_Demo.vcxproj">
+      <Project>{8DE42DC3-45D2-36FE-8076-964FCEBE67B4}</Project>
+      <Name>example_tutorial_HoughLines_Demo</Name>
+    </ProjectReference>
+    <ProjectReference Include="example_tutorial_LATCH_match.vcxproj">
+      <Project>{B715BB58-A7AF-37F3-A105-54635383CC82}</Project>
+      <Name>example_tutorial_LATCH_match</Name>
+    </ProjectReference>
+    <ProjectReference Include="example_tutorial_Laplace_Demo.vcxproj">
+      <Project>{B9779AED-B761-3230-9539-BBD9827918E4}</Project>
+      <Name>example_tutorial_Laplace_Demo</Name>
+    </ProjectReference>
+    <ProjectReference Include="example_tutorial_MatchTemplate_Demo.vcxproj">
+      <Project>{63B3651A-600A-32CA-8DCC-D651F1A5FC47}</Project>
+      <Name>example_tutorial_MatchTemplate_Demo</Name>
+    </ProjectReference>
+    <ProjectReference Include="example_tutorial_Morphology_1.vcxproj">
+      <Project>{46868253-8A11-3766-94BC-EF84EF4E49A2}</Project>
+      <Name>example_tutorial_Morphology_1</Name>
+    </ProjectReference>
+    <ProjectReference Include="example_tutorial_Morphology_2.vcxproj">
+      <Project>{D1EDB21C-6C5A-38F6-8256-1D477A979118}</Project>
+      <Name>example_tutorial_Morphology_2</Name>
+    </ProjectReference>
+    <ProjectReference Include="example_tutorial_Morphology_3.vcxproj">
+      <Project>{B41A1381-8E75-35E8-A056-880F9EE23F12}</Project>
+      <Name>example_tutorial_Morphology_3</Name>
+    </ProjectReference>
+    <ProjectReference Include="example_tutorial_Pyramids.vcxproj">
+      <Project>{5B8B71B5-F39A-35C7-8E9B-F4C00252EF83}</Project>
+      <Name>example_tutorial_Pyramids</Name>
+    </ProjectReference>
+    <ProjectReference Include="example_tutorial_Remap_Demo.vcxproj">
+      <Project>{48A3DB9B-B6C3-3001-99FB-D5A49DC3F314}</Project>
+      <Name>example_tutorial_Remap_Demo</Name>
+    </ProjectReference>
+    <ProjectReference Include="example_tutorial_SURF_FLANN_matching_Demo.vcxproj">
+      <Project>{A49870D0-D6EB-3812-9B1B-E6F8BA2DC7C6}</Project>
+      <Name>example_tutorial_SURF_FLANN_matching_Demo</Name>
+    </ProjectReference>
+    <ProjectReference Include="example_tutorial_SURF_FLANN_matching_homography_Demo.vcxproj">
+      <Project>{717441FD-6669-3883-8ED7-2A201F5F6A49}</Project>
+      <Name>example_tutorial_SURF_FLANN_matching_homography_Demo</Name>
+    </ProjectReference>
+    <ProjectReference Include="example_tutorial_SURF_detection_Demo.vcxproj">
+      <Project>{8FD973B7-E27B-3CE4-BB87-A37DD21B82DB}</Project>
+      <Name>example_tutorial_SURF_detection_Demo</Name>
+    </ProjectReference>
+    <ProjectReference Include="example_tutorial_SURF_matching_Demo.vcxproj">
+      <Project>{83C3A71D-4FCA-3484-9BFB-005E012C1ADF}</Project>
+      <Name>example_tutorial_SURF_matching_Demo</Name>
+    </ProjectReference>
+    <ProjectReference Include="example_tutorial_Smoothing.vcxproj">
+      <Project>{10128BB8-4975-32F0-B624-E8CE1C6CF025}</Project>
+      <Name>example_tutorial_Smoothing</Name>
+    </ProjectReference>
+    <ProjectReference Include="example_tutorial_Sobel_Demo.vcxproj">
+      <Project>{E85ADC54-6DCF-39F6-A971-833E6A4F94C4}</Project>
+      <Name>example_tutorial_Sobel_Demo</Name>
+    </ProjectReference>
+    <ProjectReference Include="example_tutorial_Threshold.vcxproj">
+      <Project>{4455977C-07F9-35C5-B2C8-96B1F31E2109}</Project>
+      <Name>example_tutorial_Threshold</Name>
+    </ProjectReference>
+    <ProjectReference Include="example_tutorial_Threshold_inRange.vcxproj">
+      <Project>{883406B6-2486-3878-8080-C0FD643CB9C5}</Project>
+      <Name>example_tutorial_Threshold_inRange</Name>
+    </ProjectReference>
+    <ProjectReference Include="example_tutorial_age_gender_emotion_recognition.vcxproj">
+      <Project>{62E10166-A4F1-3F10-B082-D4DBD6EC3EC9}</Project>
+      <Name>example_tutorial_age_gender_emotion_recognition</Name>
+    </ProjectReference>
+    <ProjectReference Include="example_tutorial_anisotropic_image_segmentation.vcxproj">
+      <Project>{CF2EDA87-5A66-3880-A2E7-8CDFD24E958F}</Project>
+      <Name>example_tutorial_anisotropic_image_segmentation</Name>
+    </ProjectReference>
+    <ProjectReference Include="example_tutorial_api_ref_snippets.vcxproj">
+      <Project>{ABF5A350-453B-3058-B2CA-9F0297389085}</Project>
+      <Name>example_tutorial_api_ref_snippets</Name>
+    </ProjectReference>
+    <ProjectReference Include="example_tutorial_bg_sub.vcxproj">
+      <Project>{1BEDB98E-F4A9-333A-A432-3F52711EBE9A}</Project>
+      <Name>example_tutorial_bg_sub</Name>
+    </ProjectReference>
+    <ProjectReference Include="example_tutorial_calcBackProject_Demo1.vcxproj">
+      <Project>{E50E1ADA-DCBA-3C83-A469-70A435C17010}</Project>
+      <Name>example_tutorial_calcBackProject_Demo1</Name>
+    </ProjectReference>
+    <ProjectReference Include="example_tutorial_calcBackProject_Demo2.vcxproj">
+      <Project>{8404F3D5-5A23-3182-8CAF-46FA72A0E37D}</Project>
+      <Name>example_tutorial_calcBackProject_Demo2</Name>
+    </ProjectReference>
+    <ProjectReference Include="example_tutorial_calcHist_Demo.vcxproj">
+      <Project>{5B22C3A3-212F-3851-9E0A-8B02A2E44FE7}</Project>
+      <Name>example_tutorial_calcHist_Demo</Name>
+    </ProjectReference>
+    <ProjectReference Include="example_tutorial_camera_calibration.vcxproj">
+      <Project>{FB014136-5C23-3A2C-8822-076868ED79EF}</Project>
+      <Name>example_tutorial_camera_calibration</Name>
+    </ProjectReference>
+    <ProjectReference Include="example_tutorial_camshift.vcxproj">
+      <Project>{C9F11304-C213-387E-B0C6-15A8587447D5}</Project>
+      <Name>example_tutorial_camshift</Name>
+    </ProjectReference>
+    <ProjectReference Include="example_tutorial_changing_contrast_brightness_image.vcxproj">
+      <Project>{0AC5706C-A195-3118-8C98-1D98A8DC7191}</Project>
+      <Name>example_tutorial_changing_contrast_brightness_image</Name>
+    </ProjectReference>
+    <ProjectReference Include="example_tutorial_cloning_demo.vcxproj">
+      <Project>{95DD6491-8BCF-347B-9DF4-7DFC7D994152}</Project>
+      <Name>example_tutorial_cloning_demo</Name>
+    </ProjectReference>
+    <ProjectReference Include="example_tutorial_cloning_gui.vcxproj">
+      <Project>{C1980CCE-7011-326F-873F-23DAB8D7F9C9}</Project>
+      <Name>example_tutorial_cloning_gui</Name>
+    </ProjectReference>
+    <ProjectReference Include="example_tutorial_compareHist_Demo.vcxproj">
+      <Project>{BFD736FA-2D73-3E47-A7BE-7A4078384DDA}</Project>
+      <Name>example_tutorial_compareHist_Demo</Name>
+    </ProjectReference>
+    <ProjectReference Include="example_tutorial_compatibility_test.vcxproj">
+      <Project>{26CF566C-9315-398D-9046-A8B9BAD3F218}</Project>
+      <Name>example_tutorial_compatibility_test</Name>
+    </ProjectReference>
+    <ProjectReference Include="example_tutorial_copyMakeBorder_demo.vcxproj">
+      <Project>{05A21F04-959B-317D-B25D-7FBFADCB53B3}</Project>
+      <Name>example_tutorial_copyMakeBorder_demo</Name>
+    </ProjectReference>
+    <ProjectReference Include="example_tutorial_cornerDetector_Demo.vcxproj">
+      <Project>{BE1189FB-2196-36F8-A133-626A7B27B522}</Project>
+      <Name>example_tutorial_cornerDetector_Demo</Name>
+    </ProjectReference>
+    <ProjectReference Include="example_tutorial_cornerHarris_Demo.vcxproj">
+      <Project>{ABA0F5B2-DCFD-3448-8EE2-F4DAE8B373BE}</Project>
+      <Name>example_tutorial_cornerHarris_Demo</Name>
+    </ProjectReference>
+    <ProjectReference Include="example_tutorial_cornerSubPix_Demo.vcxproj">
+      <Project>{BF2ED795-37F4-33EC-B28C-EE5F5FEB08A0}</Project>
+      <Name>example_tutorial_cornerSubPix_Demo</Name>
+    </ProjectReference>
+    <ProjectReference Include="example_tutorial_decolor.vcxproj">
+      <Project>{660C45DC-69F6-3374-808C-5192FCE0FD4C}</Project>
+      <Name>example_tutorial_decolor</Name>
+    </ProjectReference>
+    <ProjectReference Include="example_tutorial_decompose_homography.vcxproj">
+      <Project>{1BC85593-8C2B-3CCA-9762-A711C554D35B}</Project>
+      <Name>example_tutorial_decompose_homography</Name>
+    </ProjectReference>
+    <ProjectReference Include="example_tutorial_discrete_fourier_transform.vcxproj">
+      <Project>{1F4566B0-3A7E-34FB-9082-365BC6D64D06}</Project>
+      <Name>example_tutorial_discrete_fourier_transform</Name>
+    </ProjectReference>
+    <ProjectReference Include="example_tutorial_display_image.vcxproj">
+      <Project>{3B18B194-D83D-3B4D-8838-EC9C47EA036A}</Project>
+      <Name>example_tutorial_display_image</Name>
+    </ProjectReference>
+    <ProjectReference Include="example_tutorial_documentation.vcxproj">
+      <Project>{F7D8985B-5C33-3628-868F-7DB8AF408BDF}</Project>
+      <Name>example_tutorial_documentation</Name>
+    </ProjectReference>
+    <ProjectReference Include="example_tutorial_dynamic_graph_snippets.vcxproj">
+      <Project>{979C5969-7560-35DB-9781-E091918D2FCB}</Project>
+      <Name>example_tutorial_dynamic_graph_snippets</Name>
+    </ProjectReference>
+    <ProjectReference Include="example_tutorial_face_beautification.vcxproj">
+      <Project>{870250AB-9F71-36F0-BD8D-D86E5E9AAC6E}</Project>
+      <Name>example_tutorial_face_beautification</Name>
+    </ProjectReference>
+    <ProjectReference Include="example_tutorial_file_input_output.vcxproj">
+      <Project>{EF542C33-4218-35AB-9D3A-0551B1DE9FAB}</Project>
+      <Name>example_tutorial_file_input_output</Name>
+    </ProjectReference>
+    <ProjectReference Include="example_tutorial_filter2D_demo.vcxproj">
+      <Project>{BC98B0ED-9198-3A79-9B86-120BC624224C}</Project>
+      <Name>example_tutorial_filter2D_demo</Name>
+    </ProjectReference>
+    <ProjectReference Include="example_tutorial_findContours_demo.vcxproj">
+      <Project>{71E4CE54-2A24-30E4-8142-2034CE358AD2}</Project>
+      <Name>example_tutorial_findContours_demo</Name>
+    </ProjectReference>
+    <ProjectReference Include="example_tutorial_gdal-image.vcxproj">
+      <Project>{E370DE13-490F-3A07-8762-1690AFB60376}</Project>
+      <Name>example_tutorial_gdal-image</Name>
+    </ProjectReference>
+    <ProjectReference Include="example_tutorial_generalContours_demo1.vcxproj">
+      <Project>{43844C8F-39EB-3E75-8367-F7B6FC3E6D2A}</Project>
+      <Name>example_tutorial_generalContours_demo1</Name>
+    </ProjectReference>
+    <ProjectReference Include="example_tutorial_generalContours_demo2.vcxproj">
+      <Project>{26E6A159-35A0-3244-8837-8BB8916EE4A3}</Project>
+      <Name>example_tutorial_generalContours_demo2</Name>
+    </ProjectReference>
+    <ProjectReference Include="example_tutorial_generalizedHoughTransform.vcxproj">
+      <Project>{0820197A-6536-3BEE-A91E-7CE6D39CD3EA}</Project>
+      <Name>example_tutorial_generalizedHoughTransform</Name>
+    </ProjectReference>
+    <ProjectReference Include="example_tutorial_goodFeaturesToTrack_Demo.vcxproj">
+      <Project>{D18BF7A7-5114-3A68-82EE-5A86F9D0F2F6}</Project>
+      <Name>example_tutorial_goodFeaturesToTrack_Demo</Name>
+    </ProjectReference>
+    <ProjectReference Include="example_tutorial_hdr_imaging.vcxproj">
+      <Project>{2F649F0E-BE3A-30E6-BD8B-7C8EFC5BF697}</Project>
+      <Name>example_tutorial_hdr_imaging</Name>
+    </ProjectReference>
+    <ProjectReference Include="example_tutorial_homography_from_camera_displacement.vcxproj">
+      <Project>{506432FC-F867-3722-AA1D-A5142FCFB3CE}</Project>
+      <Name>example_tutorial_homography_from_camera_displacement</Name>
+    </ProjectReference>
+    <ProjectReference Include="example_tutorial_houghcircles.vcxproj">
+      <Project>{66DF95BD-53A2-318C-83CE-E79D29644562}</Project>
+      <Name>example_tutorial_houghcircles</Name>
+    </ProjectReference>
+    <ProjectReference Include="example_tutorial_houghlines.vcxproj">
+      <Project>{38DFE458-5202-3C0B-8005-8463710F5916}</Project>
+      <Name>example_tutorial_houghlines</Name>
+    </ProjectReference>
+    <ProjectReference Include="example_tutorial_how_to_scan_images.vcxproj">
+      <Project>{ADC4B071-FD2F-3526-8B5C-98CF14AD9669}</Project>
+      <Name>example_tutorial_how_to_scan_images</Name>
+    </ProjectReference>
+    <ProjectReference Include="example_tutorial_how_to_use_OpenCV_parallel_for_.vcxproj">
+      <Project>{C76C099F-4FB3-33FE-9582-89AC9ACB1588}</Project>
+      <Name>example_tutorial_how_to_use_OpenCV_parallel_for_</Name>
+    </ProjectReference>
+    <ProjectReference Include="example_tutorial_how_to_use_OpenCV_parallel_for_new.vcxproj">
+      <Project>{B6EB93CC-BDB9-3C5A-9F39-49042D0AFD2E}</Project>
+      <Name>example_tutorial_how_to_use_OpenCV_parallel_for_new</Name>
+    </ProjectReference>
+    <ProjectReference Include="example_tutorial_hull_demo.vcxproj">
+      <Project>{DA141535-5EDD-33E5-AE2C-93C499B50DB3}</Project>
+      <Name>example_tutorial_hull_demo</Name>
+    </ProjectReference>
+    <ProjectReference Include="example_tutorial_imageSegmentation.vcxproj">
+      <Project>{B197A315-7872-329B-8610-E0D409E27966}</Project>
+      <Name>example_tutorial_imageSegmentation</Name>
+    </ProjectReference>
+    <ProjectReference Include="example_tutorial_introduction_to_pca.vcxproj">
+      <Project>{B02E1DE3-F684-34A1-B95B-22D07A0E714A}</Project>
+      <Name>example_tutorial_introduction_to_pca</Name>
+    </ProjectReference>
+    <ProjectReference Include="example_tutorial_introduction_to_svm.vcxproj">
+      <Project>{EB5DF9AE-7E49-3240-9E30-145C61030BF5}</Project>
+      <Name>example_tutorial_introduction_to_svm</Name>
+    </ProjectReference>
+    <ProjectReference Include="example_tutorial_introduction_windows_vs.vcxproj">
+      <Project>{887BECFE-A236-34A7-A127-AFBD639B1B7E}</Project>
+      <Name>example_tutorial_introduction_windows_vs</Name>
+    </ProjectReference>
+    <ProjectReference Include="example_tutorial_kernel_api_snippets.vcxproj">
+      <Project>{4EEAF771-7AD9-3221-A389-BCB99D095859}</Project>
+      <Name>example_tutorial_kernel_api_snippets</Name>
+    </ProjectReference>
+    <ProjectReference Include="example_tutorial_mat_mask_operations.vcxproj">
+      <Project>{2E0C962C-2AA1-37B1-90CE-76681E1C0FD9}</Project>
+      <Name>example_tutorial_mat_mask_operations</Name>
+    </ProjectReference>
+    <ProjectReference Include="example_tutorial_mat_operations.vcxproj">
+      <Project>{44CA2F16-5C2D-3FCC-9C9E-726345055498}</Project>
+      <Name>example_tutorial_mat_operations</Name>
+    </ProjectReference>
+    <ProjectReference Include="example_tutorial_mat_the_basic_image_container.vcxproj">
+      <Project>{BDB5EF3F-D849-3B79-886B-E0077CAE1FEB}</Project>
+      <Name>example_tutorial_mat_the_basic_image_container</Name>
+    </ProjectReference>
+    <ProjectReference Include="example_tutorial_meanshift.vcxproj">
+      <Project>{04492916-929B-3C2E-B9F5-60C7D5FFACCD}</Project>
+      <Name>example_tutorial_meanshift</Name>
+    </ProjectReference>
+    <ProjectReference Include="example_tutorial_moments_demo.vcxproj">
+      <Project>{A68F6F75-778C-30FC-A18C-F317E15F0147}</Project>
+      <Name>example_tutorial_moments_demo</Name>
+    </ProjectReference>
+    <ProjectReference Include="example_tutorial_motion_deblur_filter.vcxproj">
+      <Project>{14B6B617-68BA-3C05-906D-B9B5C3AB2C1C}</Project>
+      <Name>example_tutorial_motion_deblur_filter</Name>
+    </ProjectReference>
+    <ProjectReference Include="example_tutorial_non_linear_svms.vcxproj">
+      <Project>{6B019A48-DE59-3D77-82F0-DB8A70A89677}</Project>
+      <Name>example_tutorial_non_linear_svms</Name>
+    </ProjectReference>
+    <ProjectReference Include="example_tutorial_npr_demo.vcxproj">
+      <Project>{CE85A58A-E5BC-3E80-9C00-A72079A8AF98}</Project>
+      <Name>example_tutorial_npr_demo</Name>
+    </ProjectReference>
+    <ProjectReference Include="example_tutorial_objectDetection.vcxproj">
+      <Project>{E51C7C16-3799-35BB-A645-212DB794C6BF}</Project>
+      <Name>example_tutorial_objectDetection</Name>
+    </ProjectReference>
+    <ProjectReference Include="example_tutorial_optical_flow.vcxproj">
+      <Project>{73F34466-640A-339A-A447-A9F087A41F81}</Project>
+      <Name>example_tutorial_optical_flow</Name>
+    </ProjectReference>
+    <ProjectReference Include="example_tutorial_optical_flow_dense.vcxproj">
+      <Project>{783A6D99-6599-34FE-A4E2-C0DB9B7FF40F}</Project>
+      <Name>example_tutorial_optical_flow_dense</Name>
+    </ProjectReference>
+    <ProjectReference Include="example_tutorial_orbbec_astra.vcxproj">
+      <Project>{96EEB3E7-50DF-348A-B75D-DA65FF5770E9}</Project>
+      <Name>example_tutorial_orbbec_astra</Name>
+    </ProjectReference>
+    <ProjectReference Include="example_tutorial_out_of_focus_deblur_filter.vcxproj">
+      <Project>{187962FD-DFF6-3238-9427-FB0A57E895B6}</Project>
+      <Name>example_tutorial_out_of_focus_deblur_filter</Name>
+    </ProjectReference>
+    <ProjectReference Include="example_tutorial_panorama_stitching_rotating_camera.vcxproj">
+      <Project>{510B4CDC-DF4A-36AC-B8FB-9EB71E0024A7}</Project>
+      <Name>example_tutorial_panorama_stitching_rotating_camera</Name>
+    </ProjectReference>
+    <ProjectReference Include="example_tutorial_periodic_noise_removing_filter.vcxproj">
+      <Project>{44F7B4AE-804C-322C-A444-AA79E73C4A0E}</Project>
+      <Name>example_tutorial_periodic_noise_removing_filter</Name>
+    </ProjectReference>
+    <ProjectReference Include="example_tutorial_perspective_correction.vcxproj">
+      <Project>{C28B91D6-B12A-3230-82E8-AF30B7D051F4}</Project>
+      <Name>example_tutorial_perspective_correction</Name>
+    </ProjectReference>
+    <ProjectReference Include="example_tutorial_planar_tracking.vcxproj">
+      <Project>{3CD74745-F5D6-36F1-BE6E-65AE06733EDC}</Project>
+      <Name>example_tutorial_planar_tracking</Name>
+    </ProjectReference>
+    <ProjectReference Include="example_tutorial_pointPolygonTest_demo.vcxproj">
+      <Project>{D96FD380-EA28-38B8-82A7-9B1B9E06CDB6}</Project>
+      <Name>example_tutorial_pointPolygonTest_demo</Name>
+    </ProjectReference>
+    <ProjectReference Include="example_tutorial_porting_anisotropic_image_segmentation_gapi.vcxproj">
+      <Project>{F03F2687-6BCC-38ED-92A8-91E7DE6C9A74}</Project>
+      <Name>example_tutorial_porting_anisotropic_image_segmentation_gapi</Name>
+    </ProjectReference>
+    <ProjectReference Include="example_tutorial_porting_anisotropic_image_segmentation_gapi_fluid.vcxproj">
+      <Project>{C4E76040-978B-3B3A-A0E8-4755A2256028}</Project>
+      <Name>example_tutorial_porting_anisotropic_image_segmentation_gapi_fluid</Name>
+    </ProjectReference>
+    <ProjectReference Include="example_tutorial_pose_from_homography.vcxproj">
+      <Project>{1E4CF216-BE3C-3463-ABAC-2EC0FA7102DE}</Project>
+      <Name>example_tutorial_pose_from_homography</Name>
+    </ProjectReference>
+    <ProjectReference Include="example_tutorial_security_barrier_camera.vcxproj">
+      <Project>{9B03907A-0F3D-322F-9415-A80D0868CDDC}</Project>
+      <Name>example_tutorial_security_barrier_camera</Name>
+    </ProjectReference>
+    <ProjectReference Include="example_tutorial_univ_intrin.vcxproj">
+      <Project>{E5E9E94A-9160-323A-95FD-4CC93AE62D67}</Project>
+      <Name>example_tutorial_univ_intrin</Name>
+    </ProjectReference>
+    <ProjectReference Include="example_tutorial_video-input-psnr-ssim.vcxproj">
+      <Project>{4B77566E-34C9-3656-B032-4E5E93174AD6}</Project>
+      <Name>example_tutorial_video-input-psnr-ssim</Name>
+    </ProjectReference>
+    <ProjectReference Include="example_tutorial_video-write.vcxproj">
+      <Project>{AD560BF7-F51C-3865-BBD1-4D9F2E369C1D}</Project>
+      <Name>example_tutorial_video-write</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

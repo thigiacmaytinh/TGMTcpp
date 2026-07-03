@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{EF972F38-FBA7-329C-A470-3976105574C6}</ProjectGuid>
+    <WindowsTargetPlatformVersion>10.0.17763.0</WindowsTargetPlatformVersion>
+    <Keyword>Win32Proj</Keyword>
+    <Platform>x64</Platform>
+    <ProjectName>opencv_samples_dnn</ProjectName>
+    <VCProjectUpgraderObjectName>NoUpgrade</VCProjectUpgraderObjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Midl>
+      <AdditionalIncludeDirectories>..\..\modules\videoio\include;..\..\modules\imgcodecs\include;..\..\modules\imgproc\include;..\..\modules\core\include;..\..\modules\calib3d\include;..\..\modules\features2d\include;..\..\modules\dnn\include;..\..\modules\flann\include;..\..\modules\highgui\include;..\..\modules\video\include;..\..\modules\objdetect\include;D:\LIB\opencv\opencv480\build;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Midl>
+      <AdditionalIncludeDirectories>..\..\modules\videoio\include;..\..\modules\imgcodecs\include;..\..\modules\imgproc\include;..\..\modules\core\include;..\..\modules\calib3d\include;..\..\modules\features2d\include;..\..\modules\dnn\include;..\..\modules\flann\include;..\..\modules\highgui\include;..\..\modules\video\include;..\..\modules\objdetect\include;D:\LIB\opencv\opencv480\build;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+  </ItemGroup>
+  <ItemGroup>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="D:\LIB\opencv\opencv480\build\ZERO_CHECK.vcxproj">
+      <Project>{A2B6B0A1-0116-3B54-BA2A-2EB40583D0C0}</Project>
+      <Name>ZERO_CHECK</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="example_dnn_classification.vcxproj">
+      <Project>{BC20D45F-A5AF-3724-901B-FAFCDDE97BC1}</Project>
+      <Name>example_dnn_classification</Name>
+    </ProjectReference>
+    <ProjectReference Include="example_dnn_colorization.vcxproj">
+      <Project>{877B4A85-4D12-31BC-9B4A-48A14393F72F}</Project>
+      <Name>example_dnn_colorization</Name>
+    </ProjectReference>
+    <ProjectReference Include="example_dnn_dasiamrpn_tracker.vcxproj">
+      <Project>{2C202183-F91E-31D4-B46D-97A20B898E8E}</Project>
+      <Name>example_dnn_dasiamrpn_tracker</Name>
+    </ProjectReference>
+    <ProjectReference Include="example_dnn_face_detect.vcxproj">
+      <Project>{C5CBEAC4-0E89-3F0C-80B2-99B3D0C2739C}</Project>
+      <Name>example_dnn_face_detect</Name>
+    </ProjectReference>
+    <ProjectReference Include="example_dnn_human_parsing.vcxproj">
+      <Project>{FFEB3BE6-C862-3EA1-85B2-70834C150A3B}</Project>
+      <Name>example_dnn_human_parsing</Name>
+    </ProjectReference>
+    <ProjectReference Include="example_dnn_nanotrack_tracker.vcxproj">
+      <Project>{D6FB1847-D3E3-3EED-961E-3EBA9113C500}</Project>
+      <Name>example_dnn_nanotrack_tracker</Name>
+    </ProjectReference>
+    <ProjectReference Include="example_dnn_object_detection.vcxproj">
+      <Project>{B8A0C44F-B79A-3570-9080-3B76E71D6593}</Project>
+      <Name>example_dnn_object_detection</Name>
+    </ProjectReference>
+    <ProjectReference Include="example_dnn_openpose.vcxproj">
+      <Project>{3191BBAA-5A18-3433-81AE-73056AFBBA2F}</Project>
+      <Name>example_dnn_openpose</Name>
+    </ProjectReference>
+    <ProjectReference Include="example_dnn_person_reid.vcxproj">
+      <Project>{8DB6F9B9-A281-3698-AA35-D3BEC9DB390F}</Project>
+      <Name>example_dnn_person_reid</Name>
+    </ProjectReference>
+    <ProjectReference Include="example_dnn_scene_text_detection.vcxproj">
+      <Project>{6B2027AE-A428-3CBC-B6ED-490DAF040718}</Project>
+      <Name>example_dnn_scene_text_detection</Name>
+    </ProjectReference>
+    <ProjectReference Include="example_dnn_scene_text_recognition.vcxproj">
+      <Project>{CAB32521-0A8F-3F30-A529-827CC670CFC4}</Project>
+      <Name>example_dnn_scene_text_recognition</Name>
+    </ProjectReference>
+    <ProjectReference Include="example_dnn_scene_text_spotting.vcxproj">
+      <Project>{B391767B-17DF-3A7C-A715-45A7128FA22E}</Project>
+      <Name>example_dnn_scene_text_spotting</Name>
+    </ProjectReference>
+    <ProjectReference Include="example_dnn_segmentation.vcxproj">
+      <Project>{E611F995-C5AC-380D-8E1D-2D214B4F9939}</Project>
+      <Name>example_dnn_segmentation</Name>
+    </ProjectReference>
+    <ProjectReference Include="example_dnn_speech_recognition.vcxproj">
+      <Project>{17516606-ECC9-36BE-B68B-E397606265ED}</Project>
+      <Name>example_dnn_speech_recognition</Name>
+    </ProjectReference>
+    <ProjectReference Include="example_dnn_text_detection.vcxproj">
+      <Project>{3061997C-4A27-35AB-A478-0277832959DB}</Project>
+      <Name>example_dnn_text_detection</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
