@@ -1,0 +1,367 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="misc\caffe\opencv-caffe.pb.cc" />
+    <ClCompile Include="misc\onnx\opencv-onnx.pb.cc" />
+    <ClCompile Include="misc\tensorflow\attr_value.pb.cc" />
+    <ClCompile Include="misc\tensorflow\function.pb.cc" />
+    <ClCompile Include="misc\tensorflow\graph.pb.cc" />
+    <ClCompile Include="misc\tensorflow\op_def.pb.cc" />
+    <ClCompile Include="misc\tensorflow\tensor.pb.cc" />
+    <ClCompile Include="misc\tensorflow\tensor_shape.pb.cc" />
+    <ClCompile Include="misc\tensorflow\types.pb.cc" />
+    <ClCompile Include="misc\tensorflow\versions.pb.cc" />
+    <ClCompile Include="src\backend.cpp" />
+    <ClCompile Include="src\caffe\caffe_importer.cpp" />
+    <ClCompile Include="src\caffe\caffe_io.cpp" />
+    <ClCompile Include="src\caffe\caffe_shrinker.cpp" />
+    <ClCompile Include="src\darknet\darknet_importer.cpp" />
+    <ClCompile Include="src\darknet\darknet_io.cpp" />
+    <ClCompile Include="src\debug_utils.cpp" />
+    <ClCompile Include="src\dnn.cpp" />
+    <ClCompile Include="src\dnn_params.cpp" />
+    <ClCompile Include="src\dnn_read.cpp" />
+    <ClCompile Include="src\dnn_utils.cpp" />
+    <ClCompile Include="src\graph_simplifier.cpp" />
+    <ClCompile Include="src\halide_scheduler.cpp" />
+    <ClCompile Include="src\ie_ngraph.cpp" />
+    <ClCompile Include="src\init.cpp" />
+    <ClCompile Include="src\int8layers\batch_norm_layer.cpp" />
+    <ClCompile Include="src\int8layers\convolution_layer.cpp" />
+    <ClCompile Include="src\int8layers\elementwise_layers.cpp" />
+    <ClCompile Include="src\int8layers\eltwise_layer.cpp" />
+    <ClCompile Include="src\int8layers\fully_connected_layer.cpp" />
+    <ClCompile Include="src\int8layers\pooling_layer.cpp" />
+    <ClCompile Include="src\int8layers\quantization_utils.cpp" />
+    <ClCompile Include="src\int8layers\scale_layer.cpp" />
+    <ClCompile Include="src\int8layers\softmax_layer.cpp" />
+    <ClCompile Include="src\layer.cpp" />
+    <ClCompile Include="src\layer_factory.cpp" />
+    <ClCompile Include="src\layers\accum_layer.cpp" />
+    <ClCompile Include="src\layers\arg_layer.cpp" />
+    <ClCompile Include="src\layers\batch_norm_layer.cpp" />
+    <ClCompile Include="src\layers\blank_layer.cpp" />
+    <ClCompile Include="src\layers\concat_layer.cpp" />
+    <ClCompile Include="src\layers\const_layer.cpp" />
+    <ClCompile Include="src\layers\convolution_layer.cpp" />
+    <ClCompile Include="src\layers\correlation_layer.cpp" />
+    <ClCompile Include="src\layers\cpu_kernels\conv_depthwise.cpp" />
+    <ClCompile Include="src\layers\cpu_kernels\conv_winograd_f63.cpp" />
+    <ClCompile Include="src\layers\cpu_kernels\convolution.cpp" />
+    <ClCompile Include="src\layers\crop_and_resize_layer.cpp" />
+    <ClCompile Include="src\layers\cumsum_layer.cpp" />
+    <ClCompile Include="src\layers\detection_output_layer.cpp" />
+    <ClCompile Include="src\layers\elementwise_layers.cpp" />
+    <ClCompile Include="src\layers\eltwise_layer.cpp" />
+    <ClCompile Include="src\layers\flatten_layer.cpp" />
+    <ClCompile Include="src\layers\flow_warp_layer.cpp" />
+    <ClCompile Include="src\layers\fully_connected_layer.cpp" />
+    <ClCompile Include="src\layers\gather_layer.cpp" />
+    <ClCompile Include="src\layers\layer_norm.cpp" />
+    <ClCompile Include="src\layers\layers_common.cpp" />
+    <ClCompile Include="src\layers\lrn_layer.cpp" />
+    <ClCompile Include="src\layers\max_unpooling_layer.cpp" />
+    <ClCompile Include="src\layers\mvn_layer.cpp" />
+    <ClCompile Include="src\layers\nary_eltwise_layers.cpp" />
+    <ClCompile Include="src\layers\normalize_bbox_layer.cpp" />
+    <ClCompile Include="src\layers\not_implemented_layer.cpp" />
+    <ClCompile Include="src\layers\padding_layer.cpp" />
+    <ClCompile Include="src\layers\permute_layer.cpp" />
+    <ClCompile Include="src\layers\pooling_layer.cpp" />
+    <ClCompile Include="src\layers\prior_box_layer.cpp" />
+    <ClCompile Include="src\layers\proposal_layer.cpp" />
+    <ClCompile Include="src\layers\recurrent_layers.cpp" />
+    <ClCompile Include="src\layers\reduce_layer.cpp" />
+    <ClCompile Include="src\layers\region_layer.cpp" />
+    <ClCompile Include="src\layers\reorg_layer.cpp" />
+    <ClCompile Include="src\layers\reshape_layer.cpp" />
+    <ClCompile Include="src\layers\resize_layer.cpp" />
+    <ClCompile Include="src\layers\scale_layer.cpp" />
+    <ClCompile Include="src\layers\scatterND_layer.cpp" />
+    <ClCompile Include="src\layers\scatter_layer.cpp" />
+    <ClCompile Include="src\layers\shuffle_channel_layer.cpp" />
+    <ClCompile Include="src\layers\slice_layer.cpp" />
+    <ClCompile Include="src\layers\softmax_layer.cpp" />
+    <ClCompile Include="src\layers\split_layer.cpp" />
+    <ClCompile Include="src\layers\tile_layer.cpp" />
+    <ClCompile Include="src\legacy_backend.cpp" />
+    <ClCompile Include="src\model.cpp" />
+    <ClCompile Include="src\net.cpp" />
+    <ClCompile Include="src\net_cann.cpp" />
+    <ClCompile Include="src\net_impl.cpp" />
+    <ClCompile Include="src\net_impl_backend.cpp" />
+    <ClCompile Include="src\net_impl_fuse.cpp" />
+    <ClCompile Include="src\net_openvino.cpp" />
+    <ClCompile Include="src\net_quantization.cpp" />
+    <ClCompile Include="src\nms.cpp" />
+    <ClCompile Include="src\ocl4dnn\src\common.cpp" />
+    <ClCompile Include="src\ocl4dnn\src\math_functions.cpp" />
+    <ClCompile Include="src\ocl4dnn\src\ocl4dnn_conv_spatial.cpp" />
+    <ClCompile Include="src\ocl4dnn\src\ocl4dnn_inner_product.cpp" />
+    <ClCompile Include="src\ocl4dnn\src\ocl4dnn_lrn.cpp" />
+    <ClCompile Include="src\ocl4dnn\src\ocl4dnn_pool.cpp" />
+    <ClCompile Include="src\ocl4dnn\src\ocl4dnn_softmax.cpp" />
+    <ClCompile Include="src\onnx\onnx_graph_simplifier.cpp" />
+    <ClCompile Include="src\onnx\onnx_importer.cpp" />
+    <ClCompile Include="src\op_cann.cpp" />
+    <ClCompile Include="src\op_cuda.cpp" />
+    <ClCompile Include="src\op_halide.cpp" />
+    <ClCompile Include="src\op_inf_engine.cpp" />
+    <ClCompile Include="src\op_timvx.cpp" />
+    <ClCompile Include="src\op_vkcom.cpp" />
+    <ClCompile Include="src\op_webnn.cpp" />
+    <ClCompile Include="src\registry.cpp" />
+    <ClCompile Include="src\tengine4dnn\src\tengine_graph_convolution.cpp" />
+    <ClCompile Include="src\tensorflow\tf_graph_simplifier.cpp" />
+    <ClCompile Include="src\tensorflow\tf_importer.cpp" />
+    <ClCompile Include="src\tensorflow\tf_io.cpp" />
+    <ClCompile Include="src\tflite\tflite_importer.cpp" />
+    <ClCompile Include="src\torch\THDiskFile.cpp" />
+    <ClCompile Include="src\torch\THFile.cpp" />
+    <ClCompile Include="src\torch\THGeneral.cpp" />
+    <ClCompile Include="src\torch\torch_importer.cpp" />
+    <ClCompile Include="src\vkcom\shader\conv_1x1_fast_spv.cpp" />
+    <ClCompile Include="src\vkcom\shader\conv_depthwise_3x3_spv.cpp" />
+    <ClCompile Include="src\vkcom\shader\conv_depthwise_spv.cpp" />
+    <ClCompile Include="src\vkcom\shader\conv_implicit_gemm_spv.cpp" />
+    <ClCompile Include="src\vkcom\shader\gemm_spv.cpp" />
+    <ClCompile Include="src\vkcom\shader\spv_shader.cpp" />
+    <ClCompile Include="src\vkcom\src\buffer.cpp" />
+    <ClCompile Include="src\vkcom\src\command.cpp" />
+    <ClCompile Include="src\vkcom\src\context.cpp" />
+    <ClCompile Include="src\vkcom\src\fence.cpp" />
+    <ClCompile Include="src\vkcom\src\internal.cpp" />
+    <ClCompile Include="src\vkcom\src\op_base.cpp" />
+    <ClCompile Include="src\vkcom\src\op_conv.cpp" />
+    <ClCompile Include="src\vkcom\src\op_matmul.cpp" />
+    <ClCompile Include="src\vkcom\src\pipeline.cpp" />
+    <ClCompile Include="src\vkcom\src\tensor.cpp" />
+    <ClCompile Include="src\vkcom\vulkan\vk_functions.cpp" />
+    <ClCompile Include="src\vkcom\vulkan\vk_loader.cpp" />
+    <ClCompile Include="opencl_kernels_dnn.cpp" />
+    <ClCompile Include="opencv_dnn_main.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="D:\LIB\opencv\opencv480\build\cvconfig.h">
+      <Filter>Include</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\LIB\opencv\opencv480\build\opencv2\opencv_modules.hpp">
+      <Filter>Include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\opencv2\dnn.hpp" />
+    <ClInclude Include="include\opencv2\dnn\all_layers.hpp" />
+    <ClInclude Include="include\opencv2\dnn\dict.hpp" />
+    <ClInclude Include="include\opencv2\dnn\dnn.hpp" />
+    <ClInclude Include="include\opencv2\dnn\dnn.inl.hpp" />
+    <ClInclude Include="include\opencv2\dnn\layer.details.hpp" />
+    <ClInclude Include="include\opencv2\dnn\layer.hpp" />
+    <ClInclude Include="include\opencv2\dnn\layer_reg.private.hpp" />
+    <ClInclude Include="include\opencv2\dnn\shape_utils.hpp" />
+    <ClInclude Include="include\opencv2\dnn\utils\debug_utils.hpp" />
+    <ClInclude Include="include\opencv2\dnn\utils\inference_engine.hpp" />
+    <ClInclude Include="include\opencv2\dnn\version.hpp" />
+    <ClInclude Include="opencl_kernels_dnn.hpp" />
+    <ClInclude Include="src\backend.hpp" />
+    <ClInclude Include="src\caffe\caffe_io.hpp" />
+    <ClInclude Include="src\caffe\glog_emulator.hpp" />
+    <ClInclude Include="src\cuda\array.hpp" />
+    <ClInclude Include="src\cuda\atomics.hpp" />
+    <ClInclude Include="src\cuda\bbox_utils.hpp" />
+    <ClInclude Include="src\cuda\block_stride_range.hpp" />
+    <ClInclude Include="src\cuda\execution.hpp" />
+    <ClInclude Include="src\cuda\functors.hpp" />
+    <ClInclude Include="src\cuda\grid_stride_range.hpp" />
+    <ClInclude Include="src\cuda\index_helpers.hpp" />
+    <ClInclude Include="src\cuda\kernel_dispatcher.hpp" />
+    <ClInclude Include="src\cuda\limits.hpp" />
+    <ClInclude Include="src\cuda\math.hpp" />
+    <ClInclude Include="src\cuda\memory.hpp" />
+    <ClInclude Include="src\cuda\types.hpp" />
+    <ClInclude Include="src\cuda\vector_traits.hpp" />
+    <ClInclude Include="src\darknet\darknet_io.hpp" />
+    <ClInclude Include="src\dnn_common.hpp" />
+    <ClInclude Include="src\factory.hpp" />
+    <ClInclude Include="src\graph_simplifier.hpp" />
+    <ClInclude Include="src\halide_scheduler.hpp" />
+    <ClInclude Include="src\ie_ngraph.hpp" />
+    <ClInclude Include="src\int8layers\layers_common.hpp" />
+    <ClInclude Include="src\int8layers\layers_common.simd.hpp" />
+    <ClInclude Include="src\layer_internals.hpp" />
+    <ClInclude Include="src\layers\cpu_kernels\conv_block.simd.hpp" />
+    <ClInclude Include="src\layers\cpu_kernels\conv_depthwise.simd.hpp" />
+    <ClInclude Include="src\layers\cpu_kernels\conv_winograd_f63.simd.hpp" />
+    <ClInclude Include="src\layers\cpu_kernels\convolution.hpp" />
+    <ClInclude Include="src\layers\layers_common.hpp" />
+    <ClInclude Include="src\layers\layers_common.simd.hpp" />
+    <ClInclude Include="src\legacy_backend.hpp" />
+    <ClInclude Include="src\math_utils.hpp" />
+    <ClInclude Include="src\net_impl.hpp" />
+    <ClInclude Include="src\nms.inl.hpp" />
+    <ClInclude Include="src\ocl4dnn\include\common.hpp" />
+    <ClInclude Include="src\ocl4dnn\include\default_kernel_config.hpp" />
+    <ClInclude Include="src\ocl4dnn\include\math_functions.hpp" />
+    <ClInclude Include="src\ocl4dnn\include\ocl4dnn.hpp" />
+    <ClInclude Include="src\onnx\onnx_graph_simplifier.hpp" />
+    <ClInclude Include="src\op_cann.hpp" />
+    <ClInclude Include="src\op_cuda.hpp" />
+    <ClInclude Include="src\op_halide.hpp" />
+    <ClInclude Include="src\op_inf_engine.hpp" />
+    <ClInclude Include="src\op_timvx.hpp" />
+    <ClInclude Include="src\op_vkcom.hpp" />
+    <ClInclude Include="src\op_webnn.hpp" />
+    <ClInclude Include="src\plugin_api.hpp" />
+    <ClInclude Include="src\plugin_wrapper.impl.hpp" />
+    <ClInclude Include="src\precomp.hpp" />
+    <ClInclude Include="src\tengine4dnn\include\tengine_graph_convolution.hpp" />
+    <ClInclude Include="src\tensorflow\tf_graph_simplifier.hpp" />
+    <ClInclude Include="src\tensorflow\tf_io.hpp" />
+    <ClInclude Include="src\tflite\builtin_op_data.h" />
+    <ClInclude Include="src\torch\THDiskFile.h" />
+    <ClInclude Include="src\torch\THFile.h" />
+    <ClInclude Include="src\torch\THFilePrivate.h" />
+    <ClInclude Include="src\torch\THGeneral.h" />
+    <ClInclude Include="src\vkcom\include\buffer.hpp" />
+    <ClInclude Include="src\vkcom\include\command.hpp" />
+    <ClInclude Include="src\vkcom\include\context.hpp" />
+    <ClInclude Include="src\vkcom\include\fence.hpp" />
+    <ClInclude Include="src\vkcom\include\op_base.hpp" />
+    <ClInclude Include="src\vkcom\include\op_conv.hpp" />
+    <ClInclude Include="src\vkcom\include\op_matmul.hpp" />
+    <ClInclude Include="src\vkcom\include\pipeline.hpp" />
+    <ClInclude Include="src\vkcom\include\tensor.hpp" />
+    <ClInclude Include="src\vkcom\include\vkcom.hpp" />
+    <ClInclude Include="src\vkcom\shader\spv_shader.hpp" />
+    <ClInclude Include="src\vkcom\src\internal.hpp" />
+    <ClInclude Include="src\vkcom\vulkan\function_list.inl.hpp" />
+    <ClInclude Include="src\vkcom\vulkan\vk_functions.hpp" />
+    <ClInclude Include="src\vkcom\vulkan\vk_loader.hpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="src\opencl\activations.cl" />
+    <None Include="src\opencl\batchnorm.cl" />
+    <None Include="src\opencl\col2im.cl" />
+    <None Include="src\opencl\concat.cl" />
+    <None Include="src\opencl\conv_layer_spatial.cl" />
+    <None Include="src\opencl\conv_spatial_helper.cl" />
+    <None Include="src\opencl\detection_output.cl" />
+    <None Include="src\opencl\dummy.cl" />
+    <None Include="src\opencl\eltwise.cl" />
+    <None Include="src\opencl\gemm_buffer.cl" />
+    <None Include="src\opencl\gemm_image.cl" />
+    <None Include="src\opencl\im2col.cl" />
+    <None Include="src\opencl\lrn.cl" />
+    <None Include="src\opencl\math.cl" />
+    <None Include="src\opencl\matvec_mul.cl" />
+    <None Include="src\opencl\mvn.cl" />
+    <None Include="src\opencl\ocl4dnn_lrn.cl" />
+    <None Include="src\opencl\ocl4dnn_pooling.cl" />
+    <None Include="src\opencl\permute.cl" />
+    <None Include="src\opencl\pooling.cl" />
+    <None Include="src\opencl\prior_box.cl" />
+    <None Include="src\opencl\region.cl" />
+    <None Include="src\opencl\slice.cl" />
+    <None Include="src\opencl\softmax.cl" />
+    <None Include="src\opencl\softmax_loss.cl" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="vs_version.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="CMake Rules">
+      <UniqueIdentifier>{BC6BC956-0833-3F3E-B3C8-CF14B630DA9D}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Include">
+      <UniqueIdentifier>{F73E1321-2CC0-3C82-B659-D2B5CEC43562}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Include\opencv2">
+      <UniqueIdentifier>{7B157B1B-D693-3CAB-B777-2F3947536837}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Include\opencv2\dnn">
+      <UniqueIdentifier>{6F82895C-D79C-35C8-AD05-5B8F538B6D8F}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Include\opencv2\dnn\utils">
+      <UniqueIdentifier>{F26B1910-6B65-3CC6-8A30-05434A387896}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Precompile Header File">
+      <UniqueIdentifier>{5D557921-288E-3543-B0CB-0F405FBA551C}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{B424FE76-8A02-34EF-85BB-75F86BE76CE0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Src">
+      <UniqueIdentifier>{BA1B5659-E9EF-3DC1-8E8D-15B598609623}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Src\caffe">
+      <UniqueIdentifier>{182EE10F-F3DF-31B4-BE4E-C6DEA34BF163}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Src\cuda">
+      <UniqueIdentifier>{E4FFFC8A-8E05-36E8-BE30-E769C2F4C312}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Src\darknet">
+      <UniqueIdentifier>{7BF765FF-831C-3E80-A2EB-A8ACF296A667}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Src\int8layers">
+      <UniqueIdentifier>{5CD945B5-5162-37F0-869E-0B21168E8111}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Src\layers">
+      <UniqueIdentifier>{38C3F0CB-697A-38E6-8492-46EE87DDE965}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Src\layers\cpu_kernels">
+      <UniqueIdentifier>{1F23B9B6-79BE-36B2-899D-1C7A326725EA}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Src\ocl4dnn">
+      <UniqueIdentifier>{A88F247B-3EF5-31A3-B460-933F8B92DB9B}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Src\ocl4dnn\include">
+      <UniqueIdentifier>{A3E84096-084C-37A9-AAEE-2F1F836F40EE}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Src\ocl4dnn\src">
+      <UniqueIdentifier>{209CAD8E-86C9-342F-8E10-BA0470DDB863}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Src\onnx">
+      <UniqueIdentifier>{890431E3-A9DE-341F-943C-9A75D1FF62D8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Src\opencl">
+      <UniqueIdentifier>{B0F36292-7761-3055-A6B6-041B8E30B9A5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Src\opencl\kernels">
+      <UniqueIdentifier>{A508DA8B-FF29-300B-8DAE-83129DCCA3EC}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Src\opencl\kernels\autogenerated">
+      <UniqueIdentifier>{ABADE330-7AC5-39DC-8486-109D51C8EF9B}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Src\tengine4dnn">
+      <UniqueIdentifier>{2378F4A6-8C90-35F9-B81A-3F7FDEF5A34A}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Src\tengine4dnn\include">
+      <UniqueIdentifier>{CA2567F5-D782-3C23-A5BC-160096C45CC6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Src\tengine4dnn\src">
+      <UniqueIdentifier>{FA68D414-D697-3FA1-A047-3C5FFA7E5BDF}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Src\tensorflow">
+      <UniqueIdentifier>{96B89B91-625B-322C-B0BB-77BCA38BFFF6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Src\tflite">
+      <UniqueIdentifier>{6D630901-9FEC-34B9-AAF2-2244F371F0FE}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Src\torch">
+      <UniqueIdentifier>{C732D2FC-7DDA-359A-82D8-104FA4FA0050}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Src\vkcom">
+      <UniqueIdentifier>{16D3A15B-377D-38EA-9870-DDF506C73CDC}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Src\vkcom\include">
+      <UniqueIdentifier>{E03DB1B8-F9CA-3037-8A56-DC9657851FA7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Src\vkcom\shader">
+      <UniqueIdentifier>{6E9B44EC-4042-3267-96EA-BD2C71FF3624}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Src\vkcom\src">
+      <UniqueIdentifier>{05A538E8-8DBF-33D1-95FF-507E18DF3B89}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Src\vkcom\vulkan">
+      <UniqueIdentifier>{4DA8875E-CA0E-31EB-A25B-06DB7CDDFC7B}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

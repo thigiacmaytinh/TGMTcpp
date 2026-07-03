@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="layers\layers_common.avx512_skx.cpp" />
+    <ClCompile Include="int8layers\layers_common.avx512_skx.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{B424FE76-8A02-34EF-85BB-75F86BE76CE0}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>
