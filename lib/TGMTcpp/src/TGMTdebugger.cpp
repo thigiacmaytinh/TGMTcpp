@@ -11,9 +11,7 @@
 #include <stdio.h>
 #include <string.h>
 #include <iostream>
-#ifndef _MANAGED
-#include <future>
-#endif
+
 #ifdef OS_LINUX
 #include <stdarg.h>
 #include <string.h>
@@ -112,14 +110,14 @@ void debug_out(int color, const char* fmt, ...)
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-void StartCountTime(char* taskName)
+void StartCountTime(const char* taskName)
 {
 	tasksTime[taskName] = clock();
 }
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-int StopCountTime(char* taskName)
+int StopCountTime(const char* taskName)
 {
 	clock_t startTime = tasksTime.at(taskName);
 	tasksTime.erase(taskName);
@@ -129,7 +127,7 @@ int StopCountTime(char* taskName)
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-int StopAndPrintCountTime(char* taskName)
+int StopAndPrintCountTime(const char* taskName)
 {
 	int deltaTime = StopCountTime(taskName);
 	PrintMessageYellow("%s elapsed time: %d ms \n", taskName, deltaTime);
@@ -173,7 +171,7 @@ void WriteLog( char* fmt, ...)
 	{
 		strcat(str, "\n");
 	}
-	std::string fileName = "log_" + GetCurrentDate() + ".txt";
+	std::string fileName = "log\\log_" + GetCurrentDate() + ".txt";
 #ifdef _MANAGED
 	TGMTfile::WriteToFile(fileName, GetCurrentDateTime(false) + ": " + str);
 #else
@@ -185,8 +183,8 @@ void WriteLog( char* fmt, ...)
 
 void DeleteLog(int nDaysAgo)
 {
-	std::vector<std::string> txtFiles = TGMTfile::GetFilesInDir(TGMTfile::GetCurrentDir());
-	std::vector<std::string> logFiles;
+	std::vector<std::filesystem::path> txtFiles = TGMTfile::GetFilesInDir(TGMTfile::GetCurrentDir());
+	std::vector<std::filesystem::path> logFiles;
 	for (size_t i = 0; i < txtFiles.size(); i++)
 	{
 
@@ -260,7 +258,7 @@ void ShowMessageBox(char* title, char* fmt, ...)
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-void ShowErrorBox(char* title, char* fmt, ...)
+void ShowErrorBox(const char* title, const char* fmt, ...)
 {
 	va_list arg_list;
 	char str[DEBUG_OUT_BUFFER_SIZE];
@@ -305,26 +303,26 @@ LONG WINAPI CreateMinidump(struct _EXCEPTION_POINTERS* apExceptionInfo)
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 #if defined(LIB_CS) || defined(LIB_CPP) || defined(_MANAGED)
-void ShowAssertManaged(const char* fmt, ...)
-{
-	char str[DEBUG_OUT_BUFFER_SIZE];
-#ifdef WIN32
-	va_list arg_list;
-
-	va_start(arg_list, fmt);
-	vsnprintf(str, DEBUG_OUT_BUFFER_SIZE - 1, fmt, arg_list);
-#endif
-	if (str[0] == 0 || str[strlen(str) - 1] != '\n')
-	{
-		strcat(str, "\n");
-	}
-#ifdef WIN32
-	//ShowErrorBox("TGMT error", str);
-#else
-	printf("%s", str);
-#endif
-
-}
+//void ShowAssertManaged(const char* fmt, ...)
+//{
+//	char str[DEBUG_OUT_BUFFER_SIZE];
+//#ifdef WIN32
+//	va_list arg_list;
+//
+//	va_start(arg_list, fmt);
+//	vsnprintf(str, DEBUG_OUT_BUFFER_SIZE - 1, fmt, arg_list);
+//#endif
+//	if (str[0] == 0 || str[strlen(str) - 1] != '\n')
+//	{
+//		strcat(str, "\n");
+//	}
+//#ifdef WIN32
+//	ShowErrorBox("TGMT error", str);
+//#else
+//	printf("%s", str);
+//#endif
+//
+//}
 
 #endif
 
@@ -356,7 +354,7 @@ void TGMTSetConsoleFont(const char* fmt, ...)
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 #if defined(WIN32) ||  defined(_WIN64)
-void PrintUnicode(wchar_t s[])
+void PrintUnicode(const wchar_t s[])
 {
 	int bufferSize = WideCharToMultiByte(CP_UTF8, 0, s, -1, NULL, 0, NULL, NULL);
 	char* m = new char[bufferSize];

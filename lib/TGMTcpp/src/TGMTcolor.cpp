@@ -2,8 +2,6 @@
 #include "TGMTdebugger.h"
 #include "TGMTutil.h"
 
-std::vector<std::string> TGMTcolor::ColorNames = { "Black", "White", "Grey", "Red", "Orange", "Yellow", "Green", "Aqua", "Blue", "Purple", "Pink" };
-
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 std::string TGMTcolor::GetColorName(cv::Mat imgInput, cv::Point p)
@@ -12,7 +10,7 @@ std::string TGMTcolor::GetColorName(cv::Mat imgInput, cv::Point p)
 		return "Error";
 
 	cv::Mat imgHSV;
-	cv::cvtColor(imgInput, imgHSV, CV_BGR2HSV);
+	cv::cvtColor(imgInput, imgHSV, cv::COLOR_BGR2HSV);
 
 	cv::Vec3b pixel = imgHSV.at<cv::Vec3b>(p);
 	
@@ -138,7 +136,7 @@ cv::Mat TGMTcolor::FilterColor(cv::Mat matInput, cv::Scalar lower, cv::Scalar hi
 {
 	cv::Mat matHsv;
 	if (!isHSV)
-		cv::cvtColor(matInput, matHsv, CV_BGR2HSV);
+		cv::cvtColor(matInput, matHsv, cv::COLOR_BGR2HSV);
 	else
 		matHsv = matInput;
 
@@ -156,8 +154,9 @@ std::string TGMTcolor::GetMostColorName(cv::Mat matInput, float& confidence)
 	std::vector<std::string> ColorNames = { "Black", "White", "Grey", "Red", "Orange", "Yellow", "Green", "Aqua", "Blue", "Purple", "Pink" };
 
 	cv::Mat imageHSV;
-	cv::cvtColor(matInput, imageHSV, CV_BGR2HSV);	// (note that OpenCV stores RGB images in B,G,R order.
-	ASSERT(imageHSV.data, "ERROR: Couldn't convert Shirt image from BGR2HSV.")
+	cv::cvtColor(matInput, imageHSV, cv::COLOR_BGR2HSV);	// (note that OpenCV stores RGB images in B,G,R order.
+	if (!imageHSV.data)
+		return "";
 
 		
 	int h = imageHSV.rows;				// Pixel height
@@ -202,8 +201,9 @@ std::string TGMTcolor::GetMostColorName(cv::Mat matInput, float& confidence)
 
 	confidence = (float)tallyMaxCount * 100 / pixels;
 	std::string color = ColorNames[tallyMaxIndex].c_str();
+#ifdef _DEBUG
 	PrintMessage("Detected color: %s with %d percent", color.c_str(), (int)confidence);
-
+#endif
 	return color;
 }
 

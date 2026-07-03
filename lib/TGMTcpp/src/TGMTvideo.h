@@ -50,7 +50,7 @@ public:
 
 	void ExtractFrame(std::string videoFilePath, std::string outputDir, cv::Size outputSize = cv::Size(0, 0), int startIndex =0, int total = 0);
 	cv::Mat GetFrameAt(std::string videoFilePath, int frameIndex);
-	int GetAmountFrame(std::string videoFilePath);
+	static int CountTotalFrame(std::string videoFilePath);
 
 	bool IsPlaying() { return !m_stopVideo; };
 };

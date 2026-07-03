@@ -1,5 +1,7 @@
 #pragma once
 #include "stdafx.h"
+#include <filesystem>
+
 #ifdef __APPLE__
 #include <opencv2/ml.hpp>
 #else
@@ -35,13 +37,13 @@ protected:
 	bool m_enableThreshold;
 	int m_thresholdValue;
 	
-	bool TrainData(std::vector<std::string> imgPaths, std::vector<int> labels);
-	cv::Mat PrepareMatData(cv::Mat matInput);
+	bool TrainData(std::vector<std::filesystem::path> imgPaths, std::vector<int> labels);
+	cv::Mat Flatten(cv::Mat matInput);
 public:
 	TGMTml();
 	~TGMTml();	
 
-	bool TrainData(std::string dirPath);	
+	bool TrainData(std::filesystem::path dirPath);
 	virtual bool TrainData(cv::Mat matData, cv::Mat matLabel) = 0;
 
 	bool LoadData(std::string fileName);

@@ -1,5 +1,5 @@
 #include "TGMTtransform.h"
-#include "TGMTdebugger.h"
+//#include "TGMTdebugger.h"
 
 //TGMTtransform::TGMTtransform()
 //{
@@ -14,8 +14,8 @@
 
 void TGMTtransform::WarpPerspective(cv::Mat matInput, cv::Mat& matOutput, cv::Point2f inputQuad[4], cv::Point2f outputQuad[4])
 {
-	ASSERT(matInput.data, "Mat input is null");
-	// Set the lambda matrix the same type and size as input
+	if (!matInput.data)
+		return;
 	
 	if (outputQuad == nullptr)
 	{
@@ -26,8 +26,7 @@ void TGMTtransform::WarpPerspective(cv::Mat matInput, cv::Mat& matOutput, cv::Po
 		outputQuad[3] = cv::Point2f(0, matOutput.rows - 1);
 	}
 	// Get the Perspective Transform Matrix i.e. lambda
-	cv::Mat lambda = cv::Mat::zeros(matInput.rows, matInput.cols, matInput.type());
-	lambda = getPerspectiveTransform(inputQuad, outputQuad);
+	cv::Mat lambda = getPerspectiveTransform(inputQuad, outputQuad);
 	// Apply the Perspective Transform just found to the src image
 	warpPerspective(matInput, matOutput, lambda, matOutput.size());
 }
@@ -36,7 +35,9 @@ void TGMTtransform::WarpPerspective(cv::Mat matInput, cv::Mat& matOutput, cv::Po
 
 cv::Mat TGMTtransform::Rotate(cv::Mat matInput, int angle, cv::Point point, bool avoidEnlarge)
 {	
-	ASSERT(matInput.data, "Mat input is null");
+	if(!matInput.data)
+		return matInput;
+
 	if (angle == 0)
 		return matInput;
 
@@ -102,8 +103,13 @@ cv::Mat TGMTtransform::CanvasSize(cv::Mat matInput, cv::Size size)
 
 cv::Mat TGMTtransform::CropImage(cv::Mat matInput, cv::Rect rect)
 {
-	ASSERT(rect.width < matInput.cols && rect.height < matInput.rows, "size to crop must less than mat size");
-	return matInput(rect);
+	if (rect.width == matInput.cols && rect.height == matInput.rows)
+		return matInput.clone();
+	
+	if (rect.width == 0 || rect.height == 0)
+		return matInput.clone();
+
+	return matInput.clone()(rect);
 }
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -183,4 +189,41 @@ cv::Mat TGMTtransform::Deskew(cv::Mat& img)
 	warpAffine(img, imgOut, warpMat, imgOut.size(), affineFlags);
 
 	return imgOut;
+}
+
+////////////////////////////////////////////////////////////////////////////////////////////////////
+
+cv::Rect TGMTtransform::Expand(cv::Mat frame, cv::Rect rect, float scaleFactor)
+{
+	if (scaleFactor == 1)
+		return rect;
+
+	int newWidth = static_cast<int>(rect.width * scaleFactor);
+	int newHeight = static_cast<int>(rect.height * scaleFactor);
+
+	// Calculate the new position to keep the rectangle centered
+	int newX = rect.x - (newWidth - rect.width) / 2;
+	int newY = rect.y - (newHeight - rect.height) / 2;
+
+	//claim the new position if it's out of bounds
+	if (newX < 0) newX = 0;
+	if (newY < 0) newY = 0;
+	if (newX + newWidth > frame.cols) newWidth = frame.cols - newX;
+	if (newY + newHeight > frame.rows) newHeight = frame.rows - newY;
+
+	cv::Rect expandedRect(newX, newY, newWidth, newHeight);
+	return expandedRect;
+}
+
+////////////////////////////////////////////////////////////////////////////////////////////////////
+
+cv::RotatedRect TGMTtransform::Expand(cv::Mat frame, cv::RotatedRect  rrect, float scaleFactor)
+{
+	float newWidth = rrect.size.width * scaleFactor;
+	float newHeight = rrect.size.height * scaleFactor;
+
+	// Create a new RotatedRect with expanded dimensions
+	cv::RotatedRect expandedRotatedRect(rrect.center, cv::Size2f(newWidth, newHeight), rrect.angle);
+
+	return expandedRotatedRect;
 }

@@ -21,14 +21,12 @@ public:
 	//width auto scale by height
 	static cv::Mat ResizeByHeight(cv::Mat matInput, int height);
 
-#if defined(WIN32) || defined(WIN64)
-	//resize to screen resolution
-	static cv::Mat ResizeByScreen(cv::Mat matInput, int padding = 0);
-#endif
-
 	static cv::Mat CropImage(cv::Mat matInput, cv::Rect rect);
 	static cv::Mat CropImage(cv::Mat matInput, cv::RotatedRect rrect);
 	static std::vector<cv::Mat> CropImages(cv::Mat matInput, std::vector<cv::Rect> rects);
 	static cv::Mat Deskew(cv::Mat& img);
+
+	static cv::Rect Expand(cv::Mat frame, cv::Rect rect, float scaleFactor);
+	static cv::RotatedRect Expand(cv::Mat frame, cv::RotatedRect  rrect, float scaleFactor);
 };
 

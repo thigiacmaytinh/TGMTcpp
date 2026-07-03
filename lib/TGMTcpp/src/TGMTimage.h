@@ -32,7 +32,7 @@ public:
 
 #ifdef HAVE_LIBRAW
 	static cv::Mat imreadRaw(std::wstring path);
-	static bool isRawImage(std::filesystem::path path);
+	static bool isRawImage(std::wstring path);
 #endif // HAVE_LIBRAW
 };
 

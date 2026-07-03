@@ -33,8 +33,8 @@ std::string Mat2BinaryString(cv::Mat frame)
 {
 	cv::Mat frameGray, frameBW;
 	//convert to gray
-	cvtColor(frame, frameGray, CV_BGR2GRAY);
-	adaptiveThreshold(frameGray, frameBW, 255, CV_ADAPTIVE_THRESH_GAUSSIAN_C, CV_THRESH_BINARY, 3, 0);
+	cvtColor(frame, frameGray, cv::COLOR_BGR2GRAY);
+	adaptiveThreshold(frameGray, frameBW, 255, cv::ADAPTIVE_THRESH_GAUSSIAN_C, cv::THRESH_BINARY, 3, 0);
 	std::string result;
 	for (int row = 0; row < frameBW.rows; ++row)
 	{
@@ -50,20 +50,21 @@ std::string Mat2BinaryString(cv::Mat frame)
 ////////////////////////////////////////////////////////////////////////////////////////////////////
 
 std::vector<cv::Rect> TGMTobjDetect::Detect(cv::Mat matInput, float scaleFactor, int minNeighbors, cv::Size minSize, cv::Size maxSize)
-{
+{	
 	
-	ASSERT(matInput.data, "Load image failed");
-
 	std::vector<cv::Rect> result;
-	
+	if (!matInput.data)
+	{
+		PrintError("Load image failed");
+		return result;
+	}
 
-	cv::Mat matGray = matInput.clone();
-	TGMTimage::ConvertToGray(matGray);
+	cv::Mat matGray = TGMTimage::ConvertToGray(matInput.clone());	
 
 	// Enhance / Normalise the image contrast (optional)
 	//cv::equalizeHist(detectImg, detectImg);
 	
-	m_cascade.detectMultiScale(matGray, result, scaleFactor, minNeighbors, CV_HAAR_SCALE_IMAGE);
+	m_cascade.detectMultiScale(matGray, result, scaleFactor, minNeighbors, 0, minSize, maxSize);
 
 
 	return 	result;
@@ -104,7 +105,7 @@ std::vector<cv::Rect> TGMTobjDetect::FindTemplateMatching(cv::Mat matToFind, cv:
 	int result_cols = matToFind.cols - matTemplate.cols + 1;
 	int result_rows = matToFind.rows - matTemplate.rows + 1;
 	result.create(result_rows, result_cols, CV_32FC1);
-	bool method_accepts_mask = (CV_TM_SQDIFF == method || method == CV_TM_CCORR_NORMED);
+	bool method_accepts_mask = (cv::TM_SQDIFF == method || method == cv::TM_CCORR_NORMED);
 
 	bool use_mask = false; //not implemented yet
 	if (use_mask && method_accepts_mask)
@@ -117,7 +118,7 @@ std::vector<cv::Rect> TGMTobjDetect::FindTemplateMatching(cv::Mat matToFind, cv:
 		cv::matchTemplate(matToFind, matTemplate, result, method);
 	}
 	
-	cv::threshold(result, result, 0.3, 1.0, CV_THRESH_TOZERO);
+	cv::threshold(result, result, 0.3, 1.0, cv::THRESH_TOZERO);
 	double minval, maxval, threshold = 0.89;
 	cv::Point minloc, maxloc;
 

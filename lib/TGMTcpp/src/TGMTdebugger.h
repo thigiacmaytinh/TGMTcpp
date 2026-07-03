@@ -7,9 +7,9 @@
 #include <functional>
 void debug_out(int color, const char* fmt, ...);
 
-void StartCountTime(char* taskName);
-int StopCountTime(char* taskName);
-int StopAndPrintCountTime(char* taskName);
+void StartCountTime(const char* taskName);
+int StopCountTime(const char* taskName);
+int StopAndPrintCountTime(const char* taskName);
 void TGMTSetConsoleTitle(const char* fmt,...);
 void TGMTSetConsoleFont(const char* fmt, ...);
 void WriteLog(char* fmt, ...);
@@ -22,9 +22,9 @@ int GetOrderDayInYear(int month, int day);
 void ShowMessageBox(char* title, char* fmt, ...);
 void ShowMessageBoxW(std::wstring title, std::wstring msg);
 void ShowErrorBoxW(std::wstring title, std::wstring msg);
-void ShowErrorBox(char* title, char* fmt, ...);
+void ShowErrorBox(const char* title, const char* fmt, ...);
 
-void PrintUnicode(wchar_t s[]);
+void PrintUnicode(const wchar_t s[]);
 
 //create crash dump, using: 
 //SetUnhandledExceptionFilter(CreateMinidump);
@@ -49,7 +49,7 @@ LONG WINAPI CreateMinidump(struct _EXCEPTION_POINTERS* apExceptionInfo);
 #define PrintSuccess(...)					debug_out(3, __VA_ARGS__)
 #define PrintMessageGreen(...)				debug_out(3, __VA_ARGS__)
 #define PrintMessageBlue(...)				debug_out(4, __VA_ARGS__)
-#elif defined (ANDROID)
+#elif defined (ANDROID) || defined (__APPLE__)
 #define TODO(...)							
 #define PrintMessage(...)					
 #define PrintError(...)						
@@ -62,7 +62,7 @@ LONG WINAPI CreateMinidump(struct _EXCEPTION_POINTERS* apExceptionInfo);
 
 #if defined(LIB_CS) || defined(LIB_CPP) || defined(_MANAGED)
 void OutputDebug(std::string str);
-void ShowAssertManaged(const char* fmt, ...);
+//void ShowAssertManaged(const char* fmt, ...);
 #if defined(WIN32) ||  defined(_WIN64)
 #define ASSERT(value,x,...) if(!(value)) \
 {\
@@ -90,7 +90,7 @@ else\
 	WriteLog("TestCaseLog.txt", "%s(%d) " #x " failed\n", __FILE__, __LINE__,__VA_ARGS__);\
 }
 
-#elif ANDROID || OS_LINUX
+#elif ANDROID || OS_LINUX || __APPLE__
 #define ASSERT(value,...)
 #endif
 #endif

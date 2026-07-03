@@ -23,6 +23,9 @@ public:
 
 	static void DrawRectangles(cv::Mat& matInput, std::vector<cv::Rect> rects, int thickness = 1, cv::Scalar color = UNDEFINED_COLOR);
 
+	static void DrawFancyRectangle(cv::Mat matInput, cv::Rect rect, cv::Scalar color = UNDEFINED_COLOR, int thickness = 4);
+	static void DrawFancyRectangles(cv::Mat matInput, std::vector<cv::Rect> rects, cv::Scalar color = UNDEFINED_COLOR, int thickness = 4);
+
 	static void DrawRotatedRectangle(cv::Mat& matInput, cv::RotatedRect rect, int thickness = 1, cv::Scalar color = UNDEFINED_COLOR);
 	static void DrawRotatedRectangles(cv::Mat& matInput, std::vector<cv::RotatedRect> rects, int thickness = 1, cv::Scalar color = UNDEFINED_COLOR);
 
@@ -38,5 +41,6 @@ public:
 	static void DrawNoticeBox(cv::Mat& matInput, cv::Rect rect, cv::Scalar color, int thickness, const char* fmt, ...);
 
 	static void DrawSquares(cv::Mat matInput, const std::vector<std::vector<cv::Point> > squares);
+	static void DrawPoint(cv::Mat matInput, const cv::Point point, int radius, cv::Scalar color = UNDEFINED_COLOR);
 };
 

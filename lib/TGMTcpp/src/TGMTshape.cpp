@@ -1,7 +1,8 @@
 #include "TGMTshape.h"
-#include "TGMTdebugger.h"
+//#include "TGMTdebugger.h"
 #include "TGMTimage.h"
 #include "TGMTcolor.h"
+//#include <math.h>
 
 //TGMTshape::TGMTshape()
 //{
@@ -31,7 +32,7 @@ int TGMTshape::FindLineAndCircle(cv::Mat imgInput)
 		return 0;
 	}
 	cv::Mat gray;
-	cvtColor(imgInput, gray, CV_BGR2GRAY);
+	cvtColor(imgInput, gray,  cv::COLOR_BGR2GRAY);
 	GaussianBlur(gray, gray, cv::Size(9, 9), 2, 2);
 
 	// Tim duong thang
@@ -61,7 +62,7 @@ std::vector<TGMTshape::Circle> TGMTshape::DetectCircle(cv::Mat matInput)
 	
 	std::vector<cv::Vec3f> circles;
 	std::vector<Circle> result;
-	HoughCircles(gray, circles, CV_HOUGH_GRADIENT, 1, 100, 200, 100, 0, 0);
+	cv::HoughCircles(gray, circles, cv::HOUGH_GRADIENT, 1, 100, 200, 100, 0, 0);
 	for (size_t i = 0; i < circles.size(); i++)
 	{
 		result.push_back(Circle(circles[i]));
@@ -114,11 +115,7 @@ cv::Rect TGMTshape::ExpandRect(cv::Rect rect, float scaleRatioX, float scaleRati
 	r.width *= scaleRatioX;
 	r.height *= scaleRatioY;
 
-	if (IsValidRect(r))
-	{
-		return r;
-	}
-	return rect;
+	return r;
 }
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -131,11 +128,16 @@ bool TGMTshape::IsValidRect(cv::Rect rect)
 ////////////////////////////////////////////////////////////////////////////////////////////////////
 
 bool TGMTshape::IsRectInsideMat(cv::Rect rect, cv::Mat matInput, int padding)
-{	
-	return rect.x >= padding &&
-		rect.y >= padding &&
-		rect.x + rect.width <= matInput.cols - padding &&
-		rect.y + rect.height <= matInput.rows - padding;
+{
+	if (matInput.empty() || rect.x < 0 || rect.y < 0 || rect.width <= 0 || rect.height <= 0)
+		return false;
+	if (rect.x < padding || rect.y < padding)
+		return false;
+	if (rect.x + rect.width > matInput.cols - padding)
+		return false;
+	if (rect.y + rect.height > matInput.rows - padding)
+		return false;
+	return true;
 }
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -157,6 +159,14 @@ bool TGMTshape::IsRectInsideRect(cv::Rect rectIn, cv::Rect rectOut)
 		rectIn.y >= rectOut.y &&
 		rectIn.x + rectIn.width <= rectOut.x + rectOut.width &&
 		rectIn.y + rectIn.height <= rectOut.y + rectOut.height;
+}
+
+////////////////////////////////////////////////////////////////////////////////////////////////////
+
+cv::Rect TGMTshape::Intersection(cv::Rect rect1, cv::Rect rect2)
+{
+	cv::Rect intersection = rect1 & rect2;
+	return intersection;
 }
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -289,15 +299,58 @@ cv::Size TGMTshape::GetAbsSize(cv::RotatedRect rrect)
 	cv::Point2f rectPoints[4];
 	rrect.points(rectPoints);
 	
-	int dX01 = abs(rectPoints[0].x - rectPoints[1].x);
-	int dY01 = abs(rectPoints[0].y - rectPoints[1].y);
+	double dX01 = abs(rectPoints[0].x - rectPoints[1].x);
+	double dY01 = abs(rectPoints[0].y - rectPoints[1].y);
 
-	int dX12 = abs(rectPoints[1].x - rectPoints[2].x);
-	int dY12 = abs(rectPoints[1].y - rectPoints[2].y);
+	double dX12 = abs(rectPoints[1].x - rectPoints[2].x);
+	double dY12 = abs(rectPoints[1].y - rectPoints[2].y);
 
-	
-	result.width = sqrt(pow(dX01, 2) + pow(dY01, 2));
-	result.height = sqrt(pow(dX12, 2) + pow(dY12, 2));
+	double w = sqrt(pow(dX01, 2) + pow(dY01, 2));
+	double h = sqrt(pow(dX12, 2) + pow(dY12, 2));
+
+	result.width = round(w);
+	result.height = round(h);
 
 	return result;
+}
+
+////////////////////////////////////////////////////////////////////////////////////////////////////
+
+//https://answers.opencv.org/question/14188/calc-eucliadian-distance-between-two-single-point/
+float TGMTshape::GetDistance(cv::Point p1, cv::Point p2)
+{
+	float distance = cv::norm(p1 - p2);
+	return distance;
+}
+
+////////////////////////////////////////////////////////////////////////////////////////////////////
+
+cv::Point2f TGMTshape::GetCenterPoint(cv::Point p1, cv::Point p2)
+{
+	cv::Rect rect = cv::Rect(p1, p2);
+	return GetCenterPoint(rect);
+}
+
+////////////////////////////////////////////////////////////////////////////////////////////////////
+
+cv::Rect TGMTshape::CorrectRectToInsideMat(cv::Rect rect, cv::Mat mat)
+{
+	if (rect.x < 0) rect.x = 0;
+	if (rect.y < 0) rect.y = 0;
+	if (rect.x + rect.width > mat.cols) rect.width = mat.cols - rect.x;
+	if (rect.y + rect.height > mat.rows) rect.height = mat.rows - rect.y;
+
+	return rect;
+}
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+cv::Rect TGMTshape::GetBounding(cv::Rect rect1, cv::Rect rect2)
+{
+	int top = std::min(rect1.y, rect2.y);
+	int left = std::min(rect1.x, rect2.x);
+	int bottom = std::max(rect1.y + rect1.height, rect2.y + rect2.height);
+	int right = std::max(rect1.x + rect1.width, rect2.x + rect2.width);
+
+	return cv::Rect(left, top, right - left, bottom - top);
 }

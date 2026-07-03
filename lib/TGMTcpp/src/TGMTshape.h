@@ -41,12 +41,19 @@ public:
 	static bool IsRectInsideMat(cv::Rect rect, cv::Mat matInput, int padding = 0);
 	static bool IsRectInsideMat(cv::RotatedRect rrect, cv::Mat matInput, int padding = 0);
 	static bool IsRectInsideRect(cv::Rect rectIn, cv::Rect rectOut);
-
+	static cv::Rect Intersection(cv::Rect rect1, cv::Rect rect2);
 	
 	static std::vector<std::vector<cv::Point> > FindSquares(const cv::Mat image);
 	
 
 	static double GetArea(cv::RotatedRect rrect);
 	static cv::Size GetAbsSize(cv::RotatedRect rrect);
+
+	static float GetDistance(cv::Point p1, cv::Point p2);
+	static cv::Point2f GetCenterPoint(cv::Point p1, cv::Point p2);
+
+	static cv::Rect CorrectRectToInsideMat(cv::Rect rect, cv::Mat mat);
+
+	static cv::Rect GetBounding(cv::Rect rect1, cv::Rect rect2);
 };
 

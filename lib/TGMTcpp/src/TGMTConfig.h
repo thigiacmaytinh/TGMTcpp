@@ -20,9 +20,9 @@ class TGMTConfig
 	private:
 		bool m_lastReadSuccess;
 		
-		std::map<std::string, std::string> m_values;
-		static std::string MakeKey(std::string section, std::string name);
-		static int ValueHandler(void* user, char* section, char* name, char* value);
+		std::map<std::string, std::wstring> m_values;
+		static std::string MakeKey(std::string section, std::string key);
+		static int ValueHandler(void* user, wchar_t* section, wchar_t* key, wchar_t* value);
 	public:
 		bool m_writeDefaultValueIfNotExist = false;
 
@@ -30,12 +30,13 @@ class TGMTConfig
 
 		bool LoadSetting(std::string settingFile);
 
-		std::string ReadValueString(std::string section, std::string name, std::string default_value);
-		int ReadValueInt(std::string section, std::string name, int default_value);
-		double ReadValueDouble(std::string section, std::string name, double default_value);
+		std::string ReadString(std::string section, std::string name, std::string default_value);
+		std::wstring ReadWstring(std::string section, std::string name, std::wstring default_value);
+		int ReadInt(std::string section, std::string name, int default_value);
+		double ReadDouble(std::string section, std::string name, double default_value);
 		//valid true values are "true", "yes", "on", "1",
 		// and valid false values are "false", "no", "off", "0" (not case sensitive).
-		bool ReadValueBool(std::string section, std::string name, bool default_value);
+		bool ReadBool(std::string section, std::string name, bool default_value);
 		bool LastReadSuccess();
 	}m_reader;
 
@@ -57,23 +58,23 @@ public:
 	bool LoadConfig(std::string settingFile = "config.ini");
 
 #if (defined(WIN32) || defined(WIN64)) && defined( UNICODE)
-	std::wstring ReadValueWString(std::string section, std::string key, std::wstring defaultValue = L"");
+	std::wstring ReadWString(std::string section, std::string key, std::wstring defaultValue = L"");
 #endif
-	std::string ReadValueString(std::string section, std::string key, std::string defaultValue = "");
-	int ReadValueInt(std::string section, std::string key, int defaultValue = 0);
-	bool ReadValueBool(std::string section, std::string key, bool defaultValue = false);
-	double ReadValueDouble(std::string section, std::string key, double defaultValue = 0.f);
+	//std::string ReadString(std::string section, std::string key, std::string defaultValue = "");
+	std::wstring ReadWstring(std::string section, std::string key, std::wstring defaultValue = L"");
+	int ReadInt(std::string section, std::string key, int defaultValue = 0);
+	bool ReadBool(std::string section, std::string key, bool defaultValue = false);
+	double ReadDouble(std::string section, std::string key, double defaultValue = 0.f);
 
 	bool LastReadSuccess();
 
 #if defined(WIN32) || defined(WIN64)
-	void WriteConfigString(std::string section, std::string key, std::string value);
-#ifdef UNICODE
-	void WriteConfigWString(std::string section, std::string key, std::wstring value);
-#endif
-	void WriteConfigInt(std::string section, std::string key, int value);
-	void WriteConfigDouble(std::string section, std::string key, double value);
-	void WriteConfigBool(std::string section, std::string key, bool value);
+	void WriteString(std::string section, std::string key, std::string value);
+	void WriteWstring(std::string section, std::string key, std::wstring value);
+
+	void WriteInt(std::string section, std::string key, int value);
+	void WriteDouble(std::string section, std::string key, double value);
+	void WriteBool(std::string section, std::string key, bool value);
 #endif
 
 

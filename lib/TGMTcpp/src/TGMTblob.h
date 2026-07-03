@@ -34,7 +34,9 @@ public:
 	static Blob Normalize(Blob &blob);
 	static std::vector<cv::Point> MergeBlobs(std::vector<TGMTblob::Blob> blobs);
 	static Blob GetBlobBoundary(cv::Mat matInput, TGMTblob::Blob blob);
+	static cv::Rect GetBoundingBlobs(std::vector<TGMTblob::Blob> blobs);
 	static cv::Point2f GetCenterPoint(Blob blob);
 	static Blob Rotate(Blob blob, int angle);
+	static void SaveBlob(Blob blob, cv::Scalar color, const char* fmt, ...);
 };
 

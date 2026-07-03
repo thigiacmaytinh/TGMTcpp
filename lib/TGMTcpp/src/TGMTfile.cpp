@@ -1,7 +1,7 @@
 #include "TGMTfile.h"
 
 #if defined(WIN32) || defined(WIN64) 
-#include "TGMTdebugger.h"
+//#include "TGMTdebugger.h"
 #include "TGMTutil.h"
 #include <windows.h>
 #include <filesystem>
@@ -11,7 +11,6 @@
 #define TGMTSTR LPCSTR
 #endif
 
-using namespace std::experimental;
 #endif // WIN32
 
 #include <iostream>
@@ -19,12 +18,11 @@ using namespace std::experimental;
 
 
 #ifdef _MANAGED
-
 #include "TGMTbridge.h"
 using namespace System::Threading::Tasks;
 using namespace System::Threading;
 #else
-#include <future>
+#include <thread>
 #include <algorithm>
 #endif
 
@@ -48,66 +46,66 @@ using namespace System::Threading;
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-std::vector<std::string> TGMTfile::GetFilesInDir(std::string dirPath, bool searchAllChildDir)
-{	
-	std::vector<std::string> result;
-#if defined(WIN32) 
-	WIN32_FIND_DATA findFileData;
-	HANDLE hFind;
-	std::string fileName;
-	bool ret = true;
+std::vector<std::filesystem::path> TGMTfile::GetFilesInDir(std::filesystem::path dirPath, bool searchAllChildDir)
+{
+	std::vector<std::filesystem::path> files;
 
-	TGMTfile::CorrectPath(dirPath);
-
-#ifdef UNICODE
-	std::wstring wsForLongFileName = std::wstring(L"\\\\?\\") + TGMTutil::String2WString(dirPath) + L"*";
-
-#else
-	std::string wsForLongFileName = std::string("\\\\?\\") + dirPath + "*";
-#endif
-	hFind = FindFirstFile((TGMTSTR)(wsForLongFileName).c_str(), &findFileData);
-	if (hFind != INVALID_HANDLE_VALUE)
+	// Check if directory exists
+	if (!std::filesystem::exists(dirPath) || !std::filesystem::is_directory(dirPath))
 	{
-		do
-		{
-#ifdef UNICODE
-			fileName = TGMTutil::WString2String((TGMTSTR)findFileData.cFileName);
-#else
-			fileName = (TGMTSTR)findFileData.cFileName;
-#endif
-			if (fileName != "." && fileName != "..")
-			{
-				fileName.insert(0, dirPath);
-				if ((findFileData.dwFileAttributes & FILE_ATTRIBUTE_DIRECTORY) != 0)   //file is a directory
-				{
-					if (searchAllChildDir)
-					{
-						std::vector<std::string> temp = GetFilesInDir(fileName, searchAllChildDir);
-						result.insert(result.end(), temp.begin(), temp.end());
-					}
-				}
-				else   //is a file
-				{
-					result.push_back(fileName);
-				}
+		return files;
+	}
 
+	try
+	{
+		if (searchAllChildDir)
+		{
+			// Recursive search through all subdirectories
+			for (const auto& entry : std::filesystem::recursive_directory_iterator(
+				dirPath,
+				std::filesystem::directory_options::skip_permission_denied))
+			{
+				if (entry.is_regular_file())
+				{
+					files.push_back(entry.path());
+				}
 			}
 		}
-		while (FindNextFile(hFind, &findFileData));
-
-		FindClose(hFind);
+		else
+		{
+			// Non-recursive search in current directory only
+			for (const auto& entry : std::filesystem::directory_iterator(
+				dirPath,
+				std::filesystem::directory_options::skip_permission_denied))
+			{
+				if (entry.is_regular_file())
+				{
+					files.push_back(entry.path());
+				}
+			}
+		}
 	}
-#endif
-	return result;
-}
+	catch (const std::filesystem::filesystem_error& e)
+	{
+		// Handle filesystem errors (e.g., permission denied, network issues)
+		// You can log the error or handle it based on your application's needs
+		// Example: std::cerr << "Filesystem error: " << e.what() << std::endl;
+	}
+	catch (const std::exception& e)
+	{
+		// Handle other exceptions
+		// Example: std::cerr << "Error: " << e.what() << std::endl;
+	}
 
+	return files;
+}
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-bool TGMTfile::FileExist(std::string filePath)
+bool TGMTfile::FileExist(std::filesystem::path filePath)
 {
 	if (filePath == "")
 		return false;
-	if (FILE *file = fopen(filePath.c_str(), "r"))
+	if (FILE *file = fopen(filePath.string().c_str(), "r"))
 	{
 		fclose(file);
 		return true;
@@ -120,27 +118,29 @@ bool TGMTfile::FileExist(std::string filePath)
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-std::string TGMTfile::GetFileName(std::string filePath)
+std::string TGMTfile::GetFileName(std::filesystem::path filePath)
 {
-	size_t idx = filePath.rfind('\\');
-	return filePath.substr(idx + 1);
+	size_t idx = filePath.string().rfind('\\');
+	return filePath.string().substr(idx + 1);
 }
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-std::string TGMTfile::GetFileExtension(std::string filePath)
+std::string TGMTfile::GetFileExtension(std::filesystem::path filePath)
 {
-	size_t idx = filePath.rfind('.');
-	return filePath.substr(idx + 1);
+	std::string ext = filePath.extension().string();
+	return ext;
 }
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-std::string TGMTfile::GetDirName(std::string dirPath)
+std::string TGMTfile::GetDirName(std::filesystem::path dirPath)
 {
-	if (dirPath.substr(dirPath.length() - 2) == "\\")
+	if (dirPath == "")
+		return "";
+	if (dirPath.string().substr(dirPath.string().length() - 2) == "\\")
 	{
-		dirPath = dirPath.substr(dirPath.length() - 2);
+		dirPath = dirPath.string().substr(dirPath.string().length() - 2);
 	}
 
 	return GetFileName(dirPath);
@@ -148,7 +148,7 @@ std::string TGMTfile::GetDirName(std::string dirPath)
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-std::string TGMTfile::GetFileNameWithoutExtension(std::string filePath)
+std::string TGMTfile::GetFileNameWithoutExtension(std::filesystem::path filePath)
 {
 	std::string fileName = GetFileName(filePath);
 	size_t idx = fileName.rfind('.');
@@ -157,10 +157,10 @@ std::string TGMTfile::GetFileNameWithoutExtension(std::string filePath)
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-bool TGMTfile::DirExist(const std::string dirName)
+bool TGMTfile::DirExist(const std::filesystem::path dirPath)
 {
 #ifdef WIN32
-	DWORD ftyp = GetFileAttributesA(dirName.c_str());
+	DWORD ftyp = GetFileAttributesA(dirPath.string().c_str());
 	if (ftyp == INVALID_FILE_ATTRIBUTES)
 		return false;  //something is wrong with your path!
 
@@ -176,36 +176,39 @@ bool TGMTfile::DirExist(const std::string dirName)
 			return (S_IFDIR & statbuf.st_mode) != 0;
 	}
 #endif
+    return false;
 }
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-void TGMTfile::CreateDir(std::string dirName)
+void TGMTfile::MkDir(std::filesystem::path dirName)
+{
+	CreateDir(dirName);
+}
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+void TGMTfile::CreateDir(std::filesystem::path dirName)
 {
 #if defined(WIN32) || defined (OS_LINUX)
 	if (DirExist(dirName))
 		return;
 #endif
 
-#if defined(WIN32)
-	CreateDirectoryA(dirName.c_str(), NULL);
-#elif defined (OS_LINUX)
-	std::string command = "mkdir -p " + dirName;
-	const int dir_err = system(command.c_str());
-	if (-1 == dir_err)
+	try
 	{
-		printf("Error creating directory!n");
+		std::filesystem::create_directories(dirName);
 	}
-#else
-	//TODO
-#endif
-
+	catch (const std::filesystem::filesystem_error& e)
+	{
+		// Handle filesystem errors (e.g., permission denied, invalid path)
+		// Example: std::cerr << "Failed to create directory: " << e.what() << std::endl;
+	}
 }
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-
-std::string TGMTfile::GetCurrentDir()
+std::filesystem::path TGMTfile::GetCurrentDir()
 {
 #ifdef WIN32
 #ifdef UNICODE
@@ -214,9 +217,26 @@ std::string TGMTfile::GetCurrentDir()
 	std::wstring wstr(buffer);
 	return std::string(wstr.begin(), wstr.end());
 #else
-	char buffer[MAX_PATH];
-	GetCurrentDirectory(MAX_PATH, buffer);
-	return buffer;
+	char path[MAX_PATH];
+	HMODULE hm = NULL;
+
+	if (GetModuleHandleEx(GET_MODULE_HANDLE_EX_FLAG_FROM_ADDRESS |
+		GET_MODULE_HANDLE_EX_FLAG_UNCHANGED_REFCOUNT,
+		(LPCSTR)&DirExist, &hm) == 0)
+	{
+		int ret = GetLastError();
+		fprintf(stderr, "GetModuleHandle failed, error = %d\n", ret);
+		// Return or however you want to handle an error.
+}
+	if (GetModuleFileName(hm, path, sizeof(path)) == 0)
+	{
+		int ret = GetLastError();
+		fprintf(stderr, "GetModuleFileName failed, error = %d\n", ret);
+		// Return or however you want to handle an error.
+	}
+
+	return GetParentDir(path);
+
 #endif
 
 #elif defined( OS_LINUX)
@@ -225,14 +245,15 @@ std::string TGMTfile::GetCurrentDir()
 	std::string currentDir(pWorkingDirectory);
 	return currentDir;
 #endif
+    return "";
 }
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-std::vector<std::string> TGMTfile::GetImageFilesInDir(std::string dirPath, bool searchAllChildDir)
+std::vector<std::filesystem::path> TGMTfile::GetImageFilesInDir(std::filesystem::path dirPath, bool searchAllChildDir)
 {
-	std::vector<std::string> fileNames = GetFilesInDir(dirPath, searchAllChildDir);
-	std::vector<std::string> result;
+	std::vector<std::filesystem::path> fileNames = GetFilesInDir(dirPath, searchAllChildDir);
+	std::vector<std::filesystem::path> result;
 	for (size_t i = 0; i < fileNames.size(); i++)
 	{
 		if (IsImage(fileNames[i]))
@@ -245,10 +266,10 @@ std::vector<std::string> TGMTfile::GetImageFilesInDir(std::string dirPath, bool 
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-std::vector<std::string> TGMTfile::GetVideoFilesInDir(std::string dirPath, bool searchAllChildDir)
+std::vector<std::filesystem::path> TGMTfile::GetVideoFilesInDir(std::filesystem::path dirPath, bool searchAllChildDir)
 {
-	std::vector<std::string> fileNames = GetFilesInDir(dirPath, searchAllChildDir);
-	std::vector<std::string> result;
+	std::vector<std::filesystem::path> fileNames = GetFilesInDir(dirPath, searchAllChildDir);
+	std::vector<std::filesystem::path> result;
 	for (size_t i = 0; i < fileNames.size(); i++)
 	{
 		if (IsVideo(fileNames[i]))
@@ -262,27 +283,27 @@ std::vector<std::string> TGMTfile::GetVideoFilesInDir(std::string dirPath, bool 
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-bool TGMTfile::IsDir(std::string filePath)
+bool TGMTfile::IsDir(std::filesystem::path filePath)
 {
 	return DirExist(filePath);
 }
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-bool TGMTfile::IsImage(std::string filePath)
+bool TGMTfile::IsImage(std::filesystem::path filePath)
 {	
-	std::string ext = filePath.substr(filePath.find_last_of(".") + 1);
+	std::string ext = filePath.extension().string();
 	std::transform(ext.begin(), ext.end(), ext.begin(), ::tolower);
-	return (ext == "jpg" || ext == "png" || ext == "bmp" || ext == "pgm" || ext == "webp" || ext == "gif" || ext == "jpeg");
+	return (ext == ".jpg" || ext == ".png" || ext == ".bmp" || ext == ".pgm" || ext == ".webp" || ext == ".gif" || ext == ".jpeg");
 }
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-bool TGMTfile::IsVideo(std::string filePath)
+bool TGMTfile::IsVideo(std::filesystem::path filePath)
 {
-	std::string ext = filePath.substr(filePath.find_last_of(".") + 1);
+	std::string ext = filePath.extension().string();
 	std::transform(ext.begin(), ext.end(), ext.begin(), ::tolower);
-	return (ext == "mp4" || ext == "avi" || ext == "wmv" || ext == "mpg" || ext == "flv");
+	return (ext == ".mp4" || ext == ".avi" || ext == ".wmv" || ext == ".mpg" || ext == ".flv");
 }
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -301,19 +322,20 @@ bool TGMTfile::WriteToFile(std::string fileName, std::string text, bool append)
 #if (defined(WIN32) ||defined(WIN64)) && !defined(_MANAGED)
 void TGMTfile::WriteToFileAsync(std::string fileName, std::string text, bool append)
 {
-	std::future<void> result = std::async([](const std::string _fileName, const std::string _text, bool _append)
+	std::thread([](const std::string _fileName, const std::string _text, bool _append)
 	{
 		WriteToFile(_fileName, _text, _append);
-	}, fileName, text, append);
+	}, fileName, text, append)
+	.detach();
 }
 #endif
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-std::string TGMTfile::GetParentDir(std::string filePath, bool fullPath)
+std::string TGMTfile::GetParentDir(std::filesystem::path filePath, bool fullPath)
 {
-	int lastSlash = filePath.rfind('\\');
-	std::string dir = filePath.substr(0, lastSlash);
+	int lastSlash = filePath.string().rfind('\\');
+	std::string dir = filePath.string().substr(0, lastSlash);
 	if (!fullPath)
 	{
 		lastSlash = dir.rfind('\\');
@@ -324,9 +346,9 @@ std::string TGMTfile::GetParentDir(std::string filePath, bool fullPath)
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-std::vector<std::string> TGMTfile::GetChildDirInDir(std::string dirPath, bool searchAllChildDir)
+std::vector<std::filesystem::path> TGMTfile::GetChildDirInDir(std::filesystem::path dirPath, bool searchAllChildDir)
 {
-	std::vector<std::string> result;
+	std::vector<std::filesystem::path> result;
 #if defined(WIN32) 
 	WIN32_FIND_DATA findFileData;
 	HANDLE hFind;
@@ -339,7 +361,7 @@ std::vector<std::string> TGMTfile::GetChildDirInDir(std::string dirPath, bool se
 	std::wstring wsForLongFileName = std::wstring(L"\\\\?\\") + TGMTutil::String2WString(dirPath) + L"*";
 	
 #else
-	std::string wsForLongFileName = std::string("\\\\?\\") + dirPath + "*";
+	std::string wsForLongFileName = std::string("\\\\?\\") + dirPath.string() + "*";
 	
 #endif
 
@@ -355,13 +377,13 @@ std::vector<std::string> TGMTfile::GetChildDirInDir(std::string dirPath, bool se
 #endif
 			if (fileName != "." && fileName != "..")
 			{
-				fileName.insert(0, dirPath);
+				fileName.insert(0, dirPath.string());
 				if ((findFileData.dwFileAttributes & FILE_ATTRIBUTE_DIRECTORY) != 0)   //file is a directory
 				{
 					result.push_back(fileName);
 					if (searchAllChildDir)
 					{
-						std::vector<std::string> temp = GetChildDirInDir(fileName, searchAllChildDir);
+						std::vector<std::filesystem::path> temp = GetChildDirInDir(fileName, searchAllChildDir);
 						result.insert(result.end(), temp.begin(), temp.end());
 					}
 				}
@@ -386,7 +408,7 @@ std::vector<std::string> TGMTfile::GetChildDirInDir(std::string dirPath, bool se
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-std::string TGMTfile::ReadAllText(std::string fileName)
+std::string TGMTfile::ReadAllText(std::filesystem::path fileName)
 {
 	std::string content;
 	std::ifstream myFile(fileName);
@@ -405,9 +427,9 @@ std::string TGMTfile::ReadAllText(std::string fileName)
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-std::vector<std::string> TGMTfile::ReadAllLine(std::string fileName)
+std::vector<std::string> TGMTfile::ReadAllLine(std::filesystem::path filePath)
 {
-	std::ifstream infile(fileName);
+	std::ifstream infile(filePath);
 
 	std::string line;
 	std::vector<std::string> lines;
@@ -440,48 +462,50 @@ std::vector<std::wstring> TGMTfile::WReadAllLine(std::string fileName)
 
 #if (defined(WIN32) || defined(_WIN64)) && !defined(_MANAGED)
 
-void TGMTfile::Move_File(const std::string fileNameFrom, const std::string fileNameTo)
-{
-	MoveFile((TGMTSTR)fileNameFrom.c_str(), (TGMTSTR)fileNameTo.c_str());
-}
-
-//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-
-void TGMTfile::Move_File(const std::wstring fileNameFrom, const std::wstring fileNameTo)
-{
-	MoveFile((TGMTSTR)fileNameFrom.c_str(), (TGMTSTR)fileNameTo.c_str());
-}
+//void TGMTfile::Move_File(const std::string fileNameFrom, const std::string fileNameTo)
+//{
+//	MoveFile((TGMTSTR)fileNameFrom.c_str(), (TGMTSTR)fileNameTo.c_str());
+//}
+//
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//
+//void TGMTfile::Move_File(const std::wstring fileNameFrom, const std::wstring fileNameTo)
+//{
+//	MoveFile((TGMTSTR)fileNameFrom.c_str(), (TGMTSTR)fileNameTo.c_str());
+//}
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 void TGMTfile::MoveFileAsync(const std::string fileNameFrom, const std::string fileNameTo)
 {
-	std::future<void> result = std::async([](const std::string from, const std::string to) 
+	std::thread([](const std::string from, const std::string to)
 	{
 		MoveFile((TGMTSTR)from.c_str(), (TGMTSTR)to.c_str());
-	}, fileNameFrom, fileNameTo);
+	}, fileNameFrom, fileNameTo)
+	.detach();
 }
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 void TGMTfile::MoveFileAsync(const std::wstring fileNameFrom, const std::wstring fileNameTo)
 {
-	std::future<void> result = std::async([](const std::wstring from, const std::wstring to)
+	std::thread([](const std::wstring from, const std::wstring to)
 	{
 		MoveFile((TGMTSTR)from.c_str(), (TGMTSTR)to.c_str());
-	}, fileNameFrom, fileNameTo);
+	}, fileNameFrom, fileNameTo)
+	.detach();
 }
 
 #endif
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-void TGMTfile::WriteResouceFileToDisk(std::string targetFile, int resouceID)
+void TGMTfile::WriteResourceFileToDisk(std::string targetFile, int resouceID)
 {
 #ifdef WIN32
 	HRSRC myResource = ::FindResource(NULL, MAKEINTRESOURCE(resouceID), RT_RCDATA);
 	unsigned int myResourceSize = ::SizeofResource(NULL, myResource);
-	ASSERT(myResourceSize > 0, "Can not load resouce");
+	//ASSERT(myResourceSize > 0, "Can not load resouce");
 	HGLOBAL myResourceData = ::LoadResource(NULL, myResource);
 	void* pMyExecutable = ::LockResource(myResourceData);
 
@@ -548,7 +572,7 @@ std::string TGMTfile::GetSystemTempDirPath()
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-void TGMTfile::Delete_File(std::string fileName)
+void TGMTfile::Delete_File(std::filesystem::path fileName)
 {
 #ifdef WIN32
 #ifdef _MANAGED
@@ -561,26 +585,27 @@ void TGMTfile::Delete_File(std::string fileName)
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-void TGMTfile::Delete_FileAsync(std::string fileName)
+void TGMTfile::Delete_FileAsync(std::filesystem::path fileName)
 {
 #ifdef WIN32
 #ifdef _MANAGED
 	DeleteFile((TGMTSTR)fileName.c_str());
 #else
-	std::future<void> result = std::async([](const std::string file)
+	std::thread([](const std::filesystem::path file)
 	{
 		DeleteFile((TGMTSTR)file.c_str());
-	}, fileName);
+	}, fileName)
+	.detach();
 #endif
 #endif
 }
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-void TGMTfile::Delete_Dir(std::string dirName)
+void TGMTfile::Delete_Dir(std::filesystem::path dirName)
 {
 #ifdef WIN32
-	std::system(("rmdir " + dirName + "/s /q").c_str());
+	std::system(("rmdir " + dirName.string() + "/s /q").c_str());
 #elif defined (OS_LINUX)
 	std::string command = "rmdir -p " + dirName;
 	const int dir_err = system(command.c_str());
@@ -618,11 +643,12 @@ void TGMTfile::CopyAndDeleteFile(const std::string fileNameFrom, const std::stri
 
 void TGMTfile::CopyFileAsync(const std::string fileNameFrom, const std::string fileNameTo)
 {
-	std::future<void> result = std::async([](const std::string from, const std::string to)
+	std::thread([](const std::string from, const std::string to)
 	{
 		bool temp = false;
 		CopyFile((TGMTSTR)from.c_str(), (TGMTSTR)to.c_str(), temp);
-	}, fileNameFrom, fileNameTo);
+	}, fileNameFrom, fileNameTo)
+	.detach();
 }
 
 
@@ -631,39 +657,60 @@ void TGMTfile::CopyFileAsync(const std::string fileNameFrom, const std::string f
 
 void TGMTfile::CopyDir(const std::string dirFrom, const std::string dirTo, bool recursive)
 {	
-	filesystem::copy(dirFrom, dirTo, recursive ? filesystem::copy_options::recursive : filesystem::copy_options::none);
+#if ((defined(_MSVC_LANG) && _MSVC_LANG >= 201703L) || __cplusplus >= 201703L)
+	//C++17 specific stuff here
+	std::filesystem::copy(dirFrom, dirTo, recursive ? std::filesystem::copy_options::recursive : std::filesystem::copy_options::none);
+#else
+	//std::experimental::filesystem::copy(dirFrom, dirTo, recursive ? std::experimental::filesystem::copy_options::recursive : std::experimental::filesystem::copy_options::none);
+#endif
+	
 }
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 void TGMTfile::CopyDirAsync(const std::string dirFrom, const std::string dirTo, bool recursive)
 {
-	std::future<void> result = std::async([](const std::string _dirFrom, const std::string _dirTo, bool _recursive)
+#if ((defined(_MSVC_LANG) && _MSVC_LANG >= 201703L) || __cplusplus >= 201703L)
+	//C++17 specific stuff here
+	std::thread([](const std::string _dirFrom, const std::string _dirTo, bool _recursive)
 	{
-		filesystem::copy(_dirFrom, _dirTo, _recursive ? filesystem::copy_options::recursive : filesystem::copy_options::none);
-	}, dirFrom, dirTo, recursive);
+		std::filesystem::copy(_dirFrom, _dirTo, _recursive ? std::filesystem::copy_options::recursive : std::filesystem::copy_options::none);
+	}, dirFrom, dirTo, recursive)
+		.detach();
+#else
+	/*std::thread([](const std::string _dirFrom, const std::string _dirTo, bool _recursive)
+	{
+		std::experimental::filesystem::copy(_dirFrom, _dirTo, _recursive ? std::experimental::filesystem::copy_options::recursive : std::experimental::filesystem::copy_options::none);
+	}, dirFrom, dirTo, recursive)
+	.detach();*/
+#endif
 }
 
 #endif
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-std::string TGMTfile::CorrectPath(std::string& path)
+std::filesystem::path TGMTfile::CorrectPath(std::filesystem::path path)
 {
-	if (path.substr(path.length() - 1) != "\\")
+	
+	if (path == "")
+		return "";
+
+	std::wstring wPath = path.wstring();
+	if (wPath.substr(wPath.length() - 1) != L"\\")
 	{
-		path += "\\";
+		wPath += L"\\";
 	}
-	if (path.substr(1,1) != ":")
+	if (wPath.substr(1, 1) != L":" && wPath.substr(0, 2) != L"\\\\")
 	{
-		path = GetCurrentDir() + "\\" + path;
+		wPath = GetCurrentDir().wstring() + L"\\" + wPath;
 	}
-	return path;
+	return std::filesystem::path(wPath);
 }
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-int TGMTfile::GetFileSize(std::string filePath)
+int TGMTfile::GetFileSize(std::filesystem::path filePath)
 {
 	std::ifstream in(filePath, std::ifstream::ate | std::ifstream::binary);
 	return in.tellg();	
@@ -694,7 +741,7 @@ void TGMTfile::MoveFileAsync(System::String^ fileNameFrom, System::String^ fileN
 
 bool TGMTfile::IsImage(System::String^ filePath)
 {
-	std::string sFilePath = TGMT::TGMTbridge::SystemStr2stdStr(filePath);
+	std::string sFilePath = TGMTbridge::SystemStr2stdStr(filePath);
 	return IsImage(sFilePath);
 }
 
@@ -702,7 +749,7 @@ bool TGMTfile::IsImage(System::String^ filePath)
 
 bool TGMTfile::IsVideo(System::String^ filePath)
 {
-	std::string sFilePath = TGMT::TGMTbridge::SystemStr2stdStr(filePath);
+	std::string sFilePath = TGMTbridge::SystemStr2stdStr(filePath);
 	return IsVideo(sFilePath);
 }
 
@@ -738,8 +785,8 @@ void TGMTfile::WriteAllText(System::String^ fileName, System::String^ text)
 
 void TGMTfile::WriteAllText(std::string fileName, std::string text)
 {
-	System::String^ sfileName = TGMT::TGMTbridge::stdStrToSystemStr(fileName);
-	System::String^ stext = TGMT::TGMTbridge::stdStrToSystemStr(text);
+	System::String^ sfileName = TGMTbridge::stdStrToSystemStr(fileName);
+	System::String^ stext = TGMTbridge::stdStrToSystemStr(text);
 
 	WriteAllText(sfileName, stext);
 }

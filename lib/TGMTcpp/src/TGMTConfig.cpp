@@ -27,12 +27,13 @@ bool TGMTConfig::LoadConfig(std::string settingFile)
 {
 	if (settingFile.substr(1, 1) != ":")
 	{
-		settingFile = TGMTfile::GetCurrentDir() + "\\" + settingFile;
+		settingFile = TGMTfile::GetCurrentDir().string() + "\\" + settingFile;
 	}
 	if (!TGMTfile::FileExist(settingFile))
 	{
 		WriteLog("TGMTconfig: missing settingFile %s", settingFile.c_str());
-		ASSERT(false, "Missing config file: %s ", settingFile.c_str());
+		return false;
+		//ASSERT(false, "Missing config file: %s ", settingFile.c_str());
 	}
 	m_iniFile = settingFile;
 	return m_reader.LoadSetting(settingFile);
@@ -42,7 +43,7 @@ bool TGMTConfig::LoadConfig(std::string settingFile)
 
 #if (defined(WIN32) || defined(WIN64)) && defined( UNICODE)
 
-std::wstring TGMTConfig::ReadValueWString(std::string section, std::string key, std::wstring defaultValue)
+std::wstring TGMTConfig::ReadWString(std::string section, std::string key, std::wstring defaultValue)
 {	
 	std::wstring result = defaultValue;
 	wchar_t retStr[1024] = { 0 };
@@ -61,37 +62,44 @@ std::wstring TGMTConfig::ReadValueWString(std::string section, std::string key, 
 
 //////////////////////////////////////////////////////////////////////////////////////////////////
 
-std::string TGMTConfig::ReadValueString(std::string section, std::string key, std::string defaultValue)
+//std::string TGMTConfig::ReadString(std::string section, std::string key, std::string defaultValue)
+//{
+//	return m_reader.ReadString(section, key, defaultValue);
+//}
+
+//////////////////////////////////////////////////////////////////////////////////////////////////
+
+std::wstring TGMTConfig::ReadWstring(std::string section, std::string key, std::wstring defaultValue)
 {
-	return m_reader.ReadValueString(section, key, defaultValue);
+	return m_reader.ReadWstring(section, key, defaultValue);
 }
 
 //////////////////////////////////////////////////////////////////////////////////////////////////
 
-int TGMTConfig::ReadValueInt(std::string section, std::string key, int defaultValue)
+int TGMTConfig::ReadInt(std::string section, std::string key, int defaultValue)
 {
-	return m_reader.ReadValueInt(section, key, defaultValue);
+	return m_reader.ReadInt(section, key, defaultValue);
 }
 
 //////////////////////////////////////////////////////////////////////////////////////////////////
 
-bool TGMTConfig::ReadValueBool(std::string section, std::string key, bool defaultValue)
+bool TGMTConfig::ReadBool(std::string section, std::string key, bool defaultValue)
 {
-	return m_reader.ReadValueBool(section, key, defaultValue);
+	return m_reader.ReadBool(section, key, defaultValue);
 }
 
 //////////////////////////////////////////////////////////////////////////////////////////////////
 
-double TGMTConfig::ReadValueDouble(std::string section, std::string key, double defaultValue)
+double TGMTConfig::ReadDouble(std::string section, std::string key, double defaultValue)
 {
-	return m_reader.ReadValueDouble(section, key, defaultValue);
+	return m_reader.ReadDouble(section, key, defaultValue);
 }
 
 //////////////////////////////////////////////////////////////////////////////////////////////////
 
 #if defined(WIN32) || defined(WIN64)
 
-void TGMTConfig::WriteConfigString(std::string section, std::string key, std::string value)
+void TGMTConfig::WriteString(std::string section, std::string key, std::string value)
 {
 #ifdef UNICODE
 	std::wstring strValue = TGMTutil::String2WString(value);
@@ -103,18 +111,14 @@ void TGMTConfig::WriteConfigString(std::string section, std::string key, std::st
 
 //////////////////////////////////////////////////////////////////////////////////////////////////
 
-#ifdef UNICODE
-
-void TGMTConfig::WriteConfigWString(std::string section, std::string key, std::wstring value)
+void TGMTConfig::WriteWstring(std::string section, std::string key, std::wstring value)
 {
-	WritePrivateProfileString((TGMTSTR)section.c_str(), (TGMTSTR)key.c_str(), value.c_str(), (TGMTSTR)m_iniFile.c_str());
+	WritePrivateProfileStringW((LPCWSTR)TGMTutil::String2WString(section).c_str(), (LPCWSTR)TGMTutil::String2WString(key).c_str(), value.c_str(), (LPCWSTR)TGMTutil::String2WString(m_iniFile).c_str());
 }
-
-#endif
 
 //////////////////////////////////////////////////////////////////////////////////////////////////
 
-void TGMTConfig::WriteConfigInt(std::string section, std::string key, int value)
+void TGMTConfig::WriteInt(std::string section, std::string key, int value)
 {
 #ifdef UNICODE
 	std::wstringstream ss;
@@ -127,7 +131,7 @@ void TGMTConfig::WriteConfigInt(std::string section, std::string key, int value)
 
 //////////////////////////////////////////////////////////////////////////////////////////////////
 
-void TGMTConfig::WriteConfigDouble(std::string section, std::string key, double value)
+void TGMTConfig::WriteDouble(std::string section, std::string key, double value)
 {
 #ifdef UNICODE
 	std::wstringstream ss;
@@ -140,7 +144,7 @@ void TGMTConfig::WriteConfigDouble(std::string section, std::string key, double 
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////
 
-void TGMTConfig::WriteConfigBool(std::string section, std::string key, bool value)
+void TGMTConfig::WriteBool(std::string section, std::string key, bool value)
 {
 #ifdef UNICODE
 	WritePrivateProfileString((TGMTSTR)section.c_str(), (TGMTSTR)key.c_str(), value ? L"true" : L"false", (TGMTSTR)m_iniFile.c_str());
@@ -194,12 +198,11 @@ typedef int(*ini_handler)(void* user, char* section,
 	char* name, char* value,
 	int lineno);
 #else
-typedef int(*ini_handler)(void* user, char* section, char* name, char* value);
+typedef int(*ini_handler)(void* user, wchar_t* section, wchar_t* name, wchar_t* value);
 #endif
 
 /* Typedef for prototype of fgets-style reader function. */
-typedef char* (*ini_reader)(char* str, int num, void* stream);
-
+typedef wchar_t* (*ini_reader)(wchar_t* str, int num, void* stream);
 /* Parse given INI-style file. May have [section]s, name=value pairs
 (whitespace stripped), and comments starting with ';' (semicolon). Section
 is "" if name=value pair parsed before any section heading. name:value
@@ -278,7 +281,7 @@ bool TGMTConfig::INIReader::LoadSetting(std::string settingFile)
 	return 0 == ini_parse((char*)settingFile.c_str(), ValueHandler, this);
 }
 
-std::string TGMTConfig::INIReader::ReadValueString(std::string section, std::string key, std::string default_value)
+std::string TGMTConfig::INIReader::ReadString(std::string section, std::string key, std::string default_value)
 {
 	std::string keyname = MakeKey(section, key);
 	// Use _values.find() here instead of _values.at() to support pre C++11 compilers
@@ -286,7 +289,7 @@ std::string TGMTConfig::INIReader::ReadValueString(std::string section, std::str
 	std::string result = default_value;
 	if (m_values.count(keyname) && !m_values.find(keyname)->second.empty())
 	{
-		result = m_values.find(keyname)->second;
+		result = TGMTutil::WString2String(m_values.find(keyname)->second);
 		m_lastReadSuccess = true;
 	}
 	else
@@ -295,7 +298,7 @@ std::string TGMTConfig::INIReader::ReadValueString(std::string section, std::str
 
 		if (m_writeDefaultValueIfNotExist)
 		{
-			GetTGMTConfig()->WriteConfigString(section, key, default_value);
+			GetTGMTConfig()->WriteString(section, key, default_value);
 		}
 		
 #ifdef DEBUG
@@ -305,9 +308,36 @@ std::string TGMTConfig::INIReader::ReadValueString(std::string section, std::str
 	return result;
 }
 
-int TGMTConfig::INIReader::ReadValueInt(std::string section, std::string name, int default_value)
+std::wstring TGMTConfig::INIReader::ReadWstring(std::string section, std::string key, std::wstring default_value)
 {
-	std::string valstr = ReadValueString(section, name, TGMTutil::FormatString("%d", default_value));
+	std::string keyname = MakeKey(section, key);
+	// Use _values.find() here instead of _values.at() to support pre C++11 compilers
+
+	std::wstring result = default_value;
+	if (m_values.count(keyname) && !m_values.find(keyname)->second.empty())
+	{
+		result = std::wstring(m_values.find(keyname)->second.begin(), m_values.find(keyname)->second.end());
+		m_lastReadSuccess = true;
+	}
+	else
+	{
+		m_lastReadSuccess = false;
+
+		if (m_writeDefaultValueIfNotExist)
+		{
+			GetTGMTConfig()->WriteWstring(section, key, default_value);
+		}
+
+#ifdef DEBUG
+		PrintMessageYellow("Missing config key: [%s] %s", section.c_str(), key.c_str());
+#endif
+	}
+	return result;
+}
+
+int TGMTConfig::INIReader::ReadInt(std::string section, std::string name, int default_value)
+{
+	std::string valstr = ReadString(section, name, TGMTutil::FormatString("%d", default_value));
 	char* value = (char*)valstr.c_str();
 	char* end;
 	// This parses "1234" (decimal) and also "0x4D2" (hex)
@@ -315,18 +345,18 @@ int TGMTConfig::INIReader::ReadValueInt(std::string section, std::string name, i
 	return end > value ? n : default_value;
 }
 
-double TGMTConfig::INIReader::ReadValueDouble(std::string section, std::string name, double default_value)
+double TGMTConfig::INIReader::ReadDouble(std::string section, std::string name, double default_value)
 {
-	std::string valstr = ReadValueString(section, name, "");
+	std::string valstr = ReadString(section, name, "");
 	char* value = (char*)valstr.c_str();
 	char* end;
 	double n = strtod(value, &end);
 	return end > value ? n : default_value;
 }
 
-bool TGMTConfig::INIReader::ReadValueBool(std::string section, std::string name, bool default_value)
+bool TGMTConfig::INIReader::ReadBool(std::string section, std::string name, bool default_value)
 {
-	std::string valstr = ReadValueString(section, name, "");
+	std::string valstr = ReadString(section, name, "");
 	// Convert to lower case to make string comparisons case-insensitive
 	std::transform(valstr.begin(), valstr.end(), valstr.begin(), ::tolower);
 	if (valstr == "true" || valstr == "yes" || valstr == "on" || valstr == "1")
@@ -345,13 +375,13 @@ std::string TGMTConfig::INIReader::MakeKey(std::string section, std::string name
 	return key;
 }
 
-int TGMTConfig::INIReader::ValueHandler(void* user, char* section, char* name, char* value)
+int TGMTConfig::INIReader::ValueHandler(void* user, wchar_t* section, wchar_t* name, wchar_t* value)
 {
 	INIReader* reader = (INIReader*)user;
-	std::string key = MakeKey(section, name);
+	std::string key = MakeKey(TGMTutil::WString2String(section), TGMTutil::WString2String(name));
 	if (reader->m_values[key].size() > 0)
-		reader->m_values[key] += "\n";
-	reader->m_values[key] += value;
+		reader->m_values[key] += L"\n";
+	reader->m_values[key] += std::wstring(value, value + wcslen(value));
 	return 1;
 }
 
@@ -380,6 +410,14 @@ static char* rstrip(char* s)
 	return s;
 }
 
+static wchar_t* rstrip(wchar_t* s)
+{
+	wchar_t* p = s + wcslen(s);
+	while (p > s && iswspace(*--p))
+		*p = L'\0';
+	return s;
+}
+
 /* Return pointer to first non-whitespace char in given string. */
 static char* lskip(char* s)
 {
@@ -388,10 +426,17 @@ static char* lskip(char* s)
 	return (char*)s;
 }
 
+static wchar_t* lskip(wchar_t* s)
+{
+	while (*s && iswspace(*s))
+		s++;
+	return (wchar_t*)s;
+}
+
 /* Return pointer to first char (of chars) or inline comment in given string,
 or pointer to null at end of string if neither found. Inline comment must
 be prefixed by a whitespace character to register as a comment. */
-static char* find_chars_or_comment(char* s, char* chars)
+static wchar_t* find_chars_or_comment(wchar_t* s, char* chars)
 {
 #if INI_ALLOW_INLINE_COMMENTS
 	int was_space = 0;
@@ -405,14 +450,14 @@ static char* find_chars_or_comment(char* s, char* chars)
 		s++;
 	}
 #endif
-	return (char*)s;
+	return (wchar_t*)s;
 }
 
 /* Version of strncpy that ensures dest (size bytes) is null-terminated. */
-static char* strncpy0(char* dest, char* src, size_t size)
+static wchar_t* strncpy0(wchar_t* dest, wchar_t* src, size_t size)
 {
-	strncpy(dest, src, size);
-	dest[size - 1] = '\0';
+	wcsncpy(dest, src, size);
+	dest[size - 1] = L'\0';
 	return dest;
 }
 
@@ -421,17 +466,17 @@ int ini_parse_stream(ini_reader reader, void* stream, ini_handler handler, void*
 {
 	/* Uses a fair bit of stack (use heap instead if you need to) */
 #if INI_USE_STACK
-	char line[INI_MAX_LINE];
+	wchar_t line[INI_MAX_LINE];
 #else
-	char* line;
+	wchar_t* line;
 #endif
-	char section[MAX_SECTION] = "";
-	char prev_name[MAX_NAME] = "";
+	wchar_t section[MAX_SECTION] = L"";
+	wchar_t prev_name[MAX_NAME] = L"";
 
-	char* start;
-	char* end;
-	char* name;
-	char* value;
+	wchar_t* start;
+	wchar_t* end;
+	wchar_t* name;
+	wchar_t* value;
 	int lineno = 0;
 	int error = 0;
 

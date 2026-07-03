@@ -8,7 +8,7 @@
 #include <time.h>
 #endif
 #include "TGMTutil.h"
-#include "TGMTConfig.h"
+
 
 TGMTvideo* TGMTvideo::instance = NULL;
 
@@ -29,7 +29,9 @@ TGMTvideo::~TGMTvideo()
 bool TGMTvideo::LoadVideoFile(std::string videoFilePath)
 {
 
-	ASSERT(TGMTfile::FileExist(videoFilePath), "File %s does not exist", videoFilePath.c_str());
+	if (!TGMTfile::FileExist(videoFilePath))
+		return false;
+
 #ifdef WIN32
 #if defined(OPENCV_320)
 	ASSERT(TGMTfile::FileExist(TGMTfile::GetCurrentDir() + "\\opencv_ffmpeg320.dll"), "File opencv_ffmpeg320.dll not found");
@@ -62,14 +64,19 @@ void TGMTvideo::PlayVideo()
 
 void TGMTvideo::PlayVideo(std::string videoFilePath, cv::Size maxSize, int fps, int startIndex, int total)
 {
-	ASSERT(OnNewFrame, "You must set callback function before use this function");
+	if (!OnNewFrame)
+		return;
 	
 	if (!LoadVideoFile(videoFilePath))
 		return;
 	m_stopVideo = false;
 
 	uint amount = mCap.get(cv::CAP_PROP_FRAME_COUNT);
-	ASSERT(startIndex >= 0 && startIndex < amount, "start index (%d) must less than amount frame (%d)", startIndex, amount);
+	if (startIndex < 0 || startIndex >= amount)
+	{
+		PrintError("start index (%d) must be less than amount frame (%d)", startIndex, amount);
+		return;
+	}
 
 	if (startIndex != 0 && startIndex > 0 && startIndex < amount)
 	{
@@ -134,7 +141,7 @@ void SaveFrame(cv::Mat frame)
 
 void TGMTvideo::ExtractFrame(std::string videoFilePath, std::string outputDir, cv::Size outputSize, int startIndex, int total)
 {
-	PrintMessage("Total frame: %d", GetAmountFrame(videoFilePath));
+	PrintMessage("Total frame: %d", CountTotalFrame(videoFilePath));
 	OnNewFrame = SaveFrame;
 	m_outDir = outputDir;	
 	TGMTfile::CreateDir(outputDir);	
@@ -146,7 +153,11 @@ void TGMTvideo::ExtractFrame(std::string videoFilePath, std::string outputDir, c
 cv::Mat TGMTvideo::GetFrameAt(std::string videoFilePath, int frameIndex)
 {
 	//in function GetAmountFrame() has loaded video
-	ASSERT(0 < frameIndex && frameIndex < GetAmountFrame(videoFilePath), "Frame index is invalid: %d", frameIndex);
+	if (frameIndex <= 0 || frameIndex >= CountTotalFrame(videoFilePath))
+	{
+		PrintError("Frame index is invalid: %d", frameIndex);
+		return cv::Mat();
+	}
 
 	mCap.set(cv::CAP_PROP_POS_FRAMES, frameIndex);
 	cv::Mat frame;
@@ -156,12 +167,18 @@ cv::Mat TGMTvideo::GetFrameAt(std::string videoFilePath, int frameIndex)
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-int TGMTvideo::GetAmountFrame(std::string videoFilePath)
+int TGMTvideo::CountTotalFrame(std::string videoFilePath)
 {
-	if (!LoadVideoFile(videoFilePath))
-		return -1;
+	cv::VideoCapture cap = cv::VideoCapture(videoFilePath);
+	if (!cap.isOpened())
+	{
+		PrintError("Can not load video %s", videoFilePath.c_str());
 
-	int amountOfFrame = mCap.get(cv::CAP_PROP_FRAME_COUNT);
+		return -1;
+	}
+
+
+	int amountOfFrame = cap.get(cv::CAP_PROP_FRAME_COUNT);
 	return amountOfFrame;
 }
 
@@ -172,16 +189,16 @@ bool TGMTvideo::LoadConfig()
 	PrintMessage("Loading video in config.ini");
 	m_loadConfigSuccess = false;
 
-	//read config
-	m_videoPath = GetTGMTConfig()->ReadValueString("TGMTvideo", "video");
-	ASSERT(!m_videoPath.empty(), "Video path is empty");
+	////read config
+	//m_videoPath = GetTGMTConfig()->ReadString("TGMTvideo", "video");
+	//ASSERT(!m_videoPath.empty(), "Video path is empty");
 
-	
-	m_inputWidth = GetTGMTConfig()->ReadValueInt("TGMTvideo", "input_width");
-	m_inputHeight = GetTGMTConfig()->ReadValueInt("TGMTvideo", "input_height");
+	//
+	//m_inputWidth = GetTGMTConfig()->ReadInt("TGMTvideo", "input_width");
+	//m_inputHeight = GetTGMTConfig()->ReadInt("TGMTvideo", "input_height");
 
-	m_startIndex = GetTGMTConfig()->ReadValueInt("TGMTvideo", "start_video_at_frame");
-	m_playTotalFrame = GetTGMTConfig()->ReadValueInt("TGMTvideo", "play_total_frame");
+	//m_startIndex = GetTGMTConfig()->ReadInt("TGMTvideo", "start_video_at_frame");
+	//m_playTotalFrame = GetTGMTConfig()->ReadInt("TGMTvideo", "play_total_frame");
 
 	return true;
 }

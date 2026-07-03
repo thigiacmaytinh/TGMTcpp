@@ -19,9 +19,13 @@ void TGMTblob::Demo(std::string imgPath)
 {
 	cv::Mat matInput = cv::imread(imgPath);
 	cv::Mat matBinary = TGMTimage::ConvertToGray(matInput);
-	
+#if CV_MAJOR_VERSION == 4
+	cv::adaptiveThreshold(matBinary, matBinary, 255, 
+		cv::AdaptiveThresholdTypes::ADAPTIVE_THRESH_GAUSSIAN_C, 
+		cv::ThresholdTypes::THRESH_BINARY_INV, 21, 0);
+#else
 	cv::adaptiveThreshold(matBinary, matBinary, 255, CV_ADAPTIVE_THRESH_GAUSSIAN_C, CV_THRESH_BINARY_INV, 21, 0);
-
+#endif
 	//cv::threshold(matBinary, matBinary, 100, 255, CV_THRESH_BINARY);
 
 
@@ -40,8 +44,11 @@ void TGMTblob::Demo(std::string imgPath)
 
 std::vector<TGMTblob::Blob> TGMTblob::FindBlobs(const cv::Mat &matBinary, cv::Size minSize, cv::Size maxSize)
 {
-	ASSERT(matBinary.channels() == 1, "Image is not binary");
-
+	if (matBinary.channels() != 1)
+	{
+		PrintError("Image is not binary");
+		return std::vector<Blob>();
+	}
 
 	std::vector<Blob> blobs;
 
@@ -100,7 +107,11 @@ std::vector<TGMTblob::Blob> TGMTblob::FindBlobs(const cv::Mat &matBinary, cv::Si
 
 void TGMTblob::DrawBlobs(cv::Mat& mat, std::vector<Blob> blobs, cv::Point startPoint, cv::Scalar color)
 {
-	ASSERT(mat.data, "Image input is null");
+	if (!mat.data)
+	{
+		PrintError("Image input is null");
+		return;
+	}
 
 	// Randomy color the blobs
 	for (size_t i = 0; i < blobs.size(); i++)
@@ -124,7 +135,11 @@ void TGMTblob::DrawBlobs(cv::Mat& mat, std::vector<Blob> blobs, cv::Point startP
 
 void TGMTblob::DrawBlob(cv::Mat& mat, Blob blob, cv::Point startPoint, cv::Scalar color)
 {
-	ASSERT(mat.data, "Image input is null");
+	if (!mat.data)
+	{
+		PrintError("Image input is null");
+		return;
+	}
 
 	cv::Scalar clr = color == UNDEFINED_COLOR ? TGMTcolor::GetRandomColor() : color;
 
@@ -238,6 +253,25 @@ TGMTblob::Blob TGMTblob::GetBlobBoundary(cv::Mat matInput, TGMTblob::Blob blob)
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
+cv::Rect TGMTblob::GetBoundingBlobs(std::vector<TGMTblob::Blob> blobs)
+{
+	cv::Rect rect;
+	
+	for (int i = 0; i < blobs.size(); i++)
+	{		
+		cv::Rect bounding = blobs[i].boundingRect;
+		if (rect.x == 0 || bounding.x < rect.x) rect.x = bounding.x;
+		if (rect.y == 0 || bounding.y < rect.y) rect.y = bounding.y;
+
+		if (bounding.br().x > rect.br().x) { rect.width = bounding.br().x - rect.x; }
+		if (bounding.br().y > rect.br().y) { rect.height = bounding.br().y - rect.y; }
+	}
+
+	return rect;
+}
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
 cv::Point2f TGMTblob::GetCenterPoint(Blob blob)
 {
 	cv::Moments oMoments = cv::moments(blob.ToBinaryMat());
@@ -311,7 +345,7 @@ TGMTblob::Blob TGMTblob::Rotate(TGMTblob::Blob blob, int angle)
 {
 	cv::Mat matBlob = blob.ToBinaryMat();
 	cv::Mat matRotate = TGMTtransform::Rotate(matBlob, angle);
-	cv::threshold(matRotate, matRotate, 0, 255, CV_THRESH_BINARY);
+	cv::threshold(matRotate, matRotate, 0, 255, cv::ThresholdTypes::THRESH_BINARY);
 
 	//DEBUG_IMAGE(matRotate, "mat blob");
 	//cv::waitKey();
@@ -342,4 +376,17 @@ TGMTblob::Blob TGMTblob::Rotate(TGMTblob::Blob blob, int angle)
 	blob.boundingRect.width = maxX - minX + 1;
 	blob.boundingRect.height = maxY - minY + 1;
 	return blob;
+}
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+void TGMTblob::SaveBlob(Blob blob, cv::Scalar color, const char* fmt, ...)
+{
+	va_list arg_list;
+	char str[DEBUG_OUT_BUFFER_SIZE];
+	va_start(arg_list, fmt);
+	vsnprintf(str, DEBUG_OUT_BUFFER_SIZE - 1, fmt, arg_list);
+
+	cv::Mat mat = DrawBlobAndTrim(blob, color);
+	cv::imwrite(str, mat);
 }

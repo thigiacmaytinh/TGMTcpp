@@ -3,6 +3,7 @@
 
 #ifdef HAVE_LIBRAW
 #include "libraw.h"
+#include <filesystem> // for checking file extension
 namespace fs = std::filesystem;
 
 static const std::vector<std::wstring> RAW_EXTENSIONS = {
@@ -250,7 +251,7 @@ cv::Mat TGMTimage::imread(std::filesystem::path path, int flags)
 {
 #ifdef HAVE_LIBRAW
 	if (isRawImage(path))
-		return imreadRaw(path);
+		return imreadRaw(path.wstring());
 #endif // HAVE_LIBRAW
 
 	// mở file unicode
@@ -367,7 +368,7 @@ cv::Mat TGMTimage::imreadRaw(std::wstring path)
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////
 
-bool TGMTimage::isRawImage(std::filesystem::path path)
+bool TGMTimage::isRawImage(std::wstring path)
 {
 	std::wstring ext = fs::path(path).extension().wstring();
 	std::transform(ext.begin(), ext.end(), ext.begin(), ::towlower);
