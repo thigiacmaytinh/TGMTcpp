@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="mathfuncs_core.avx2.cpp" />
+    <ClCompile Include="stat.avx2.cpp" />
+    <ClCompile Include="arithm.avx2.cpp" />
+    <ClCompile Include="convert.avx2.cpp" />
+    <ClCompile Include="convert_scale.avx2.cpp" />
+    <ClCompile Include="count_non_zero.avx2.cpp" />
+    <ClCompile Include="has_non_zero.avx2.cpp" />
+    <ClCompile Include="matmul.avx2.cpp" />
+    <ClCompile Include="mean.avx2.cpp" />
+    <ClCompile Include="merge.avx2.cpp" />
+    <ClCompile Include="split.avx2.cpp" />
+    <ClCompile Include="sum.avx2.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{B424FE76-8A02-34EF-85BB-75F86BE76CE0}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

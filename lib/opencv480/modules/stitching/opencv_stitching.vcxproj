@@ -1,0 +1,266 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{3881D659-B347-31FA-A273-592289C2DB71}</ProjectGuid>
+    <WindowsTargetPlatformVersion>10.0.17763.0</WindowsTargetPlatformVersion>
+    <Keyword>Win32Proj</Keyword>
+    <Platform>x64</Platform>
+    <ProjectName>opencv_stitching</ProjectName>
+    <VCProjectUpgraderObjectName>NoUpgrade</VCProjectUpgraderObjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">..\lib\$(Configuration)-x64\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">obj\$(Configuration)-x64\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">opencv_stitching480d</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.lib</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</GenerateManifest>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">..\lib\$(Configuration)-x64\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">obj\$(Configuration)-x64\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">opencv_stitching480</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.lib</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</GenerateManifest>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>src;include;$(ProjectDir);..\..\modules\core\include;..\..\modules\flann\include;..\..\modules\imgproc\include;..\..\modules\ml\include;..\..\modules\features2d\include;..\..\modules\calib3d\include;..\..\contrib\\shape\include;..\..\contrib\\xfeatures2d\include;$(SolutionDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /bigobj</AdditionalOptions>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <DisableSpecificWarnings>4127;4251;4324;4275;4512;4589;4819</DisableSpecificWarnings>
+      <ExceptionHandling>Async</ExceptionHandling>
+      <FloatingPointModel>Precise</FloatingPointModel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <InlineFunctionExpansion>Disabled</InlineFunctionExpansion>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <Optimization>Disabled</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <PrecompiledHeaderFile>
+      </PrecompiledHeaderFile>
+      <PrecompiledHeaderOutputFile>
+      </PrecompiledHeaderOutputFile>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level4</WarningLevel>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;_SCL_SECURE_NO_WARNINGS;_VARIADIC_MAX=10;_WIN32_WINNT=0x0601;_USE_MATH_DEFINES;__STDC_CONSTANT_MACROS;__STDC_LIMIT_MACROS;__STDC_FORMAT_MACROS;__OPENCV_BUILD=1;CMAKE_INTDIR="Debug";CVAPI_EXPORTS</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <ProgramDataBaseFileName>$(OutDir)\$(TargetName).pdb</ProgramDataBaseFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_DEBUG;_WINDOWS;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;_SCL_SECURE_NO_WARNINGS;_VARIADIC_MAX=10;_WIN32_WINNT=0x0601;_USE_MATH_DEFINES;__STDC_CONSTANT_MACROS;__STDC_LIMIT_MACROS;__STDC_FORMAT_MACROS;__OPENCV_BUILD=1;CMAKE_INTDIR=\"Debug\";CVAPI_EXPORTS</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>src;include;D:\LIB\opencv\opencv480\build\modules\stitching;..\..\modules\core\include;..\..\modules\flann\include;..\..\modules\imgproc\include;..\..\modules\ml\include;..\..\modules\features2d\include;..\..\modules\calib3d\include;..\..\contrib\\shape\include;..\..\contrib\\xfeatures2d\include;$(SolutionDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>src;include;D:\LIB\opencv\opencv480\build\modules\stitching;..\..\modules\core\include;..\..\modules\flann\include;..\..\modules\imgproc\include;..\..\modules\ml\include;..\..\modules\features2d\include;..\..\modules\calib3d\include;..\..\contrib\\shape\include;..\..\contrib\\xfeatures2d\include;$(SolutionDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalDependencies>..\..\lib\Debug-x64\opencv_xfeatures2d480d.lib;..\..\lib\Debug-x64\opencv_ml480d.lib;..\..\lib\Debug-x64\opencv_shape480d.lib;..\..\lib\Debug-x64\opencv_calib3d480d.lib;..\..\lib\Debug-x64\opencv_features2d480d.lib;..\..\lib\Debug-x64\opencv_flann480d.lib;..\..\lib\Debug-x64\opencv_imgproc480d.lib;..\..\lib\Debug-x64\opencv_core480d.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>libc;%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>D:/LIB/opencv/opencv480/build/lib/Debug/opencv_stitching480d.lib</ImportLibrary>
+      <ProgramDataBaseFile>D:/LIB/opencv/opencv480/build/bin/Debug/opencv_stitching480d.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>src;include;$(ProjectDir);..\..\modules\core\include;..\..\modules\flann\include;..\..\modules\imgproc\include;..\..\modules\ml\include;..\..\modules\features2d\include;..\..\modules\calib3d\include;..\..\contrib\\shape\include;..\..\contrib\\xfeatures2d\include;$(SolutionDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /bigobj</AdditionalOptions>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <DisableSpecificWarnings>4127;4251;4324;4275;4512;4589;4819</DisableSpecificWarnings>
+      <ExceptionHandling>Async</ExceptionHandling>
+      <FloatingPointModel>Precise</FloatingPointModel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <PrecompiledHeaderFile>
+      </PrecompiledHeaderFile>
+      <PrecompiledHeaderOutputFile>
+      </PrecompiledHeaderOutputFile>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level4</WarningLevel>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;_SCL_SECURE_NO_WARNINGS;NDEBUG;_VARIADIC_MAX=10;_WIN32_WINNT=0x0601;_USE_MATH_DEFINES;__STDC_CONSTANT_MACROS;__STDC_LIMIT_MACROS;__STDC_FORMAT_MACROS;__OPENCV_BUILD=1;CMAKE_INTDIR="Release";CVAPI_EXPORTS</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
+      <ProgramDataBaseFileName>$(OutDir)\$(TargetName).pdb</ProgramDataBaseFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;_SCL_SECURE_NO_WARNINGS;NDEBUG;_VARIADIC_MAX=10;_WIN32_WINNT=0x0601;_USE_MATH_DEFINES;__STDC_CONSTANT_MACROS;__STDC_LIMIT_MACROS;__STDC_FORMAT_MACROS;__OPENCV_BUILD=1;CMAKE_INTDIR=\"Release\";CVAPI_EXPORTS</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>src;include;D:\LIB\opencv\opencv480\build\modules\stitching;..\..\modules\core\include;..\..\modules\flann\include;..\..\modules\imgproc\include;..\..\modules\ml\include;..\..\modules\features2d\include;..\..\modules\calib3d\include;..\..\contrib\\shape\include;..\..\contrib\\xfeatures2d\include;$(SolutionDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>src;include;D:\LIB\opencv\opencv480\build\modules\stitching;..\..\modules\core\include;..\..\modules\flann\include;..\..\modules\imgproc\include;..\..\modules\ml\include;..\..\modules\features2d\include;..\..\modules\calib3d\include;..\..\contrib\\shape\include;..\..\contrib\\xfeatures2d\include;$(SolutionDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalDependencies>..\..\lib\Release-x64\opencv_xfeatures2d480.lib;..\..\lib\Release-x64\opencv_ml480.lib;..\..\lib\Release-x64\opencv_shape480.lib;..\..\lib\Release-x64\opencv_calib3d480.lib;..\..\lib\Release-x64\opencv_features2d480.lib;..\..\lib\Release-x64\opencv_flann480.lib;..\..\lib\Release-x64\opencv_imgproc480.lib;..\..\lib\Release-x64\opencv_core480.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>libc;%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>D:/LIB/opencv/opencv480/build/lib/Release/opencv_stitching480.lib</ImportLibrary>
+      <ProgramDataBaseFile>D:/LIB/opencv/opencv480/build/bin/Release/opencv_stitching480.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+  </ItemGroup>
+  <ItemGroup>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="include\opencv2\stitching.hpp" />
+    <ClInclude Include="include\opencv2\stitching\detail\autocalib.hpp" />
+    <ClInclude Include="include\opencv2\stitching\detail\blenders.hpp" />
+    <ClInclude Include="include\opencv2\stitching\detail\camera.hpp" />
+    <ClInclude Include="include\opencv2\stitching\detail\exposure_compensate.hpp" />
+    <ClInclude Include="include\opencv2\stitching\detail\matchers.hpp" />
+    <ClInclude Include="include\opencv2\stitching\detail\motion_estimators.hpp" />
+    <ClInclude Include="include\opencv2\stitching\detail\seam_finders.hpp" />
+    <ClInclude Include="include\opencv2\stitching\detail\timelapsers.hpp" />
+    <ClInclude Include="include\opencv2\stitching\detail\util.hpp" />
+    <ClInclude Include="include\opencv2\stitching\detail\util_inl.hpp" />
+    <ClInclude Include="include\opencv2\stitching\detail\warpers.hpp" />
+    <ClInclude Include="include\opencv2\stitching\detail\warpers_inl.hpp" />
+    <ClInclude Include="include\opencv2\stitching\warpers.hpp" />
+    <ClCompile Include="src\autocalib.cpp">
+    </ClCompile>
+    <ClCompile Include="src\blenders.cpp">
+    </ClCompile>
+    <ClCompile Include="src\camera.cpp">
+    </ClCompile>
+    <ClCompile Include="src\exposure_compensate.cpp">
+    </ClCompile>
+    <ClCompile Include="src\matchers.cpp">
+    </ClCompile>
+    <ClCompile Include="src\motion_estimators.cpp">
+    </ClCompile>
+    <ClCompile Include="src\seam_finders.cpp">
+    </ClCompile>
+    <ClCompile Include="src\stitcher.cpp">
+    </ClCompile>
+    <ClCompile Include="src\timelapsers.cpp">
+    </ClCompile>
+    <ClCompile Include="src\util.cpp">
+    </ClCompile>
+    <ClCompile Include="src\warpers.cpp">
+    </ClCompile>
+    <ClCompile Include="src\warpers_cuda.cpp">
+    </ClCompile>
+    <None Include="src\opencl\multibandblend.cl">
+    </None>
+    <None Include="src\opencl\warpers.cl">
+    </None>
+    <ClCompile Include="opencl_kernels_stitching.cpp">
+    </ClCompile>
+    <ClInclude Include="opencl_kernels_stitching.hpp" />
+    <ClInclude Include="src\precomp.hpp" />
+    <ClInclude Include="src\util_log.hpp" />
+    <ClInclude Include="D:\LIB\opencv\opencv480\build\cvconfig.h" />
+    <ClInclude Include="D:\LIB\opencv\opencv480\build\opencv2\opencv_modules.hpp" />
+    <ResourceCompile Include="vs_version.rc">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
+    </ResourceCompile>
+    <ClCompile Include="opencv_stitching_main.cpp">
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="D:\LIB\opencv\opencv480\build\ZERO_CHECK.vcxproj">
+      <Project>{A2B6B0A1-0116-3B54-BA2A-2EB40583D0C0}</Project>
+      <Name>ZERO_CHECK</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="D:\LIB\opencv\opencv480\build\modules\calib3d\opencv_calib3d.vcxproj">
+      <Project>{9F4C872A-07C5-34F4-97A1-A6FD09C48232}</Project>
+      <Name>opencv_calib3d</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\LIB\opencv\opencv480\build\modules\core\opencv_core.vcxproj">
+      <Project>{236D9F3A-4D25-3745-A439-0D17D29C4B19}</Project>
+      <Name>opencv_core</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\LIB\opencv\opencv480\build\modules\features2d\opencv_features2d.vcxproj">
+      <Project>{25F1F230-8722-3294-9A82-3F5D93073CA7}</Project>
+      <Name>opencv_features2d</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\LIB\opencv\opencv480\build\modules\flann\opencv_flann.vcxproj">
+      <Project>{0C24BCD0-4390-3055-A2F6-2C8A42C3BC58}</Project>
+      <Name>opencv_flann</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\LIB\opencv\opencv480\build\modules\imgproc\opencv_imgproc.vcxproj">
+      <Project>{AE105776-CAC0-304A-89A3-13174D730095}</Project>
+      <Name>opencv_imgproc</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\LIB\opencv\opencv480\build\modules\ml\opencv_ml.vcxproj">
+      <Project>{39C3E051-8DFF-3A8A-B56B-C768951D31C2}</Project>
+      <Name>opencv_ml</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\LIB\opencv\opencv480\build\modules\shape\opencv_shape.vcxproj">
+      <Project>{60659D09-FEA3-37CE-BC08-689D67984FA0}</Project>
+      <Name>opencv_shape</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\LIB\opencv\opencv480\build\modules\xfeatures2d\opencv_xfeatures2d.vcxproj">
+      <Project>{51A55CFC-30A7-325F-B415-57CC03CC1F26}</Project>
+      <Name>opencv_xfeatures2d</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

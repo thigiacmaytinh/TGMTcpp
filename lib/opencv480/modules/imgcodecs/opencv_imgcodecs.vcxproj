@@ -1,0 +1,275 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{0C89160B-F0FF-3B00-A234-9EC8877EDEFF}</ProjectGuid>
+    <WindowsTargetPlatformVersion>10.0.17763.0</WindowsTargetPlatformVersion>
+    <Keyword>Win32Proj</Keyword>
+    <Platform>x64</Platform>
+    <ProjectName>opencv_imgcodecs</ProjectName>
+    <VCProjectUpgraderObjectName>NoUpgrade</VCProjectUpgraderObjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">..\lib\$(Configuration)-x64\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">obj\$(Configuration)-x64\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">opencv_imgcodecs480d</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.lib</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</GenerateManifest>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">..\lib\$(Configuration)-x64\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">obj\$(Configuration)-x64\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">opencv_imgcodecs480</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.lib</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</GenerateManifest>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>..\..\3rdparty\zlib;..\..\3rdparty\openjpeg\openjp2;..\..\3rdparty\libtiff;..\..\3rdparty\libpng;..\..\3rdparty\libwebp\src;..\..\3rdparty\libjpeg-turbo;..\..\3rdparty\libjpeg-turbo\src;src;include;$(ProjectDir);..\..\modules\core\include;..\..\modules\imgproc\include;$(SolutionDir);..\..\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /bigobj</AdditionalOptions>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <DisableSpecificWarnings>4127;4251;4324;4275;4512;4589;4819</DisableSpecificWarnings>
+      <ExceptionHandling>Async</ExceptionHandling>
+      <FloatingPointModel>Precise</FloatingPointModel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <InlineFunctionExpansion>Disabled</InlineFunctionExpansion>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <Optimization>Disabled</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <PrecompiledHeaderFile>
+      </PrecompiledHeaderFile>
+      <PrecompiledHeaderOutputFile>
+      </PrecompiledHeaderOutputFile>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level4</WarningLevel>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;_SCL_SECURE_NO_WARNINGS;_VARIADIC_MAX=10;_WIN32_WINNT=0x0601;_USE_MATH_DEFINES;__STDC_CONSTANT_MACROS;__STDC_LIMIT_MACROS;__STDC_FORMAT_MACROS;HAVE_IMGCODEC_HDR;HAVE_IMGCODEC_SUNRASTER;HAVE_IMGCODEC_PXM;HAVE_IMGCODEC_PFM;__OPENCV_BUILD=1;OPJ_STATIC;CMAKE_INTDIR="Debug";CVAPI_EXPORTS;HAVE_WEBP</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <ProgramDataBaseFileName>$(OutDir)\$(TargetName).pdb</ProgramDataBaseFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_DEBUG;_WINDOWS;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;_SCL_SECURE_NO_WARNINGS;_VARIADIC_MAX=10;_WIN32_WINNT=0x0601;_USE_MATH_DEFINES;__STDC_CONSTANT_MACROS;__STDC_LIMIT_MACROS;__STDC_FORMAT_MACROS;HAVE_WEBP;HAVE_IMGCODEC_HDR;HAVE_IMGCODEC_SUNRASTER;HAVE_IMGCODEC_PXM;HAVE_IMGCODEC_PFM;__OPENCV_BUILD=1;OPJ_STATIC;CMAKE_INTDIR=\"Debug\";CVAPI_EXPORTS</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>D:\LIB\opencv\opencv480\build\3rdparty\zlib;..\..\3rdparty\zlib;..\..\3rdparty\openjpeg\openjp2;D:\LIB\opencv\opencv480\build\3rdparty\openjpeg\openjp2;D:\LIB\opencv\opencv480\build\3rdparty\libtiff;..\..\3rdparty\libtiff;..\..\3rdparty\libpng;..\..\3rdparty\libwebp\src;D:\LIB\opencv\opencv480\build\3rdparty\libjpeg-turbo;..\..\3rdparty\libjpeg-turbo\src;src;include;D:\LIB\opencv\opencv480\build\modules\imgcodecs;..\..\modules\core\include;..\..\modules\imgproc\include;$(SolutionDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>D:\LIB\opencv\opencv480\build\3rdparty\zlib;..\..\3rdparty\zlib;..\..\3rdparty\openjpeg\openjp2;D:\LIB\opencv\opencv480\build\3rdparty\openjpeg\openjp2;D:\LIB\opencv\opencv480\build\3rdparty\libtiff;..\..\3rdparty\libtiff;..\..\3rdparty\libpng;..\..\3rdparty\libwebp\src;D:\LIB\opencv\opencv480\build\3rdparty\libjpeg-turbo;..\..\3rdparty\libjpeg-turbo\src;src;include;D:\LIB\opencv\opencv480\build\modules\imgcodecs;..\..\modules\core\include;..\..\modules\imgproc\include;$(SolutionDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalDependencies>..\..\lib\Debug-x64\opencv_imgproc480d.lib;..\..\3rdparty\lib\Debug\libjpeg-turbod.lib;..\..\3rdparty\lib\Debug\libwebpd.lib;..\..\3rdparty\lib\Debug\libpngd.lib;..\..\3rdparty\lib\Debug\libtiffd.lib;..\..\3rdparty\lib\Debug\libopenjp2d.lib;..\..\3rdparty\lib\Debug\zlibd.lib;..\..\lib\Debug-x64\opencv_core480d.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>libc;%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>D:/LIB/opencv/opencv480/build/lib/Debug/opencv_imgcodecs480d.lib</ImportLibrary>
+      <ProgramDataBaseFile>D:/LIB/opencv/opencv480/build/bin/Debug/opencv_imgcodecs480d.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>..\..\3rdparty\zlib;..\..\3rdparty\openjpeg\openjp2;..\..\3rdparty\libtiff;..\..\3rdparty\libpng;..\..\3rdparty\libwebp\src;..\..\3rdparty\libjpeg-turbo;..\..\3rdparty\libjpeg-turbo\src;src;include;$(ProjectDir);..\..\modules\core\include;..\..\modules\imgproc\include;$(SolutionDir);..\..\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /bigobj</AdditionalOptions>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <DisableSpecificWarnings>4127;4251;4324;4275;4512;4589;4819</DisableSpecificWarnings>
+      <ExceptionHandling>Async</ExceptionHandling>
+      <FloatingPointModel>Precise</FloatingPointModel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <PrecompiledHeaderFile>
+      </PrecompiledHeaderFile>
+      <PrecompiledHeaderOutputFile>
+      </PrecompiledHeaderOutputFile>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level4</WarningLevel>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;_SCL_SECURE_NO_WARNINGS;NDEBUG;_VARIADIC_MAX=10;_WIN32_WINNT=0x0601;_USE_MATH_DEFINES;__STDC_CONSTANT_MACROS;__STDC_LIMIT_MACROS;__STDC_FORMAT_MACROS;HAVE_IMGCODEC_HDR;HAVE_IMGCODEC_SUNRASTER;HAVE_IMGCODEC_PXM;HAVE_IMGCODEC_PFM;__OPENCV_BUILD=1;OPJ_STATIC;CMAKE_INTDIR="Release";CVAPI_EXPORTS;HAVE_WEBP</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
+      <ProgramDataBaseFileName>$(OutDir)\$(TargetName).pdb</ProgramDataBaseFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;_SCL_SECURE_NO_WARNINGS;NDEBUG;_VARIADIC_MAX=10;_WIN32_WINNT=0x0601;_USE_MATH_DEFINES;__STDC_CONSTANT_MACROS;__STDC_LIMIT_MACROS;__STDC_FORMAT_MACROS;HAVE_WEBP;HAVE_IMGCODEC_HDR;HAVE_IMGCODEC_SUNRASTER;HAVE_IMGCODEC_PXM;HAVE_IMGCODEC_PFM;__OPENCV_BUILD=1;OPJ_STATIC;CMAKE_INTDIR=\"Release\";CVAPI_EXPORTS</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>D:\LIB\opencv\opencv480\build\3rdparty\zlib;..\..\3rdparty\zlib;..\..\3rdparty\openjpeg\openjp2;D:\LIB\opencv\opencv480\build\3rdparty\openjpeg\openjp2;D:\LIB\opencv\opencv480\build\3rdparty\libtiff;..\..\3rdparty\libtiff;..\..\3rdparty\libpng;..\..\3rdparty\libwebp\src;D:\LIB\opencv\opencv480\build\3rdparty\libjpeg-turbo;..\..\3rdparty\libjpeg-turbo\src;src;include;D:\LIB\opencv\opencv480\build\modules\imgcodecs;..\..\modules\core\include;..\..\modules\imgproc\include;$(SolutionDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>D:\LIB\opencv\opencv480\build\3rdparty\zlib;..\..\3rdparty\zlib;..\..\3rdparty\openjpeg\openjp2;D:\LIB\opencv\opencv480\build\3rdparty\openjpeg\openjp2;D:\LIB\opencv\opencv480\build\3rdparty\libtiff;..\..\3rdparty\libtiff;..\..\3rdparty\libpng;..\..\3rdparty\libwebp\src;D:\LIB\opencv\opencv480\build\3rdparty\libjpeg-turbo;..\..\3rdparty\libjpeg-turbo\src;src;include;D:\LIB\opencv\opencv480\build\modules\imgcodecs;..\..\modules\core\include;..\..\modules\imgproc\include;$(SolutionDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalDependencies>..\..\lib\Release-x64\opencv_imgproc480.lib;..\..\3rdparty\lib\Release\libjpeg-turbo.lib;..\..\3rdparty\lib\Release\libwebp.lib;..\..\3rdparty\lib\Release\libpng.lib;..\..\3rdparty\lib\Release\libtiff.lib;..\..\3rdparty\lib\Release\libopenjp2.lib;..\..\3rdparty\lib\Release\zlib.lib;..\..\lib\Release-x64\opencv_core480.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>libc;%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>D:/LIB/opencv/opencv480/build/lib/Release/opencv_imgcodecs480.lib</ImportLibrary>
+      <ProgramDataBaseFile>D:/LIB/opencv/opencv480/build/bin/Release/opencv_imgcodecs480.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="include\opencv2\imgcodecs.hpp" />
+    <ClInclude Include="include\opencv2\imgcodecs\imgcodecs.hpp" />
+    <ClInclude Include="include\opencv2\imgcodecs\imgcodecs_c.h" />
+    <ClInclude Include="include\opencv2\imgcodecs\ios.h" />
+    <ClInclude Include="include\opencv2\imgcodecs\legacy\constants_c.h" />
+    <ClInclude Include="include\opencv2\imgcodecs\macosx.h" />
+    <ClCompile Include="src\loadsave.cpp">
+    </ClCompile>
+    <ClCompile Include="src\utils.cpp">
+    </ClCompile>
+    <ClInclude Include="src\precomp.hpp" />
+    <ClInclude Include="src\utils.hpp" />
+    <ClCompile Include="src\grfmt_avif.cpp">
+    </ClCompile>
+    <ClCompile Include="src\grfmt_base.cpp">
+    </ClCompile>
+    <ClCompile Include="src\grfmt_bmp.cpp">
+    </ClCompile>
+    <ClCompile Include="src\grfmt_exr.cpp">
+    </ClCompile>
+    <ClCompile Include="src\grfmt_gdal.cpp">
+    </ClCompile>
+    <ClCompile Include="src\grfmt_gdcm.cpp">
+    </ClCompile>
+    <ClCompile Include="src\grfmt_hdr.cpp">
+    </ClCompile>
+    <ClCompile Include="src\grfmt_jpeg.cpp">
+    </ClCompile>
+    <ClCompile Include="src\grfmt_jpeg2000.cpp">
+    </ClCompile>
+    <ClCompile Include="src\grfmt_jpeg2000_openjpeg.cpp">
+    </ClCompile>
+    <ClCompile Include="src\grfmt_pam.cpp">
+    </ClCompile>
+    <ClCompile Include="src\grfmt_pfm.cpp">
+    </ClCompile>
+    <ClCompile Include="src\grfmt_png.cpp">
+    </ClCompile>
+    <ClCompile Include="src\grfmt_pxm.cpp">
+    </ClCompile>
+    <ClCompile Include="src\grfmt_spng.cpp">
+    </ClCompile>
+    <ClCompile Include="src\grfmt_sunras.cpp">
+    </ClCompile>
+    <ClCompile Include="src\grfmt_tiff.cpp">
+    </ClCompile>
+    <ClCompile Include="src\grfmt_webp.cpp">
+    </ClCompile>
+    <ClCompile Include="src\bitstrm.cpp">
+    </ClCompile>
+    <ClCompile Include="src\rgbe.cpp">
+    </ClCompile>
+    <ClCompile Include="src\exif.cpp">
+    </ClCompile>
+    <ClInclude Include="src\grfmt_avif.hpp" />
+    <ClInclude Include="src\grfmt_base.hpp" />
+    <ClInclude Include="src\grfmt_bmp.hpp" />
+    <ClInclude Include="src\grfmt_exr.hpp" />
+    <ClInclude Include="src\grfmt_gdal.hpp" />
+    <ClInclude Include="src\grfmt_gdcm.hpp" />
+    <ClInclude Include="src\grfmt_hdr.hpp" />
+    <ClInclude Include="src\grfmt_jpeg.hpp" />
+    <ClInclude Include="src\grfmt_jpeg2000.hpp" />
+    <ClInclude Include="src\grfmt_jpeg2000_openjpeg.hpp" />
+    <ClInclude Include="src\grfmt_pam.hpp" />
+    <ClInclude Include="src\grfmt_pfm.hpp" />
+    <ClInclude Include="src\grfmt_png.hpp" />
+    <ClInclude Include="src\grfmt_pxm.hpp" />
+    <ClInclude Include="src\grfmt_spng.hpp" />
+    <ClInclude Include="src\grfmt_sunras.hpp" />
+    <ClInclude Include="src\grfmt_tiff.hpp" />
+    <ClInclude Include="src\grfmt_webp.hpp" />
+    <ClInclude Include="src\grfmts.hpp" />
+    <ClInclude Include="src\bitstrm.hpp" />
+    <ClInclude Include="src\rgbe.hpp" />
+    <ClInclude Include="src\exif.hpp" />
+    <ClInclude Include="D:\LIB\opencv\opencv480\build\cvconfig.h" />
+    <ClInclude Include="D:\LIB\opencv\opencv480\build\opencv2\opencv_modules.hpp" />
+    <ResourceCompile Include="vs_version.rc">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
+    </ResourceCompile>
+    <ClCompile Include="opencv_imgcodecs_main.cpp">
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="D:\LIB\opencv\opencv480\build\3rdparty\libjpeg-turbo\libjpeg-turbo.vcxproj">
+      <Project>{62B866CB-7714-3C1A-9252-BCA1F8C1DFBC}</Project>
+      <Name>libjpeg-turbo</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\LIB\opencv\opencv480\build\3rdparty\libpng\libpng.vcxproj">
+      <Project>{978D094A-68DD-3BB9-A26D-A1848DD8050A}</Project>
+      <Name>libpng</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\LIB\opencv\opencv480\build\modules\core\opencv_core.vcxproj">
+      <Project>{236D9F3A-4D25-3745-A439-0D17D29C4B19}</Project>
+      <Name>opencv_core</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\LIB\opencv\opencv480\build\modules\imgproc\opencv_imgproc.vcxproj">
+      <Project>{AE105776-CAC0-304A-89A3-13174D730095}</Project>
+      <Name>opencv_imgproc</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\LIB\opencv\opencv480\build\3rdparty\zlib\zlib.vcxproj">
+      <Project>{3A04D858-B82E-3A36-8AA0-1CA8EDAF9FE7}</Project>
+      <Name>zlib</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

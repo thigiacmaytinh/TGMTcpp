@@ -1,0 +1,248 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{0EE710F9-7C5C-3DEF-8921-4C0657DCDE49}</ProjectGuid>
+    <WindowsTargetPlatformVersion>10.0.17763.0</WindowsTargetPlatformVersion>
+    <Keyword>Win32Proj</Keyword>
+    <Platform>x64</Platform>
+    <ProjectName>opencv_objdetect</ProjectName>
+    <VCProjectUpgraderObjectName>NoUpgrade</VCProjectUpgraderObjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">..\lib\$(Configuration)-x64\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">obj\$(Configuration)-x64\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">opencv_objdetect480d</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.lib</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</GenerateManifest>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">..\lib\$(Configuration)-x64\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">obj\$(Configuration)-x64\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">opencv_objdetect480</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.lib</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</GenerateManifest>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>src;include;$(ProjectDir);..\..\modules\core\include;..\..\modules\flann\include;..\..\modules\imgproc\include;..\..\modules\dnn\include;..\..\modules\features2d\include;..\..\modules\calib3d\include;$(SolutionDir);..\..\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /bigobj</AdditionalOptions>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <DisableSpecificWarnings>4127;4251;4324;4275;4512;4589;4819</DisableSpecificWarnings>
+      <ExceptionHandling>Async</ExceptionHandling>
+      <FloatingPointModel>Precise</FloatingPointModel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <InlineFunctionExpansion>Disabled</InlineFunctionExpansion>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <Optimization>Disabled</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <PrecompiledHeaderFile>
+      </PrecompiledHeaderFile>
+      <PrecompiledHeaderOutputFile>
+      </PrecompiledHeaderOutputFile>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level4</WarningLevel>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;_SCL_SECURE_NO_WARNINGS;_VARIADIC_MAX=10;_WIN32_WINNT=0x0601;_USE_MATH_DEFINES;__STDC_CONSTANT_MACROS;__STDC_LIMIT_MACROS;__STDC_FORMAT_MACROS;__OPENCV_BUILD=1;CMAKE_INTDIR="Debug";CVAPI_EXPORTS</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <ProgramDataBaseFileName>$(OutDir)\$(TargetName).pdb</ProgramDataBaseFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_DEBUG;_WINDOWS;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;_SCL_SECURE_NO_WARNINGS;_VARIADIC_MAX=10;_WIN32_WINNT=0x0601;_USE_MATH_DEFINES;__STDC_CONSTANT_MACROS;__STDC_LIMIT_MACROS;__STDC_FORMAT_MACROS;__OPENCV_BUILD=1;CMAKE_INTDIR=\"Debug\";CVAPI_EXPORTS</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>src;include;D:\LIB\opencv\opencv480\build\modules\objdetect;..\..\modules\core\include;..\..\modules\flann\include;..\..\modules\imgproc\include;..\..\modules\dnn\include;..\..\modules\features2d\include;..\..\modules\calib3d\include;$(SolutionDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>src;include;D:\LIB\opencv\opencv480\build\modules\objdetect;..\..\modules\core\include;..\..\modules\flann\include;..\..\modules\imgproc\include;..\..\modules\dnn\include;..\..\modules\features2d\include;..\..\modules\calib3d\include;$(SolutionDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalDependencies>..\..\lib\Debug-x64\opencv_dnn480d.lib;..\..\lib\Debug-x64\opencv_calib3d480d.lib;..\..\lib\Debug-x64\opencv_features2d480d.lib;..\..\lib\Debug-x64\opencv_flann480d.lib;..\..\lib\Debug-x64\opencv_imgproc480d.lib;..\..\lib\Debug-x64\opencv_core480d.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>libc;%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>D:/LIB/opencv/opencv480/build/lib/Debug/opencv_objdetect480d.lib</ImportLibrary>
+      <ProgramDataBaseFile>D:/LIB/opencv/opencv480/build/bin/Debug/opencv_objdetect480d.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>src;include;$(ProjectDir);..\..\modules\core\include;..\..\modules\flann\include;..\..\modules\imgproc\include;..\..\modules\dnn\include;..\..\modules\features2d\include;..\..\modules\calib3d\include;$(SolutionDir);..\..\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /bigobj</AdditionalOptions>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <DisableSpecificWarnings>4127;4251;4324;4275;4512;4589;4819</DisableSpecificWarnings>
+      <ExceptionHandling>Async</ExceptionHandling>
+      <FloatingPointModel>Precise</FloatingPointModel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <PrecompiledHeaderFile>
+      </PrecompiledHeaderFile>
+      <PrecompiledHeaderOutputFile>
+      </PrecompiledHeaderOutputFile>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level4</WarningLevel>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;_SCL_SECURE_NO_WARNINGS;NDEBUG;_VARIADIC_MAX=10;_WIN32_WINNT=0x0601;_USE_MATH_DEFINES;__STDC_CONSTANT_MACROS;__STDC_LIMIT_MACROS;__STDC_FORMAT_MACROS;__OPENCV_BUILD=1;CMAKE_INTDIR="Release";CVAPI_EXPORTS</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
+      <ProgramDataBaseFileName>$(OutDir)\$(TargetName).pdb</ProgramDataBaseFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;_SCL_SECURE_NO_WARNINGS;NDEBUG;_VARIADIC_MAX=10;_WIN32_WINNT=0x0601;_USE_MATH_DEFINES;__STDC_CONSTANT_MACROS;__STDC_LIMIT_MACROS;__STDC_FORMAT_MACROS;__OPENCV_BUILD=1;CMAKE_INTDIR=\"Release\";CVAPI_EXPORTS</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>src;include;D:\LIB\opencv\opencv480\build\modules\objdetect;..\..\modules\core\include;..\..\modules\flann\include;..\..\modules\imgproc\include;..\..\modules\dnn\include;..\..\modules\features2d\include;..\..\modules\calib3d\include;$(SolutionDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>src;include;D:\LIB\opencv\opencv480\build\modules\objdetect;..\..\modules\core\include;..\..\modules\flann\include;..\..\modules\imgproc\include;..\..\modules\dnn\include;..\..\modules\features2d\include;..\..\modules\calib3d\include;$(SolutionDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalDependencies>..\..\lib\Release-x64\opencv_dnn480.lib;..\..\lib\Release-x64\opencv_calib3d480.lib;..\..\lib\Release-x64\opencv_features2d480.lib;..\..\lib\Release-x64\opencv_flann480.lib;..\..\lib\Release-x64\opencv_imgproc480.lib;..\..\lib\Release-x64\opencv_core480.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>libc;%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>D:/LIB/opencv/opencv480/build/lib/Release/opencv_objdetect480.lib</ImportLibrary>
+      <ProgramDataBaseFile>D:/LIB/opencv/opencv480/build/bin/Release/opencv_objdetect480.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+  </ItemGroup>
+  <ItemGroup>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="include\opencv2\objdetect.hpp" />
+    <ClInclude Include="include\opencv2\objdetect\barcode.hpp" />
+    <ClInclude Include="include\opencv2\objdetect\detection_based_tracker.hpp" />
+    <ClInclude Include="include\opencv2\objdetect\face.hpp" />
+    <ClInclude Include="include\opencv2\objdetect\graphical_code_detector.hpp" />
+    <ClInclude Include="include\opencv2\objdetect\objdetect.hpp" />
+    <ClCompile Include="src\barcode.cpp">
+    </ClCompile>
+    <ClCompile Include="src\barcode_decoder\abs_decoder.cpp">
+    </ClCompile>
+    <ClCompile Include="src\barcode_decoder\common\hybrid_binarizer.cpp">
+    </ClCompile>
+    <ClCompile Include="src\barcode_decoder\common\super_scale.cpp">
+    </ClCompile>
+    <ClCompile Include="src\barcode_decoder\common\utils.cpp">
+    </ClCompile>
+    <ClCompile Include="src\barcode_decoder\ean13_decoder.cpp">
+    </ClCompile>
+    <ClCompile Include="src\barcode_decoder\ean8_decoder.cpp">
+    </ClCompile>
+    <ClCompile Include="src\barcode_decoder\upcean_decoder.cpp">
+    </ClCompile>
+    <ClCompile Include="src\barcode_detector\bardetect.cpp">
+    </ClCompile>
+    <ClCompile Include="src\cascadedetect.cpp">
+    </ClCompile>
+    <ClCompile Include="src\cascadedetect_convert.cpp">
+    </ClCompile>
+    <ClCompile Include="src\detection_based_tracker.cpp">
+    </ClCompile>
+    <ClCompile Include="src\face_detect.cpp">
+    </ClCompile>
+    <ClCompile Include="src\face_recognize.cpp">
+    </ClCompile>
+    <ClCompile Include="src\graphical_code_detector.cpp">
+    </ClCompile>
+    <ClCompile Include="src\hog.cpp">
+    </ClCompile>
+    <ClCompile Include="src\main.cpp">
+    </ClCompile>
+    <ClCompile Include="src\qrcode.cpp">
+    </ClCompile>
+    <ClCompile Include="src\qrcode_encoder.cpp">
+    </ClCompile>
+    <None Include="src\opencl\cascadedetect.cl">
+    </None>
+    <None Include="src\opencl\objdetect_hog.cl">
+    </None>
+    <ClCompile Include="opencl_kernels_objdetect.cpp">
+    </ClCompile>
+    <ClInclude Include="opencl_kernels_objdetect.hpp" />
+    <ClInclude Include="src\aruco\apriltag\apriltag_quad_thresh.hpp" />
+    <ClInclude Include="src\aruco\apriltag\predefined_dictionaries_apriltag.hpp" />
+    <ClInclude Include="src\aruco\apriltag\unionfind.hpp" />
+    <ClInclude Include="src\aruco\apriltag\zarray.hpp" />
+    <ClInclude Include="src\aruco\apriltag\zmaxheap.hpp" />
+    <ClInclude Include="src\aruco\predefined_dictionaries.hpp" />
+    <ClInclude Include="src\barcode_decoder\abs_decoder.hpp" />
+    <ClInclude Include="src\barcode_decoder\common\hybrid_binarizer.hpp" />
+    <ClInclude Include="src\barcode_decoder\common\super_scale.hpp" />
+    <ClInclude Include="src\barcode_decoder\common\utils.hpp" />
+    <ClInclude Include="src\barcode_decoder\ean13_decoder.hpp" />
+    <ClInclude Include="src\barcode_decoder\ean8_decoder.hpp" />
+    <ClInclude Include="src\barcode_decoder\upcean_decoder.hpp" />
+    <ClInclude Include="src\barcode_detector\bardetect.hpp" />
+    <ClInclude Include="src\cascadedetect.hpp" />
+    <ClInclude Include="src\graphical_code_detector_impl.hpp" />
+    <ClInclude Include="src\precomp.hpp" />
+    <ClInclude Include="src\qrcode_encoder_table.inl.hpp" />
+    <ClInclude Include="D:\LIB\opencv\opencv480\build\cvconfig.h" />
+    <ClInclude Include="D:\LIB\opencv\opencv480\build\opencv2\opencv_modules.hpp" />
+    <ResourceCompile Include="vs_version.rc">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
+    </ResourceCompile>
+    <ClCompile Include="opencv_objdetect_main.cpp">
+    </ClCompile>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

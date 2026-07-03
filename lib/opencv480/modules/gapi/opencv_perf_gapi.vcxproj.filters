@@ -1,0 +1,129 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="D:\LIB\opencv\opencv480\build\modules\gapi\CMakeFiles\opencv_perf_gapi.dir\cmake_pch.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\LIB\opencv\opencv480\sources\modules\gapi\perf\common\gapi_core_perf_tests.cpp">
+      <Filter>Src\common</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\LIB\opencv\opencv480\sources\modules\gapi\perf\common\gapi_imgproc_perf_tests.cpp">
+      <Filter>Src\common</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\LIB\opencv\opencv480\sources\modules\gapi\perf\common\gapi_render_perf_tests.cpp">
+      <Filter>Src\common</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\LIB\opencv\opencv480\sources\modules\gapi\perf\common\gapi_video_perf_tests.cpp">
+      <Filter>Src\common</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\LIB\opencv\opencv480\sources\modules\gapi\perf\cpu\gapi_core_perf_tests_cpu.cpp">
+      <Filter>Src\cpu</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\LIB\opencv\opencv480\sources\modules\gapi\perf\cpu\gapi_core_perf_tests_fluid.cpp">
+      <Filter>Src\cpu</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\LIB\opencv\opencv480\sources\modules\gapi\perf\cpu\gapi_imgproc_perf_tests_cpu.cpp">
+      <Filter>Src\cpu</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\LIB\opencv\opencv480\sources\modules\gapi\perf\cpu\gapi_imgproc_perf_tests_fluid.cpp">
+      <Filter>Src\cpu</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\LIB\opencv\opencv480\sources\modules\gapi\perf\cpu\gapi_video_perf_tests_cpu.cpp">
+      <Filter>Src\cpu</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\LIB\opencv\opencv480\sources\modules\gapi\perf\gpu\gapi_core_perf_tests_gpu.cpp">
+      <Filter>Src\gpu</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\LIB\opencv\opencv480\sources\modules\gapi\perf\gpu\gapi_imgproc_perf_tests_gpu.cpp">
+      <Filter>Src\gpu</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\LIB\opencv\opencv480\sources\modules\gapi\perf\internal\gapi_compiler_perf_tests.cpp">
+      <Filter>Src\internal</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\LIB\opencv\opencv480\sources\modules\gapi\perf\perf_bench.cpp">
+      <Filter>Src</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\LIB\opencv\opencv480\sources\modules\gapi\perf\perf_main.cpp">
+      <Filter>Src</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\LIB\opencv\opencv480\sources\modules\gapi\perf\render\gapi_render_perf_tests_ocv.cpp">
+      <Filter>Src\render</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\LIB\opencv\opencv480\sources\modules\gapi\perf\streaming\gapi_streaming_source_perf_tests.cpp">
+      <Filter>Src\streaming</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="D:\LIB\opencv\opencv480\sources\modules\gapi\perf\common\gapi_core_perf_tests.hpp">
+      <Filter>Include\common</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\LIB\opencv\opencv480\sources\modules\gapi\perf\common\gapi_core_perf_tests_inl.hpp">
+      <Filter>Include\common</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\LIB\opencv\opencv480\sources\modules\gapi\perf\common\gapi_imgproc_perf_tests.hpp">
+      <Filter>Include\common</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\LIB\opencv\opencv480\sources\modules\gapi\perf\common\gapi_imgproc_perf_tests_inl.hpp">
+      <Filter>Include\common</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\LIB\opencv\opencv480\sources\modules\gapi\perf\common\gapi_render_perf_tests.hpp">
+      <Filter>Include\common</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\LIB\opencv\opencv480\sources\modules\gapi\perf\common\gapi_render_perf_tests_inl.hpp">
+      <Filter>Include\common</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\LIB\opencv\opencv480\sources\modules\gapi\perf\common\gapi_video_perf_tests.hpp">
+      <Filter>Include\common</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\LIB\opencv\opencv480\sources\modules\gapi\perf\common\gapi_video_perf_tests_inl.hpp">
+      <Filter>Include\common</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\LIB\opencv\opencv480\sources\modules\gapi\perf\perf_precomp.hpp">
+      <Filter>Include</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\LIB\opencv\opencv480\build\modules\gapi\CMakeFiles\opencv_perf_gapi.dir\Debug\cmake_pch.hxx">
+      <Filter>Precompile Header File</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\LIB\opencv\opencv480\build\modules\gapi\CMakeFiles\opencv_perf_gapi.dir\Release\cmake_pch.hxx">
+      <Filter>Precompile Header File</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="D:\LIB\opencv\opencv480\sources\modules\gapi\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Include">
+      <UniqueIdentifier>{F73E1321-2CC0-3C82-B659-D2B5CEC43562}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Include\common">
+      <UniqueIdentifier>{9CDCE85F-57C9-320D-AE97-D9AE19FE64EB}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Precompile Header File">
+      <UniqueIdentifier>{5D557921-288E-3543-B0CB-0F405FBA551C}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{B424FE76-8A02-34EF-85BB-75F86BE76CE0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Src">
+      <UniqueIdentifier>{BA1B5659-E9EF-3DC1-8E8D-15B598609623}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Src\common">
+      <UniqueIdentifier>{6AC9D94E-717D-364F-95FC-DB1B6248921D}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Src\cpu">
+      <UniqueIdentifier>{14BCEC66-2F05-356B-A188-2363969D96F7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Src\gpu">
+      <UniqueIdentifier>{DC461CD1-C4D8-3930-9415-55D163912697}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Src\internal">
+      <UniqueIdentifier>{41852B0D-E1FC-3D1C-9870-8888E7573132}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Src\render">
+      <UniqueIdentifier>{AD5BE72A-3EE3-3FED-838F-E2F90886C34C}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Src\streaming">
+      <UniqueIdentifier>{71397516-8112-3FF0-AEEC-E485ECB93D35}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

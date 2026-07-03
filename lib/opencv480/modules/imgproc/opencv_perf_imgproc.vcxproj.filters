@@ -1,0 +1,159 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="D:\LIB\opencv\opencv480\build\modules\imgproc\CMakeFiles\opencv_perf_imgproc.dir\cmake_pch.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\LIB\opencv\opencv480\sources\modules\imgproc\perf\opencl\perf_3vs4.cpp">
+      <Filter>Src\opencl</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\LIB\opencv\opencv480\sources\modules\imgproc\perf\opencl\perf_accumulate.cpp">
+      <Filter>Src\opencl</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\LIB\opencv\opencv480\sources\modules\imgproc\perf\opencl\perf_blend.cpp">
+      <Filter>Src\opencl</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\LIB\opencv\opencv480\sources\modules\imgproc\perf\opencl\perf_color.cpp">
+      <Filter>Src\opencl</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\LIB\opencv\opencv480\sources\modules\imgproc\perf\opencl\perf_filters.cpp">
+      <Filter>Src\opencl</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\LIB\opencv\opencv480\sources\modules\imgproc\perf\opencl\perf_gftt.cpp">
+      <Filter>Src\opencl</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\LIB\opencv\opencv480\sources\modules\imgproc\perf\opencl\perf_houghlines.cpp">
+      <Filter>Src\opencl</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\LIB\opencv\opencv480\sources\modules\imgproc\perf\opencl\perf_imgproc.cpp">
+      <Filter>Src\opencl</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\LIB\opencv\opencv480\sources\modules\imgproc\perf\opencl\perf_imgwarp.cpp">
+      <Filter>Src\opencl</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\LIB\opencv\opencv480\sources\modules\imgproc\perf\opencl\perf_matchTemplate.cpp">
+      <Filter>Src\opencl</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\LIB\opencv\opencv480\sources\modules\imgproc\perf\opencl\perf_moments.cpp">
+      <Filter>Src\opencl</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\LIB\opencv\opencv480\sources\modules\imgproc\perf\opencl\perf_pyramid.cpp">
+      <Filter>Src\opencl</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\LIB\opencv\opencv480\sources\modules\imgproc\perf\perf_accumulate.cpp">
+      <Filter>Src</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\LIB\opencv\opencv480\sources\modules\imgproc\perf\perf_bilateral.cpp">
+      <Filter>Src</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\LIB\opencv\opencv480\sources\modules\imgproc\perf\perf_blur.cpp">
+      <Filter>Src</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\LIB\opencv\opencv480\sources\modules\imgproc\perf\perf_canny.cpp">
+      <Filter>Src</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\LIB\opencv\opencv480\sources\modules\imgproc\perf\perf_contours.cpp">
+      <Filter>Src</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\LIB\opencv\opencv480\sources\modules\imgproc\perf\perf_corners.cpp">
+      <Filter>Src</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\LIB\opencv\opencv480\sources\modules\imgproc\perf\perf_cvt_color.cpp">
+      <Filter>Src</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\LIB\opencv\opencv480\sources\modules\imgproc\perf\perf_distanceTransform.cpp">
+      <Filter>Src</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\LIB\opencv\opencv480\sources\modules\imgproc\perf\perf_filter2d.cpp">
+      <Filter>Src</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\LIB\opencv\opencv480\sources\modules\imgproc\perf\perf_floodfill.cpp">
+      <Filter>Src</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\LIB\opencv\opencv480\sources\modules\imgproc\perf\perf_goodFeaturesToTrack.cpp">
+      <Filter>Src</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\LIB\opencv\opencv480\sources\modules\imgproc\perf\perf_histogram.cpp">
+      <Filter>Src</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\LIB\opencv\opencv480\sources\modules\imgproc\perf\perf_houghcircles.cpp">
+      <Filter>Src</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\LIB\opencv\opencv480\sources\modules\imgproc\perf\perf_houghlines.cpp">
+      <Filter>Src</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\LIB\opencv\opencv480\sources\modules\imgproc\perf\perf_integral.cpp">
+      <Filter>Src</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\LIB\opencv\opencv480\sources\modules\imgproc\perf\perf_intelligent_scissors.cpp">
+      <Filter>Src</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\LIB\opencv\opencv480\sources\modules\imgproc\perf\perf_main.cpp">
+      <Filter>Src</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\LIB\opencv\opencv480\sources\modules\imgproc\perf\perf_matchTemplate.cpp">
+      <Filter>Src</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\LIB\opencv\opencv480\sources\modules\imgproc\perf\perf_moments.cpp">
+      <Filter>Src</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\LIB\opencv\opencv480\sources\modules\imgproc\perf\perf_morph.cpp">
+      <Filter>Src</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\LIB\opencv\opencv480\sources\modules\imgproc\perf\perf_phasecorr.cpp">
+      <Filter>Src</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\LIB\opencv\opencv480\sources\modules\imgproc\perf\perf_pyramids.cpp">
+      <Filter>Src</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\LIB\opencv\opencv480\sources\modules\imgproc\perf\perf_remap.cpp">
+      <Filter>Src</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\LIB\opencv\opencv480\sources\modules\imgproc\perf\perf_resize.cpp">
+      <Filter>Src</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\LIB\opencv\opencv480\sources\modules\imgproc\perf\perf_sepfilters.cpp">
+      <Filter>Src</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\LIB\opencv\opencv480\sources\modules\imgproc\perf\perf_spatialgradient.cpp">
+      <Filter>Src</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\LIB\opencv\opencv480\sources\modules\imgproc\perf\perf_threshold.cpp">
+      <Filter>Src</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\LIB\opencv\opencv480\sources\modules\imgproc\perf\perf_warp.cpp">
+      <Filter>Src</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="D:\LIB\opencv\opencv480\sources\modules\imgproc\perf\perf_precomp.hpp">
+      <Filter>Include</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\LIB\opencv\opencv480\build\modules\imgproc\CMakeFiles\opencv_perf_imgproc.dir\Debug\cmake_pch.hxx">
+      <Filter>Precompile Header File</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\LIB\opencv\opencv480\build\modules\imgproc\CMakeFiles\opencv_perf_imgproc.dir\Release\cmake_pch.hxx">
+      <Filter>Precompile Header File</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="D:\LIB\opencv\opencv480\sources\modules\imgproc\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Include">
+      <UniqueIdentifier>{F73E1321-2CC0-3C82-B659-D2B5CEC43562}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Precompile Header File">
+      <UniqueIdentifier>{5D557921-288E-3543-B0CB-0F405FBA551C}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{B424FE76-8A02-34EF-85BB-75F86BE76CE0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Src">
+      <UniqueIdentifier>{BA1B5659-E9EF-3DC1-8E8D-15B598609623}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Src\opencl">
+      <UniqueIdentifier>{B0F36292-7761-3055-A6B6-041B8E30B9A5}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

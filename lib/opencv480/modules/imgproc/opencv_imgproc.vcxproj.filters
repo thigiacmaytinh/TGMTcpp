@@ -1,0 +1,202 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="src\accum.cpp" />
+    <ClCompile Include="src\accum.dispatch.cpp" />
+    <ClCompile Include="src\approx.cpp" />
+    <ClCompile Include="src\bilateral_filter.dispatch.cpp" />
+    <ClCompile Include="src\blend.cpp" />
+    <ClCompile Include="src\box_filter.dispatch.cpp" />
+    <ClCompile Include="src\canny.cpp" />
+    <ClCompile Include="src\clahe.cpp" />
+    <ClCompile Include="src\color.cpp" />
+    <ClCompile Include="src\color_hsv.dispatch.cpp" />
+    <ClCompile Include="src\color_lab.cpp" />
+    <ClCompile Include="src\color_rgb.dispatch.cpp" />
+    <ClCompile Include="src\color_yuv.dispatch.cpp" />
+    <ClCompile Include="src\colormap.cpp" />
+    <ClCompile Include="src\connectedcomponents.cpp" />
+    <ClCompile Include="src\contours.cpp" />
+    <ClCompile Include="src\convhull.cpp" />
+    <ClCompile Include="src\corner.cpp" />
+    <ClCompile Include="src\cornersubpix.cpp" />
+    <ClCompile Include="src\demosaicing.cpp" />
+    <ClCompile Include="src\deriv.cpp" />
+    <ClCompile Include="src\distransform.cpp" />
+    <ClCompile Include="src\drawing.cpp" />
+    <ClCompile Include="src\emd.cpp" />
+    <ClCompile Include="src\featureselect.cpp" />
+    <ClCompile Include="src\filter.dispatch.cpp" />
+    <ClCompile Include="src\floodfill.cpp" />
+    <ClCompile Include="src\gabor.cpp" />
+    <ClCompile Include="src\generalized_hough.cpp" />
+    <ClCompile Include="src\geometry.cpp" />
+    <ClCompile Include="src\grabcut.cpp" />
+    <ClCompile Include="src\hershey_fonts.cpp" />
+    <ClCompile Include="src\histogram.cpp" />
+    <ClCompile Include="src\hough.cpp" />
+    <ClCompile Include="src\imgwarp.cpp" />
+    <ClCompile Include="src\intelligent_scissors.cpp" />
+    <ClCompile Include="src\intersection.cpp" />
+    <ClCompile Include="src\linefit.cpp" />
+    <ClCompile Include="src\lsd.cpp" />
+    <ClCompile Include="src\main.cpp" />
+    <ClCompile Include="src\matchcontours.cpp" />
+    <ClCompile Include="src\median_blur.dispatch.cpp" />
+    <ClCompile Include="src\min_enclosing_triangle.cpp" />
+    <ClCompile Include="src\moments.cpp" />
+    <ClCompile Include="src\morph.dispatch.cpp" />
+    <ClCompile Include="src\phasecorr.cpp" />
+    <ClCompile Include="src\pyramids.cpp" />
+    <ClCompile Include="src\resize.cpp" />
+    <ClCompile Include="src\rotcalipers.cpp" />
+    <ClCompile Include="src\samplers.cpp" />
+    <ClCompile Include="src\segmentation.cpp" />
+    <ClCompile Include="src\shapedescr.cpp" />
+    <ClCompile Include="src\smooth.dispatch.cpp" />
+    <ClCompile Include="src\spatialgradient.cpp" />
+    <ClCompile Include="src\stackblur.cpp" />
+    <ClCompile Include="src\subdivision2d.cpp" />
+    <ClCompile Include="src\sumpixels.dispatch.cpp" />
+    <ClCompile Include="src\tables.cpp" />
+    <ClCompile Include="src\templmatch.cpp" />
+    <ClCompile Include="src\thresh.cpp" />
+    <ClCompile Include="src\utils.cpp" />
+    <ClCompile Include="opencl_kernels_imgproc.cpp" />
+    <ClCompile Include="opencv_imgproc_main.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="D:\LIB\opencv\opencv480\build\cvconfig.h">
+      <Filter>Include</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\LIB\opencv\opencv480\build\opencv2\opencv_modules.hpp">
+      <Filter>Include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\opencv2\imgproc.hpp" />
+    <ClInclude Include="include\opencv2\imgproc\bindings.hpp" />
+    <ClInclude Include="include\opencv2\imgproc\detail\gcgraph.hpp" />
+    <ClInclude Include="include\opencv2\imgproc\hal\hal.hpp" />
+    <ClInclude Include="include\opencv2\imgproc\hal\interface.h" />
+    <ClInclude Include="include\opencv2\imgproc\imgproc.hpp" />
+    <ClInclude Include="include\opencv2\imgproc\imgproc_c.h" />
+    <ClInclude Include="include\opencv2\imgproc\segmentation.hpp" />
+    <ClInclude Include="include\opencv2\imgproc\types_c.h" />
+    <ClInclude Include="opencl_kernels_imgproc.hpp" />
+    <ClInclude Include="src\_geom.h" />
+    <ClInclude Include="src\accum.simd.hpp" />
+    <ClInclude Include="src\bilateral_filter.simd.hpp" />
+    <ClInclude Include="src\box_filter.simd.hpp" />
+    <ClInclude Include="src\ccl_bolelli_forest.inc.hpp" />
+    <ClInclude Include="src\ccl_bolelli_forest_firstline.inc.hpp" />
+    <ClInclude Include="src\ccl_bolelli_forest_lastline.inc.hpp" />
+    <ClInclude Include="src\ccl_bolelli_forest_singleline.inc.hpp" />
+    <ClInclude Include="src\color.hpp" />
+    <ClInclude Include="src\color.simd_helpers.hpp" />
+    <ClInclude Include="src\color_hsv.simd.hpp" />
+    <ClInclude Include="src\color_rgb.simd.hpp" />
+    <ClInclude Include="src\color_yuv.simd.hpp" />
+    <ClInclude Include="src\corner.hpp" />
+    <ClInclude Include="src\filter.hpp" />
+    <ClInclude Include="src\filter.simd.hpp" />
+    <ClInclude Include="src\filterengine.hpp" />
+    <ClInclude Include="src\fixedpoint.inl.hpp" />
+    <ClInclude Include="src\hal_replacement.hpp" />
+    <ClInclude Include="src\imgwarp.hpp" />
+    <ClInclude Include="src\median_blur.simd.hpp" />
+    <ClInclude Include="src\morph.simd.hpp" />
+    <ClInclude Include="src\precomp.hpp" />
+    <ClInclude Include="src\resize.hpp" />
+    <ClInclude Include="src\smooth.simd.hpp" />
+    <ClInclude Include="src\sumpixels.avx512_skx.hpp" />
+    <ClInclude Include="src\sumpixels.simd.hpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="src\opencl\accumulate.cl" />
+    <None Include="src\opencl\bilateral.cl" />
+    <None Include="src\opencl\blend_linear.cl" />
+    <None Include="src\opencl\boxFilter.cl" />
+    <None Include="src\opencl\boxFilter3x3.cl" />
+    <None Include="src\opencl\calc_back_project.cl" />
+    <None Include="src\opencl\canny.cl" />
+    <None Include="src\opencl\clahe.cl" />
+    <None Include="src\opencl\color_hsv.cl" />
+    <None Include="src\opencl\color_lab.cl" />
+    <None Include="src\opencl\color_rgb.cl" />
+    <None Include="src\opencl\color_yuv.cl" />
+    <None Include="src\opencl\corner.cl" />
+    <None Include="src\opencl\covardata.cl" />
+    <None Include="src\opencl\filter2D.cl" />
+    <None Include="src\opencl\filter2DSmall.cl" />
+    <None Include="src\opencl\filterSepCol.cl" />
+    <None Include="src\opencl\filterSepRow.cl" />
+    <None Include="src\opencl\filterSep_singlePass.cl" />
+    <None Include="src\opencl\filterSmall.cl" />
+    <None Include="src\opencl\gaussianBlur3x3.cl" />
+    <None Include="src\opencl\gaussianBlur5x5.cl" />
+    <None Include="src\opencl\gftt.cl" />
+    <None Include="src\opencl\histogram.cl" />
+    <None Include="src\opencl\hough_lines.cl" />
+    <None Include="src\opencl\integral_sum.cl" />
+    <None Include="src\opencl\laplacian3.cl" />
+    <None Include="src\opencl\laplacian5.cl" />
+    <None Include="src\opencl\linearPolar.cl" />
+    <None Include="src\opencl\logPolar.cl" />
+    <None Include="src\opencl\match_template.cl" />
+    <None Include="src\opencl\medianFilter.cl" />
+    <None Include="src\opencl\moments.cl" />
+    <None Include="src\opencl\morph.cl" />
+    <None Include="src\opencl\morph3x3.cl" />
+    <None Include="src\opencl\precornerdetect.cl" />
+    <None Include="src\opencl\pyr_down.cl" />
+    <None Include="src\opencl\pyr_up.cl" />
+    <None Include="src\opencl\pyramid_up.cl" />
+    <None Include="src\opencl\remap.cl" />
+    <None Include="src\opencl\resize.cl" />
+    <None Include="src\opencl\sepFilter3x3.cl" />
+    <None Include="src\opencl\threshold.cl" />
+    <None Include="src\opencl\warp_affine.cl" />
+    <None Include="src\opencl\warp_perspective.cl" />
+    <None Include="src\opencl\warp_transform.cl" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="vs_version.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="CMake Rules">
+      <UniqueIdentifier>{BC6BC956-0833-3F3E-B3C8-CF14B630DA9D}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Include">
+      <UniqueIdentifier>{F73E1321-2CC0-3C82-B659-D2B5CEC43562}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Include\opencv2">
+      <UniqueIdentifier>{7B157B1B-D693-3CAB-B777-2F3947536837}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Include\opencv2\imgproc">
+      <UniqueIdentifier>{C720EB9F-7841-3242-8185-D18C97158F4A}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Include\opencv2\imgproc\detail">
+      <UniqueIdentifier>{1F5428E9-949D-32A8-92D6-3B70E423B21F}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Include\opencv2\imgproc\hal">
+      <UniqueIdentifier>{A974C799-0E5E-3339-99F1-91D03B3BF595}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Precompile Header File">
+      <UniqueIdentifier>{5D557921-288E-3543-B0CB-0F405FBA551C}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{B424FE76-8A02-34EF-85BB-75F86BE76CE0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Src">
+      <UniqueIdentifier>{BA1B5659-E9EF-3DC1-8E8D-15B598609623}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Src\opencl">
+      <UniqueIdentifier>{B0F36292-7761-3055-A6B6-041B8E30B9A5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Src\opencl\kernels">
+      <UniqueIdentifier>{A508DA8B-FF29-300B-8DAE-83129DCCA3EC}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Src\opencl\kernels\autogenerated">
+      <UniqueIdentifier>{ABADE330-7AC5-39DC-8486-109D51C8EF9B}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

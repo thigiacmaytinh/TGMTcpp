@@ -1,0 +1,138 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="D:\LIB\opencv\opencv480\build\modules\core\CMakeFiles\opencv_perf_core.dir\cmake_pch.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\LIB\opencv\opencv480\sources\modules\core\perf\cuda\perf_gpumat.cpp">
+      <Filter>Src\cuda</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\LIB\opencv\opencv480\sources\modules\core\perf\opencl\perf_arithm.cpp">
+      <Filter>Src\opencl</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\LIB\opencv\opencv480\sources\modules\core\perf\opencl\perf_bufferpool.cpp">
+      <Filter>Src\opencl</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\LIB\opencv\opencv480\sources\modules\core\perf\opencl\perf_channels.cpp">
+      <Filter>Src\opencl</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\LIB\opencv\opencv480\sources\modules\core\perf\opencl\perf_dxt.cpp">
+      <Filter>Src\opencl</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\LIB\opencv\opencv480\sources\modules\core\perf\opencl\perf_gemm.cpp">
+      <Filter>Src\opencl</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\LIB\opencv\opencv480\sources\modules\core\perf\opencl\perf_matop.cpp">
+      <Filter>Src\opencl</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\LIB\opencv\opencv480\sources\modules\core\perf\opencl\perf_usage_flags.cpp">
+      <Filter>Src\opencl</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\LIB\opencv\opencv480\sources\modules\core\perf\perf_abs.cpp">
+      <Filter>Src</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\LIB\opencv\opencv480\sources\modules\core\perf\perf_addWeighted.cpp">
+      <Filter>Src</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\LIB\opencv\opencv480\sources\modules\core\perf\perf_allocation.cpp">
+      <Filter>Src</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\LIB\opencv\opencv480\sources\modules\core\perf\perf_arithm.cpp">
+      <Filter>Src</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\LIB\opencv\opencv480\sources\modules\core\perf\perf_bitwise.cpp">
+      <Filter>Src</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\LIB\opencv\opencv480\sources\modules\core\perf\perf_compare.cpp">
+      <Filter>Src</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\LIB\opencv\opencv480\sources\modules\core\perf\perf_convertTo.cpp">
+      <Filter>Src</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\LIB\opencv\opencv480\sources\modules\core\perf\perf_cvround.cpp">
+      <Filter>Src</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\LIB\opencv\opencv480\sources\modules\core\perf\perf_dft.cpp">
+      <Filter>Src</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\LIB\opencv\opencv480\sources\modules\core\perf\perf_dot.cpp">
+      <Filter>Src</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\LIB\opencv\opencv480\sources\modules\core\perf\perf_inRange.cpp">
+      <Filter>Src</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\LIB\opencv\opencv480\sources\modules\core\perf\perf_io_base64.cpp">
+      <Filter>Src</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\LIB\opencv\opencv480\sources\modules\core\perf\perf_lut.cpp">
+      <Filter>Src</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\LIB\opencv\opencv480\sources\modules\core\perf\perf_main.cpp">
+      <Filter>Src</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\LIB\opencv\opencv480\sources\modules\core\perf\perf_mat.cpp">
+      <Filter>Src</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\LIB\opencv\opencv480\sources\modules\core\perf\perf_math.cpp">
+      <Filter>Src</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\LIB\opencv\opencv480\sources\modules\core\perf\perf_merge.cpp">
+      <Filter>Src</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\LIB\opencv\opencv480\sources\modules\core\perf\perf_minmaxloc.cpp">
+      <Filter>Src</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\LIB\opencv\opencv480\sources\modules\core\perf\perf_norm.cpp">
+      <Filter>Src</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\LIB\opencv\opencv480\sources\modules\core\perf\perf_reduce.cpp">
+      <Filter>Src</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\LIB\opencv\opencv480\sources\modules\core\perf\perf_sort.cpp">
+      <Filter>Src</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\LIB\opencv\opencv480\sources\modules\core\perf\perf_split.cpp">
+      <Filter>Src</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\LIB\opencv\opencv480\sources\modules\core\perf\perf_stat.cpp">
+      <Filter>Src</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\LIB\opencv\opencv480\sources\modules\core\perf\perf_umat.cpp">
+      <Filter>Src</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="D:\LIB\opencv\opencv480\sources\modules\core\perf\perf_precomp.hpp">
+      <Filter>Include</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\LIB\opencv\opencv480\build\modules\core\CMakeFiles\opencv_perf_core.dir\Debug\cmake_pch.hxx">
+      <Filter>Precompile Header File</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\LIB\opencv\opencv480\build\modules\core\CMakeFiles\opencv_perf_core.dir\Release\cmake_pch.hxx">
+      <Filter>Precompile Header File</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="D:\LIB\opencv\opencv480\sources\modules\core\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Include">
+      <UniqueIdentifier>{F73E1321-2CC0-3C82-B659-D2B5CEC43562}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Precompile Header File">
+      <UniqueIdentifier>{5D557921-288E-3543-B0CB-0F405FBA551C}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{B424FE76-8A02-34EF-85BB-75F86BE76CE0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Src">
+      <UniqueIdentifier>{BA1B5659-E9EF-3DC1-8E8D-15B598609623}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Src\cuda">
+      <UniqueIdentifier>{E4FFFC8A-8E05-36E8-BE30-E769C2F4C312}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Src\opencl">
+      <UniqueIdentifier>{B0F36292-7761-3055-A6B6-041B8E30B9A5}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

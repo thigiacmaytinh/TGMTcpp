@@ -1,0 +1,62 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="src\videoio_registry.cpp" />
+    <ClCompile Include="src\videoio_c.cpp" />
+    <ClCompile Include="src\cap.cpp" />
+    <ClCompile Include="src\cap_images.cpp" />
+    <ClCompile Include="src\cap_mjpeg_encoder.cpp" />
+    <ClCompile Include="src\cap_mjpeg_decoder.cpp" />
+    <ClCompile Include="src\backend_plugin.cpp" />
+    <ClCompile Include="src\backend_static.cpp" />
+    <ClCompile Include="src\container_avi.cpp" />
+    <ClCompile Include="src\cap_dshow.cpp" />
+    <ClCompile Include="src\cap_msmf.cpp" />
+    <ClCompile Include="src\cap_obsensor_capture.cpp" />
+    <ClCompile Include="src\cap_obsensor\obsensor_uvc_stream_channel.cpp" />
+    <ClCompile Include="src\cap_obsensor\obsensor_stream_channel_msmf.cpp" />
+    <ClCompile Include="opencv_videoio_main.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="D:\LIB\opencv\opencv480\build\cvconfig.h">
+      <Filter>Include</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\LIB\opencv\opencv480\build\opencv2\opencv_modules.hpp">
+      <Filter>Include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\opencv2\videoio.hpp" />
+    <ClInclude Include="include\opencv2\videoio\cap_ios.h" />
+    <ClInclude Include="include\opencv2\videoio\container_avi.private.hpp" />
+    <ClInclude Include="include\opencv2\videoio\legacy\constants_c.h" />
+    <ClInclude Include="include\opencv2\videoio\registry.hpp" />
+    <ClInclude Include="include\opencv2\videoio\videoio.hpp" />
+    <ClInclude Include="include\opencv2\videoio\videoio_c.h" />
+    <ClInclude Include="src\cap_dshow.hpp" />
+    <ClInclude Include="src\cap_obsensor\obsensor_stream_channel_interface.hpp" />
+    <ClInclude Include="src\cap_obsensor\obsensor_stream_channel_msmf.hpp" />
+    <ClInclude Include="src\cap_obsensor\obsensor_uvc_stream_channel.hpp" />
+    <ClInclude Include="src\cap_obsensor_capture.hpp" />
+    <ClInclude Include="src\precomp.hpp" />
+    <ClInclude Include="src\cap_msmf.hpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="vs_version.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{2114BDCE-9B25-36F7-B79C-C7D8D4EFB3FB}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Include">
+      <UniqueIdentifier>{F73E1321-2CC0-3C82-B659-D2B5CEC43562}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Precompile Header File">
+      <UniqueIdentifier>{5D557921-288E-3543-B0CB-0F405FBA551C}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{B424FE76-8A02-34EF-85BB-75F86BE76CE0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Src">
+      <UniqueIdentifier>{BA1B5659-E9EF-3DC1-8E8D-15B598609623}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

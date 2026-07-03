@@ -68,7 +68,7 @@
 /* #undef HAVE_EIGEN */
 
 /* FFMpeg video library */
-#define HAVE_FFMPEG
+//#define HAVE_FFMPEG
 
 /* ffmpeg's libswscale */
 #define HAVE_FFMPEG_SWSCALE
@@ -106,6 +106,8 @@
 
 /* IJG JPEG codec */
 #define HAVE_JPEG
+
+#define HAVE_WEBP
 
 /* libpng/png.h needs to be included */
 /* #undef HAVE_LIBPNG_PNG_H */

@@ -1,0 +1,115 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="src\aruco\apriltag\apriltag_quad_thresh.cpp" />
+    <ClCompile Include="src\aruco\apriltag\zmaxheap.cpp" />
+    <ClCompile Include="src\barcode.cpp" />
+    <ClCompile Include="src\barcode_decoder\abs_decoder.cpp" />
+    <ClCompile Include="src\barcode_decoder\common\hybrid_binarizer.cpp" />
+    <ClCompile Include="src\barcode_decoder\common\super_scale.cpp" />
+    <ClCompile Include="src\barcode_decoder\common\utils.cpp" />
+    <ClCompile Include="src\barcode_decoder\ean13_decoder.cpp" />
+    <ClCompile Include="src\barcode_decoder\ean8_decoder.cpp" />
+    <ClCompile Include="src\barcode_decoder\upcean_decoder.cpp" />
+    <ClCompile Include="src\barcode_detector\bardetect.cpp" />
+    <ClCompile Include="src\cascadedetect.cpp" />
+    <ClCompile Include="src\cascadedetect_convert.cpp" />
+    <ClCompile Include="src\detection_based_tracker.cpp" />
+    <ClCompile Include="src\face_detect.cpp" />
+    <ClCompile Include="src\face_recognize.cpp" />
+    <ClCompile Include="src\graphical_code_detector.cpp" />
+    <ClCompile Include="src\hog.cpp" />
+    <ClCompile Include="src\main.cpp" />
+    <ClCompile Include="src\qrcode.cpp" />
+    <ClCompile Include="src\qrcode_encoder.cpp" />
+    <ClCompile Include="opencl_kernels_objdetect.cpp" />
+    <ClCompile Include="opencv_objdetect_main.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="D:\LIB\opencv\opencv480\build\cvconfig.h">
+      <Filter>Include</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\LIB\opencv\opencv480\build\opencv2\opencv_modules.hpp">
+      <Filter>Include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\opencv2\objdetect.hpp" />
+    <ClInclude Include="include\opencv2\objdetect\barcode.hpp" />
+    <ClInclude Include="include\opencv2\objdetect\detection_based_tracker.hpp" />
+    <ClInclude Include="include\opencv2\objdetect\face.hpp" />
+    <ClInclude Include="include\opencv2\objdetect\graphical_code_detector.hpp" />
+    <ClInclude Include="include\opencv2\objdetect\objdetect.hpp" />
+    <ClInclude Include="opencl_kernels_objdetect.hpp" />
+    <ClInclude Include="src\aruco\apriltag\apriltag_quad_thresh.hpp" />
+    <ClInclude Include="src\aruco\apriltag\predefined_dictionaries_apriltag.hpp" />
+    <ClInclude Include="src\aruco\apriltag\unionfind.hpp" />
+    <ClInclude Include="src\aruco\apriltag\zarray.hpp" />
+    <ClInclude Include="src\aruco\apriltag\zmaxheap.hpp" />
+    <ClInclude Include="src\aruco\predefined_dictionaries.hpp" />
+    <ClInclude Include="src\barcode_decoder\abs_decoder.hpp" />
+    <ClInclude Include="src\barcode_decoder\common\hybrid_binarizer.hpp" />
+    <ClInclude Include="src\barcode_decoder\common\super_scale.hpp" />
+    <ClInclude Include="src\barcode_decoder\common\utils.hpp" />
+    <ClInclude Include="src\barcode_decoder\ean13_decoder.hpp" />
+    <ClInclude Include="src\barcode_decoder\ean8_decoder.hpp" />
+    <ClInclude Include="src\barcode_decoder\upcean_decoder.hpp" />
+    <ClInclude Include="src\barcode_detector\bardetect.hpp" />
+    <ClInclude Include="src\cascadedetect.hpp" />
+    <ClInclude Include="src\graphical_code_detector_impl.hpp" />
+    <ClInclude Include="src\precomp.hpp" />
+    <ClInclude Include="src\qrcode_encoder_table.inl.hpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="src\opencl\cascadedetect.cl" />
+    <None Include="src\opencl\objdetect_hog.cl" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="vs_version.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="CMake Rules">
+      <UniqueIdentifier>{BC6BC956-0833-3F3E-B3C8-CF14B630DA9D}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Include">
+      <UniqueIdentifier>{F73E1321-2CC0-3C82-B659-D2B5CEC43562}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Include\opencv2">
+      <UniqueIdentifier>{7B157B1B-D693-3CAB-B777-2F3947536837}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Include\opencv2\objdetect">
+      <UniqueIdentifier>{92D7F206-F5FB-330D-B473-3FFDB7A6C97B}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Precompile Header File">
+      <UniqueIdentifier>{5D557921-288E-3543-B0CB-0F405FBA551C}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{B424FE76-8A02-34EF-85BB-75F86BE76CE0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Src">
+      <UniqueIdentifier>{BA1B5659-E9EF-3DC1-8E8D-15B598609623}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Src\aruco">
+      <UniqueIdentifier>{21AAB2A8-1E90-3687-8CF8-4A8A435AB95B}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Src\aruco\apriltag">
+      <UniqueIdentifier>{570F3686-AA71-3BD9-AAD2-E869F3BACA89}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Src\barcode_decoder">
+      <UniqueIdentifier>{E8078289-FCF7-31C1-981C-54597671769C}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Src\barcode_decoder\common">
+      <UniqueIdentifier>{B1D9DDC8-9412-30C6-9EFD-E0745D001B29}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Src\barcode_detector">
+      <UniqueIdentifier>{C6B4CADE-C7FA-34D2-BFB7-E800344DBAF7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Src\opencl">
+      <UniqueIdentifier>{B0F36292-7761-3055-A6B6-041B8E30B9A5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Src\opencl\kernels">
+      <UniqueIdentifier>{A508DA8B-FF29-300B-8DAE-83129DCCA3EC}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Src\opencl\kernels\autogenerated">
+      <UniqueIdentifier>{ABADE330-7AC5-39DC-8486-109D51C8EF9B}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="src\ann_mlp.cpp" />
+    <ClCompile Include="src\boost.cpp" />
+    <ClCompile Include="src\data.cpp" />
+    <ClCompile Include="src\em.cpp" />
+    <ClCompile Include="src\gbt.cpp" />
+    <ClCompile Include="src\inner_functions.cpp" />
+    <ClCompile Include="src\kdtree.cpp" />
+    <ClCompile Include="src\knearest.cpp" />
+    <ClCompile Include="src\lr.cpp" />
+    <ClCompile Include="src\nbayes.cpp" />
+    <ClCompile Include="src\rtrees.cpp" />
+    <ClCompile Include="src\svm.cpp" />
+    <ClCompile Include="src\svmsgd.cpp" />
+    <ClCompile Include="src\testset.cpp" />
+    <ClCompile Include="src\tree.cpp" />
+    <ClCompile Include="opencv_ml_main.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="D:\LIB\opencv\opencv480\build\cvconfig.h">
+      <Filter>Include</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\LIB\opencv\opencv480\build\opencv2\opencv_modules.hpp">
+      <Filter>Include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\opencv2\ml.hpp" />
+    <ClInclude Include="include\opencv2\ml\ml.hpp" />
+    <ClInclude Include="include\opencv2\ml\ml.inl.hpp" />
+    <ClInclude Include="src\kdtree.hpp" />
+    <ClInclude Include="src\precomp.hpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="vs_version.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Include">
+      <UniqueIdentifier>{F73E1321-2CC0-3C82-B659-D2B5CEC43562}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Include\opencv2">
+      <UniqueIdentifier>{7B157B1B-D693-3CAB-B777-2F3947536837}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Include\opencv2\ml">
+      <UniqueIdentifier>{FBFC10EC-CEA3-373E-AC88-EC2203DA80F4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Precompile Header File">
+      <UniqueIdentifier>{5D557921-288E-3543-B0CB-0F405FBA551C}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{B424FE76-8A02-34EF-85BB-75F86BE76CE0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Src">
+      <UniqueIdentifier>{BA1B5659-E9EF-3DC1-8E8D-15B598609623}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

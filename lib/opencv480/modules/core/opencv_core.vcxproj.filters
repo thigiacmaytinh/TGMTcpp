@@ -1,0 +1,392 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="src\algorithm.cpp" />
+    <ClCompile Include="src\alloc.cpp" />
+    <ClCompile Include="src\arithm.cpp" />
+    <ClCompile Include="src\arithm.dispatch.cpp" />
+    <ClCompile Include="src\array.cpp" />
+    <ClCompile Include="src\async.cpp" />
+    <ClCompile Include="src\batch_distance.cpp" />
+    <ClCompile Include="src\bindings_utils.cpp" />
+    <ClCompile Include="src\buffer_area.cpp" />
+    <ClCompile Include="src\channels.cpp" />
+    <ClCompile Include="src\check.cpp" />
+    <ClCompile Include="src\command_line_parser.cpp" />
+    <ClCompile Include="src\conjugate_gradient.cpp" />
+    <ClCompile Include="src\convert.dispatch.cpp" />
+    <ClCompile Include="src\convert_c.cpp" />
+    <ClCompile Include="src\convert_scale.dispatch.cpp" />
+    <ClCompile Include="src\copy.cpp" />
+    <ClCompile Include="src\count_non_zero.dispatch.cpp" />
+    <ClCompile Include="src\cuda_gpu_mat.cpp" />
+    <ClCompile Include="src\cuda_gpu_mat_nd.cpp" />
+    <ClCompile Include="src\cuda_host_mem.cpp" />
+    <ClCompile Include="src\cuda_info.cpp" />
+    <ClCompile Include="src\cuda_stream.cpp" />
+    <ClCompile Include="src\datastructs.cpp" />
+    <ClCompile Include="src\directx.cpp" />
+    <ClCompile Include="src\downhill_simplex.cpp" />
+    <ClCompile Include="src\dxt.cpp" />
+    <ClCompile Include="src\gl_core_3_1.cpp" />
+    <ClCompile Include="src\glob.cpp" />
+    <ClCompile Include="src\hal_internal.cpp" />
+    <ClCompile Include="src\has_non_zero.dispatch.cpp" />
+    <ClCompile Include="src\kmeans.cpp" />
+    <ClCompile Include="src\lapack.cpp" />
+    <ClCompile Include="src\lda.cpp" />
+    <ClCompile Include="src\logger.cpp" />
+    <ClCompile Include="src\lpsolver.cpp" />
+    <ClCompile Include="src\lut.cpp" />
+    <ClCompile Include="src\mathfuncs.cpp" />
+    <ClCompile Include="src\mathfuncs_core.dispatch.cpp" />
+    <ClCompile Include="src\matmul.dispatch.cpp" />
+    <ClCompile Include="src\matrix.cpp" />
+    <ClCompile Include="src\matrix_c.cpp" />
+    <ClCompile Include="src\matrix_decomp.cpp" />
+    <ClCompile Include="src\matrix_expressions.cpp" />
+    <ClCompile Include="src\matrix_iterator.cpp" />
+    <ClCompile Include="src\matrix_operations.cpp" />
+    <ClCompile Include="src\matrix_sparse.cpp" />
+    <ClCompile Include="src\matrix_transform.cpp" />
+    <ClCompile Include="src\matrix_wrap.cpp" />
+    <ClCompile Include="src\mean.dispatch.cpp" />
+    <ClCompile Include="src\merge.dispatch.cpp" />
+    <ClCompile Include="src\minmax.cpp" />
+    <ClCompile Include="src\norm.cpp" />
+    <ClCompile Include="src\ocl.cpp" />
+    <ClCompile Include="src\opencl\runtime\opencl_clblas.cpp" />
+    <ClCompile Include="src\opencl\runtime\opencl_clfft.cpp" />
+    <ClCompile Include="src\opencl\runtime\opencl_core.cpp" />
+    <ClCompile Include="src\opengl.cpp" />
+    <ClCompile Include="src\out.cpp" />
+    <ClCompile Include="src\ovx.cpp" />
+    <ClCompile Include="src\parallel.cpp" />
+    <ClCompile Include="src\parallel\parallel.cpp" />
+    <ClCompile Include="src\parallel\parallel_openmp.cpp" />
+    <ClCompile Include="src\parallel\parallel_tbb.cpp" />
+    <ClCompile Include="src\parallel_impl.cpp" />
+    <ClCompile Include="src\pca.cpp" />
+    <ClCompile Include="src\persistence.cpp" />
+    <ClCompile Include="src\persistence_base64_encoding.cpp" />
+    <ClCompile Include="src\persistence_json.cpp" />
+    <ClCompile Include="src\persistence_types.cpp" />
+    <ClCompile Include="src\persistence_xml.cpp" />
+    <ClCompile Include="src\persistence_yml.cpp" />
+    <ClCompile Include="src\rand.cpp" />
+    <ClCompile Include="src\softfloat.cpp" />
+    <ClCompile Include="src\split.dispatch.cpp" />
+    <ClCompile Include="src\stat.dispatch.cpp" />
+    <ClCompile Include="src\stat_c.cpp" />
+    <ClCompile Include="src\stl.cpp" />
+    <ClCompile Include="src\sum.dispatch.cpp" />
+    <ClCompile Include="src\system.cpp" />
+    <ClCompile Include="src\tables.cpp" />
+    <ClCompile Include="src\trace.cpp" />
+    <ClCompile Include="src\types.cpp" />
+    <ClCompile Include="src\umatrix.cpp" />
+    <ClCompile Include="src\utils\datafile.cpp" />
+    <ClCompile Include="src\utils\filesystem.cpp" />
+    <ClCompile Include="src\utils\logtagconfigparser.cpp" />
+    <ClCompile Include="src\utils\logtagmanager.cpp" />
+    <ClCompile Include="src\utils\samples.cpp" />
+    <ClCompile Include="src\va_intel.cpp" />
+    <ClCompile Include="opencl_kernels_core.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="D:\LIB\opencv\opencv480\build\cvconfig.h">
+      <Filter>Include</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\LIB\opencv\opencv480\build\opencv2\opencv_modules.hpp">
+      <Filter>Include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\opencv2\core.hpp" />
+    <ClInclude Include="include\opencv2\core\affine.hpp" />
+    <ClInclude Include="include\opencv2\core\async.hpp" />
+    <ClInclude Include="include\opencv2\core\base.hpp" />
+    <ClInclude Include="include\opencv2\core\bindings_utils.hpp" />
+    <ClInclude Include="include\opencv2\core\bufferpool.hpp" />
+    <ClInclude Include="include\opencv2\core\check.hpp" />
+    <ClInclude Include="include\opencv2\core\core.hpp" />
+    <ClInclude Include="include\opencv2\core\core_c.h" />
+    <ClInclude Include="include\opencv2\core\cuda.hpp" />
+    <ClInclude Include="include\opencv2\core\cuda.inl.hpp" />
+    <ClInclude Include="include\opencv2\core\cuda\block.hpp" />
+    <ClInclude Include="include\opencv2\core\cuda\border_interpolate.hpp" />
+    <ClInclude Include="include\opencv2\core\cuda\color.hpp" />
+    <ClInclude Include="include\opencv2\core\cuda\common.hpp" />
+    <ClInclude Include="include\opencv2\core\cuda\datamov_utils.hpp" />
+    <ClInclude Include="include\opencv2\core\cuda\detail\color_detail.hpp" />
+    <ClInclude Include="include\opencv2\core\cuda\detail\reduce.hpp" />
+    <ClInclude Include="include\opencv2\core\cuda\detail\reduce_key_val.hpp" />
+    <ClInclude Include="include\opencv2\core\cuda\detail\transform_detail.hpp" />
+    <ClInclude Include="include\opencv2\core\cuda\detail\type_traits_detail.hpp" />
+    <ClInclude Include="include\opencv2\core\cuda\detail\vec_distance_detail.hpp" />
+    <ClInclude Include="include\opencv2\core\cuda\dynamic_smem.hpp" />
+    <ClInclude Include="include\opencv2\core\cuda\emulation.hpp" />
+    <ClInclude Include="include\opencv2\core\cuda\filters.hpp" />
+    <ClInclude Include="include\opencv2\core\cuda\funcattrib.hpp" />
+    <ClInclude Include="include\opencv2\core\cuda\functional.hpp" />
+    <ClInclude Include="include\opencv2\core\cuda\limits.hpp" />
+    <ClInclude Include="include\opencv2\core\cuda\reduce.hpp" />
+    <ClInclude Include="include\opencv2\core\cuda\saturate_cast.hpp" />
+    <ClInclude Include="include\opencv2\core\cuda\scan.hpp" />
+    <ClInclude Include="include\opencv2\core\cuda\simd_functions.hpp" />
+    <ClInclude Include="include\opencv2\core\cuda\transform.hpp" />
+    <ClInclude Include="include\opencv2\core\cuda\type_traits.hpp" />
+    <ClInclude Include="include\opencv2\core\cuda\utility.hpp" />
+    <ClInclude Include="include\opencv2\core\cuda\vec_distance.hpp" />
+    <ClInclude Include="include\opencv2\core\cuda\vec_math.hpp" />
+    <ClInclude Include="include\opencv2\core\cuda\vec_traits.hpp" />
+    <ClInclude Include="include\opencv2\core\cuda\warp.hpp" />
+    <ClInclude Include="include\opencv2\core\cuda\warp_reduce.hpp" />
+    <ClInclude Include="include\opencv2\core\cuda\warp_shuffle.hpp" />
+    <ClInclude Include="include\opencv2\core\cuda_stream_accessor.hpp" />
+    <ClInclude Include="include\opencv2\core\cuda_types.hpp" />
+    <ClInclude Include="include\opencv2\core\cv_cpu_dispatch.h" />
+    <ClInclude Include="include\opencv2\core\cv_cpu_helper.h" />
+    <ClInclude Include="include\opencv2\core\cvdef.h" />
+    <ClInclude Include="include\opencv2\core\cvstd.hpp" />
+    <ClInclude Include="include\opencv2\core\cvstd.inl.hpp" />
+    <ClInclude Include="include\opencv2\core\cvstd_wrapper.hpp" />
+    <ClInclude Include="include\opencv2\core\detail\async_promise.hpp" />
+    <ClInclude Include="include\opencv2\core\detail\dispatch_helper.impl.hpp" />
+    <ClInclude Include="include\opencv2\core\detail\exception_ptr.hpp" />
+    <ClInclude Include="include\opencv2\core\directx.hpp" />
+    <ClInclude Include="include\opencv2\core\dualquaternion.hpp" />
+    <ClInclude Include="include\opencv2\core\dualquaternion.inl.hpp" />
+    <ClInclude Include="include\opencv2\core\eigen.hpp" />
+    <ClInclude Include="include\opencv2\core\fast_math.hpp" />
+    <ClInclude Include="include\opencv2\core\hal\hal.hpp" />
+    <ClInclude Include="include\opencv2\core\hal\interface.h" />
+    <ClInclude Include="include\opencv2\core\hal\intrin.hpp" />
+    <ClInclude Include="include\opencv2\core\hal\intrin_avx.hpp" />
+    <ClInclude Include="include\opencv2\core\hal\intrin_avx512.hpp" />
+    <ClInclude Include="include\opencv2\core\hal\intrin_cpp.hpp" />
+    <ClInclude Include="include\opencv2\core\hal\intrin_forward.hpp" />
+    <ClInclude Include="include\opencv2\core\hal\intrin_lasx.hpp" />
+    <ClInclude Include="include\opencv2\core\hal\intrin_msa.hpp" />
+    <ClInclude Include="include\opencv2\core\hal\intrin_neon.hpp" />
+    <ClInclude Include="include\opencv2\core\hal\intrin_rvv.hpp" />
+    <ClInclude Include="include\opencv2\core\hal\intrin_rvv071.hpp" />
+    <ClInclude Include="include\opencv2\core\hal\intrin_rvv_010_compat_non-policy.hpp" />
+    <ClInclude Include="include\opencv2\core\hal\intrin_rvv_010_compat_overloaded-non-policy.hpp" />
+    <ClInclude Include="include\opencv2\core\hal\intrin_rvv_compat_overloaded.hpp" />
+    <ClInclude Include="include\opencv2\core\hal\intrin_rvv_scalable.hpp" />
+    <ClInclude Include="include\opencv2\core\hal\intrin_sse.hpp" />
+    <ClInclude Include="include\opencv2\core\hal\intrin_sse_em.hpp" />
+    <ClInclude Include="include\opencv2\core\hal\intrin_vsx.hpp" />
+    <ClInclude Include="include\opencv2\core\hal\intrin_wasm.hpp" />
+    <ClInclude Include="include\opencv2\core\hal\msa_macros.h" />
+    <ClInclude Include="include\opencv2\core\hal\simd_utils.impl.hpp" />
+    <ClInclude Include="include\opencv2\core\mat.hpp" />
+    <ClInclude Include="include\opencv2\core\mat.inl.hpp" />
+    <ClInclude Include="include\opencv2\core\matx.hpp" />
+    <ClInclude Include="include\opencv2\core\neon_utils.hpp" />
+    <ClInclude Include="include\opencv2\core\ocl.hpp" />
+    <ClInclude Include="include\opencv2\core\ocl_genbase.hpp" />
+    <ClInclude Include="include\opencv2\core\opencl\ocl_defs.hpp" />
+    <ClInclude Include="include\opencv2\core\opencl\opencl_info.hpp" />
+    <ClInclude Include="include\opencv2\core\opencl\opencl_svm.hpp" />
+    <ClInclude Include="include\opencv2\core\opencl\runtime\autogenerated\opencl_clblas.hpp" />
+    <ClInclude Include="include\opencv2\core\opencl\runtime\autogenerated\opencl_clfft.hpp" />
+    <ClInclude Include="include\opencv2\core\opencl\runtime\autogenerated\opencl_core.hpp" />
+    <ClInclude Include="include\opencv2\core\opencl\runtime\autogenerated\opencl_core_wrappers.hpp" />
+    <ClInclude Include="include\opencv2\core\opencl\runtime\autogenerated\opencl_gl.hpp" />
+    <ClInclude Include="include\opencv2\core\opencl\runtime\autogenerated\opencl_gl_wrappers.hpp" />
+    <ClInclude Include="include\opencv2\core\opencl\runtime\opencl_clblas.hpp" />
+    <ClInclude Include="include\opencv2\core\opencl\runtime\opencl_clfft.hpp" />
+    <ClInclude Include="include\opencv2\core\opencl\runtime\opencl_core.hpp" />
+    <ClInclude Include="include\opencv2\core\opencl\runtime\opencl_core_wrappers.hpp" />
+    <ClInclude Include="include\opencv2\core\opencl\runtime\opencl_gl.hpp" />
+    <ClInclude Include="include\opencv2\core\opencl\runtime\opencl_gl_wrappers.hpp" />
+    <ClInclude Include="include\opencv2\core\opencl\runtime\opencl_svm_20.hpp" />
+    <ClInclude Include="include\opencv2\core\opencl\runtime\opencl_svm_definitions.hpp" />
+    <ClInclude Include="include\opencv2\core\opencl\runtime\opencl_svm_hsa_extension.hpp" />
+    <ClInclude Include="include\opencv2\core\opengl.hpp" />
+    <ClInclude Include="include\opencv2\core\operations.hpp" />
+    <ClInclude Include="include\opencv2\core\optim.hpp" />
+    <ClInclude Include="include\opencv2\core\ovx.hpp" />
+    <ClInclude Include="include\opencv2\core\parallel\backend\parallel_for.openmp.hpp" />
+    <ClInclude Include="include\opencv2\core\parallel\backend\parallel_for.tbb.hpp" />
+    <ClInclude Include="include\opencv2\core\parallel\parallel_backend.hpp" />
+    <ClInclude Include="include\opencv2\core\persistence.hpp" />
+    <ClInclude Include="include\opencv2\core\private.cuda.hpp" />
+    <ClInclude Include="include\opencv2\core\private.hpp" />
+    <ClInclude Include="include\opencv2\core\quaternion.hpp" />
+    <ClInclude Include="include\opencv2\core\quaternion.inl.hpp" />
+    <ClInclude Include="include\opencv2\core\saturate.hpp" />
+    <ClInclude Include="include\opencv2\core\simd_intrinsics.hpp" />
+    <ClInclude Include="include\opencv2\core\softfloat.hpp" />
+    <ClInclude Include="include\opencv2\core\sse_utils.hpp" />
+    <ClInclude Include="include\opencv2\core\traits.hpp" />
+    <ClInclude Include="include\opencv2\core\types.hpp" />
+    <ClInclude Include="include\opencv2\core\types_c.h" />
+    <ClInclude Include="include\opencv2\core\utility.hpp" />
+    <ClInclude Include="include\opencv2\core\utils\allocator_stats.hpp" />
+    <ClInclude Include="include\opencv2\core\utils\allocator_stats.impl.hpp" />
+    <ClInclude Include="include\opencv2\core\utils\buffer_area.private.hpp" />
+    <ClInclude Include="include\opencv2\core\utils\configuration.private.hpp" />
+    <ClInclude Include="include\opencv2\core\utils\filesystem.hpp" />
+    <ClInclude Include="include\opencv2\core\utils\filesystem.private.hpp" />
+    <ClInclude Include="include\opencv2\core\utils\fp_control.private.hpp" />
+    <ClInclude Include="include\opencv2\core\utils\fp_control_utils.hpp" />
+    <ClInclude Include="include\opencv2\core\utils\instrumentation.hpp" />
+    <ClInclude Include="include\opencv2\core\utils\lock.private.hpp" />
+    <ClInclude Include="include\opencv2\core\utils\logger.defines.hpp" />
+    <ClInclude Include="include\opencv2\core\utils\logger.hpp" />
+    <ClInclude Include="include\opencv2\core\utils\logtag.hpp" />
+    <ClInclude Include="include\opencv2\core\utils\plugin_loader.private.hpp" />
+    <ClInclude Include="include\opencv2\core\utils\tls.hpp" />
+    <ClInclude Include="include\opencv2\core\utils\trace.hpp" />
+    <ClInclude Include="include\opencv2\core\utils\trace.private.hpp" />
+    <ClInclude Include="include\opencv2\core\va_intel.hpp" />
+    <ClInclude Include="include\opencv2\core\version.hpp" />
+    <ClInclude Include="include\opencv2\core\vsx_utils.hpp" />
+    <ClInclude Include="opencl_kernels_core.hpp" />
+    <ClInclude Include="src\arithm.simd.hpp" />
+    <ClInclude Include="src\arithm_ipp.hpp" />
+    <ClInclude Include="src\bufferpool.impl.hpp" />
+    <ClInclude Include="src\convert.hpp" />
+    <ClInclude Include="src\convert.simd.hpp" />
+    <ClInclude Include="src\convert_scale.simd.hpp" />
+    <ClInclude Include="src\count_non_zero.simd.hpp" />
+    <ClInclude Include="src\directx.inc.hpp" />
+    <ClInclude Include="src\gl_core_3_1.hpp" />
+    <ClInclude Include="src\hal_internal.hpp" />
+    <ClInclude Include="src\hal_replacement.hpp" />
+    <ClInclude Include="src\has_non_zero.simd.hpp" />
+    <ClInclude Include="src\intel_gpu_gemm.inl.hpp" />
+    <ClInclude Include="src\mathfuncs.hpp" />
+    <ClInclude Include="src\mathfuncs_core.simd.hpp" />
+    <ClInclude Include="src\matmul.simd.hpp" />
+    <ClInclude Include="src\mean.simd.hpp" />
+    <ClInclude Include="src\merge.simd.hpp" />
+    <ClInclude Include="src\ocl_disabled.impl.hpp" />
+    <ClInclude Include="src\opencl\runtime\autogenerated\opencl_clblas_impl.hpp" />
+    <ClInclude Include="src\opencl\runtime\autogenerated\opencl_clfft_impl.hpp" />
+    <ClInclude Include="src\opencl\runtime\autogenerated\opencl_core_impl.hpp" />
+    <ClInclude Include="src\opencl\runtime\autogenerated\opencl_core_static_impl.hpp" />
+    <ClInclude Include="src\opencl\runtime\autogenerated\opencl_gl_impl.hpp" />
+    <ClInclude Include="src\opencl\runtime\autogenerated\opencl_gl_static_impl.hpp" />
+    <ClInclude Include="src\opencl\runtime\runtime_common.hpp" />
+    <ClInclude Include="src\parallel\factory_parallel.hpp" />
+    <ClInclude Include="src\parallel\parallel.hpp" />
+    <ClInclude Include="src\parallel\plugin_parallel_api.hpp" />
+    <ClInclude Include="src\parallel\plugin_parallel_wrapper.impl.hpp" />
+    <ClInclude Include="src\parallel\registry_parallel.hpp" />
+    <ClInclude Include="src\parallel\registry_parallel.impl.hpp" />
+    <ClInclude Include="src\parallel_impl.hpp" />
+    <ClInclude Include="src\persistence.hpp" />
+    <ClInclude Include="src\persistence_base64_encoding.hpp" />
+    <ClInclude Include="src\persistence_impl.hpp" />
+    <ClInclude Include="src\precomp.hpp" />
+    <ClInclude Include="src\split.simd.hpp" />
+    <ClInclude Include="src\stat.hpp" />
+    <ClInclude Include="src\stat.simd.hpp" />
+    <ClInclude Include="src\sum.simd.hpp" />
+    <ClInclude Include="src\umatrix.hpp" />
+    <ClInclude Include="src\utils\logtagconfig.hpp" />
+    <ClInclude Include="src\utils\logtagconfigparser.hpp" />
+    <ClInclude Include="src\utils\logtagmanager.hpp" />
+    <ClInclude Include="src\utils\plugin_loader.impl.hpp" />
+    <ClInclude Include="src\va_wrapper.impl.hpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="version_string.inc" />
+    <None Include="src\opencl\arithm.cl" />
+    <None Include="src\opencl\convert.cl" />
+    <None Include="src\opencl\copymakeborder.cl" />
+    <None Include="src\opencl\copyset.cl" />
+    <None Include="src\opencl\cvtclr_dx.cl" />
+    <None Include="src\opencl\fft.cl" />
+    <None Include="src\opencl\flip.cl" />
+    <None Include="src\opencl\gemm.cl" />
+    <None Include="src\opencl\halfconvert.cl" />
+    <None Include="src\opencl\inrange.cl" />
+    <None Include="src\opencl\intel_gemm.cl" />
+    <None Include="src\opencl\lut.cl" />
+    <None Include="src\opencl\meanstddev.cl" />
+    <None Include="src\opencl\minmaxloc.cl" />
+    <None Include="src\opencl\mixchannels.cl" />
+    <None Include="src\opencl\mulspectrums.cl" />
+    <None Include="src\opencl\normalize.cl" />
+    <None Include="src\opencl\reduce.cl" />
+    <None Include="src\opencl\reduce2.cl" />
+    <None Include="src\opencl\repeat.cl" />
+    <None Include="src\opencl\set_identity.cl" />
+    <None Include="src\opencl\split_merge.cl" />
+    <None Include="src\opencl\transpose.cl" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="vs_version.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="CMake Rules">
+      <UniqueIdentifier>{BC6BC956-0833-3F3E-B3C8-CF14B630DA9D}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{2114BDCE-9B25-36F7-B79C-C7D8D4EFB3FB}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Include">
+      <UniqueIdentifier>{F73E1321-2CC0-3C82-B659-D2B5CEC43562}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Include\Cuda Headers">
+      <UniqueIdentifier>{61243CC2-DFD4-305C-BCC7-63B30461E3A7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Include\Cuda Headers\Detail">
+      <UniqueIdentifier>{B454445C-E0BB-35EC-9B0F-0FBF1252BAD5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Include\opencv2">
+      <UniqueIdentifier>{7B157B1B-D693-3CAB-B777-2F3947536837}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Include\opencv2\core">
+      <UniqueIdentifier>{2D1C7DE8-CD86-39CC-BCF9-26DCC698B8F3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Include\opencv2\core\detail">
+      <UniqueIdentifier>{8E3029B3-0696-3D77-B0AE-4DF5DE6F14E7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Include\opencv2\core\hal">
+      <UniqueIdentifier>{2AFFF056-E41B-3CC4-A336-BAFE335B1447}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Include\opencv2\core\parallel">
+      <UniqueIdentifier>{4C2012A2-342D-37FA-9C14-AD6370F9CDBB}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Include\opencv2\core\parallel\backend">
+      <UniqueIdentifier>{73749825-8DCD-3D32-B54F-CFD851AE0F9E}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Include\opencv2\core\utils">
+      <UniqueIdentifier>{CA995EFD-D15F-39EE-B984-3121ACCCA5E8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Precompile Header File">
+      <UniqueIdentifier>{5D557921-288E-3543-B0CB-0F405FBA551C}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{B424FE76-8A02-34EF-85BB-75F86BE76CE0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Src">
+      <UniqueIdentifier>{BA1B5659-E9EF-3DC1-8E8D-15B598609623}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Src\opencl">
+      <UniqueIdentifier>{B0F36292-7761-3055-A6B6-041B8E30B9A5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Src\opencl\kernels">
+      <UniqueIdentifier>{A508DA8B-FF29-300B-8DAE-83129DCCA3EC}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Src\opencl\kernels\autogenerated">
+      <UniqueIdentifier>{ABADE330-7AC5-39DC-8486-109D51C8EF9B}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Src\opencl\runtime">
+      <UniqueIdentifier>{174D11D2-E7EC-3954-9265-4369A71EEAF1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Src\opencl\runtime\autogenerated">
+      <UniqueIdentifier>{BD22F5AC-4981-3FEC-8335-554A714584C0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Src\parallel">
+      <UniqueIdentifier>{B129758E-E07A-373D-86CD-13F31B413CC0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Src\utils">
+      <UniqueIdentifier>{20B375FF-2F8D-362C-93D6-9D3941F8A14D}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

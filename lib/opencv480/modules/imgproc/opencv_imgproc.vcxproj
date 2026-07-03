@@ -1,0 +1,438 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{AE105776-CAC0-304A-89A3-13174D730095}</ProjectGuid>
+    <WindowsTargetPlatformVersion>10.0.17763.0</WindowsTargetPlatformVersion>
+    <Keyword>Win32Proj</Keyword>
+    <Platform>x64</Platform>
+    <ProjectName>opencv_imgproc</ProjectName>
+    <VCProjectUpgraderObjectName>NoUpgrade</VCProjectUpgraderObjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">..\lib\$(Configuration)-x64\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">obj\$(Configuration)-x64\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">opencv_imgproc480d</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.lib</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</GenerateManifest>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">..\lib\$(Configuration)-x64\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">obj\$(Configuration)-x64\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">opencv_imgproc480</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.lib</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</GenerateManifest>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>src;include;$(ProjectDir);..\..\modules\core\include;$(SolutionDir);..\..\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /bigobj</AdditionalOptions>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <DisableSpecificWarnings>4127;4251;4324;4275;4512;4589;4819</DisableSpecificWarnings>
+      <ExceptionHandling>Async</ExceptionHandling>
+      <FloatingPointModel>Precise</FloatingPointModel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <InlineFunctionExpansion>Disabled</InlineFunctionExpansion>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <Optimization>Disabled</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <PrecompiledHeaderFile>
+      </PrecompiledHeaderFile>
+      <PrecompiledHeaderOutputFile>
+      </PrecompiledHeaderOutputFile>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level4</WarningLevel>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;_SCL_SECURE_NO_WARNINGS;_VARIADIC_MAX=10;_WIN32_WINNT=0x0601;_USE_MATH_DEFINES;__STDC_CONSTANT_MACROS;__STDC_LIMIT_MACROS;__STDC_FORMAT_MACROS;__OPENCV_BUILD=1;CMAKE_INTDIR="Debug";CVAPI_EXPORTS</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <ProgramDataBaseFileName>$(OutDir)\$(TargetName).pdb</ProgramDataBaseFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_DEBUG;_WINDOWS;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;_SCL_SECURE_NO_WARNINGS;_VARIADIC_MAX=10;_WIN32_WINNT=0x0601;_USE_MATH_DEFINES;__STDC_CONSTANT_MACROS;__STDC_LIMIT_MACROS;__STDC_FORMAT_MACROS;__OPENCV_BUILD=1;CMAKE_INTDIR=\"Debug\";CVAPI_EXPORTS</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>src;include;D:\LIB\opencv\opencv480\build\modules\imgproc;..\..\modules\core\include;$(SolutionDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>src;include;D:\LIB\opencv\opencv480\build\modules\imgproc;..\..\modules\core\include;$(SolutionDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalDependencies>..\lib\Debug-x64\opencv_core480d.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>libc;%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>D:/LIB/opencv/opencv480/build/lib/Debug/opencv_imgproc480d.lib</ImportLibrary>
+      <ProgramDataBaseFile>D:/LIB/opencv/opencv480/build/bin/Debug/opencv_imgproc480d.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>src;include;$(ProjectDir);..\..\modules\core\include;$(SolutionDir);..\..\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /bigobj</AdditionalOptions>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <DisableSpecificWarnings>4127;4251;4324;4275;4512;4589;4819</DisableSpecificWarnings>
+      <ExceptionHandling>Async</ExceptionHandling>
+      <FloatingPointModel>Precise</FloatingPointModel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <PrecompiledHeaderFile>
+      </PrecompiledHeaderFile>
+      <PrecompiledHeaderOutputFile>
+      </PrecompiledHeaderOutputFile>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level4</WarningLevel>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;_SCL_SECURE_NO_WARNINGS;NDEBUG;_VARIADIC_MAX=10;_WIN32_WINNT=0x0601;_USE_MATH_DEFINES;__STDC_CONSTANT_MACROS;__STDC_LIMIT_MACROS;__STDC_FORMAT_MACROS;__OPENCV_BUILD=1;CMAKE_INTDIR="Release";CVAPI_EXPORTS</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
+      <ProgramDataBaseFileName>$(OutDir)\$(TargetName).pdb</ProgramDataBaseFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;_SCL_SECURE_NO_WARNINGS;NDEBUG;_VARIADIC_MAX=10;_WIN32_WINNT=0x0601;_USE_MATH_DEFINES;__STDC_CONSTANT_MACROS;__STDC_LIMIT_MACROS;__STDC_FORMAT_MACROS;__OPENCV_BUILD=1;CMAKE_INTDIR=\"Release\";CVAPI_EXPORTS</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>src;include;D:\LIB\opencv\opencv480\build\modules\imgproc;..\..\modules\core\include;$(SolutionDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>src;include;D:\LIB\opencv\opencv480\build\modules\imgproc;..\..\modules\core\include;$(SolutionDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalDependencies>..\..\lib\Release-x64\opencv_core480.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>libc;%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>D:/LIB/opencv/opencv480/build/lib/Release/opencv_imgproc480.lib</ImportLibrary>
+      <ProgramDataBaseFile>D:/LIB/opencv/opencv480/build/bin/Release/opencv_imgproc480.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+  </ItemGroup>
+  <ItemGroup>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="include\opencv2\imgproc.hpp" />
+    <ClInclude Include="include\opencv2\imgproc\bindings.hpp" />
+    <ClInclude Include="include\opencv2\imgproc\detail\gcgraph.hpp" />
+    <ClInclude Include="include\opencv2\imgproc\hal\hal.hpp" />
+    <ClInclude Include="include\opencv2\imgproc\hal\interface.h" />
+    <ClInclude Include="include\opencv2\imgproc\imgproc.hpp" />
+    <ClInclude Include="include\opencv2\imgproc\imgproc_c.h" />
+    <ClInclude Include="include\opencv2\imgproc\segmentation.hpp" />
+    <ClInclude Include="include\opencv2\imgproc\types_c.h" />
+    <ClCompile Include="src\accum.cpp">
+    </ClCompile>
+    <ClCompile Include="src\accum.dispatch.cpp">
+    </ClCompile>
+    <ClCompile Include="src\approx.cpp">
+    </ClCompile>
+    <ClCompile Include="src\bilateral_filter.dispatch.cpp">
+    </ClCompile>
+    <ClCompile Include="src\blend.cpp">
+    </ClCompile>
+    <ClCompile Include="src\box_filter.dispatch.cpp">
+    </ClCompile>
+    <ClCompile Include="src\canny.cpp">
+    </ClCompile>
+    <ClCompile Include="src\clahe.cpp">
+    </ClCompile>
+    <ClCompile Include="src\color.cpp">
+    </ClCompile>
+    <ClCompile Include="src\color_hsv.dispatch.cpp">
+    </ClCompile>
+    <ClCompile Include="src\color_lab.cpp">
+    </ClCompile>
+    <ClCompile Include="src\color_rgb.dispatch.cpp">
+    </ClCompile>
+    <ClCompile Include="src\color_yuv.dispatch.cpp">
+    </ClCompile>
+    <ClCompile Include="src\colormap.cpp">
+    </ClCompile>
+    <ClCompile Include="src\connectedcomponents.cpp">
+    </ClCompile>
+    <ClCompile Include="src\contours.cpp">
+    </ClCompile>
+    <ClCompile Include="src\convhull.cpp">
+    </ClCompile>
+    <ClCompile Include="src\corner.cpp">
+    </ClCompile>
+    <ClCompile Include="src\cornersubpix.cpp">
+    </ClCompile>
+    <ClCompile Include="src\demosaicing.cpp">
+    </ClCompile>
+    <ClCompile Include="src\deriv.cpp">
+    </ClCompile>
+    <ClCompile Include="src\distransform.cpp">
+    </ClCompile>
+    <ClCompile Include="src\drawing.cpp">
+    </ClCompile>
+    <ClCompile Include="src\emd.cpp">
+    </ClCompile>
+    <ClCompile Include="src\featureselect.cpp">
+    </ClCompile>
+    <ClCompile Include="src\filter.dispatch.cpp">
+    </ClCompile>
+    <ClCompile Include="src\floodfill.cpp">
+    </ClCompile>
+    <ClCompile Include="src\gabor.cpp">
+    </ClCompile>
+    <ClCompile Include="src\generalized_hough.cpp">
+    </ClCompile>
+    <ClCompile Include="src\geometry.cpp">
+    </ClCompile>
+    <ClCompile Include="src\grabcut.cpp">
+    </ClCompile>
+    <ClCompile Include="src\hershey_fonts.cpp">
+    </ClCompile>
+    <ClCompile Include="src\histogram.cpp">
+    </ClCompile>
+    <ClCompile Include="src\hough.cpp">
+    </ClCompile>
+    <ClCompile Include="src\imgwarp.cpp">
+    </ClCompile>
+    <ClCompile Include="src\intelligent_scissors.cpp">
+    </ClCompile>
+    <ClCompile Include="src\intersection.cpp">
+    </ClCompile>
+    <ClCompile Include="src\linefit.cpp">
+    </ClCompile>
+    <ClCompile Include="src\lsd.cpp">
+    </ClCompile>
+    <ClCompile Include="src\main.cpp">
+    </ClCompile>
+    <ClCompile Include="src\matchcontours.cpp">
+    </ClCompile>
+    <ClCompile Include="src\median_blur.dispatch.cpp">
+    </ClCompile>
+    <ClCompile Include="src\min_enclosing_triangle.cpp">
+    </ClCompile>
+    <ClCompile Include="src\moments.cpp">
+    </ClCompile>
+    <ClCompile Include="src\morph.dispatch.cpp">
+    </ClCompile>
+    <ClCompile Include="src\phasecorr.cpp">
+    </ClCompile>
+    <ClCompile Include="src\pyramids.cpp">
+    </ClCompile>
+    <ClCompile Include="src\resize.cpp">
+    </ClCompile>
+    <ClCompile Include="src\rotcalipers.cpp">
+    </ClCompile>
+    <ClCompile Include="src\samplers.cpp">
+    </ClCompile>
+    <ClCompile Include="src\segmentation.cpp">
+    </ClCompile>
+    <ClCompile Include="src\shapedescr.cpp">
+    </ClCompile>
+    <ClCompile Include="src\smooth.dispatch.cpp">
+    </ClCompile>
+    <ClCompile Include="src\spatialgradient.cpp">
+    </ClCompile>
+    <ClCompile Include="src\stackblur.cpp">
+    </ClCompile>
+    <ClCompile Include="src\subdivision2d.cpp">
+    </ClCompile>
+    <ClCompile Include="src\sumpixels.dispatch.cpp">
+    </ClCompile>
+    <ClCompile Include="src\tables.cpp">
+    </ClCompile>
+    <ClCompile Include="src\templmatch.cpp">
+    </ClCompile>
+    <ClCompile Include="src\thresh.cpp">
+    </ClCompile>
+    <ClCompile Include="src\utils.cpp">
+    </ClCompile>
+    <None Include="src\opencl\accumulate.cl">
+    </None>
+    <None Include="src\opencl\bilateral.cl">
+    </None>
+    <None Include="src\opencl\blend_linear.cl">
+    </None>
+    <None Include="src\opencl\boxFilter.cl">
+    </None>
+    <None Include="src\opencl\boxFilter3x3.cl">
+    </None>
+    <None Include="src\opencl\calc_back_project.cl">
+    </None>
+    <None Include="src\opencl\canny.cl">
+    </None>
+    <None Include="src\opencl\clahe.cl">
+    </None>
+    <None Include="src\opencl\color_hsv.cl">
+    </None>
+    <None Include="src\opencl\color_lab.cl">
+    </None>
+    <None Include="src\opencl\color_rgb.cl">
+    </None>
+    <None Include="src\opencl\color_yuv.cl">
+    </None>
+    <None Include="src\opencl\corner.cl">
+    </None>
+    <None Include="src\opencl\covardata.cl">
+    </None>
+    <None Include="src\opencl\filter2D.cl">
+    </None>
+    <None Include="src\opencl\filter2DSmall.cl">
+    </None>
+    <None Include="src\opencl\filterSepCol.cl">
+    </None>
+    <None Include="src\opencl\filterSepRow.cl">
+    </None>
+    <None Include="src\opencl\filterSep_singlePass.cl">
+    </None>
+    <None Include="src\opencl\filterSmall.cl">
+    </None>
+    <None Include="src\opencl\gaussianBlur3x3.cl">
+    </None>
+    <None Include="src\opencl\gaussianBlur5x5.cl">
+    </None>
+    <None Include="src\opencl\gftt.cl">
+    </None>
+    <None Include="src\opencl\histogram.cl">
+    </None>
+    <None Include="src\opencl\hough_lines.cl">
+    </None>
+    <None Include="src\opencl\integral_sum.cl">
+    </None>
+    <None Include="src\opencl\laplacian3.cl">
+    </None>
+    <None Include="src\opencl\laplacian5.cl">
+    </None>
+    <None Include="src\opencl\linearPolar.cl">
+    </None>
+    <None Include="src\opencl\logPolar.cl">
+    </None>
+    <None Include="src\opencl\match_template.cl">
+    </None>
+    <None Include="src\opencl\medianFilter.cl">
+    </None>
+    <None Include="src\opencl\moments.cl">
+    </None>
+    <None Include="src\opencl\morph.cl">
+    </None>
+    <None Include="src\opencl\morph3x3.cl">
+    </None>
+    <None Include="src\opencl\precornerdetect.cl">
+    </None>
+    <None Include="src\opencl\pyr_down.cl">
+    </None>
+    <None Include="src\opencl\pyr_up.cl">
+    </None>
+    <None Include="src\opencl\pyramid_up.cl">
+    </None>
+    <None Include="src\opencl\remap.cl">
+    </None>
+    <None Include="src\opencl\resize.cl">
+    </None>
+    <None Include="src\opencl\sepFilter3x3.cl">
+    </None>
+    <None Include="src\opencl\threshold.cl">
+    </None>
+    <None Include="src\opencl\warp_affine.cl">
+    </None>
+    <None Include="src\opencl\warp_perspective.cl">
+    </None>
+    <None Include="src\opencl\warp_transform.cl">
+    </None>
+    <ClCompile Include="opencl_kernels_imgproc.cpp">
+    </ClCompile>
+    <ClInclude Include="opencl_kernels_imgproc.hpp" />
+    <ClInclude Include="src\_geom.h" />
+    <ClInclude Include="src\accum.simd.hpp" />
+    <ClInclude Include="src\bilateral_filter.simd.hpp" />
+    <ClInclude Include="src\box_filter.simd.hpp" />
+    <ClInclude Include="src\ccl_bolelli_forest.inc.hpp" />
+    <ClInclude Include="src\ccl_bolelli_forest_firstline.inc.hpp" />
+    <ClInclude Include="src\ccl_bolelli_forest_lastline.inc.hpp" />
+    <ClInclude Include="src\ccl_bolelli_forest_singleline.inc.hpp" />
+    <ClInclude Include="src\color.hpp" />
+    <ClInclude Include="src\color.simd_helpers.hpp" />
+    <ClInclude Include="src\color_hsv.simd.hpp" />
+    <ClInclude Include="src\color_rgb.simd.hpp" />
+    <ClInclude Include="src\color_yuv.simd.hpp" />
+    <ClInclude Include="src\corner.hpp" />
+    <ClInclude Include="src\filter.hpp" />
+    <ClInclude Include="src\filter.simd.hpp" />
+    <ClInclude Include="src\filterengine.hpp" />
+    <ClInclude Include="src\fixedpoint.inl.hpp" />
+    <ClInclude Include="src\hal_replacement.hpp" />
+    <ClInclude Include="src\imgwarp.hpp" />
+    <ClInclude Include="src\median_blur.simd.hpp" />
+    <ClInclude Include="src\morph.simd.hpp" />
+    <ClInclude Include="src\precomp.hpp" />
+    <ClInclude Include="src\resize.hpp" />
+    <ClInclude Include="src\smooth.simd.hpp" />
+    <ClInclude Include="src\sumpixels.avx512_skx.hpp" />
+    <ClInclude Include="src\sumpixels.simd.hpp" />
+    <ClInclude Include="D:\LIB\opencv\opencv480\build\cvconfig.h" />
+    <ClInclude Include="D:\LIB\opencv\opencv480\build\opencv2\opencv_modules.hpp" />
+    <ResourceCompile Include="vs_version.rc">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
+    </ResourceCompile>
+    <ClCompile Include="opencv_imgproc_main.cpp">
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="D:\LIB\opencv\opencv480\build\modules\core\opencv_core.vcxproj">
+      <Project>{236D9F3A-4D25-3745-A439-0D17D29C4B19}</Project>
+      <Name>opencv_core</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
