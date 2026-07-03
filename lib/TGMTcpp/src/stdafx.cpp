@@ -4,13 +4,14 @@
 #include <time.h>
 #endif
 
-#ifndef _MANAGED
-#include <future>
-#endif
 #ifdef OS_LINUX
 #include <stdarg.h>
 #endif
 
+#ifdef _MANAGED
+#else
+#include <thread>
+#endif
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 void OnMouseEvent(int event, int x, int y, int flags, void* userdata)
@@ -77,9 +78,9 @@ void DebugImage(cv::Mat img, const char* fmt, ...)
 	vsnprintf(str, DEBUG_OUT_BUFFER_SIZE - 1, fmt, arg_list);
 #endif
 
-	if (img.cols < 200 && img.rows < 200)
+	if (img.cols < 100 && img.rows < 100)
 	{
-		float ratio = 200.f / img.cols;
+		float ratio = 100.f / img.cols;
 		cv::Mat matTemp;
 		cv::resize(img, matTemp, cv::Size(img.cols * ratio, img.rows * ratio));
 		cv::imshow(str, matTemp);
@@ -99,7 +100,12 @@ void WriteImageAsync(cv::Mat img, const char* fmt, ...)
 	char str[DEBUG_OUT_BUFFER_SIZE];
 	va_start(arg_list, fmt);
 	vsnprintf(str, DEBUG_OUT_BUFFER_SIZE - 1, fmt, arg_list);
-	std::future<void> result = std::async([](char* chr, cv::Mat mat) {cv::imwrite(chr, mat); }, str, img);	
+
+	std::thread([](char* chr, cv::Mat mat) 
+	{
+		cv::imwrite(chr, mat);
+	}, str, img)
+	.detach();
 }
 #endif
 

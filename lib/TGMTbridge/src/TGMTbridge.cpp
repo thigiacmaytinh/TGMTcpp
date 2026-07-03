@@ -3,13 +3,13 @@
 #include "TGMTbridge.h"
 #include <msclr/marshal.h>
 
-using namespace TGMT;
+
 using namespace System;
 using namespace System::Drawing;
 using namespace System::Drawing::Imaging;
 using namespace System::Threading;
 using namespace System::Runtime::InteropServices;
-using namespace System::Windows::Forms;
+//using namespace System::Windows::Forms;
 
 typedef unsigned char byte;
 
@@ -17,9 +17,11 @@ Bitmap^ TGMTbridge::MatToBitmap(cv::Mat img)
 {
 	if (img.data == nullptr)
 		return nullptr;
+
 	if (img.type() != CV_8UC3 && img.type() != CV_8UC4)
 	{
-		throw gcnew NotSupportedException("Only images of type CV_8UC3 are supported for conversion to Bitmap");
+		std::cout<< "Only images of type CV_8UC3 are supported for conversion to Bitmap";
+		return nullptr;
 	}
 
 	//create the bitmap and get the pointer to the data
@@ -48,72 +50,90 @@ Bitmap^ TGMTbridge::MatToBitmap(cv::Mat img)
 
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-//#define USE_OLD_WAY
 
 cv::Mat TGMTbridge::BitmapToMat(Bitmap^ bitmap)
 {
-	
-#ifdef USE_OLD_WAY
-	IplImage* tmp;
+    if (bitmap == nullptr)
+        return cv::Mat();
 
-	BitmapData^ bmData = bitmap->LockBits(System::Drawing::Rectangle(0, 0, bitmap->Width, bitmap->Height), ImageLockMode::ReadWrite, bitmap->PixelFormat);
-	if (bitmap->PixelFormat == PixelFormat::Format8bppIndexed)
-	{
-		tmp = cvCreateImage(cvSize(bitmap->Width, bitmap->Height), IPL_DEPTH_8U, 1);
-		tmp->imageData = (char*)bmData->Scan0.ToPointer();
-	}
+    Drawing::Rectangle rect(0, 0, bitmap->Width, bitmap->Height);
 
-	else if (bitmap->PixelFormat == PixelFormat::Format24bppRgb)
-	{
-		tmp = cvCreateImage(cvSize(bitmap->Width, bitmap->Height), IPL_DEPTH_8U, 3);
-		tmp->imageData = (char*)bmData->Scan0.ToPointer();
-	}
+    BitmapData^ bmpData = nullptr;
 
-	bitmap->UnlockBits(bmData);
-	delete(bmData);
-#if CV_MAJOR_VERSION == 3
-	return cv::cvarrToMat(tmp);
-#else
-	return cv::Mat(tmp);
-#endif
-#else
-	Drawing::Rectangle rect = Drawing::Rectangle(0, 0, bitmap->Width, bitmap->Height);
+    try
+    {
+        bmpData = bitmap->LockBits(
+            rect,
+            ImageLockMode::ReadOnly,
+            bitmap->PixelFormat
+        );
 
-	BitmapData^ bmpData = bitmap->LockBits(rect, ImageLockMode::ReadWrite, bitmap->PixelFormat);
+        int width = bitmap->Width;
+        int height = bitmap->Height;
+        int stride = bmpData->Stride;
 
-	// data = scan0 is a pointer to our memory block.
-	IntPtr data = bmpData->Scan0;
+        uchar* src = static_cast<uchar*>(bmpData->Scan0.ToPointer());
 
-	// step = stride = amount of bytes for a single line of the image
-	size_t step = bmpData->Stride;
-	
-	// So you can try to get you Mat instance like this:
-	cv::Mat mat; 
+        cv::Mat owned;
 
-	if (bitmap->PixelFormat == PixelFormat::Format8bppIndexed)
-	{
-		mat = cv::Mat(bitmap->Height, bitmap->Width, CV_8UC1, data.ToPointer(), step);
-	}
-	else if (bitmap->PixelFormat == PixelFormat::Format24bppRgb)
-	{
-		mat = cv::Mat(bitmap->Height, bitmap->Width, CV_8UC3, data.ToPointer(), step);
-	}
-	else if (bitmap->PixelFormat == PixelFormat::Format32bppArgb ||
-		bitmap->PixelFormat == PixelFormat::Format32bppRgb)
-	{
-		mat = cv::Mat(bitmap->Height, bitmap->Width, CV_8UC4, data.ToPointer(), step);
-	}
-	else
-	{
-		MessageBox::Show("Does not support input image because don't know format", "TGMT error", MessageBoxButtons::OK, MessageBoxIcon::Error);
-	}
+        if (bitmap->PixelFormat == PixelFormat::Format24bppRgb)
+        {
+            owned = cv::Mat(height, width, CV_8UC3);
 
-	// Unlock the bits.
-	bitmap->UnlockBits(bmpData);
-	delete(bmpData);
-	
-	return mat;
-#endif
+            int rowBytes = width * 3;
+
+            for (int y = 0; y < height; y++)
+            {
+                uchar* srcRow = src + y * stride;
+                uchar* dstRow = owned.ptr<uchar>(y);
+                memcpy(dstRow, srcRow, rowBytes);
+            }
+        }
+        else if (bitmap->PixelFormat == PixelFormat::Format8bppIndexed)
+        {
+            cv::Mat gray(height, width, CV_8UC1);
+
+            int rowBytes = width;
+
+            for (int y = 0; y < height; y++)
+            {
+                uchar* srcRow = src + y * stride;
+                uchar* dstRow = gray.ptr<uchar>(y);
+                memcpy(dstRow, srcRow, rowBytes);
+            }
+
+            cv::cvtColor(gray, owned, cv::COLOR_GRAY2BGR);
+        }
+        else if (bitmap->PixelFormat == PixelFormat::Format32bppArgb ||
+            bitmap->PixelFormat == PixelFormat::Format32bppRgb ||
+            bitmap->PixelFormat == PixelFormat::Format32bppPArgb)
+        {
+            cv::Mat bgra(height, width, CV_8UC4);
+
+            int rowBytes = width * 4;
+
+            for (int y = 0; y < height; y++)
+            {
+                uchar* srcRow = src + y * stride;
+                uchar* dstRow = bgra.ptr<uchar>(y);
+                memcpy(dstRow, srcRow, rowBytes);
+            }
+
+            cv::cvtColor(bgra, owned, cv::COLOR_BGRA2BGR);
+        }
+        else
+        {
+            //MessageBox::Show("Does not support input image because don't know format", "TGMT error", MessageBoxButtons::OK, MessageBoxIcon::Error);
+            return cv::Mat();
+        }
+
+        return owned;
+    }
+    finally
+    {
+        if (bmpData != nullptr)
+            bitmap->UnlockBits(bmpData);
+    }
 }
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -121,6 +141,13 @@ cv::Mat TGMTbridge::BitmapToMat(Bitmap^ bitmap)
 cv::Point2f TGMTbridge::Point2cvPoint(System::Drawing::Point^ p)
 {
 	return cv::Point2f(p->X, p->Y);
+}
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+Point TGMTbridge::CvPoint2Point(cv::Point2f p)
+{
+	return Point(p.x, p.y);
 }
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -137,17 +164,36 @@ Drawing::Rectangle TGMTbridge::CvRectToRectangle(cv::Rect rect)
 	return Drawing::Rectangle(rect.x, rect.y, rect.width, rect.height);
 }
 
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//
+//array<System::Drawing::Rectangle^>^ TGMTbridge::CvRectsToRectangles(std::vector<cv::Rect> rects)
+//{
+//	array<System::Drawing::Rectangle^>^ result = gcnew array<System::Drawing::Rectangle^ >(rects.size());
+//	for (int i = 0; i < rects.size(); i++)
+//	{
+//		result[i] = CvRectToRectangle(rects[i]);
+//	}
+//	return result;
+//}
+
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 void TGMTbridge::StringToCharPointer(System::String^ string, char* output, int size)
 {
-	pin_ptr<const __wchar_t> p = PtrToStringChars(string);
-	wcstombs_s(NULL, output, size, p, size);
+	//pin_ptr<const __wchar_t> p = PtrToStringChars(string);
+	//wcstombs_s(NULL, output, size, p, size);
 }
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 System::String^ TGMTbridge::stdStrToSystemStr(std::string str)
+{
+	return gcnew System::String(str.c_str());
+}
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+System::String^ TGMTbridge::stdWstrToSystemStr(std::wstring str)
 {
 	return gcnew System::String(str.c_str());
 }
@@ -161,6 +207,15 @@ std::string TGMTbridge::SystemStr2stdStr(System::String^ str)
 	std::string result = chars;
 	Marshal::FreeHGlobal(System::IntPtr((void*)chars));
 	return result;
+}
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+//return UTF-16 string
+std::wstring TGMTbridge::SystemStr2stdWstr(System::String^ str)
+{
+	pin_ptr<const wchar_t> wch = PtrToStringChars(str);
+	return std::wstring(wch, str->Length);
 }
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////

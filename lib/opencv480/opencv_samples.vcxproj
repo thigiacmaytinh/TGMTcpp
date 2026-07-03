@@ -1,0 +1,319 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{213A7241-BCB4-34C3-825C-F25DF5C66F5F}</ProjectGuid>
+    <WindowsTargetPlatformVersion>10.0.17763.0</WindowsTargetPlatformVersion>
+    <Keyword>Win32Proj</Keyword>
+    <Platform>x64</Platform>
+    <ProjectName>opencv_samples</ProjectName>
+    <VCProjectUpgraderObjectName>NoUpgrade</VCProjectUpgraderObjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Midl>
+      <AdditionalIncludeDirectories>D:\LIB\opencv\opencv480\build;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Midl>
+      <AdditionalIncludeDirectories>D:\LIB\opencv\opencv480\build;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+  </ItemGroup>
+  <ItemGroup>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="ZERO_CHECK.vcxproj">
+      <Project>{A2B6B0A1-0116-3B54-BA2A-2EB40583D0C0}</Project>
+      <Name>ZERO_CHECK</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="modules\aruco\opencv_samples_aruco.vcxproj">
+      <Project>{7CFCE356-7A76-390E-813A-ACA9050B814E}</Project>
+      <Name>opencv_samples_aruco</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="modules\bgsegm\opencv_samples_bgsegm.vcxproj">
+      <Project>{1DFA153A-A1FC-377A-BB18-F9BB064C6B11}</Project>
+      <Name>opencv_samples_bgsegm</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="modules\bioinspired\opencv_samples_bioinspired.vcxproj">
+      <Project>{1A1DAA6A-AE7A-3F75-B06E-F5F8AD41CD5B}</Project>
+      <Name>opencv_samples_bioinspired</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="modules\ccalib\opencv_samples_ccalib.vcxproj">
+      <Project>{7644803A-46ED-3A55-869E-4AA95D45055A}</Project>
+      <Name>opencv_samples_ccalib</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="samples\cpp\opencv_samples_cpp.vcxproj">
+      <Project>{B7B470D7-8E17-3881-BD2F-A1F522C101B2}</Project>
+      <Name>opencv_samples_cpp</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="modules\datasets\opencv_samples_datasets.vcxproj">
+      <Project>{BAF758EA-3F83-3F96-8AE5-88F183C5516A}</Project>
+      <Name>opencv_samples_datasets</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="samples\directx\opencv_samples_directx.vcxproj">
+      <Project>{39FF2A00-2169-3EC4-9267-1539AA306E37}</Project>
+      <Name>opencv_samples_directx</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="samples\dnn\opencv_samples_dnn.vcxproj">
+      <Project>{EF972F38-FBA7-329C-A470-3976105574C6}</Project>
+      <Name>opencv_samples_dnn</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="modules\dnn_objdetect\opencv_samples_dnn_objdetect.vcxproj">
+      <Project>{0E3A1E5C-E6AB-3D53-96B7-1828155144E5}</Project>
+      <Name>opencv_samples_dnn_objdetect</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="modules\dnn_superres\opencv_samples_dnn_superres.vcxproj">
+      <Project>{25ED5213-C5C7-329B-9C2B-7BE938E71B85}</Project>
+      <Name>opencv_samples_dnn_superres</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="modules\dpm\opencv_samples_dpm.vcxproj">
+      <Project>{2A93EAE6-BC87-3378-8363-145D4FC738BF}</Project>
+      <Name>opencv_samples_dpm</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="modules\face\opencv_samples_face.vcxproj">
+      <Project>{052C0D13-2A5F-3224-96FF-10B929762106}</Project>
+      <Name>opencv_samples_face</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="modules\fuzzy\opencv_samples_fuzzy.vcxproj">
+      <Project>{787FF362-F20D-3DB7-9FC0-99A5249ACCB8}</Project>
+      <Name>opencv_samples_fuzzy</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="modules\gapi\opencv_samples_gapi.vcxproj">
+      <Project>{9788107A-102F-30A4-B578-28C48EBDD4EF}</Project>
+      <Name>opencv_samples_gapi</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="modules\hfs\opencv_samples_hfs.vcxproj">
+      <Project>{36587ED9-77C4-312D-BD64-1F7A1993E29C}</Project>
+      <Name>opencv_samples_hfs</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="modules\img_hash\opencv_samples_img_hash.vcxproj">
+      <Project>{C90D7DD9-F73B-31A2-AA3E-94E7FF7F3CAD}</Project>
+      <Name>opencv_samples_img_hash</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="modules\intensity_transform\opencv_samples_intensity_transform.vcxproj">
+      <Project>{D0DFE40E-113B-351B-A6E1-EDD9BFD5C375}</Project>
+      <Name>opencv_samples_intensity_transform</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="modules\line_descriptor\opencv_samples_line_descriptor.vcxproj">
+      <Project>{3A919EA3-3E55-3D75-A1B2-522774943ADA}</Project>
+      <Name>opencv_samples_line_descriptor</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="modules\mcc\opencv_samples_mcc.vcxproj">
+      <Project>{F1DCF11A-6FFF-3546-AC60-71173B9EBC00}</Project>
+      <Name>opencv_samples_mcc</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="samples\opencl\opencv_samples_opencl.vcxproj">
+      <Project>{CA39F611-4FEA-3935-B903-2292F00B2125}</Project>
+      <Name>opencv_samples_opencl</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="modules\optflow\opencv_samples_optflow.vcxproj">
+      <Project>{1777A904-F676-3F81-8732-6831BDD05C99}</Project>
+      <Name>opencv_samples_optflow</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="modules\phase_unwrapping\opencv_samples_phase_unwrapping.vcxproj">
+      <Project>{B2D43407-7466-36E6-BCE0-B50928FBBAD3}</Project>
+      <Name>opencv_samples_phase_unwrapping</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="modules\plot\opencv_samples_plot.vcxproj">
+      <Project>{6124842A-60C1-3145-892E-B7FE36476BD5}</Project>
+      <Name>opencv_samples_plot</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="modules\quality\opencv_samples_quality.vcxproj">
+      <Project>{942DFBE1-BDA7-3547-91AE-6E9A40DBD317}</Project>
+      <Name>opencv_samples_quality</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="modules\reg\opencv_samples_reg.vcxproj">
+      <Project>{6726EBC2-2410-3DA0-AD31-C0E2A6CC4681}</Project>
+      <Name>opencv_samples_reg</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="modules\rgbd\opencv_samples_rgbd.vcxproj">
+      <Project>{3394B90D-03B5-31ED-9591-68E08637A0D0}</Project>
+      <Name>opencv_samples_rgbd</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="modules\saliency\opencv_samples_saliency.vcxproj">
+      <Project>{18C08D9C-FA94-3352-A037-3FC1133C3873}</Project>
+      <Name>opencv_samples_saliency</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="modules\shape\opencv_samples_shape.vcxproj">
+      <Project>{417391E0-0146-32F4-B5FB-2A78742D0D99}</Project>
+      <Name>opencv_samples_shape</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="samples\cpp\opencv_samples_snippet.vcxproj">
+      <Project>{42090068-7631-3B3F-9A5D-C4DFFC1F6355}</Project>
+      <Name>opencv_samples_snippet</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="modules\stereo\opencv_samples_stereo.vcxproj">
+      <Project>{D3D8D53D-4648-3B98-878D-8537A372AF81}</Project>
+      <Name>opencv_samples_stereo</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="modules\structured_light\opencv_samples_structured_light.vcxproj">
+      <Project>{8BEB81FF-0D52-37C9-BCCB-B73EC7EC401F}</Project>
+      <Name>opencv_samples_structured_light</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="modules\surface_matching\opencv_samples_surface_matching.vcxproj">
+      <Project>{FAE5B56A-9731-3699-8EFB-0375815FEFC6}</Project>
+      <Name>opencv_samples_surface_matching</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="samples\tapi\opencv_samples_tapi.vcxproj">
+      <Project>{041E769C-244D-3E40-B1ED-92AE58B19CA5}</Project>
+      <Name>opencv_samples_tapi</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="modules\text\opencv_samples_text.vcxproj">
+      <Project>{0BB894E2-DE81-3D52-86F6-C0FC27C94BE1}</Project>
+      <Name>opencv_samples_text</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="modules\tracking\opencv_samples_tracking.vcxproj">
+      <Project>{7AA41875-18AF-3E80-94C0-A423E7299327}</Project>
+      <Name>opencv_samples_tracking</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="samples\cpp\opencv_samples_tutorial.vcxproj">
+      <Project>{D91FBA03-6A0C-3ADA-B142-3D3170CF01E5}</Project>
+      <Name>opencv_samples_tutorial</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="modules\videostab\opencv_samples_videostab.vcxproj">
+      <Project>{8E7D86D0-61AD-36DF-A2B8-5CE95098AAC3}</Project>
+      <Name>opencv_samples_videostab</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="modules\xfeatures2d\opencv_samples_xfeatures2d.vcxproj">
+      <Project>{95A3215D-C8D4-304A-8624-9A933928C512}</Project>
+      <Name>opencv_samples_xfeatures2d</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="modules\ximgproc\opencv_samples_ximgproc.vcxproj">
+      <Project>{C06BADD2-42CE-31C8-B886-C5C10E17BB11}</Project>
+      <Name>opencv_samples_ximgproc</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="modules\xphoto\opencv_samples_xphoto.vcxproj">
+      <Project>{75D7830C-DA24-3E4D-B9F5-FB267DE072F0}</Project>
+      <Name>opencv_samples_xphoto</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

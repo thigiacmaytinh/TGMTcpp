@@ -1,20 +1,16 @@
 #pragma once
 #include <iostream>
 
+#if defined(OPENCV450) || defined(OPENCV470) || defined(OPENCV480)
+#include "opencv2/core.hpp"
+#include "opencv2/imgcodecs.hpp"
+#include "opencv2/highgui.hpp"
+#include "opencv2/imgproc.hpp"
+#else
 #include <opencv2/opencv.hpp>
+#endif
 
 #define DEBUG_OUT_BUFFER_SIZE			(64*1024)
-
-#if _DEBUG
-#define DEBUG_INFO(FORMAT,...) \
-	    { \
-        char debugString[200]; \
-        sprintf_s(debugString,FORMAT, __VA_ARGS__); \
-        OutputDebugStringA(debugString); \
-	    }
-#else
-#define DEBUG_INFO(FORMAT, ...)
-#endif
 
 #if defined(WIN32) || defined(WIN64)
 #ifdef _MANAGED
@@ -44,7 +40,7 @@
 void PrintFPS(cv::Mat& img);
 #define PRINT_FPS PrintFPS
 
-#if CV_MAJOR_VERSION == 3
+#if CV_MAJOR_VERSION == 3 
 #define CV_ADAPTIVE_THRESH_GAUSSIAN_C cv::ADAPTIVE_THRESH_GAUSSIAN_C
 #define CV_CHAIN_APPROX_NONE cv::CHAIN_APPROX_NONE
 #define CV_CHAIN_APPROX_SIMPLE cv::CHAIN_APPROX_SIMPLE
@@ -56,19 +52,17 @@ void PrintFPS(cv::Mat& img);
 #define CV_THRESH_BINARY_INV cv::THRESH_BINARY_INV
 #define CV_BGR2GRAY cv::COLOR_BGR2GRAY
 #define CV_BGR2HSV cv::COLOR_BGR2HSV
-#else
+#elif CV_MAJOR_VERSION == 4
+#define CV_LOAD_IMAGE_GRAYSCALE cv::IMREAD_GRAYSCALE
+//#define CV_ADAPTIVE_THRESH_GAUSSIAN_C cv::AdaptiveThresholdTypes::ADAPTIVE_THRESH_GAUSSIAN_C
+//#define CV_THRESH_BINARY_INV cv::ThresholdTypes::THRESH_BINARY_INV
+//#define CV_THRESH_BINARY cv::THRESH_BINARY
+
+#ifndef CV_AA
+#define CV_AA 16
 #endif
 
-#ifdef _MSC_FULL_VER
-	#if   _MSC_FULL_VER == 170060315 // MSVS 2012; Platform Toolset v110
-	
-	#elif _MSC_FULL_VER == 170051025 // MSVS 2012; Platform Toolset v120_CTP_Nov2012
-	
-	#elif _MSC_FULL_VER == 180020617 // MSVS 2013; Platform Toolset v120
-	
-	#elif _MSC_FULL_VER == 190024210 // MSVS 2015; Platform Toolset v140	
-
-	#endif
+#else
 #endif
 
 
@@ -103,9 +97,3 @@ void PrintFPS(cv::Mat& img);
 #define KEY_F1 7340032
 #define KEY_F2 7405568
 #define KEY_F3 7471104
-
-#if CV_MAJOR_VERSION == 3 && CV_VERSION_MINOR == 4 && CV_VERSION_REVISION == 2
-#define OPENCV_342
-#elif CV_MAJOR_VERSION == 3 && CV_VERSION_MINOR == 2 && CV_VERSION_REVISION == 0
-#define OPENCV_320 
-#endif

@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="D:\LIB\opencv\opencv480\sources\3rdparty\ittnotify\src\ittnotify\ittnotify_static.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\LIB\opencv\opencv480\sources\3rdparty\ittnotify\src\ittnotify\jitprofiling.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="D:\LIB\opencv\opencv480\sources\3rdparty\ittnotify\include\ittnotify.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\LIB\opencv\opencv480\sources\3rdparty\ittnotify\include\jitprofiling.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\LIB\opencv\opencv480\sources\3rdparty\ittnotify\include\libittnotify.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\LIB\opencv\opencv480\sources\3rdparty\ittnotify\include\llvm_jit_event_listener.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\LIB\opencv\opencv480\sources\3rdparty\ittnotify\src\ittnotify\disable_warnings.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\LIB\opencv\opencv480\sources\3rdparty\ittnotify\src\ittnotify\ittnotify_config.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\LIB\opencv\opencv480\sources\3rdparty\ittnotify\src\ittnotify\ittnotify_static.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\LIB\opencv\opencv480\sources\3rdparty\ittnotify\src\ittnotify\ittnotify_types.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="D:\LIB\opencv\opencv480\sources\3rdparty\ittnotify\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{2114BDCE-9B25-36F7-B79C-C7D8D4EFB3FB}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{B424FE76-8A02-34EF-85BB-75F86BE76CE0}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

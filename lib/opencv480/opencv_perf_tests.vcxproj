@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{5DD3BECF-6290-3113-9E4D-F1FF41B80723}</ProjectGuid>
+    <WindowsTargetPlatformVersion>10.0.17763.0</WindowsTargetPlatformVersion>
+    <Keyword>Win32Proj</Keyword>
+    <Platform>x64</Platform>
+    <ProjectName>opencv_perf_tests</ProjectName>
+    <VCProjectUpgraderObjectName>NoUpgrade</VCProjectUpgraderObjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Midl>
+      <AdditionalIncludeDirectories>3rdparty\ippicv\ippicv_win\icv\include;3rdparty\ippicv\ippicv_win\iw\include;D:\LIB\opencv\opencv480\build;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Midl>
+      <AdditionalIncludeDirectories>3rdparty\ippicv\ippicv_win\icv\include;3rdparty\ippicv\ippicv_win\iw\include;D:\LIB\opencv\opencv480\build;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+  </ItemGroup>
+  <ItemGroup>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="ZERO_CHECK.vcxproj">
+      <Project>{A2B6B0A1-0116-3B54-BA2A-2EB40583D0C0}</Project>
+      <Name>ZERO_CHECK</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="modules\aruco\opencv_perf_aruco.vcxproj">
+      <Project>{923ED5B2-9E0C-3BA1-A010-01658D2D3A67}</Project>
+      <Name>opencv_perf_aruco</Name>
+    </ProjectReference>
+    <ProjectReference Include="modules\bioinspired\opencv_perf_bioinspired.vcxproj">
+      <Project>{E85D1297-F757-39A6-8B06-30F7EC8ADE21}</Project>
+      <Name>opencv_perf_bioinspired</Name>
+    </ProjectReference>
+    <ProjectReference Include="modules\calib3d\opencv_perf_calib3d.vcxproj">
+      <Project>{503AA53D-B558-3664-9BFA-C18C5D539CB6}</Project>
+      <Name>opencv_perf_calib3d</Name>
+    </ProjectReference>
+    <ProjectReference Include="modules\core\opencv_perf_core.vcxproj">
+      <Project>{C7699394-CB8F-3A9E-9A9D-40ECC76C1B30}</Project>
+      <Name>opencv_perf_core</Name>
+    </ProjectReference>
+    <ProjectReference Include="modules\dnn\opencv_perf_dnn.vcxproj">
+      <Project>{B2159EBA-3363-3C08-B00C-C77A2FAFC317}</Project>
+      <Name>opencv_perf_dnn</Name>
+    </ProjectReference>
+    <ProjectReference Include="modules\dnn_superres\opencv_perf_dnn_superres.vcxproj">
+      <Project>{A68DEA3E-CF20-333D-B3C9-AEA740EC8F90}</Project>
+      <Name>opencv_perf_dnn_superres</Name>
+    </ProjectReference>
+    <ProjectReference Include="modules\features2d\opencv_perf_features2d.vcxproj">
+      <Project>{653672B2-B5A2-3329-AA28-41972C8098D9}</Project>
+      <Name>opencv_perf_features2d</Name>
+    </ProjectReference>
+    <ProjectReference Include="modules\gapi\opencv_perf_gapi.vcxproj">
+      <Project>{400683EB-991D-3B73-A19C-E0E2309BEF2A}</Project>
+      <Name>opencv_perf_gapi</Name>
+    </ProjectReference>
+    <ProjectReference Include="modules\imgcodecs\opencv_perf_imgcodecs.vcxproj">
+      <Project>{050B015F-6F3B-3E40-86C2-1C6049C06831}</Project>
+      <Name>opencv_perf_imgcodecs</Name>
+    </ProjectReference>
+    <ProjectReference Include="modules\imgproc\opencv_perf_imgproc.vcxproj">
+      <Project>{AEE1A2DD-3063-3E63-A346-DE05BAF3990E}</Project>
+      <Name>opencv_perf_imgproc</Name>
+    </ProjectReference>
+    <ProjectReference Include="modules\line_descriptor\opencv_perf_line_descriptor.vcxproj">
+      <Project>{766DF542-D705-3E42-A612-D7CE7D39D610}</Project>
+      <Name>opencv_perf_line_descriptor</Name>
+    </ProjectReference>
+    <ProjectReference Include="modules\objdetect\opencv_perf_objdetect.vcxproj">
+      <Project>{94B9BDAC-6F44-3D32-B3D5-B60ED16ED684}</Project>
+      <Name>opencv_perf_objdetect</Name>
+    </ProjectReference>
+    <ProjectReference Include="modules\optflow\opencv_perf_optflow.vcxproj">
+      <Project>{432478E8-6FA8-3CD7-95E7-987625A1BDFD}</Project>
+      <Name>opencv_perf_optflow</Name>
+    </ProjectReference>
+    <ProjectReference Include="modules\photo\opencv_perf_photo.vcxproj">
+      <Project>{9789284E-F7EC-30CF-A545-BD5EA18058D5}</Project>
+      <Name>opencv_perf_photo</Name>
+    </ProjectReference>
+    <ProjectReference Include="modules\reg\opencv_perf_reg.vcxproj">
+      <Project>{88E3D668-21B2-30DE-8D8B-0010C454608A}</Project>
+      <Name>opencv_perf_reg</Name>
+    </ProjectReference>
+    <ProjectReference Include="modules\rgbd\opencv_perf_rgbd.vcxproj">
+      <Project>{C08909EC-6633-3280-B0E1-86D5A236A277}</Project>
+      <Name>opencv_perf_rgbd</Name>
+    </ProjectReference>
+    <ProjectReference Include="modules\stereo\opencv_perf_stereo.vcxproj">
+      <Project>{AEDBE9EF-D909-3E68-A819-69621538F0DD}</Project>
+      <Name>opencv_perf_stereo</Name>
+    </ProjectReference>
+    <ProjectReference Include="modules\stitching\opencv_perf_stitching.vcxproj">
+      <Project>{3F299DDC-84C4-37FE-B5C5-45B93486CF74}</Project>
+      <Name>opencv_perf_stitching</Name>
+    </ProjectReference>
+    <ProjectReference Include="modules\superres\opencv_perf_superres.vcxproj">
+      <Project>{BCD87544-F682-3C34-88E0-150354BE8973}</Project>
+      <Name>opencv_perf_superres</Name>
+    </ProjectReference>
+    <ProjectReference Include="modules\tracking\opencv_perf_tracking.vcxproj">
+      <Project>{8B9742A3-C1CF-3881-93BF-2572397B3162}</Project>
+      <Name>opencv_perf_tracking</Name>
+    </ProjectReference>
+    <ProjectReference Include="modules\video\opencv_perf_video.vcxproj">
+      <Project>{2256816D-ED7E-33FD-91B0-EAADA39B7130}</Project>
+      <Name>opencv_perf_video</Name>
+    </ProjectReference>
+    <ProjectReference Include="modules\videoio\opencv_perf_videoio.vcxproj">
+      <Project>{7FB5F49D-AECE-3048-A0F7-87B668B9785A}</Project>
+      <Name>opencv_perf_videoio</Name>
+    </ProjectReference>
+    <ProjectReference Include="modules\wechat_qrcode\opencv_perf_wechat_qrcode.vcxproj">
+      <Project>{24B78ADB-7BB5-3EFC-A5F0-E8D266EC2ECC}</Project>
+      <Name>opencv_perf_wechat_qrcode</Name>
+    </ProjectReference>
+    <ProjectReference Include="modules\xfeatures2d\opencv_perf_xfeatures2d.vcxproj">
+      <Project>{3C8CFA99-B901-3F1F-8DD3-4D04605B4BF3}</Project>
+      <Name>opencv_perf_xfeatures2d</Name>
+    </ProjectReference>
+    <ProjectReference Include="modules\ximgproc\opencv_perf_ximgproc.vcxproj">
+      <Project>{A4052980-B5CA-3AE4-B8E5-3B0416EE9E5B}</Project>
+      <Name>opencv_perf_ximgproc</Name>
+    </ProjectReference>
+    <ProjectReference Include="modules\xphoto\opencv_perf_xphoto.vcxproj">
+      <Project>{5EB0550E-5396-3658-BCBB-A70A9BFDFDE9}</Project>
+      <Name>opencv_perf_xphoto</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

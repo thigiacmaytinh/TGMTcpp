@@ -319,7 +319,7 @@ void ShowAssertManaged(const char* fmt, ...)
 		strcat(str, "\n");
 	}
 #ifdef WIN32
-	ShowErrorBox("TGMT error", str);
+	//ShowErrorBox("TGMT error", str);
 #else
 	printf("%s", str);
 #endif

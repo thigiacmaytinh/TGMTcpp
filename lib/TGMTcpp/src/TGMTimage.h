@@ -1,5 +1,6 @@
 #pragma once
 #include "stdafx.h"
+#include <filesystem>
 
 //----------------------------------------
 // TGMT mean: ThiGiacMayTinh
@@ -16,12 +17,22 @@ public:
 
 	//return percent of Blurriness
 	//lower is more blurry
-	static int CalcBlurriness(const cv::Mat src);
 
 	static int GetBitDepth(cv::Mat);
+	static int GetNumChannels(cv::Mat matInput);
 	static cv::Mat Blend(cv::Mat mat1, cv::Mat mat2, float alpha);
 	static cv::Mat SelectRoi(cv::Mat matInput, cv::Rect roi);
-	static bool IsBlurryImage(cv::Mat matInput, int thresh = 50);
-	static int CalcBlurry(cv::Mat matInput);
+	static std::string MatToBase64(cv::Mat matInput);
+	static cv::Mat Base64ToMat(std::string base64);
+
+	static cv::Mat imread(std::filesystem::path path, int flags = cv::IMREAD_COLOR);
+	static cv::Mat imwrite(std::filesystem::path path, cv::Mat frame);
+
+	static bool IsMatHeaderValid(const cv::Mat& m);
+
+#ifdef HAVE_LIBRAW
+	static cv::Mat imreadRaw(std::wstring path);
+	static bool isRawImage(std::filesystem::path path);
+#endif // HAVE_LIBRAW
 };
 
